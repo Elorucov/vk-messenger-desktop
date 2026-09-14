@@ -1,0 +1,5 @@
+import e from './../../deps/style-inject/dist/style-inject.es.js';
+
+var t=".InterstitialMotionAd-module_banner__6-8U8{background-color:var(--vkui--color_background_content);border-radius:var(--vkui--size_border_radius_paper--regular);bottom:0;height:320px;margin:auto;max-height:100%;max-width:100%;overflow:hidden;position:absolute;top:0;width:620px}.InterstitialMotionAd-module_banner__6-8U8.InterstitialMotionAd-module_bannerFullscreen__-svJj{border-radius:0;height:100%;left:0;top:0;width:100%}.InterstitialMotionAd-module_bannerCenteredScroll__roF9M{position:-webkit-sticky;position:sticky;top:50%;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.InterstitialMotionAd-module_inner__J8Zpb{height:100%;width:100%}";var u = {"banner":"InterstitialMotionAd-module_banner__6-8U8","bannerFullscreen":"InterstitialMotionAd-module_bannerFullscreen__-svJj","bannerCenteredScroll":"InterstitialMotionAd-module_bannerCenteredScroll__roF9M","inner":"InterstitialMotionAd-module_inner__J8Zpb"};e(t);
+
+export { u as default };

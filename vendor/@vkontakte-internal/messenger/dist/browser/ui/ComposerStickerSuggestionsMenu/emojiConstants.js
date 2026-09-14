@@ -1,0 +1,41 @@
+import { escapeRegex } from '../../../core/utils/misc';
+export const EMOJI_HINTS = {
+    e29da4: '<3',
+    f09f988a: ':-)',
+    f09f9883: ':-D',
+    f09f9889: ';-)',
+    f09f9886: 'xD',
+    f09f989c: ';-P',
+    f09f988b: ':-p',
+    f09f988d: '8-)',
+    f09f988e: 'B-)',
+    f09f9892: ':-(',
+    f09f988f: ';-]',
+    f09f9894: '3(',
+    f09f98a2: ":'(",
+    f09f98ad: ':_(',
+    f09f98a9: ':((',
+    f09f98a8: ':o',
+    f09f9890: ':|',
+    f09f988c: '3-)',
+    f09f98a0: '>(',
+    f09f98a1: '>((',
+    f09f9887: 'O:)',
+    f09f98b0: ';o',
+    f09f98b3: '8|',
+    f09f98b2: '8o',
+    f09f98b7: ':X',
+    f09f989a: ':-*',
+    f09f9888: '}:)',
+    f09f918d: ':like:',
+    f09f918e: ':dislike:',
+    e2989d: ':up:',
+    e29c8c: ':v:',
+    f09f918c: ':ok:',
+};
+export const stringEmojiRegExps = Object.entries(EMOJI_HINTS).map(([code, string]) => [
+    new RegExp(`(\\s|^)(${escapeRegex(string)}${string.endsWith(')') || string.endsWith('(') ? '+' : ''})([\\s\\.,]|$)`, 'gi'),
+    code,
+]);
+export const skinToneModifierRegex = /\uFE0F?\uD83C[\uDFFB-\uDFFF]/;
+//# sourceMappingURL=emojiConstants.js.map

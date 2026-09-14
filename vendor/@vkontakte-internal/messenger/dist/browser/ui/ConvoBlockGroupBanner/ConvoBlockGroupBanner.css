@@ -1,0 +1,7 @@
+.ConvoBlockGroupBanner__icon {
+  grid-area: icon;
+}
+
+.ConvoBlockGroupBanner__text {
+  grid-area: text;
+}

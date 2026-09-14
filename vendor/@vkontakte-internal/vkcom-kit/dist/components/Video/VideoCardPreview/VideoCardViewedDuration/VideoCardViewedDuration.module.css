@@ -1,0 +1,23 @@
+.duration {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--vkui--color_track_background);
+  background-clip: content-box;
+  opacity: 1;
+  border-top: var(--vkui--size_border--regular) solid var(--vkui--color_separator_primary_alpha);
+}
+
+.viewedDuration {
+  border-radius: 2px;
+  min-width: 10%;
+  background-color: var(--vkui--color_background_accent_alternative);
+  height: 100%;
+}
+
+.durationHidden {
+  opacity: 0;
+  transition: opacity var(--videocard-hover-transition-duration, var(--vkui--animation_duration_l)) var(--videocard-hover-transition-fn, ease-in-out);
+}

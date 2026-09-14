@@ -1,0 +1,22 @@
+{
+  "name": "@vkontakte-internal/vkcom-kit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte-internal/browsers-utils": "*",
+    "@vkontakte-internal/icons-private": "*",
+    "@vkontakte-internal/react-utils": "*",
+    "@vkontakte-internal/rlottie": "*",
+    "@vkontakte-internal/utils": "*",
+    "@vkontakte/icons": "*",
+    "@vkontakte/vk-qr": "2.1.1",
+    "@vkontakte/vkjs": "2.0.1",
+    "@vkontakte/vkui": "7.6.1",
+    "react": "18.3.1",
+    "sortablejs": "1.15.6",
+    "@vkontakte/vkui-tokens": "*"
+  }
+}

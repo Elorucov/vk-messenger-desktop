@@ -1,0 +1,4 @@
+:where(.VirtualScrollItem) {
+  position: relative;
+  width: 100%;
+}

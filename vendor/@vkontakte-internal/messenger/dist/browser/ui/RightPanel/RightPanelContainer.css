@@ -1,0 +1,624 @@
+.RightPanelContainer__mainContent,
+.RightPanelContainer {
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.RightPanelContainer__mainContent--compressed {
+  width: calc(100% - var(--compress_width));
+}
+
+.ConvoHistory,
+.ConvoHistory__loader {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.ConvoHistory__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+.ConvoHistory__selectToggler {
+  border: 1px solid var(--vkui--color_icon_secondary);
+  border-radius: 50%;
+  position: absolute;
+  left: -68px;
+  bottom: 9px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity,visibility .4s ease-in;
+  transition: opacity,visibility .4s ease-in;
+}
+
+.ConvoHistory__selectToggler--themed {
+  border-color: var(--vkui--color_icon_contrast);
+}
+
+.ConvoHistory__selectToggler.ConvoHistory__selectToggler--noAuthorAvatar {
+  left: -28px;
+}
+
+.ConvoHistory__selectToggler--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ConvoHistory__selectToggler--visible:hover {
+  cursor: pointer;
+}
+
+.ConvoHistory__selectToggler--out {
+  left: 0;
+}
+
+.ConvoHistory__selectToggler--active {
+  border-color: transparent;
+}
+
+.ConvoHistory__selectTogglerIcon {
+  color: var(--vkui--color_background_accent_themed);
+  opacity: 0;
+  -webkit-transition: opacity .25s ease-in;
+  transition: opacity .25s ease-in;
+}
+
+.ConvoHistory__selectToggler--active .ConvoHistory__selectTogglerIcon {
+  opacity: 1;
+  -webkit-transition: opacity .25s ease-in;
+  transition: opacity .25s ease-in;
+}
+
+.ConvoHistory__navigationSelectTogglerContainer {
+  position: relative;
+  height: 0;
+  width: 0;
+}
+
+.ConvoHistory__scrollbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  min-height: 100%;
+}
+
+.ConvoHistory__dateStack {
+  position: relative;
+  width: 100%;
+}
+
+.ConvoHistory__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+.ConvoHistory__contentHeader {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: visible;
+  gap: 20px;
+}
+
+.ConvoHistory__contentFooter {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.ConvoHistory__flow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding: 0 var(--historyPaddingRight) var(--historyPaddingBottom) var(--historyPaddingLeft);
+  outline: none;
+}
+
+.ConvoHistory__flow--withVacationMark {
+  padding: 0 var(--historyPaddingRight) calc(var(--historyPaddingBottom) + var(--vacationMarkContainerHeight)) var(--historyPaddingLeft);
+}
+
+.ConvoHistory__flow--withScheduleFootnote {
+  padding: 0 var(--historyPaddingRight) 0 var(--historyPaddingLeft);
+}
+
+.ConvoHistory__frameWrapper {
+  contain: layout style;
+  width: 100%;
+}
+
+.ConvoHistory__item {
+  padding: var(--historyItemVerticalIndent) 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.ConvoHistory__messageWrapper {
+  position: relative;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  max-width: min(90%,var(--messageMaxWidth));
+  min-width: 0;
+}
+
+.ConvoHistory__messageBlock {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: var(--historyItemVerticalIndent) 0;
+  scroll-margin: 24px 0;
+  outline: none;
+}
+
+.ConvoHistory__messageBlock:not(.ConvoHistory__messageBlock--withContextMenu,
+.ConvoHistory__messageBlock--canBeSelected):hover .ConvoMessage__bomb--dynamic {
+  -webkit-transform: translateX(30px);
+  transform: translate(30px);
+}
+
+.ConvoHistory__messageBlock:not(.ConvoHistory__messageBlock--withContextMenu,
+.ConvoHistory__messageBlock--canBeSelected).ConvoHistory__messageBlock--out:hover .ConvoMessage__bomb--dynamic {
+  -webkit-transform: translateX(-30px);
+  transform: translate(-30px);
+}
+
+.ConvoHistory__expiredMessageContainer {
+  position: relative;
+}
+
+.ConvoHistory__expiredMessageVirtualItem {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  min-width: 0;
+}
+
+.ConvoHistory__flowStack--searchable {
+  cursor: pointer;
+  -webkit-transition: .2s background-color cubic-bezier(0,.5,0,1);
+  transition: .2s background-color cubic-bezier(0,.5,0,1);
+}
+
+.ConvoHistory__flowStack--searchable:hover {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.ConvoHistory__messageBlock--highlighted .ConvoMessage:not(.ConvoMessage--noBackground) {
+  --messageHighlightFromColor: var( --vkui--vkontakte_color_im_bubble_incoming_alternate );
+  --messageHighlightToColor: var(--im_bubble_incoming_alternate_highlighted);
+}
+
+.ConvoHistory__messageBlock--highlighted .ConvoMessage:not(.ConvoMessage--noBackground).ConvoMessage--withNativeBackground,
+.ConvoHistory__messageBlock--highlighted .ConvoMessage:not(.ConvoMessage--noBackground) .ConvoMessage__background {
+  -webkit-animation: messageHighlight var(--transitionMessageHighlightDuration) ease-in-out 1 50ms;
+  animation: messageHighlight var(--transitionMessageHighlightDuration) ease-in-out 1 50ms;
+}
+
+.ConvoHistory__messageBlock--highlighted .ConvoMessage.ConvoMessage--out {
+  --messageHighlightFromColor: var(--vkui--vkontakte_color_im_bubble_outgoing);
+  --messageHighlightToColor: var( --vkui--vkontakte_color_im_bubble_outgoing--active );
+}
+
+.ConvoHistory__messageBlock--highlighted .ConvoMessage.ConvoMessage--expiring {
+  --messageHighlightFromColor: var( --vkui--vkontakte_color_im_bubble_incoming_expiring );
+  --messageHighlightToColor: var(--im_bubble_outgoing_expiring);
+}
+
+.ConvoHistory__messageBlock--highlighted .ConvoMessage.ConvoMessage--out.ConvoMessage--expiring {
+  --messageHighlightFromColor: var(--im_bubble_outgoing_expiring);
+  --messageHighlightToColor: var( --vkui--vkontakte_color_im_bubble_outgoing_expiring_highlighted );
+}
+
+.ConvoHistory__messageBlock--updated {
+  -webkit-animation-name: ConvoHistory__messageBlockUpdateAnimation;
+  animation-name: ConvoHistory__messageBlockUpdateAnimation;
+  -webkit-animation-duration: .16s;
+  animation-duration: .16s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ConvoHistory__messageBlockUpdateAnimation {
+  0% {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ConvoHistory__messageBlockUpdateAnimation {
+  0% {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ConvoHistory__unreadSeparator {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1ch;
+  padding-left: 4px;
+  padding: var(--historyUnreadSeparatorPadding);
+  color: var(--vkui--color_text_tertiary);
+  font-size: var(--historyUnreadSeparatorFontSize);
+  line-height: var(--historyUnreadSeparatorLineHeight);
+  font-weight: 400;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  isolation: isolate;
+}
+
+.ConvoHistory__unreadSeparator--themed {
+  color: var(--vkui--color_text_contrast);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.ConvoHistory__unreadSeparator:before,
+.ConvoHistory__unreadSeparator:after {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  display: block;
+  content: "";
+  height: 1px;
+  background: var(--vkui--color_separator_secondary);
+}
+
+.ConvoHistory__unreadSeparator--themed:after {
+  display: none;
+}
+
+.ConvoHistory__unreadSeparator--themed:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translate(-50%);
+  background-color: var(--vkui--color_overlay_primary);
+  z-index: -1;
+}
+
+.ConvoHistory__spinnerWrapper {
+  position: relative;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: var(--historyPaddingBottom);
+  width: 100%;
+  background: transparent;
+}
+
+.ConvoHistory__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition: opacity .26s ease;
+  transition: opacity .26s ease;
+}
+
+.ConvoHistory__spinner--hidden {
+  opacity: 0;
+}
+
+.ConvoHistory__spinnerInner--themed {
+  color: var(--vkui--color_icon_contrast);
+}
+
+.ConvoHistory__messageBlock--canBeSelected:hover {
+  cursor: pointer;
+}
+
+.ConvoHistory__reactionPicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoHistory__messageBlock:before,
+.ConvoHistory__messageBlock--canBeSelected:after {
+  opacity: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  -webkit-transform: translateX(-50%);
+  transform: translate(-50%);
+}
+
+.ConvoHistory__messageBlock--withContextMenuActive:before,
+.ConvoHistory__messageBlock--selected:before {
+  -webkit-transition: opacity .1s ease-in;
+  transition: opacity .1s ease-in;
+  background: var(--vkui--color_transparent--active);
+  opacity: 1;
+  z-index: -1;
+}
+
+.ConvoHistory__messageBlock--highlighted:before {
+  background: var(--vkui--color_transparent--active);
+  -webkit-animation: messageHighlightBackground var(--transitionMessageHighlightDuration) ease-in-out 1;
+  animation: messageHighlightBackground var(--transitionMessageHighlightDuration) ease-in-out 1;
+}
+
+.ConvoHistory__messageBlock--out {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.ConvoHistory__messageBlock--navigating:focus .ConvoMessage {
+  outline: var(--vkui--color_stroke_accent) solid 2px;
+}
+
+.ConvoHistory__debug {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: .3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ConvoHistory__debugItem {
+  position: absolute;
+  width: 100%;
+  background: #1b7a1b;
+  color: #0a0a0a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoHistory__debugItem:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0a0a0a;
+}
+
+.ConvoHistory__debugItem--focused {
+  background: #f2b40b;
+}
+
+.ConvoHistory__antispamCard {
+  width: 100%;
+  max-width: var(--convoMainMaxWidth);
+  margin: auto;
+}
+
+.ConvoHistory--compact {
+  --messageBlockMaxWidth: 395px;
+}
+
+.ConvoHistory--compact .ConvoHistory__messageBlock--withoutBubbles {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: min(90%,var(--messageBlockMaxWidth));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+}
+
+.ConvoHistory__selectToggler--withoutBubbles {
+  top: 13px;
+  bottom: unset;
+  left: -8px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ConvoHistory__selectToggler--withoutBubbles.ConvoHistory__selectTogglerNoAuthorAvatar--withoutBubbles {
+  top: calc(var(--messageVerticalIndent) * .75);
+}
+
+.ConvoHistory__messageBlock--withoutBubbles {
+  padding: var(--historyItemVerticalIndent) 22px;
+}
+
+.ConvoHistory__messageWrapper--withoutBubbles {
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ConvoHistory__selectTogglerIcon--withoutBubbles {
+  color: var(--vkui--color_background_accent_themed);
+  opacity: 0;
+}
+
+.ConvoHistory__messageBlockCanBeSelected--withoutBubbles:hover .ConvoHistory__selectTogglerInActive--withoutBubbles .ConvoHistory__selectTogglerIcon--withoutBubbles {
+  opacity: .5;
+}
+
+.ConvoHistory__selectTogglerActive--withoutBubbles .ConvoHistory__selectTogglerIcon--withoutBubbles {
+  opacity: 1;
+}
+
+.ConvoHistory__messageBlock--navigating:focus .ConvoMessageWithoutBubble {
+  outline: var(--vkui--color_stroke_accent) solid 2px;
+}
+
+.ServiceMessage {
+  --serviceMessageSidePadding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: var(--vkui--color_text_subhead);
+  font-weight: 400;
+  font-size: var(--serviceMessageAndConvoDateFontSize);
+  line-height: var(--serviceMessageAndConvoDateLineHeight);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px var(--serviceMessageSidePadding,12px);
+  text-align: center;
+  word-break: break-word;
+  letter-spacing: -.004em;
+  -webkit-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in,-webkit-transform .2s ease-in;
+  width: 100%;
+  pointer-events: initial;
+  scroll-margin: 24px 0;
+  outline: none;
+}
+
+.ServiceMessage__highlight {
+  font-weight: 500;
+}
+
+.ServiceMessage__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.ServiceMessage__link:hover {
+  opacity: .8;
+}
+
+.ServiceMessage--withBubble .ServiceMessage__preview {
+  color: var(--vkui--color_text_contrast);
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: var(--vkui--color_overlay_primary);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.ServiceMessage__preview:empty {
+  display: none;
+}
+
+.ServiceMessage--navigating:focus {
+  outline: var(--vkui--color_stroke_accent) solid 2px;
+  border-radius: 12px;
+}

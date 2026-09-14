@@ -1,0 +1,30 @@
+.MessagePreview {
+  padding-right: .5ch;
+}
+
+.MessagePreview__attach {
+  color: var(--vkui--color_text_link);
+}
+
+.ServiceMessagePreview__link {
+  pointer-events: all;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+}
+
+.AlertInterface__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}

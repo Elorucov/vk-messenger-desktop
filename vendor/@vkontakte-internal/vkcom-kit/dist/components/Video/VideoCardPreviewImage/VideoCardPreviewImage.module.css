@@ -1,0 +1,63 @@
+.container {
+  --videocard-preview-image-transition: opacity cubic-bezier(.65, .05, .36, 1) var(--vkui--animation_duration_m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  object-fit: cover;
+  opacity: 0;
+  transition: var(--videocard-preview-image-transition);
+  background-color: var(--vkui--color_image_placeholder);
+  transform: translateZ(0);
+}
+
+.fullSize {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.containerVisible {
+  opacity: 1;
+}
+
+.img {
+  overflow: hidden;
+  transition-duration: 0s;
+  object-fit: cover;
+}
+
+.imgHidden {
+  opacity: 0;
+  transition: var( --videocard-preview-image-transition, opacity cubic-bezier(.65, .05, .36, 1) var(--vkui--animation_duration_m) );
+}
+
+.imgBlurred {
+  transform: translateZ(0) scale(1.1);
+}
+
+.imgBlurredSizeS {
+  filter: blur(8px);
+}
+
+.imgBlurredSizeM {
+  filter: blur(30px);
+}
+
+.imgBlurredSizeL {
+  filter: blur(40px);
+}
+
+.imgBlurredSizeXl {
+  filter: blur(50px);
+}
+
+.imgBlurredSize2Xl {
+  filter: blur(60px);
+}
+
+.imgContain {
+  background-color: var(--black);
+  object-fit: contain;
+}

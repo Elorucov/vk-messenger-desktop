@@ -1,0 +1,49 @@
+.root {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 550px;
+}
+
+.root :global(.vkuiBanner__host) {
+  overflow: visible;
+}
+
+.root:not(.transparent) :global(.vkuiBanner__host) {
+  background-color: var(--vkui--color_background_tertiary);
+}
+
+.text {
+  font-family: var(--vk-sans-display, "VK Sans Display"),var(--vkui--font_family_fallbacks);
+}
+
+.actions {
+  position: relative;
+  --vkui--color_background_accent_themed: var(--vkui--color_background_modal_inverse);
+  --vkui--color_background_accent_themed--hover: var(--vkui--color_background_modal_inverse--hover);
+  --vkui--color_background_accent_themed--active: var(--vkui--color_background_modal_inverse--active);
+}
+
+.actions :global(.vkuiButton__host) :global(.vkuiButton__content) {
+  font-family: var(--vk-sans-display, "VK Sans Display"),var(--vkui--font_family_fallbacks);
+}
+
+.actionsEmpty {
+  height: 28px;
+}
+
+.pointer {
+  display: inline-block;
+  position: absolute;
+  margin-left: 16px;
+  pointer-events: none;
+}
+
+.pointerShake {
+  margin-left: 4px;
+}
+
+.pointerReversed {
+  transform: rotate(-180deg);
+  margin-left: 0;
+}

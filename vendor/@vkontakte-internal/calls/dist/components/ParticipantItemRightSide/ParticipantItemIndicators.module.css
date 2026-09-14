@@ -1,0 +1,11 @@
+.indicators {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 4px;
+}
+
+.indicators .buttonHand:last-child {
+  margin-right: initial;
+}

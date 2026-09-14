@@ -1,0 +1,9 @@
+.root:not(.rootHasHorizontalScroll) {
+  display: flex;
+  flex-flow: wrap;
+  margin: calc(var(--grid-row-spacing, 0) / -2) calc(var(--grid-column-spacing, 0) / -2);
+}
+
+.rootStretched {
+  height: 100%;
+}

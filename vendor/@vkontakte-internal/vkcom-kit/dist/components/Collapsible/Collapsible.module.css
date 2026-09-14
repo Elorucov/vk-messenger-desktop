@@ -1,0 +1,10 @@
+.container {
+  overflow: hidden;
+  transition: height var(--vkui--animation_duration_m) var(--vkui--animation_easing_default),margin var(--vkui--animation_duration_m) var(--vkui--animation_easing_default),padding var(--vkui--animation_duration_m) var(--vkui--animation_easing_default);
+}
+
+.containerCollapsed {
+  height: 0;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@vkontakte-internal/icons-private",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte/icons-sprite": "3.1.0",
+    "react": "18.3.1"
+  }
+}

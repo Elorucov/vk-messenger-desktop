@@ -1,0 +1,10 @@
+{
+  "name": "preload",
+  "version": "6.0.57",
+  "private": true,
+  "dependencies": {
+    "@sentry/electron": "4.15.1",
+    "@vkontakte-internal/messenger": "*",
+    "vkme-common": "*"
+  }
+}

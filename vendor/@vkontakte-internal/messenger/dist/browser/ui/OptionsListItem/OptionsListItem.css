@@ -1,0 +1,106 @@
+.OptionsListItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-height: 28px;
+  padding: 16px 0;
+}
+
+.OptionsListItem__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.OptionsListItem__icon--withBG {
+  background-image: linear-gradient(135deg,#b1b6bd,#99a2ad);
+}
+
+.OptionsListItem__main {
+  margin-right: auto;
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_primary);
+}
+
+.OptionsListItem__description {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 4px;
+}
+
+.OptionsListItem__aside {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.OptionsListItem__aside--chevron {
+  margin-left: -8px;
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.OptionsListItem--padded {
+  padding: 16px 25px;
+}
+
+.OptionsListItem--interactive {
+  cursor: pointer;
+}
+
+.OptionsListItem--interactive:hover,
+.OptionsListItem--interactive:focus {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.OptionsListItem+.OptionsListItem {
+  border-top: 1px solid var(--vkui--color_separator_primary);
+}
+
+@media (max-width: 639px) {
+  .OptionsListItem__main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+  .OptionsListItem__aside {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}

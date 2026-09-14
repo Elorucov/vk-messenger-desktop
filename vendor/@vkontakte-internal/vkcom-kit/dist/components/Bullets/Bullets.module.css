@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  background-color: var(--vkui--color_icon_secondary);
+  opacity: .3;
+}
+
+.bullet.bullet {
+  border-radius: 50%;
+}
+
+.bulletHover,
+.bulletSelected,
+.bullet:hover {
+  opacity: 1;
+}

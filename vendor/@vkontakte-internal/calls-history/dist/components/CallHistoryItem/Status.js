@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Flex, Text, Div, getColorClass, Spacing, Card } from '@vkontakte-internal/vkcom-kit';
+export function Status({ date, time, status, duration }) {
+    return (_jsxs(_Fragment, { children: [_jsx(Card, { children: _jsx(Div, { mode: "vertical", paddingTop: 8, paddingBottom: 8, spacing: 8, children: _jsxs(Flex, { direction: "column", gap: [0, 'm'], children: [_jsxs(Flex, { align: "center", justify: "space-between", children: [_jsx(Flex.Item, { className: getColorClass('color_text_secondary'), children: _jsx(Text, { children: date }) }), _jsx(Flex.Item, { children: _jsx(Text, { children: time }) })] }), _jsxs(Flex, { align: "center", justify: "space-between", children: [_jsx(Flex.Item, { children: _jsx(Text, { weight: "2", children: status }) }), !!duration && (_jsx(Flex.Item, { children: _jsx(Text, { children: duration }) }))] })] }) }) }), _jsx(Spacing, { size: 8, mode: "horizontal" })] }));
+}
+//# sourceMappingURL=Status.js.map

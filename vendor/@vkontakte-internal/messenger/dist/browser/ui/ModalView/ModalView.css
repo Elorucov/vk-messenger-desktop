@@ -1,0 +1,8 @@
+.RE_ModalView {
+  z-index: var(--me-dialog-layer,auto);
+  position: relative;
+}
+
+.RE_ModalView--hidden {
+  display: none;
+}

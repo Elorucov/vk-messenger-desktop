@@ -1,0 +1,14 @@
+.disabled {
+  opacity: var(--vkui--opacity_disable);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: -6px;
+}
+
+.buttonContainer {
+  position: relative;
+  width: max-content;
+}

@@ -1,0 +1,14 @@
+.rootNoPadding.rootNoPadding {
+  height: initial;
+}
+
+.rootNoPadding.rootNoPadding :global(.vkuiIcon),
+.rootCustomSize.rootCustomSize :global(.vkuiIcon) {
+  padding: initial;
+}
+
+.rootCustomSize.rootCustomSize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

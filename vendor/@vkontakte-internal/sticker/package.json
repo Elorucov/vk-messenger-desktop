@@ -1,0 +1,17 @@
+{
+  "name": "@vkontakte-internal/sticker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte-internal/icons-private": "*",
+    "@vkontakte-internal/langs": "*",
+    "@vkontakte-internal/rlottie": "*",
+    "@vkontakte/icons": "*",
+    "@vkontakte/vkjs": "2.0.1",
+    "@vkontakte/vkui": "7.6.1",
+    "react": "18.3.1"
+  }
+}

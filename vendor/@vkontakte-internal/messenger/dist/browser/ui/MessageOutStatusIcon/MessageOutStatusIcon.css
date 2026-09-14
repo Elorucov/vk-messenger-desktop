@@ -1,0 +1,8 @@
+.MessageOutStatusIcon__failed {
+  color: var(--vkui--color_icon_negative);
+  padding: 2px;
+}
+
+.MessageOutStatusIcon__sending {
+  padding: 2px;
+}

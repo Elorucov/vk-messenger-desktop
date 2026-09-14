@@ -1,0 +1,125 @@
+.MEConfig .Snackbar__body {
+  box-sizing: border-box;
+  padding: 12px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--vkui--elevation4);
+  border-radius: var(--vkui--size_card_border_radius--regular);
+}
+
+.MEConfig .Snackbar__before {
+  margin-right: 12px;
+  margin-left: 0;
+}
+
+.MEConfig .Snackbar__after {
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+.MEConfig .Snackbar--layout-horizontal .Snackbar__action {
+  margin-left: 12px;
+  position: relative;
+}
+
+.MEConfig .Snackbar--layout-vertical .Snackbar__action {
+  margin-top: 2px;
+  min-height: initial;
+}
+
+.MEConfig .SnackbarContainer__item+.SnackbarContainer__item {
+  margin-top: 16px;
+}
+
+.MEConfig.AvatarAreaSelectorModal {
+  --me-dialog-layer: 999;
+}
+
+.CallsSelect.ModalScheduleCall__select.ModalScheduleCall__select--searchable .CallsSelect__control,
+.CallsSelect__input.CallsSelect__input {
+  background-color: transparent;
+}
+
+.CallsModalEventPlanned__preview {
+  font-size: 13px;
+  font-family: var( --vkui--font_family_base, -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", arial, Tahoma, verdana, sans-serif );
+}
+
+.ConvoListLogo__stage {
+  display: none!important;
+}
+
+.WebVkMeSettingsScreen__fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: var(--vkui--color_background);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 24px 16px;
+  width: 100%;
+}
+
+.WebVkMeSettingsScreen--oneColumnMode.WebVkMeSettingsScreen__fixed,
+.WebVkMeSettingsScreen--mobile.WebVkMeSettingsScreen__fixed {
+  padding: 0;
+}
+
+.WebVkMeSettingsScreen__fixed-inner {
+  max-width: 911px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.AppUnavailableFallback {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_text_primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: var(--vkui--color_background_content);
+}
+
+.AppUnavailableFallback__wrapper {
+  max-width: 360px;
+  text-align: center;
+}
+
+.AppUnavailableFallback__title {
+  margin-top: 36px;
+  margin-bottom: 8px;
+}
+
+.AppUnavailableFallback__subtitle {
+  color: var(--vkui--color_text_secondary);
+}
+
+.AppUnavailableFallback__buttons {
+  margin-top: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.MEApp {
+  height: calc(var(--realVh, 1vh) * 100);
+}

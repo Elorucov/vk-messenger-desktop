@@ -1,0 +1,206 @@
+.BannerPanel {
+  --convoBannerHeight: 46px;
+  --convoBannerPadding: 0 12px;
+  --convoBannerBackground: var(--vkui--color_background_content);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  -webkit-transition: opacity .32s ease,min-height 0ms linear,visibility 0ms .32s linear;
+  transition: opacity .32s ease,min-height 0ms linear,visibility 0ms .32s linear;
+  opacity: 1;
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+}
+
+.BannerPanel *,
+.BannerPanel *:before,
+.BannerPanel *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.BannerPanel[hidden] {
+  opacity: 0;
+  height: 0;
+  min-height: 0;
+  visibility: hidden;
+  z-index: 1;
+  overflow: visible;
+  pointer-events: none;
+  border-bottom: none;
+}
+
+.BannerPanel[hidden] .BannerPanel__content {
+  position: absolute;
+  top: 0;
+}
+
+.BannerPanel--compact {
+  --convoBannerPadding: 0 14px;
+}
+
+.BannerPanel--large {
+  --convoBannerHeight: 50px;
+}
+
+.BannerPanel--spam {
+  --convoBannerBackground: var(--vkui--color_field_background);
+}
+
+.BannerPanel--withoutBottomBorder {
+  border-bottom: none;
+}
+
+.BannerPanel--withoutTransition {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.BannerPanel__content {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 12px;
+  grid-template-columns: auto 1fr auto auto;
+  justify-items: flex-start;
+  position: relative;
+  width: 100%;
+  min-height: var(--convoBannerHeight);
+  padding: var(--convoBannerPadding);
+  background: var(--convoBannerBackground);
+}
+
+.BannerPanel__content--oneLine {
+  grid-template-areas: "icon text buttons close";
+}
+
+.BannerPanel__content--twoLines {
+  grid-template-areas: "icon text close" "icon buttons close";
+  grid-template-columns: auto 1fr auto;
+}
+
+.BannerPanel__content--custom {
+  grid-template-areas: none;
+  grid-template-columns: minmax(0,1fr);
+}
+
+.BannerPanel__content--twoLines .BannerPanel__text {
+  padding-bottom: 0;
+}
+
+.BannerPanel__content--twoLines .BannerPanel__buttons {
+  padding-bottom: 12px;
+}
+
+.BannerPanel__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  grid-area: icon;
+}
+
+.BannerPanel__content--twoLines .BannerPanel__icon {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+.BannerPanel__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: pre;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  overflow: auto;
+  width: 100%;
+  padding: 12px 10px 10px 0;
+  grid-area: text;
+}
+
+.BannerPanel__text--wrapText {
+  white-space: pre-wrap;
+}
+
+.BannerPanel__textTitle {
+  font: 500 13px/16px var(--font);
+  color: var(--vkui--color_text_primary);
+}
+
+.BannerPanel__textContent {
+  color: var(--vkui--color_text_primary);
+  font: 400 var(--bannerPanelTextContentFontSize) /var(--bannerPanelTextContentLineHeight) var(--font);
+}
+
+.BannerPanel__textContent--secondary {
+  font: 400 var(--bannerPanelSecondaryTextContentFontSize) /var(--bannerPanelSecondaryTextContentLineHeight) var(--font);
+  color: var(--vkui--color_text_subhead);
+}
+
+.BannerPanel__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 12px;
+  grid-area: buttons;
+}
+
+.BannerPanel__buttons:first-child {
+  justify-self: center;
+}
+
+.BannerPanel__close {
+  background: none;
+  border: 0;
+  outline: none;
+  color: var(--vkui--color_icon_secondary);
+  opacity: .7;
+  cursor: pointer;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  grid-area: close;
+}
+
+.BannerPanel__content--twoLines .BannerPanel__close {
+  margin-top: 12px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.BannerPanel__close:hover {
+  opacity: 1;
+}
+
+.BannerPanel__close:focus-visible {
+  outline: var(--vkui--color_stroke_accent) auto 2px;
+  outline-offset: 2px;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.BannerPanel--clickable {
+  cursor: pointer;
+}

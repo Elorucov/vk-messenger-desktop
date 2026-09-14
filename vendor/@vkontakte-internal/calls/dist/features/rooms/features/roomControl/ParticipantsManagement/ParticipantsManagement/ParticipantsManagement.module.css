@@ -1,0 +1,12 @@
+.root {
+  min-height: 400px;
+  max-height: 465px;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.root::-webkit-scrollbar {
+  display: none;
+}

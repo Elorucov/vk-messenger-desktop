@@ -1,0 +1,9 @@
+export const init = Symbol('init');
+export const destroy = Symbol('destroy');
+export const update = Symbol('update');
+export const pageModel = Symbol('pageModel');
+export const isAbstract = Symbol('isAbstract');
+export const constructorScope = Symbol('constructorScope');
+export const isRegisteredByValue = Symbol('isRegisteredByValue');
+export const shouldInitOnSsr = Symbol('shouldInitOnSsr');
+//# sourceMappingURL=symbols.js.map

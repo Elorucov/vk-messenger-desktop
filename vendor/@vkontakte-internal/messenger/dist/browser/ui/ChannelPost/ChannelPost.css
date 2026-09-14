@@ -1,0 +1,638 @@
+.ChannelPostsHistory {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ChannelPostsHistory__header {
+  border-bottom: 1px solid var(--vkui--color_transparent--active);
+}
+
+.ChannelPostsHistory__dropArea {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.ChannelPostsHistory__themeWrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ChannelPostsHistory__footer {
+  max-width: var(--channelHistoryMaxContentWidth);
+  padding: 0 16px 16px;
+}
+
+.ChannelPostsHistory__header,
+.ChannelPostsHistory__footer,
+.ChannelPostsHistory__banners {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+}
+
+.PostsHistory {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  isolation: isolate;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+}
+
+.PostsHistory__emptyPlaceholder {
+  font-size: 14px;
+  margin: auto;
+  color: var(--vkui--color_text_secondary);
+}
+
+.PostsHistory__emptyPlaceholder--themed {
+  color: var(--vkui--color_text_contrast);
+  padding: 4px 12px;
+  border-radius: 12px;
+  background-color: var(--vkui--color_overlay_primary);
+}
+
+.PostsHistory__emptyOnboarding {
+  padding: 16px 0;
+  margin: auto;
+}
+
+.PostsHistory__hopNavigation {
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 6px;
+  --hopNavigationIndent: 6px;
+  margin-right: var(--hopNavigationIndent);
+  padding-right: calc((100% - var(--channelHistoryMaxContentWidth)) / 2 - 2 * var(--hopNavigationIndent) + var(--channelPostsHistoryContentHorizontalPadding) - 40px);
+}
+
+.PostsList {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  --postsListPostsGap: 16px;
+}
+
+.PostsList--secondary {
+  --postsListPostsGap: 24px;
+}
+
+.PostsList__scrollbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  min-height: 100%;
+}
+
+.PostsList__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--postsListPostsGap);
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: var(--channelHistoryMaxContentWidth);
+  margin: var(--channelPostListContentMargin);
+  padding: 0 var(--channelPostsHistoryContentHorizontalPadding) 40px var(--channelPostsHistoryContentHorizontalPadding);
+}
+
+.PostsList__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.PostsList__post {
+  max-width: min(90%,var(--messageMaxWidth));
+}
+
+.PostsList__dateGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--postsListPostsGap);
+}
+
+.PostsList__date {
+  top: var(--postsListPostsGap);
+  z-index: 1;
+  padding: 0;
+}
+
+.PostsList__spinner {
+  padding: 16px 0;
+  height: 48px;
+  margin: auto;
+}
+
+.PostsList__unreadSeparator {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 12px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_text_tertiary);
+  grid-template-columns: 1fr auto 1fr;
+  padding: 8px 12px;
+  margin: 4px 0;
+}
+
+.PostsList__unreadSeparatorStroke {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.PostsList__unreadSeparator--themed {
+  color: var(--vkui--color_text_contrast);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.PostsList__unreadSeparator--themed:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translate(-50%);
+  background-color: var(--vkui--color_overlay_primary);
+  z-index: -1;
+}
+
+.ChannelPostAttaches,
+.ChannelPost__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+  word-wrap: break-word;
+}
+
+.ChannelPost {
+  --postMaxWidth: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-width: 100px;
+  max-width: var(--postMaxWidth);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--vkui--color_background_content);
+  border-radius: 12px;
+  padding-top: 8px;
+}
+
+.ChannelPost__mediaAttaches {
+  margin-top: -6px;
+  margin-bottom: 8px;
+  padding: 0 var(--channelPostsMediaPadding);
+}
+
+.ChannelPostPending--withText .ChannelPost__mediaAttaches--withPublicVideo {
+  margin-top: 6px;
+  --mediaAttachBorderRadius: 0;
+}
+
+.ChannelPost:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vkui--color_background_accent);
+  -webkit-box-shadow: 0 0 0 2px var(--vkui--color_background_content);
+  box-shadow: 0 0 0 2px var(--vkui--color_background_content);
+  z-index: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .16s ease;
+  transition: -webkit-transform .16s ease;
+  transition: transform .16s ease;
+  transition: transform .16s ease,-webkit-transform .16s ease;
+}
+
+.ChannelPost--unread:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.ChannelPostMeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  gap: 8px;
+  font: 11px/14px var(--font);
+  color: var(--vkui--color_text_secondary);
+}
+
+.ChannelPostMeta--float {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px 6px;
+  margin: 0 var(--ChannelPostPrimaryVerticalPadding) var(--ChannelPostPrimaryVerticalPadding) 0;
+  background: var(--vkui--color_overlay_primary);
+  border-radius: 10px;
+  color: var(--vkui--color_text_contrast);
+}
+
+.ChannelPostMeta__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.ChannelPostMeta__views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ChannelPostMarkedDeleted {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 10px;
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+}
+
+.ChannelPostMarkedDeleted__restoreBtn {
+  color: var(--vkui--color_text_link);
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+}
+
+.ChannelPostMarkedDeleted__restoreBtn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ChannelPostPending {
+  position: relative;
+  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.ChannelPostHighlightWrapper--active .ChannelPostMarkedDeleted {
+  -webkit-animation: messageHighlight var(--transitionMessageHighlightDuration) ease-in-out 1 50ms;
+  animation: messageHighlight var(--transitionMessageHighlightDuration) ease-in-out 1 50ms;
+}
+
+.ChannelPostPending--fitMediaAttachesWidth {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.PostText {
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  overflow-wrap: break-word;
+}
+
+.PostText__refactored {
+  word-break: break-word;
+}
+
+.PostText__hashtag {
+  cursor: pointer;
+}
+
+.ChannelPostMediaAttaches,
+.ChannelPostAttaches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+  word-wrap: break-word;
+}
+
+.ChannelPostAttaches__audio,
+.ChannelPostAttaches__playlistNew {
+  background: none;
+  border: none;
+  padding-top: 16px;
+}
+
+.AttachChannelStubDoc {
+  color: var(--vkui--color_text_tertiary);
+}
+
+.AttachChannelStubDoc__headline {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.AttachChannelStubDoc__footnote {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AttachChannelStubAudio {
+  cursor: default;
+}
+
+.AttachChannelStubAudio__skeleton {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.ChannelPostPrimaryHighlightWrapper {
+  --messageHighlightFromColor: var( --vkui--vkontakte_color_im_bubble_incoming_alternate );
+  --messageHighlightToColor: var(--im_bubble_incoming_alternate_highlighted);
+}
+
+.ChannelPostPrimaryHighlightWrapper.ChannelPostHighlightWrapper--active:before {
+  width: 200vw;
+  height: calc(100% + var(--vkui--spacing_size_m) * 2);
+  left: 50%;
+  right: auto;
+  top: calc(var(--vkui--spacing_size_m) * -1);
+  bottom: auto;
+  opacity: 0;
+  background: var(--vkui--color_transparent--active);
+  -webkit-animation: messageHighlightBackground var(--transitionMessageHighlightDuration) ease-in-out 1;
+  animation: messageHighlightBackground var(--transitionMessageHighlightDuration) ease-in-out 1;
+  -webkit-transform: translateX(-50%);
+  transform: translate(-50%);
+}
+
+.ChannelPostHighlightWrapper {
+  display: inline-block;
+  display: contents;
+  width: 100%;
+  height: 100%;
+}
+
+.ChannelPostHighlightWrapper--active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ChannelFooter {
+  width: 100%;
+  gap: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  --button-color: var(--vkui--color_text_accent);
+  --button-background-color: var(--vkui--color_background_content);
+  --button-background-color--hover: var( --vkui--color_background_content--hover );
+  --button-background-color--disabled: var(--vkui--color_skeleton_from);
+  --button-max-width: 100%;
+}
+
+.ChannelFooter--secondary {
+  --button-color: var(--vkui--color_text_accent);
+  --button-background-color: var(--vkui--color_background_secondary_alpha);
+  --button-background-color--hover: var( --vkui--color_background_secondary_alpha--hover );
+  --button-max-width: 500px;
+  width: 100%;
+  padding: 0 var(--convoMainComposerPaddingSide) var(--convoMainComposerPaddingBottom);
+}
+
+.ChannelFooter__menuWrapper {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+}
+
+.ChannelFooter__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  outline: none;
+  border-radius: var(--vkui--size_border_radius--regular);
+  height: 36px;
+  cursor: pointer;
+  color: var(--button-color);
+  font: 500 16px/20px var(--font);
+  font-style: normal;
+  letter-spacing: -.01em;
+  background-color: var(--button-background-color);
+  will-change: background-color;
+  -webkit-transition: background-color .16s ease;
+  transition: background-color .16s ease;
+  text-decoration: none;
+  max-width: var(--button-max-width);
+}
+
+.ChannelFooter__button:hover {
+  background-color: var(--button-background-color--hover);
+}
+
+.ChannelFooter__button:disabled {
+  cursor: not-allowed;
+  background-color: var(--button-background-color--disabled);
+}
+
+.ChannelFooter__button:focus-visible {
+  outline: 2px auto var(--vkui--color_stroke_accent);
+}
+
+.ChannelFooter__buttonIcon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ChannelFooter__blocked {
+  background-color: var(--vkui--color_background_content);
+  border-radius: var(--vkui--size_border_radius--regular);
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.ChannelFooter__blockedIcon {
+  color: var(--vkui--color_accent_orange);
+  margin-right: 14px;
+}
+
+.ChannelFooter__backdrop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--button-max-width);
+  border-radius: var(--vkui--size_border_radius--regular);
+  background-color: var(--vkui--color_background_modal);
+}
+
+.ChannelFooter__backdrop--shadow {
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+}
+
+.ChannelFooter_notificationButton--themed {
+  color: var(--vkui--color_text_accent);
+}

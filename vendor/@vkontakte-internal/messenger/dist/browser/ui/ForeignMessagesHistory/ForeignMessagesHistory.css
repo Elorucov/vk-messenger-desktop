@@ -1,0 +1,100 @@
+.ForeignMessagesHistory {
+  width: 638px;
+}
+
+.ForeignMessagesHistory__body {
+  overflow: auto;
+  max-height: calc(100vh - 300px);
+}
+
+.ForeignMessagesHistory__content {
+  padding: 24px 16px;
+}
+
+.ForeignMessagesHistory__spinner {
+  padding-top: 12px;
+}
+
+.ForeignMessagesHistory__bubble {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.ForeignMessagesHistory__main {
+  position: relative;
+  background-color: var(--convoHistoryBackgroundColor);
+}
+
+.ForeignMessagesHistory__top {
+  border-bottom: .5px solid var(--vkui--color_separator_primary);
+  background-color: var(--vkui--color_background_content);
+  padding: 10px 14px 10px 28px;
+  cursor: pointer;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.ForeignMessagesHistory__top:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: calc(100% - 20px);
+  left: 14px;
+  border-radius: 2px;
+  background-color: var(--vkui--color_icon_accent);
+  position: absolute;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.ForeignMessagesHistory__topAuthor {
+  color: var(--vkui--color_text_primary);
+}
+
+.ForeignMessagesHistory__topMessage {
+  color: var(--vkui--color_text_secondary);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.ForeignMessagesHistory__messageBlock {
+  padding: var(--historyItemVerticalIndent) 0;
+}
+
+.ForeignMessagesHistory__messageBlock:hover :where(.ConvoMessage__actions) {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.ForeignMessagesHistory__messageWrapper {
+  max-width: min(90%,var(--messageMaxWidth));
+  min-width: 0;
+}
+
+.ForeignMessagesHistory__messageWrapper .ConvoMessage--withNativeBackground,
+.ForeignMessagesHistory__messageWrapper .ConvoMessage__background {
+  background: var(--messageOutBubbleBackground);
+}
+
+.ForeignMessagesHistory__modalWrapper {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+
+.ForeignMessagesHistory__themeWrapper {
+  position: relative;
+}
+
+.FetchFullMessageError_text {
+  color: var(--vkui--color_text_secondary);
+  margin-top: 8px;
+  margin-bottom: 4px;
+  white-space: pre-line;
+  text-align: center;
+}

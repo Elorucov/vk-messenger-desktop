@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: "topLeft topRight" "bottomLeft bottomRight";
+}
+
+.topLeft {
+  grid-area: topLeft;
+}
+
+.topRight {
+  grid-area: topRight;
+  justify-self: end;
+}
+
+.bottomLeft {
+  grid-area: bottomLeft;
+  align-self: end;
+}
+
+.bottomRight {
+  grid-area: bottomRight;
+  align-self: end;
+  justify-self: end;
+}
+
+.grid.redesign {
+  --padding: 8px;
+}
+
+.grid.redesign .topLeft {
+  padding-left: var(--padding);
+  padding-top: var(--padding);
+}
+
+.grid.redesign .topRight {
+  padding-right: var(--padding);
+  padding-top: var(--padding);
+}
+
+.grid.redesign .bottomLeft {
+  padding-left: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.grid.redesign .bottomRight {
+  padding-right: var(--padding);
+  padding-bottom: var(--padding);
+}

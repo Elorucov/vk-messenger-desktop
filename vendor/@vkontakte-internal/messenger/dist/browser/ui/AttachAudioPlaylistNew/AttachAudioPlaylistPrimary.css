@@ -1,0 +1,224 @@
+.AttachAudioPlaylistPrimary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 400px;
+  max-width: 100%;
+  padding: 8px;
+  background-color: var(--vkui--color_background_tertiary);
+  border-radius: var(--mediaAttachBorderRadius);
+  border: .5px solid var(--vkui--color_image_border_alpha);
+}
+
+.AttachAudioPlaylistPrimary__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  padding: 7px 8px;
+}
+
+.AttachAudioPlaylistPrimary__headerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.AttachAudioPlaylistPrimary__image {
+  display: grid;
+  place-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  color: var(--vkui--color_icon_secondary);
+  background-color: var(--vkui--color_background_secondary);
+  overflow: hidden;
+}
+
+.AttachAudioPlaylistPrimary__image--circle {
+  border-radius: 100%;
+}
+
+.AttachAudioPlaylistPrimary__imageThumbs {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+}
+
+.AttachAudioPlaylistPrimary__headerAuthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 18px;
+  max-width: 100%;
+  color: var(--vkui--color_text_subhead);
+}
+
+.AttachAudioPlaylistPrimary__headerAuthorText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AttachAudioPlaylistPrimary__headerAuthorText a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AttachAudioPlaylistPrimary__headerAuthorText a:hover {
+  text-decoration: underline;
+}
+
+.AttachAudioPlaylistPrimary__headerTitle {
+  font: 600 19px/24px var(--fontVkSans);
+  color: var(--vkui--color_text_primary);
+  margin: 6px 0 4px;
+  white-space: normal;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.AttachAudioPlaylistPrimary__headerTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AttachAudioPlaylistPrimary__headerTitle a:hover {
+  text-decoration: underline;
+}
+
+.AttachAudioPlaylistPrimary__headerDesc {
+  color: var(--vkui--color_text_subhead);
+}
+
+.AttachAudioPlaylistPrimary__headerControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.AttachAudioPlaylistPrimary__headerControls svg {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.AttachAudioPlaylistPrimary__tracks {
+  margin: 4px 0 8px;
+}
+
+.AttachAudioPlaylistPrimary__footer {
+  color: var(--vkui--color_text_subhead);
+  padding: 0 8px 8px;
+}
+
+.AttachAudioPlaylistPrimary--compact {
+  width: 240px;
+}
+
+.AttachAudioPlaylistPrimary--compact .AttachAudioPlaylistPrimary__header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.AttachAudioPlaylistPrimary--compact .AttachAudioPlaylistPrimary__headerInfo {
+  gap: 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.AttachAudioPlaylistPrimary--compact .AttachAudioPlaylistPrimary__headerTitle {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+  margin: 0;
+  text-align: center;
+}
+
+.AttachAudioPlaylistPrimary--compact .AttachAudioPlaylistPrimary__headerControls {
+  margin-top: 8px;
+}
+
+.AttachAudioPlaylistPrimary__playBtn {
+  -webkit-box-shadow: var(--vkui--elevation2);
+  box-shadow: var(--vkui--elevation2);
+}
+
+.ConvoMessageWithoutBubble .AttachAudioPlaylistPrimary--compact {
+  width: initial;
+}
+
+.AttachAudioPlaylistControlButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border: none;
+  border-radius: 100%;
+  outline: none;
+  cursor: pointer;
+  color: var(--vkui--color_icon_primary_invariably);
+  background-color: var(--vkui--color_background_contrast);
+  -webkit-box-shadow: var(--vkui--elevation2);
+  box-shadow: var(--vkui--elevation2);
+  -webkit-transition: background-color .1s linear;
+  transition: background-color .1s linear;
+}
+
+.AttachAudioPlaylistControlButton:hover {
+  background-color: var(--vkui--color_background_contrast--hover);
+}
+
+.AttachAudioPlaylistControlButton:active {
+  background-color: var(--vkui--color_background_contrast--active);
+}
+
+.AttachAudioPlaylistControlButton--mode-accent {
+  color: var(--vkui--color_text_contrast);
+  background-color: var(--vkui--color_background_accent);
+}
+
+.AttachAudioPlaylistControlButton--mode-accent:hover {
+  background-color: var(--vkui--color_background_accent--hover);
+}
+
+.AttachAudioPlaylistControlButton--mode-accent:active {
+  background-color: var(--vkui--color_background_accent--active);
+}

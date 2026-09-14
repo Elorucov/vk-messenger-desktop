@@ -1,0 +1,17 @@
+.view {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.panel {
+  width: 100%;
+  flex-shrink: 0;
+  transform: translate(0);
+  transition: transform var(--vkui--animation_duration_l);
+}
+
+.panelSwitched {
+  transform: translate(-100%);
+}

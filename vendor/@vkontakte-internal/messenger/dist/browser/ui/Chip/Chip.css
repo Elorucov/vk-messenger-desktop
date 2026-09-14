@@ -1,0 +1,42 @@
+.Chip {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3px 7px;
+  background-color: var(--vkui--color_background_content);
+  border-radius: 6px;
+  border: 1px solid var(--vkui--color_transparent--active);
+  height: 28px;
+}
+
+.Chip__remove {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--vkui--color_icon_secondary);
+}
+
+.Chip__remove:hover {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.Chip__content {
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-column-gap: 6px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Chip__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--vkui--color_text_primary);
+  font-size: 13px;
+}

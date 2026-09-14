@@ -1,0 +1,63 @@
+.ConvoProfileAchievements {
+  -webkit-animation: expand .3s;
+  animation: expand .3s;
+  overflow: hidden;
+}
+
+@-webkit-keyframes expand {
+  0% {
+    height: 0px;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+@keyframes expand {
+  0% {
+    height: 0px;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+.ConvoProfileAchievements__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ConvoProfileAchievements__achievementsLabel {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoProfileAchievements__showAll {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--vkui--color_text_accent);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ConvoProfileAchievements__achievementsList {
+  padding-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.ConvoProfileAchievements__achievementsLink {
+  min-width: 72px;
+  max-width: 72px;
+  height: 72px;
+}

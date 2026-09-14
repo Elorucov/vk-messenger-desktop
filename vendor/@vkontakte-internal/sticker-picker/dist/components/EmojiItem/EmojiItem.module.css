@@ -1,0 +1,27 @@
+.item {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  position: absolute;
+  border-radius: var(--vkui--size_border_radius--regular);
+  transition: background var(--vkui--animation_duration_m);
+}
+
+.item:hover:before,
+.item:active:before,
+.itemActive:before {
+  background: var(--vkui--color_transparent--active);
+}

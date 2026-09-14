@@ -1,0 +1,12 @@
+{
+  "name": "@vkontakte/videoplayer-statistics",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./esnext.esm.js",
+  "module": "./esnext.esm.js",
+  "dependencies": {
+    "@vkontakte/videoplayer-core": "*",
+    "@vkontakte/videoplayer-shared": "*"
+  }
+}

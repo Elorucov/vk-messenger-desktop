@@ -1,0 +1,43 @@
+.rootTopWidthS {
+  --vkit_internal--form_item_label_width: 125px;
+}
+
+.rootTopWidthM {
+  --vkit_internal--form_item_label_width: 188px;
+}
+
+.rootTopWidthL {
+  --vkit_internal--form_item_label_width: 50%;
+}
+
+.rootHorizontal {
+  position: relative;
+}
+
+.rootHorizontal.rootMultiline:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.rootHorizontal :global(.vkuiFormItem__top) {
+  float: left;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: var(--vkit_internal--form_item_label_width, 188px);
+  max-width: var(--vkit_internal--form_item_label_width, 188px);
+  max-height: 100%;
+  padding-top: 10px;
+  padding-right: 12px;
+  padding-bottom: 10px;
+}
+
+.rootTopRight :global(.vkuiFormItem__top) {
+  justify-content: flex-end;
+}
+
+.rootHorizontal .in,
+.rootHorizontal :global(.vkuiFormItem__bottom) {
+  padding-left: var(--vkit_internal--form_item_label_width, 188px);
+}

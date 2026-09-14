@@ -1,0 +1,63 @@
+import { Mode, participantIsAdmin, isGroupCallByPeerAndMe, isEmptyPeerId, } from '@vkontakte-internal/calls-core';
+import { isParticipantAnonym, isParticipantGroup } from '../helpers/participant';
+export const getMyExternalId = (state) => state.externalId;
+export const getMyDevice = (state) => state.localDevice;
+export const getMeGroup = (state) => state.meGroup;
+export const getMyMediaSettings = (state) => state.localDevice?.mediaSettings || {};
+export const getParticipants = (state) => state.participants;
+export const getPermissions = (state) => state.permissions;
+export const createParticipantSelector = (peerId) => (state) => state.participants[peerId];
+export const getCallTopology = (state) => state.callData.topology;
+export const getMyId = (state) => state.me;
+export const getPeerId = (state) => state.peer;
+export const getJoin = (state) => state.join;
+export const getJoinLink = (state) => state.join?.joinLink;
+export const getAnonymSecret = (state) => state.anonymSecret;
+export const getIsMeAdmin = (state) => participantIsAdmin(state.localDevice);
+export const getIsMeAnonym = (state) => isParticipantAnonym(state.me);
+export const getIsRestrictedConversation = (state) => state.restrictedConversation;
+export const getNoiseCancellation = (state) => state.noiseCancellation;
+export const getLocalVideoResolution = (state) => state.localVideoResolution;
+export const getPeerIdToDevices = (state) => state.maps.peerIdToDevices;
+export const getNotification = (state) => state.notification;
+export const getTooltips = (state) => state.tooltips;
+export const getSpeakers = (state) => state.speakers;
+export const getIsVoiceRoom = (state) => state.isVoiceRoom;
+export const getCallByName = (state) => state.callByName;
+export const getUIMode = (state) => state.uiMode;
+export const getConversation = (state) => state.callData.conversation;
+export const getConversationOptions = (state) => state.conversationOptions;
+export const getOpponent = (state) => {
+    const peerId = getPeerId(state);
+    const myId = getMyId(state);
+    return isGroupCallByPeerAndMe(peerId, myId) ? getConversation(state) : state.participants[peerId];
+};
+export const getMode = (state) => state.mode;
+export const getLastCallData = (state) => state.lastCallData;
+export const getEntryPoint = (state) => state.entryPoint;
+export const getGroupId = (state) => state.groupId;
+export const getModal = (state) => state.modal;
+export const getIsModalOpened = (state) => {
+    return !!state.modal || state.errorShown || state.cautionShown;
+};
+export const getJoinProps = (state) => state.join;
+export const getUiMode = (state) => state.uiMode;
+export const getPreselectedIds = (state) => state.preselectedIds;
+export const getIsMeCommunity = (state) => isParticipantGroup(state.groupId);
+export const getIsLoaderVisible = (state) => state.isLoaderVisible;
+export const getHasInCallChat = (state) => state.hasInCallChat;
+export const getInCallChatOpened = (state) => state.inCallChatOpened;
+export const getEffectVoiceChange = (state) => state.effectVoiceChange;
+export const getIsChatAttachedToCall = (state) => {
+    return !isEmptyPeerId(state.peer) && !state.groupId;
+};
+export const getMessages = (state) => state.messages;
+export const getOnlyAdminCanShareMovie = (state) => state.onlyAdminCanShareMovie;
+export const getPhotos = (state) => state.virtualBackgroundSettings?.photos || [];
+export const getShouldShowCloseTabWarning = (state) => {
+    const { mode, devices, waitingHall } = state;
+    const totalWaiting = waitingHall?.members.size ?? 0;
+    return mode === Mode.CALL && (Object.values(devices).length > 0 || totalWaiting > 0);
+};
+export const getIsOratorMode = (state) => state.isOratorMode;
+//# sourceMappingURL=common.js.map

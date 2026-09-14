@@ -1,0 +1,2 @@
+export const TO_PORT_PING_INTERVAL = 1000 * 10;
+export const TO_PORT_PING_REPLY_WAIT = 1000;

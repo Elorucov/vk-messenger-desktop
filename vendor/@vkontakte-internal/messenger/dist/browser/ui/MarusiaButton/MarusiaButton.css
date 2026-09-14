@@ -1,0 +1,128 @@
+.MarusiaButton {
+  position: absolute;
+  right: 7px;
+  bottom: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  background-color: unset;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.MarusiaButton__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.MarusiaButton--loading .MarusiaButton__wrapper {
+  display: none;
+}
+
+.MarusiaButton--loading .MarusiaButton__spin {
+  display: block;
+}
+
+.MarusiaButton__animation,
+.MarusiaButton__typing {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.MarusiaButton__wave {
+  position: absolute;
+  width: 20px;
+  inset: 5px 0 0;
+  height: 22px;
+  margin: auto;
+}
+
+.MarusiaButton__wave--dense {
+  top: 2px;
+}
+
+.MarusiaButton__animation {
+  display: block;
+  width: 24px;
+  height: 45px;
+  top: -5px;
+  left: 2px;
+}
+
+.MarusiaButton__animation svg {
+  position: absolute;
+  top: 5px;
+  left: -2px;
+}
+
+.MarusiaButton__lottie {
+  position: relative;
+}
+
+.MarusiaButton__typing,
+.MarusiaButton__wave {
+  opacity: 0;
+}
+
+.MarusiaButton--typing .MarusiaButton__typing,
+.MarusiaButton--wave .MarusiaButton__wave {
+  opacity: 1;
+}
+
+.MarusiaButton--typing .MarusiaButton__animation {
+  opacity: 0;
+}
+
+.MarusiaButton__spin {
+  display: none;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  color: var(--vkui--color_text_contrast);
+  -webkit-animation: spin .7s linear infinite;
+  animation: spin .7s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.MarusiaButton__spin svg,
+.MarusiaButton__spin div {
+  width: 100%;
+  height: 100%;
+}

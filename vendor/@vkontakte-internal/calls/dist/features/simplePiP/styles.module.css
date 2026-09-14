@@ -1,0 +1,17 @@
+.hiddenVideo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inlineVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inlineWideVideo {
+  object-fit: contain;
+}

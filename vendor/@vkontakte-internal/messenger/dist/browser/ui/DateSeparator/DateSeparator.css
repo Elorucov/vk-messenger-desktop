@@ -1,0 +1,50 @@
+.DateSeparator {
+  display: block;
+  position: relative;
+  pointer-events: all;
+  font: 400 var(--serviceMessageAndConvoDateFontSize) /var(--serviceMessageAndConvoDateLineHeight) var(--font);
+  letter-spacing: -.004em;
+  padding: var(--historyDateSeparatorPadding);
+  color: var(--vkui--color_text_subhead);
+  border-radius: 8px;
+  opacity: 0;
+  background-color: var(--convoHistoryBackgroundColor);
+  will-change: background-color;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.DateSeparator--active:not(.DateSeparator--themed) {
+  -webkit-box-shadow: var(--vkui--elevation2);
+  box-shadow: var(--vkui--elevation2);
+  background-color: var(--vkui--color_background_modal);
+}
+
+.DateSeparator--visible {
+  opacity: 1;
+}
+
+.DateSeparator--themed {
+  color: var(--vkui--color_text_contrast);
+  padding: 4px 12px;
+  border-radius: 12px;
+  background-color: var(--vkui--color_overlay_primary);
+}
+
+.StickyDateSeparator {
+  position: sticky;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
+  top: calc(8px - var(--historyDateSeparatorVerticalIndent));
+  padding: var(--historyDateSeparatorVerticalIndent) 0;
+}

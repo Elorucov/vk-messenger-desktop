@@ -1,0 +1,85 @@
+.AttachStickerWrapper {
+  vertical-align: bottom;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.AttachSticker {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity .35s;
+  transition: opacity .35s;
+}
+
+.AttachSticker--clickable.AttachSticker--clickable {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.AttachSticker--loading {
+  opacity: .25;
+}
+
+.AttachStickerWrapper__iconClass--not-clickable {
+  pointer-events: none;
+}
+
+.PopupIcon__wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: var(--vkui--size_border_radius_rounded--regular);
+  padding: 4px;
+  color: var(--vkui--color_icon_contrast);
+  background: var(--vkui--color_icon_tertiary);
+}
+
+.PopupIcon__wrapper--withTransparentBg {
+  background: var(--vkui--color_overlay_secondary);
+}
+
+.PopupIcon__rotated {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-animation: rotating .5s linear infinite;
+  animation: rotating .5s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

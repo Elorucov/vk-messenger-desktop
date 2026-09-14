@@ -1,0 +1,23 @@
+.container {
+  --vkit_internal--modal_vertical_padding: 20px;
+  --vkit_internal--modal_horizontal_padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--vkui--color_background_modal);
+}
+
+.container:not(.containerStretched) {
+  width: var(--modal-width, initial);
+  max-width: var(--modal-max-width, 800px);
+  border-radius: var(--vkui--size_border_radius_paper--regular);
+  box-shadow: 0 2px 10px #0006;
+}
+
+.containerStretched {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}

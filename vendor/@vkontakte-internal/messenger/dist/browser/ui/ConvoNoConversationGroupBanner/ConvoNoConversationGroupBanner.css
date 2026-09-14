@@ -1,0 +1,7 @@
+.ConvoNoConversationGroupBanner__icon {
+  grid-area: icon;
+}
+
+.ConvoNoConversationGroupBanner__text {
+  grid-area: text;
+}

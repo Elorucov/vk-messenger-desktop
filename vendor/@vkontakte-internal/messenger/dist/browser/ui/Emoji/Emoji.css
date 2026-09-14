@@ -1,0 +1,9 @@
+.Emoji {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  margin: 0 1px;
+  pointer-events: none;
+  color: inherit;
+}

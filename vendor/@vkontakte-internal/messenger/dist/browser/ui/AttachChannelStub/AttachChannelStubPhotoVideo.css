@@ -1,0 +1,177 @@
+.AttachChannelStubPhotoVideo {
+  position: relative;
+}
+
+.AttachChannelStubPhotoVideo__meta {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.AttachChannelStubPhotoVideo__skeleton {
+  display: block;
+  border-radius: unset;
+}
+
+.AttachChannelStubPhotoVideo__skeleton.AttachesGrid__item--radiusTopLeft {
+  border-top-left-radius: var(--mediaAttachBorderRadius);
+}
+
+.AttachChannelStubPhotoVideo__skeleton.AttachesGrid__item--radiusTopRight {
+  border-top-right-radius: var(--mediaAttachBorderRadius);
+}
+
+.AttachChannelStubPhotoVideo__skeleton.AttachesGrid__item--radiusBottomLeft {
+  border-bottom-left-radius: var(--mediaAttachBorderRadius);
+}
+
+.AttachChannelStubPhotoVideo__skeleton.AttachesGrid__item--radiusBottomRight {
+  border-bottom-right-radius: var(--mediaAttachBorderRadius);
+}
+
+.ForwardedMessageNew {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.ForwardedMessageNew:last-child {
+  padding-bottom: 0;
+}
+
+.ForwardedMessageNew__avatar {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.ForwardedMessageNew__main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.ForwardedMessageNew__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 2px;
+  line-height: var(--messageAuthorLinkLineHeight);
+  font-size: var(--messageAuthorLinkFontSize);
+  height: var(--messageAuthorLinkLineHeight);
+  white-space: nowrap;
+}
+
+.ForwardedMessageNew__headerRefactored {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.ForwardedMessageNew__userName {
+  color: var(--vkui--color_text_link);
+  font-weight: var(--messageAuthorLinkFontWeight);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ForwardedMessageNew__info {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ForwardedMessageNew--themed .ForwardedMessageNew__info {
+  opacity: .6;
+}
+
+.ForwardedMessageNew--withTopPadding .ForwardedMessageNew__content {
+  padding-top: 4px;
+}
+
+.ForwardedMessageNew__forward {
+  margin-top: 6px;
+}
+
+.ForwardedMessageNew__gift {
+  background: var(--vkui--color_background_content);
+  margin-top: 4px;
+  border-radius: 8px;
+  color: var(--vkui--color_text_secondary);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 224px;
+  padding: 8px;
+}
+
+.ForwardedMessageNew__gift--contrastThemed {
+  background: #ffffff14;
+  color: #fff;
+}
+
+.ForwardedMessageNew__gift--limited {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.ForwardedMessageNew__gift--out {
+  background: var(--vkui--vkontakte_color_im_bubble_outgoing);
+}
+
+.ForwardedMessageNew__gift--withoutBubble {
+  background: var(--vkui--color_background_secondary);
+}
+
+.ForwardedMessageNew__attachments,
+.ForwardedMessageNew__mediaAttachments {
+  margin-top: var(--messageVerticalIndent);
+}
+
+.ForwardedMessageNew__mediaAttachments+.ForwardedMessageNew__text {
+  margin-top: 4px;
+  display: block;
+}
+
+.ForwardedMessageNew__text {
+  white-space: pre-wrap;
+}
+
+.ForwardedMessageNew__goToMessage {
+  padding-left: 16px;
+  margin-left: auto;
+  margin-bottom: -4px;
+  opacity: 0;
+  -webkit-transition: opacity .15s;
+  transition: opacity .15s;
+}
+
+.ForwardedMessageNew__goToMessage--withoutBubbles {
+  margin-left: 0;
+  padding-left: 4px;
+}
+
+.ForwardedMessageNew:hover .ForwardedMessageNew__goToMessage,
+.ForwardedMessageNew:focus .ForwardedMessageNew__goToMessage {
+  opacity: 1;
+}
+
+.ForwardedMessageNew__goToMessageBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--vkui--color_icon_accent);
+}
+
+.ForwardedMessageNew__goToMessageBtn:hover,
+.ForwardedMessageNew__goToMessageBtn:focus {
+  opacity: .8;
+}

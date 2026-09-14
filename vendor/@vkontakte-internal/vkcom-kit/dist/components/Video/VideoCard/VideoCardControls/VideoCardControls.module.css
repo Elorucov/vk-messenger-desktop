@@ -1,0 +1,37 @@
+.controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-height: 32px;
+  min-width: 32px;
+  border-radius: 6px;
+  transition: opacity var(--vkui--animation_duration_s) linear;
+  z-index: 1;
+  color: var(--vkui--color_icon_contrast);
+  opacity: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.controlsWithBackground {
+  background-color: var(--vkui--color_overlay_primary);
+}
+
+.controlsWithBackground:hover {
+  background-color: var(--vkui--color_overlay_primary--hover);
+}
+
+.controlsVisible {
+  opacity: 1;
+}
+
+.controlsWithBackground>:first-child {
+  margin-left: 4px;
+}
+
+.controlsWithBackground>:last-child {
+  margin-right: 4px;
+}

@@ -1,0 +1,15 @@
+.FoldersModalEdit__form {
+  width: 560px;
+  min-width: 100%;
+  padding: 25px 8px 0;
+  min-height: 100%;
+  max-height: calc(100vh - 300px);
+}
+
+.FoldersModalEdit__form .FoldersModalEdit__convoList {
+  padding-bottom: 17px;
+}
+
+.FoldersModalEdit__deleteBtn.FoldersModalEdit__deleteBtn {
+  color: var(--vkui--color_text_negative);
+}

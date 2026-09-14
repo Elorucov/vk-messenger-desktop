@@ -1,0 +1,25 @@
+:global(.CallsBaseModal).modal {
+  z-index: 1002;
+}
+
+.modal :global(.CallsModalHeader) {
+  background: transparent;
+  border-bottom: unset;
+  height: 0;
+}
+
+.modal :global(.CallsBaseModal__content) {
+  width: 450px;
+  height: fit-content;
+  border-radius: var(--vkui--size_border_radius_paper--regular);
+}
+
+.modal .wrap {
+  text-align: center;
+  padding: 55px 25px;
+}
+
+.modal :global(.CallsModalHeader__cross) {
+  top: 20px;
+  height: fit-content;
+}

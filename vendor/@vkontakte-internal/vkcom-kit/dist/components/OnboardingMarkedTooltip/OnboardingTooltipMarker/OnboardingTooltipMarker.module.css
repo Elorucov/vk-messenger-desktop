@@ -1,0 +1,24 @@
+.root {
+  position: absolute;
+  z-index: inherit;
+  width: var(--onboarding-tooltip-marker-size-x, 48px);
+  height: var(--onboarding-tooltip-marker-size-y, 48px);
+  inset: var(--onboarding-tooltip-marker-inset, auto);
+  transform: translate(var(--onboarding-tooltip-marker-left-offset, 0),var(--onboarding-tooltip-marker-top-offset, 0));
+}
+
+.rootLime {
+  color: #aff70d;
+}
+
+.rootCyan {
+  color: #13ffd0;
+}
+
+.rootBlue {
+  color: #07f;
+}
+
+.rootPink {
+  color: #f45fff;
+}

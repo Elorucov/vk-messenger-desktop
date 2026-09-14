@@ -1,0 +1,22 @@
+.ElectronAuthSettingsScreen__fixed {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  background-color: var(--vkui--color_background);
+  justify-content: center;
+  padding: 24px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ElectronAuthSettingsScreen--oneColumnMode.ElectronAuthSettingsScreen__fixed,
+.ElectronAuthSettingsScreen--mobile.ElectronAuthSettingsScreen__fixed {
+  padding: 0;
+}
+
+.ElectronAuthSettingsScreen__fixed-inner {
+  max-width: 911px;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}

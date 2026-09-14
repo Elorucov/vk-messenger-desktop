@@ -1,0 +1,65 @@
+.OptionsListSelectTrigger {
+  background: none;
+  border: 0;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font: 13px/15px var(--font);
+  color: var(--vkui--color_text_subhead);
+  letter-spacing: .005em;
+  gap: 2px;
+  padding: 4px 0;
+  opacity: 1;
+  -webkit-transition: opacity 50ms;
+  transition: opacity 50ms;
+}
+
+.OptionsListSelectTrigger--colored {
+  color: var(--vkui--color_text_link);
+}
+
+.OptionsListSelectTrigger__icon {
+  color: var(--vkui--color_icon_tertiary);
+  padding-top: 2px;
+}
+
+.OptionsListSelectTrigger--colored .OptionsListSelectTrigger__icon {
+  color: var(--vkui--color_text_link);
+}
+
+.OptionsListSelectTrigger__icon--cancel {
+  padding-top: 0;
+}
+
+.OptionsListSelectTrigger:hover {
+  opacity: .7;
+}
+
+.OptionsListSelectItem .ActionsMenuAction__icon {
+  visibility: hidden;
+  color: var(--vkui--color_icon_accent);
+}
+
+.OptionsListSelectItem .ReforgedCheckbox {
+  min-height: 20px;
+  min-width: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.OptionsListSelectItem--selected .ActionsMenuAction__icon,
+.OptionsListSelectItem--checkbox .ActionsMenuAction__icon {
+  visibility: visible;
+}
+
+.OptionsListSelectItem--checkbox {
+  gap: 4px;
+  padding: 0;
+}

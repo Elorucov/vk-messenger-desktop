@@ -1,0 +1,24 @@
+{
+  "name": "@vkontakte-internal/calls-history",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte-internal/calls-core": "*",
+    "@vkontakte-internal/di": "*",
+    "@vkontakte-internal/icons-private": "*",
+    "@vkontakte-internal/plugins": "*",
+    "@vkontakte-internal/shared": "*",
+    "@vkontakte-internal/vk-analytics-events": "*",
+    "@vkontakte-internal/vkcom-kit": "*",
+    "@vkontakte/icons": "*",
+    "@vkontakte/vkjs": "2.0.1",
+    "mobx": "6.12.0",
+    "mobx-react-lite": "4.1.0",
+    "react": "18.3.1",
+    "tslib": "2.8.1",
+    "uuid": "9.0.1"
+  }
+}

@@ -1,0 +1,180 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.rootSizeL {
+  column-gap: 6px;
+  min-block-size: 28px;
+  padding-block: 6px;
+  padding-inline: 8px;
+  border-radius: 6px;
+}
+
+.rootSizeM {
+  column-gap: 4px;
+  min-block-size: 20px;
+  padding-block: 3px;
+  padding-inline: 6px;
+  border-radius: 6px;
+}
+
+.rootSizeS {
+  column-gap: 0;
+  min-block-size: 16px;
+  padding-block: 1px;
+  padding-inline: 4px;
+  border-radius: 4px;
+}
+
+.rootCapsule {
+  border-radius: var(--vkui--size_border_radius_rounded--regular);
+}
+
+.rootAppearanceAccent.rootModePrimary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_background_accent);
+}
+
+.rootAppearanceAccent.rootModeSecondary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_text_accent);
+  --vkit_internal--content_badge_custom_bg: var(--vkui--color_background_secondary_alpha);
+}
+
+.rootAppearanceAccent.rootModeOutline {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_text_accent);
+  --vkit_internal--content_badge_custom_border_color: var(--vkui--color_stroke_accent);
+}
+
+.rootAppearanceAccentRed {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_red);
+}
+
+.rootAppearanceAccentRed.rootModeSecondary {
+  --vkit_internal--content_badge_custom_bg: var(--vkui--color_background_negative_tint);
+}
+
+.rootAppearanceAccentOrangeFire {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_orange_fire);
+}
+
+.rootAppearanceAccentOrange {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_orange);
+}
+
+.rootAppearanceAccentOrangePeach {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_orange_peach);
+}
+
+.rootAppearanceAccentGreen {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_green);
+}
+
+.rootAppearanceAccentGreen.rootModeSecondary {
+  --vkit_internal--content_badge_custom_bg: var(--vkui--color_background_positive_tint);
+}
+
+.rootAppearanceAccentSecondary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_secondary);
+}
+
+.rootAppearanceAccentTint {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_background_accent_tint);
+}
+
+.rootAppearanceAccentBlue {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_blue);
+}
+
+.rootAppearanceAccentPurple {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_purple);
+}
+
+.rootAppearanceAccentViolet {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_violet);
+}
+
+.rootAppearanceAccentRaspberryPink {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_raspberry_pink);
+}
+
+.rootAppearanceAccentPink {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_pink);
+}
+
+.rootAppearanceAccentGray {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_accent_gray);
+}
+
+.rootAppearanceNeutral.rootModePrimary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_background_secondary);
+  --vkit_internal--content_badge_custom_fg: var(--vkui--color_text_primary);
+}
+
+.rootAppearanceNeutral.rootModeSecondary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_text_secondary);
+  --vkit_internal--content_badge_custom_bg: var(--vkui--color_background_secondary);
+}
+
+.rootAppearanceNeutral.rootModeOutline {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_text_secondary);
+  --vkit_internal--content_badge_custom_border_color: var(--vkui--color_icon_secondary);
+}
+
+.rootAppearanceOverlay.rootModePrimary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_overlay_primary);
+}
+
+.rootAppearanceOverlay.rootModeSecondary {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_text_contrast);
+  --vkit_internal--content_badge_custom_bg: var(--vkui--color_overlay_secondary);
+}
+
+.rootAppearanceOverlay.rootModeOutline {
+  --vkit_internal--content_badge_main_color: var(--vkui--color_text_contrast);
+  --vkit_internal--content_badge_custom_bg: var(--vkui--color_overlay_primary);
+}
+
+.rootModePrimary {
+  background-color: var(--vkit_internal--content_badge_main_color);
+  color: var(--vkit_internal--content_badge_custom_fg, var(--vkui--color_text_contrast));
+}
+
+.rootModeSecondary {
+  color: var(--vkit_internal--content_badge_main_color);
+  background-color: var(--vkit_internal--content_badge_custom_bg);
+}
+
+.rootModeSecondary:before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: var(--vkit_internal--content_badge_custom_bg, "");
+  background-color: currentColor;
+  opacity: .12;
+  border-radius: inherit;
+}
+
+.rootModeOutline {
+  color: var(--vkit_internal--content_badge_main_color);
+  background-color: var(--vkit_internal--content_badge_custom_bg);
+}
+
+.rootModeOutline:before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  border: var(--vkui--size_border--regular) solid;
+  border-color: var(--vkit_internal--content_badge_custom_border_color, currentColor);
+  border-radius: inherit;
+}

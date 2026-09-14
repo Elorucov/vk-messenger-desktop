@@ -1,0 +1,45 @@
+.root {
+  position: relative;
+}
+
+.root :first-child,
+.root :last-child {
+  position: absolute;
+}
+
+.root :first-child {
+  left: 0;
+  z-index: 2;
+}
+
+.root :last-child {
+  right: 0;
+}
+
+.rootTop :first-child,
+.rootBottom :last-child {
+  top: 0;
+}
+
+.rootTop :last-child,
+.rootBottom :first-child {
+  bottom: 0;
+}
+
+.rootStroke :last-child {
+  --vkui_internal--avatarstack_stroke_size: 1.5px;
+  --vkui_internal--avatarstack_mask_size: calc( var(--vkui_internal--avatarstack_avatar_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0) );
+  mask: radial-gradient(farthest-side,#000 97%,#0000) center / var(--vkui_internal--avatarstack_mask_size) var(--vkui_internal--avatarstack_mask_size) no-repeat,linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.rootStroke.rootTop :last-child {
+  -webkit-mask-position: calc((var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0)) * -1) calc((var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0)) * -1);
+  mask-position: calc((var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0)) * -1) calc((var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0)) * -1);
+}
+
+.rootStroke.rootBottom :last-child {
+  -webkit-mask-position: calc((var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0)) * -1) calc(var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0));
+  mask-position: calc((var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0) + var(--vkui_internal--avatarstack_stroke_size, 0)) * -1) calc(var(--vkui_internal--avatarstack_size, 0) - var(--vkui_internal--avatarstack_mask_size, 0));
+}

@@ -1,0 +1,30 @@
+.elevation1.elevation1 {
+  box-shadow: var(--vkui--elevation1);
+}
+
+.elevation2.elevation2 {
+  box-shadow: var(--vkui--elevation2);
+}
+
+.elevation3.elevation3 {
+  box-shadow: var(--vkui--elevation3);
+}
+
+.elevation4.elevation4 {
+  box-shadow: var(--vkui--elevation4);
+}
+
+[dir=rtl] .root:global(.vkuiButton__sizeS) :global(.vkuiButton__after),
+[dir=rtl] .root:global(.vkuiButton__sizeS) :global(.vkuiButton__content):last-child {
+  padding-right: var(--vkui--size_button_base_small_padding_horizontal--regular);
+}
+
+[dir=rtl] .root:global(.vkuiButton__sizeM) :global(.vkuiButton__after),
+[dir=rtl] .root:global(.vkuiButton__sizeM) :global(.vkuiButton__content):last-child {
+  padding-right: var(--vkui--size_button_base_medium_padding_horizontal--regular);
+}
+
+[dir=rtl] .root:global(.vkuiButton__sizeL) :global(.vkuiButton__after),
+[dir=rtl] .root:global(.vkuiButton__sizeL) :global(.vkuiButton__content):last-child {
+  padding-right: var(--vkui--size_button_base_large_padding_horizontal--regular);
+}

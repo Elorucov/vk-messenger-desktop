@@ -1,0 +1,35 @@
+.manageButton {
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_l) ease;
+}
+
+.root:hover .manageButton {
+  opacity: 1;
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.micIcon {
+  margin-left: 2px;
+  flex-shrink: 0;
+}
+
+.stream {
+  z-index: 0;
+}
+
+.reaction {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,16 @@
+.containerTextAlignCenter {
+  text-align: center;
+}
+
+.containerTextAlignCenter :global(.vkuiTooltipBase__content)>div {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.containerTextAlignRight {
+  text-align: right;
+}
+
+.containerTextAlignRight :global(.vkuiTooltipBase__content)>div {
+  margin-left: auto;
+}

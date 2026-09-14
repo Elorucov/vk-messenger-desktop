@@ -1,0 +1,160 @@
+.VideoCommentsComposer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--vkui--color_background_content);
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+  border-radius: 12px;
+}
+
+.VideoCommentsComposer__stickerEmojiMenuPopper {
+  height: 480px;
+  width: 388px;
+  z-index: var( --me-dialog-layer,auto );
+}
+
+.VideoCommentsComposer__attaches,
+.VideoCommentsComposer__reply,
+.VideoCommentsComposer__editing {
+  border-bottom: 1px solid var(--vkui--color_separator_secondary);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.VideoCommentsComposer__attaches {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.VideoCommentsComposer__inputPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 6px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.VideoCommentsComposer__inputWrapper {
+  margin: 8px 6px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.VideoCommentsComposer__input.VideoCommentsComposer__input.VideoCommentsComposer__input {
+  min-height: var(--messageLineHeight);
+  max-height: calc(12 * var(--messageLineHeight));
+  color: var(--vkui--color_text_contrast);
+}
+
+.VideoCommentsComposer__input:focus {
+  outline: none;
+}
+
+.VideoCommentsComposer__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_medium);
+  cursor: pointer;
+  opacity: .72;
+  height: 36px;
+  min-width: 36px;
+  width: 36px;
+}
+
+.VideoCommentsComposer__button:hover {
+  opacity: 1;
+}
+
+.VideoCommentsComposer__button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.VideoCommentsComposer__buttonIcon {
+  --offset: calc((100% - 30px)/2);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 30px;
+  top: var(--offset);
+  left: 0;
+  right: 0;
+  bottom: var(--offset);
+}
+
+.VideoCommentsComposer__buttonIcon--submit,
+.VideoCommentsComposer__buttonIcon--edit,
+.VideoCommentsComposer__buttonIcon--loading,
+.VideoCommentsComposer__buttonIcon--delete,
+.VideoCommentsComposer__buttonIcon--block {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s,-webkit-transform .2s;
+}
+
+.VideoCommentsComposer__button--submit .VideoCommentsComposer__buttonIcon--submit,
+.VideoCommentsComposer__button--edit .VideoCommentsComposer__buttonIcon--edit,
+.VideoCommentsComposer__button--loading .VideoCommentsComposer__buttonIcon--loading,
+.VideoCommentsComposer__button--delete .VideoCommentsComposer__buttonIcon--delete,
+.VideoCommentsComposer__button--block .VideoCommentsComposer__buttonIcon--block {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.VideoCommentsComposer__button--submitActive .VideoCommentsComposer__buttonIcon--submit {
+  color: var(--vkui--color_icon_accent);
+}
+
+.VideoCommentsComposer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+}
+
+.VideoCommentsComposer__blockedIcon {
+  color: var(--vkui--color_accent_orange);
+  margin-left: 2px;
+  margin-right: 14px;
+}
+
+.VideoCommentsComposer__blockedMessage {
+  font: 12px/14px var(--font);
+  color: var(--vkui--color_text_subhead);
+  letter-spacing: .2px;
+}

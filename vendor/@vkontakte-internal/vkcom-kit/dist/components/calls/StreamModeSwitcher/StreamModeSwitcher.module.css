@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 18px;
+  background-color: var(--vkui--color_overlay_secondary);
+  border: var(--vkui--size_border--regular) solid var(--vkui--color_field_border_alpha);
+  width: max-content;
+}
+
+.item {
+  display: flex;
+  padding: 4px 8px;
+  gap: 4px;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.item:hover,
+.activeItem {
+  border-radius: 18px;
+  background-color: var(--vkui--color_background_contrast_secondary_alpha);
+}

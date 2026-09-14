@@ -1,0 +1,127 @@
+.ComposerOverMessage {
+  width: 100%;
+  padding: var(--composerOverMessagePadding);
+  --composerOverMessagePadding: 18px 6px;
+}
+
+.ComposerOverMessage--compact {
+  --composerOverMessagePadding: 8px 6px;
+}
+
+.ComposerOverMessage__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-areas: "actions separator title close" "actions separator content close";
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-rows: auto auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ComposerOverMessage__actions {
+  grid-area: actions;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ComposerOverMessage__actionsButtonClickArea {
+  position: absolute;
+  inset: 0;
+}
+
+.ComposerOverMessage__separator {
+  grid-area: separator;
+  width: 2px;
+  margin: calc(.25 * var(--messageVerticalIndent)) 6px;
+  border-radius: 2px;
+  background: var(--vkui--vkontakte_color_im_forward_line_alpha);
+}
+
+.ComposerOverMessage--highlighted .ComposerOverMessage__separator {
+  background: var(--vkui--color_background_accent);
+}
+
+.ComposerOverMessage__title {
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  color: var(--vkui--color_text_link);
+  font: 500 var(--composerOverMessageTitleFontSize) /var(--composerOverMessageTitleLineHeight) var(--font);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.ComposerOverMessage__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ComposerOverMessage__date {
+  margin-left: 6px;
+  font: 400 var(--composerOverMessageDateFontSize) /var(--composerOverMessageDateLineHeight) var(--font);
+  color: var(--vkui--color_text_secondary);
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+.ComposerOverMessage__content {
+  font: 400 var(--composerOverMessageContentFontSize) /var(--composerOverMessageContentLineHeight) var(--font);
+  grid-area: content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: -.004em;
+}
+
+.ComposerOverMessage__close {
+  grid-area: close;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_medium);
+  cursor: pointer;
+  opacity: .72;
+  height: 36px;
+  width: 36px;
+  margin-left: 2px;
+}
+
+.ComposerOverMessage__close:hover {
+  opacity: 1;
+}
+
+.ComposerOverMessage__actionIcon {
+  margin: 0 8px;
+  color: var(--vkui--color_icon_accent);
+}
+
+.ComposerOverMessage__actionsMenu {
+  margin-bottom: 8px;
+  margin-left: -6px;
+}
+
+.ComposerOverMessage__actionsButton {
+  padding: 6px;
+  color: var(--vkui--color_icon_secondary);
+}

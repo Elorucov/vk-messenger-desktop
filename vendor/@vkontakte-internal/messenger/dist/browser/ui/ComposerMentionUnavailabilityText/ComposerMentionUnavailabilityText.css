@@ -1,0 +1,13 @@
+.MentionSuggestion__scheduleMessage {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_negative);
+  margin-left: 4px;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.MentionSuggestion__scheduleMessageWrapper {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

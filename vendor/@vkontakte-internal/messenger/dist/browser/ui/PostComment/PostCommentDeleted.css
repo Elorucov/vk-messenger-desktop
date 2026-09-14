@@ -1,0 +1,19 @@
+.PostCommentDeleted__text {
+  font: 400 14px/18px var(--font);
+  letter-spacing: .15px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.PostCommentDeleted__buttonRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.PostCommentDeleted__thread--marginTop {
+  margin-top: 6px;
+}

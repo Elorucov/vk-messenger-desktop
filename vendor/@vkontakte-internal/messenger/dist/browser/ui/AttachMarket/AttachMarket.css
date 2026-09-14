@@ -1,0 +1,4 @@
+.AttachMarket__priceOld {
+  text-decoration: line-through;
+  color: var(--vkui--color_text_tertiary);
+}

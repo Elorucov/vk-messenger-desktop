@@ -1,0 +1,77 @@
+.InviteContactModal {
+  margin: 20px 24px 24px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.InviteContactModal--fullScreen {
+  max-width: 100%;
+}
+
+.InviteContactModal__text {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--vkui--color_text_primary);
+}
+
+.InviteContactModal__phone {
+  color: var(--vkui--color_text_accent);
+}
+
+.InviteContactModal__textWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.InviteContactModal__linkCopyWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.InviteContactModal__linkCopyNotice {
+  color: var(--vkui--color_text_secondary);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
+.InviteContactModal__linkCopyNotice--blink {
+  opacity: 1;
+  -webkit-transition: opacity 0ms;
+  transition: opacity 0ms;
+}
+
+.InviteContactModal__linkBox {
+  width: 100%;
+}

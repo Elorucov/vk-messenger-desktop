@@ -1,0 +1,99 @@
+.ChannelMembers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 8px 8px;
+}
+
+.ChannelMember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ChannelMember:hover {
+  background-color: var(--vkui--color_transparent--hover);
+  cursor: pointer;
+}
+
+.ChannelMember__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.ChannelMember__menuButton {
+  background: none;
+  border: none;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ChannelMember__name {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ChannelMember__subnote {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--vkui--color_text_secondary);
+  white-space: nowrap;
+}
+
+.ChannelMembers__empty {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ChannelMembers__spinner {
+  margin: 12px 0;
+}
+
+.ChannelMembers__search {
+  position: sticky;
+  top: 47px;
+  padding: 8px 0;
+  background: -webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_background_content)),color-stop(93%,var(--vkui--color_background_content)),to(transparent));
+  background: linear-gradient(to bottom,var(--vkui--color_background_content) 0%,var(--vkui--color_background_content) 93%,transparent 100%);
+  z-index: 1;
+}
+
+.ChannelMainWrapper__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_icon_accent);
+}
+
+.ChannelMainWrapper__icon--edu {
+  color: var(--vkui--color_accent_purple);
+}
+
+.ChannelMainWrapper__button {
+  margin-top: 24px;
+}
+
+.ChannelMainWrapper__button--edu.vkuiButton__host.vkuiButton__appearanceAccent {
+  background-color: var(--vkui--color_accent_purple);
+}
+
+.ChannelMainWrapper__button--edu.vkuiButton__host.vkuiButton__appearanceAccent.vkuiButton__hover {
+  background-color: var(--vkui--color_accent_purple--hover);
+}

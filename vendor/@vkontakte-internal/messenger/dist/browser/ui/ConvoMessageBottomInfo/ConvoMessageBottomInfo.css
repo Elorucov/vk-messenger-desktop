@@ -1,0 +1,110 @@
+.ConvoMessageBottomInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  float: right;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_icon_accent);
+}
+
+.ConvoMessageBottomInfo--clickable {
+  cursor: pointer;
+}
+
+.ConvoMessageBottomInfo__date {
+  text-align: right;
+  font: 400 var(--messageDateFontSize) /var(--messageDateFontSize) var(--font);
+  color: var(--vkui--color_text_secondary);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ConvoMessageBottomInfo__date--out,
+.ConvoMessageBottomInfo__views.ConvoMessageBottomInfo__views--out {
+  color: var(--vkui--color_background_accent_themed);
+}
+
+.ConvoMessageBottomInfo__importantIcon {
+  width: var(--messageDateFontSize)!important;
+  height: var(--messageDateFontSize)!important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 1px;
+}
+
+.ConvoMessageBottomInfo__outStatusIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(var(--messageDateFontSize) + 3px);
+  height: var(--messageDateFontSize);
+  margin-left: 1px;
+}
+
+.ConvoMessageBottomInfo__views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: .3px;
+  text-align: right;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoMessage--withWallOrWallReplyOnly:not(.ConvoMessage--withReactions) .ConvoMessageBottomInfo {
+  padding-right: 10px;
+}
+
+.ConvoMessageBottomInfo__viewsIcon {
+  margin-right: 4px;
+}
+
+.ConvoMessageBottomInfo--withViews {
+  opacity: 1;
+  padding-right: 10px;
+}
+
+.ConvoMessage--withMediaAttach .ConvoMessageBottomInfo--withViews,
+.ConvoMessage--withReactions .ConvoMessageBottomInfo--withViews {
+  padding-right: 0;
+}
+
+.ConvoMessage--withPostReactionsTrigger.ConvoMessage--withReactions .ConvoMessageBottomInfo {
+  margin-bottom: -12px;
+}
+
+.MessageOutStatusIconHint__icon {
+  display: inline;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.ConvoMessageInfoTooltip {
+  --tooltipBackground: var(--vkui--color_background_content);
+  color: var(--vkui--color_text_primary--active);
+  max-width: 165px;
+  cursor: pointer;
+  text-align: center;
+}

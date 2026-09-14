@@ -1,0 +1,77 @@
+.card {
+  --videocard-hover-transition-duration: var(--vkui--animation_duration_l);
+  --videocard-hover-transition-fn: ease-in-out;
+  --videocard-border-radius: 10px;
+  --videocard-privacy-shadow-color: var(--black_alpha24, rgba(0, 0, 0, .24));
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: transparent;
+}
+
+.cardHorizontal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.cardHorizontalMiniHover {
+  background-color: var(--vkui--color_background_content--hover);
+}
+
+.cardHorizontalMiniActive {
+  background-color: var(--vkui--color_background_content--active);
+}
+
+.cardMini {
+  padding: 8px 8px 0;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.cardMini:hover {
+  text-decoration: none;
+}
+
+.cardNoRounded {
+  border-radius: unset;
+}
+
+.videoContainer {
+  position: relative;
+  border-radius: var(--videocard-border-radius, 10px);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.videoContainerOverflow {
+  overflow: visible;
+}
+
+.videoContainer:after {
+  pointer-events: none;
+  border-radius: inherit;
+  border: var(--vkui--size_border--regular) solid var(--vkui--color_image_border_alpha);
+}
+
+.videoContainerFullWidth {
+  border-radius: 0;
+}
+
+.videoContainerWithoutInfo {
+  margin-bottom: 0;
+}
+
+.videoContainerWithEpisodes {
+  align-self: flex-start;
+}
+
+.focusOutlined {
+  padding: 10px;
+}
+
+.focusOutlined:focus-visible {
+  outline: 2px solid #2a5885;
+  outline-offset: -2px;
+  border-radius: var(--videocard-border-radius, 10px);
+}

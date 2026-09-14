@@ -1,0 +1,20 @@
+.room {
+  display: flex;
+  padding: 5px 12px;
+  align-items: center;
+  gap: 10px;
+}
+
+.room:hover {
+  border-radius: var(--vkui--size_border_radius--regular);
+  background-color: var(--white_alpha16);
+}
+
+.roomName {
+  display: flex;
+  align-items: center;
+}
+
+.roomIcon {
+  margin-right: 4px;
+}

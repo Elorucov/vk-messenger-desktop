@@ -1,0 +1,171 @@
+.MediaViewerToolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 48px;
+  width: 100%;
+}
+
+.MediaViewerToolbar__count {
+  visibility: hidden;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_subhead);
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 450px) {
+  .MediaViewerToolbar__count {
+    visibility: visible;
+  }
+}
+
+.MediaViewerToolbar__author {
+  display: grid;
+  grid-template-areas: "avatar name name" "avatar date date";
+  grid-template-rows: auto 14px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MediaViewerToolbar__avatar {
+  grid-area: avatar;
+  margin-right: 12px;
+}
+
+.MediaViewerToolbar__authorName {
+  grid-area: name;
+  margin-bottom: 2px;
+  color: var(--vkui--color_text_primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: none;
+  text-decoration: none;
+}
+
+.MediaViewerToolbar__authorName--cropped {
+  max-width: 200px;
+}
+
+.MediaViewerToolbar__authorName--extended {
+  max-width: 100%;
+}
+
+.MediaViewerToolbar__publicAuthor {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.MediaViewerToolbar__publicName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.MediaViewerToolbar__verified {
+  color: #5c9ce6;
+}
+
+.MediaViewerToolbar__authorName:hover {
+  text-decoration: none;
+}
+
+.MediaViewerToolbar__authorName--link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.MediaViewerToolbar__uploadAt {
+  grid-area: date;
+  color: var(--vkui--color_text_tertiary);
+  font-size: 12px;
+  line-height: 14px;
+  display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .MediaViewerToolbar__authorName,
+  .MediaViewerToolbar__uploadAt {
+    display: block;
+  }
+}
+
+.MediaViewerToolbar__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 2px;
+}
+
+.MediaViewerToolbar__action {
+  z-index: 1;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  -webkit-transition: background-color,color .2s ease;
+  transition: background-color,color .2s ease;
+}
+
+.MediaViewerToolbar__action:active {
+  background-color: var(--vkui--color_transparent--hover);
+  color: var(--vkui--color_text_primary);
+}
+
+@media (hover: hover) {
+  .MediaViewerToolbar__action:hover {
+    background-color: var(--vkui--color_transparent--hover);
+    color: var(--vkui--color_text_primary);
+  }
+}
+
+.MediaViewerToolbar__actionDivider {
+  width: 1px;
+  height: 24px;
+  margin: 0 6px;
+  background-color: var(--vkui--color_separator_primary,#363738);
+  display: block;
+}

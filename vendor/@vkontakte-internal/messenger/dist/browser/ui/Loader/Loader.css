@@ -1,0 +1,98 @@
+:where(.Loader) {
+  --smallSize: 24px;
+  --regularSize: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.Loader--regular {
+  min-width: var(--regularSize);
+  width: var(--regularSize);
+  height: var(--regularSize);
+}
+
+.Loader--small {
+  min-width: var(--smallSize);
+  width: var(--smallSize);
+  height: var(--smallSize);
+}
+
+.Loader--empty,
+.Loader--retry {
+  background-color: #fff6;
+}
+
+.Loader .vkuiSpinner__host {
+  color: var(--vkui--color_text_contrast);
+}
+
+:where(.Loader__progress) {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 4px rgba(255,255,255,.4) inset;
+  box-shadow: 0 0 0 4px #fff6 inset;
+}
+
+:where(.Loader--small .Loader__progress) {
+  -webkit-box-shadow: 0 0 0 2px rgba(255,255,255,.4) inset;
+  box-shadow: 0 0 0 2px #fff6 inset;
+}
+
+:where(.Loader__progress) circle {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: stroke-dashoffset .1s ease;
+  transition: stroke-dashoffset .1s ease;
+}
+
+.Loader--small .Loader__progress circle {
+  stroke-width: 2;
+}
+
+.Loader__button {
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+:where(.Loader__content) {
+  font: inherit;
+  font-weight: 600;
+  color: var(--vkui--color_text_primary);
+}

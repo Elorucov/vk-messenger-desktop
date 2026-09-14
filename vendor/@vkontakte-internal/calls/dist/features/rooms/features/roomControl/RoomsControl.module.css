@@ -1,0 +1,30 @@
+.modal {
+  --left-block-width: 345px;
+  z-index: var(--calls-modal-z-index, 1002);
+}
+
+.modal:global(.CallsModal) :global(.BaseModal__content) {
+  max-width: 845px;
+}
+
+.modal :global(.CallsModalBody) {
+  padding: 0;
+}
+
+.modal :global(.CallsBaseModal__content) {
+  width: 845px;
+}
+
+.modal .modalBody {
+  width: 845px;
+  display: grid;
+  grid-template-columns: var(--left-block-width) 1fr;
+}
+
+.modal .footerSettings {
+  display: flex;
+  left: var(--left-block-width);
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}

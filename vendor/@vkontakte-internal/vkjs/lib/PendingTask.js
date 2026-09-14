@@ -1,0 +1,1 @@
+var e=function(){var e=this;this.get=function(){return e.promise},this.resolve=function(r){return e.resolveHandler(r)},this.reject=function(r){return e.rejectHandler(r)},this.promise=new Promise((function(r,t){e.resolveHandler=r,e.rejectHandler=t}))};export default e;

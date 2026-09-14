@@ -1,0 +1,5 @@
+:global(.vkuiInternalTwoColumnLayout) .root {
+  position: relative;
+  width: var(--narrow-column-width, 345px);
+  height: auto;
+}

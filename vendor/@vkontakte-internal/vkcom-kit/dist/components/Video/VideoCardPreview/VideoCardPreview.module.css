@@ -1,0 +1,19 @@
+.top {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 1;
+}
+
+.footer {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.privacyIcon {
+  margin-right: 8px;
+}

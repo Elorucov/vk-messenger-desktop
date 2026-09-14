@@ -1,0 +1,46 @@
+.wrapper {
+  --icon-microphone-indicator-level: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes level {
+  0% {
+    clip-path: inset(70% 0 0);
+  }
+  5% {
+    clip-path: inset(40% 0 0);
+  }
+  15% {
+    clip-path: inset(20% 0 0);
+  }
+  30% {
+    clip-path: inset(80% 0 0);
+  }
+  45% {
+    clip-path: inset(65% 0 0);
+  }
+  60% {
+    clip-path: inset(55% 0 0);
+  }
+  75% {
+    clip-path: inset(15% 0 0);
+  }
+  90% {
+    clip-path: inset(45% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0);
+  }
+}
+
+.voiceLevelIconActive {
+  clip-path: inset(calc(100% - var(--icon-microphone-indicator-level, 100%)) 0 0);
+  position: absolute;
+  top: 0;
+  transition: clip-path var(--vkui--animation_duration_m);
+}
+
+.voiceLevelIconActiveAnimation {
+  animation: 2s infinite alternate level;
+}

@@ -1,0 +1,48 @@
+:root,
+[scheme=vkcom_light],
+[scheme=bright_light],
+.vkui--vkBase--light,
+.vkui--vkCom--light {
+  --im_bubble_incoming_alternate_highlighted: #f9f9f9;
+  --im_bubble_incoming_expiring_highlighted: #ccd3ff;
+  --im_bubble_outgoing_highlighted: #add3ff;
+  --im_reaction_chip_incoming: rgba(68,123,186,.2);
+  --im_reaction_chip_incoming_text: var(--vkui--color_text_accent);
+  --im_reaction_chip_incoming--active: var(--vkui--color_background_accent);
+  --im_reaction_chip_incoming_text--active: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outgoing: rgba(68,123,186,.2);
+  --im_reaction_chip_outgoing_text: var(--vkui--color_text_accent);
+  --im_reaction_chip_outgoing--active: var(--vkui--color_background_accent);
+  --im_reaction_chip_outgoing_text--active: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outside_bubble: rgba(0,0,0,.06);
+  --im_reaction_chip_outside_bubble_text: var(--vkui--color_text_subhead);
+  --im_reaction_chip_outside_bubble--active: var( --vkui--color_background_accent );
+  --im_reaction_chip_outside_bubble_text--active: var( --vkui--color_text_contrast );
+  --im_classic_message--hover: rgba(0,16,61,.02);
+}
+
+:root,
+[scheme=vkcom_dark],
+[scheme=space_gray],
+.vkui--vkBase--dark,
+.vkui--vkCom--dark {
+  --im_bubble_incoming_alternate_highlighted: #5d5f61;
+  --im_bubble_incoming_expiring_highlighted: #404980;
+  --im_bubble_outgoing_highlighted: #405c82;
+  --vkui--vkontakte_color_im_bubble_outgoing: #1e2f42;
+  --vkui--vkontakte_color_im_bubble_outgoing--hover: #2a415c;
+  --vkui--vkontakte_color_im_bubble_outgoing--active: #2a415c;
+  --im_reaction_chip_incoming: rgba(255,255,255,.3);
+  --im_reaction_chip_incoming_text: var(--vkui--color_text_contrast);
+  --im_reaction_chip_incoming--active: var(--vkui--color_background_accent);
+  --im_reaction_chip_incoming_text--active: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outgoing: rgba(255,255,255,.3);
+  --im_reaction_chip_outgoing_text: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outgoing--active: var(--vkui--color_background_accent);
+  --im_reaction_chip_outgoing_text--active: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outside_bubble: rgba(255,255,255,.3);
+  --im_reaction_chip_outside_bubble_text: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outside_bubble--active: var( --vkui--color_background_accent );
+  --im_reaction_chip_outside_bubble_text--active: var( --vkui--color_text_contrast );
+  --im_classic_message--hover: rgba(255,255,255,.02);
+}

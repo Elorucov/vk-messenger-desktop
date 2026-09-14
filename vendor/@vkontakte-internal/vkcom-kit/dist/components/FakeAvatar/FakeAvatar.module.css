@@ -1,0 +1,7 @@
+.root.root {
+  display: flex;
+  color: unset;
+  background: unset;
+  align-items: unset;
+  justify-content: unset;
+}

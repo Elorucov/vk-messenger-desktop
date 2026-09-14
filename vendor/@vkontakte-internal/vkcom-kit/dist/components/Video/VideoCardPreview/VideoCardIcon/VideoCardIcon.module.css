@@ -1,0 +1,4 @@
+.icon {
+  color: var(--vkui--color_stroke_contrast);
+  filter: drop-shadow(0 0 4px var(--videocard-privacy-shadow-color, var(--black_alpha24))) drop-shadow(0 0 1px var(--videocard-privacy-shadow-color, var(--black_alpha24)));
+}

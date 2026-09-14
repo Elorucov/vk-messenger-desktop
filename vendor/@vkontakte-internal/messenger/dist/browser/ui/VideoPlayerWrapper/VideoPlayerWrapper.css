@@ -1,0 +1,23 @@
+.VideoPlayerWrapper__spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: var(--vkui--color_text_contrast);
+}
+
+.VideoPlayerWrapper__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_icon_accent);
+}
+
+.VideoPlayerWrapper__button {
+  margin-top: 24px;
+}

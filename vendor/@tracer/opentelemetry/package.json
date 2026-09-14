@@ -1,0 +1,9 @@
+{
+  "name": "@tracer/opentelemetry",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.mjs",
+  "module": "./lib/index.mjs",
+  "dependencies": {}
+}

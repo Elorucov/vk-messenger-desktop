@@ -1,0 +1,58 @@
+.ConvoAttachesMiniAppWidgets {
+  padding: 0 8px;
+}
+
+.ConvoAttachesMiniAppWidgets__itemWrapper {
+  border-radius: var(--vkui--size_border_radius--regular);
+  overflow: hidden;
+}
+
+.ConvoAttachesMiniAppWidgets__itemWrapper a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.ConvoAttachesMiniAppWidgets__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  padding: 8px;
+}
+
+.ConvoAttachesMiniAppWidgets__itemContent {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.ConvoAttachesMiniAppWidgets__richCell {
+  padding: 0;
+}
+
+.ConvoAttachesMiniAppWidgets__richCell:hover {
+  cursor: pointer;
+}
+
+.ConvoAttachesMiniAppWidgets__dropdown {
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  -webkit-transition: all 90ms ease-out;
+  transition: all 90ms ease-out;
+  overflow: hidden;
+}
+
+.ConvoAttachesMiniAppWidgets__dropdown--open,
+.ConvoAttachesMiniAppWidgets__item:hover .ConvoAttachesMiniAppWidgets__dropdown {
+  width: 20px;
+  opacity: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 6px;
+}

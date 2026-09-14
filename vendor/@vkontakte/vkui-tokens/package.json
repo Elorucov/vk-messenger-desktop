@@ -1,0 +1,6 @@
+{
+  "name": "@vkontakte/vkui-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./themes/vkBase/cssVars/theme/index.js"
+}

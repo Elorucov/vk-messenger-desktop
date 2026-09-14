@@ -1,0 +1,25 @@
+.button {
+  appearance: none;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  display: block;
+  color: currentColor;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 34px;
+  border-radius: 9999px;
+}
+
+.button[disabled] {
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+.ios {
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+.button>svg {
+  padding: 5px;
+}

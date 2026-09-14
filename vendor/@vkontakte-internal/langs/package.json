@@ -1,0 +1,13 @@
+{
+  "name": "@vkontakte-internal/langs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "effector": "22.8.8",
+    "effector-react": "22.5.4",
+    "react": "18.3.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "active-win-fork",
+  "version": "8.2.1",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "peerDependencies": {
+    "node-addon-api": "^5.0.0",
+    "node-gyp": "^9.3.0"
+  }
+}

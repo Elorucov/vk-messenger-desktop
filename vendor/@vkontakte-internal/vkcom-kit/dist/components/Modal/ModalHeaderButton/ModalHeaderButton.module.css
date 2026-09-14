@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  color: var(--vkui--color_icon_medium);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.button:not(:first-child) {
+  margin-left: 8px;
+}
+
+.button+.button {
+  margin-left: 0;
+}

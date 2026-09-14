@@ -1,0 +1,55 @@
+.wrapper {
+  position: relative;
+  justify-self: center;
+}
+
+.wrapperFlex {
+  display: inline-flex;
+}
+
+.wrapperFlexLeft {
+  flex-direction: row-reverse;
+}
+
+.wrapperFlexRight {
+  flex-direction: row;
+}
+
+.icon {
+  transition: transform var(--vkui--animation_duration_l) linear;
+}
+
+.iconAbsolute {
+  bottom: 0;
+  position: absolute;
+}
+
+.iconAbsoluteLeft {
+  left: -24px;
+}
+
+.iconAbsoluteRight {
+  right: -24px;
+}
+
+.iconAbsoluteInsetLeft {
+  left: 0;
+}
+
+.iconAbsoluteInsetRight {
+  right: 0;
+}
+
+.iconRelative {
+  position: relative;
+  align-self: flex-end;
+  --icon-margin: 8px;
+}
+
+.iconRelativeLeft {
+  margin-right: var(--icon-margin, 8px);
+}
+
+.iconRelativeRight {
+  margin-left: var(--icon-margin, 8px);
+}

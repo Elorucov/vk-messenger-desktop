@@ -1,0 +1,53 @@
+.group,
+.groupModeCard.groupPaddingNone {
+  --group-padding: 0px;
+}
+
+.groupModeCard.groupPaddingS {
+  --group-padding: 4px;
+}
+
+.groupModeCard.groupPaddingM {
+  --group-padding: 8px;
+}
+
+.group.group.groupModeCard.groupModeCard.noTopRounded {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.group.group.groupModeCard.groupModeCard.noBottomRounded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.stretched {
+  min-height: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.group.group.groupModeCard.groupModeCard {
+  padding: var(--group-padding, 0);
+}
+
+.horizontalContentExpanded.horizontalContentExpanded {
+  width: calc(100% + var(--group-padding, 0) * 2);
+  margin-left: calc(-1 * var(--group-padding, 0));
+}
+
+.verticalContentExpanded {
+  margin: calc(-1 * var(--group-padding, 0)) auto;
+}
+
+.groupModeCard .horizontalContentExpanded {
+  padding: 0 var(--vkui--size_border--regular);
+  box-sizing: border-box;
+}
+
+.groupModePlain .verticalContentExpanded {
+  margin: -8px auto;
+  padding: var(--vkui--size_border--regular) 0;
+  box-sizing: border-box;
+}

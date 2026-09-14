@@ -1,0 +1,346 @@
+.root {
+  --border-radius: 2px;
+  position: relative;
+  text-align: left;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.readonly.root {
+  cursor: auto;
+}
+
+.rootCursorInherit.rootCursorInherit {
+  cursor: inherit;
+}
+
+.sliderSizeM,
+.sliderSizeL {
+  height: 16px;
+}
+
+.sliderSizeXl {
+  height: 17px;
+}
+
+.heightByLine.sliderSizeM {
+  height: 2px;
+}
+
+.heightByLine.sliderSizeL {
+  height: 3px;
+}
+
+.heightByLine.sliderSizeXl {
+  height: 5px;
+}
+
+.root:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: var(--border-radius, 2px);
+}
+
+.vertical.root {
+  width: auto;
+  height: 100%;
+}
+
+.vertical.sliderSizeM,
+.vertical.sliderSizeL {
+  width: 16px;
+}
+
+.vertical.sliderSizeXl {
+  width: 17px;
+}
+
+.vertical.heightByLine.sliderSizeM {
+  width: 2px;
+}
+
+.vertical.heightByLine.sliderSizeL {
+  width: 3px;
+}
+
+.vertical.heightByLine.sliderSizeXl {
+  width: 5px;
+}
+
+.vertical.root:before {
+  width: auto;
+  height: 100%;
+}
+
+.root:hover .handle {
+  opacity: 1;
+}
+
+.sliderSizeM:before {
+  top: 7px;
+  height: 2px;
+}
+
+.sliderSizeL:before {
+  top: 6px;
+  height: 3px;
+}
+
+.heightByLine.sliderSizeL:before {
+  top: 0;
+}
+
+.sliderSizeXl:before {
+  top: 6px;
+  height: 5px;
+}
+
+.heightByLine.sliderSizeM:before,
+.heightByLine.sliderSizeXl:before,
+.heightByLine.sliderSizeL:before {
+  top: 0;
+}
+
+.vertical.sliderSizeM:before {
+  top: 0;
+  left: 7px;
+  width: 2px;
+}
+
+.vertical.sliderSizeL:before {
+  top: 0;
+  left: 6px;
+  width: 3px;
+}
+
+.vertical.heightByLine.sliderSizeL:before {
+  left: 0;
+}
+
+.vertical.sliderSizeXl:before {
+  top: 0;
+  left: 6px;
+  width: 5px;
+}
+
+.vertical.heightByLine.sliderSizeM:before,
+.vertical.heightByLine.sliderSizeXl:before,
+.vertical.heightByLine.sliderSizeL:before {
+  left: 0;
+}
+
+.backTrackBackground.sliderPrimary:before {
+  background-color: var(--vkui--color_track_background);
+}
+
+.backSearchFieldBackground.sliderPrimary:before {
+  background-color: var(--vkui--color_search_field_background);
+}
+
+.backTransparent.sliderPrimary:before {
+  background-color: var(--vkui--color_transparent);
+}
+
+.backContrast.sliderPrimary:before {
+  background: var(--vkui--color_background_contrast_secondary_alpha);
+}
+
+.rootBackModeTertiary.sliderPrimary:before {
+  background-color: var(--vkui--color_icon_tertiary);
+}
+
+.backBackgroundTertiaryAlpha.sliderPrimary:before {
+  background-color: var(--vkui--color_background_tertiary_alpha--hover);
+  opacity: .5;
+}
+
+.sliderContrast:before {
+  background-color: var(--white_alpha40);
+}
+
+.middletick {
+  position: absolute;
+  width: 2px;
+  background-color: var(--vkui--color_track_buffer);
+}
+
+.sliderSizeM .middletick {
+  top: 3px;
+  height: 10px;
+}
+
+.sliderSizeL .middletick {
+  top: 3px;
+  height: 11px;
+}
+
+.sliderSizeXl .middletick {
+  top: 2px;
+  height: 13px;
+}
+
+.vertical .middletick {
+  height: 2px;
+  top: auto;
+  bottom: 0;
+}
+
+.vertical.sliderSizeM .middletick {
+  left: 3px;
+  width: 10px;
+}
+
+.vertical.sliderSizeL .middletick {
+  left: 3px;
+  width: 11px;
+}
+
+.vertical.sliderSizeXl .middletick {
+  left: 2px;
+  width: 13px;
+}
+
+.fill {
+  position: absolute;
+  border-radius: var(--border-radius, 2px);
+}
+
+.fillTrackBuffered {
+  background-color: var(--vkui--color_track_buffer);
+}
+
+.fillWriteBarIcon {
+  background-color: var(--vkui--color_write_bar_icon);
+}
+
+.fillAccentOrangePeach {
+  background-color: var(--vkui--color_accent_orange_peach);
+}
+
+.fillTrackBackground {
+  background-color: var(--vkui--color_track_background);
+}
+
+.fillTransparent {
+  background-color: var(--vkui--color_transparent);
+}
+
+.fillContrast {
+  background-color: var(--vkui--color_text_contrast);
+}
+
+.fillTextPrimary {
+  background-color: var(--vkui--color_text_primary);
+}
+
+.fillTextAccent {
+  background-color: var(--vkui--color_text_accent);
+}
+
+.sliderSizeM .fill {
+  top: 7px;
+  height: 2px;
+}
+
+.sliderSizeL .fill {
+  top: 6px;
+  height: 3px;
+}
+
+.sliderSizeXl .fill {
+  top: 6px;
+  height: 5px;
+}
+
+.heightByLine.sliderSizeM .fill,
+.heightByLine.sliderSizeL .fill,
+.heightByLine.sliderSizeXl .fill,
+.vertical .fill {
+  top: auto;
+  bottom: 0;
+}
+
+.vertical.sliderSizeM .fill {
+  left: 7px;
+  width: 2px;
+}
+
+.vertical.sliderSizeL .fill {
+  left: 6px;
+  width: 3px;
+}
+
+.vertical.sliderSizeXl .fill {
+  left: 6px;
+  width: 5px;
+}
+
+.vertical.heightByLine.sliderSizeM .fill,
+.vertical.heightByLine.sliderSizeL .fill,
+.vertical.heightByLine.sliderSizeXl .fill {
+  left: 0;
+}
+
+.handle {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%);
+  transition: opacity var(--vkui--animation_duration_m) ease,background-color var(--vkui--animation_duration_m) ease;
+  opacity: 0;
+  background-color: var(--vkui--color_track_background);
+}
+
+.sliderSizeM .handle {
+  top: 3px;
+  width: 10px;
+  height: 10px;
+}
+
+.sliderSizeL .handle {
+  top: 3px;
+  width: 11px;
+  height: 11px;
+}
+
+.sliderSizeXl .handle {
+  top: 2px;
+  width: 13px;
+  height: 13px;
+}
+
+.vertical .handle {
+  top: auto;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.vertical.sliderSizeM .handle,
+.vertical.sliderSizeL .handle {
+  left: 3px;
+}
+
+.vertical.sliderSizeXl .handle {
+  left: 2px;
+}
+
+.handle:hover {
+  background: var(--vkui--color_track_buffer--active);
+}
+
+.handleShow {
+  opacity: 1;
+}
+
+.handleActive {
+  background: var(--vkui--color_track_buffer--active);
+}
+
+.handleVisible {
+  opacity: 1;
+}
+
+.handleActive:hover {
+  background: var(--vkui--color_track_buffer--hover);
+}

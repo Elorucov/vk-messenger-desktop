@@ -1,0 +1,54 @@
+.RE_ModalBackdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  isolation: isolate;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.RE_ModalBackdrop--tinted {
+  background-color: #000c;
+}
+
+.RE_ModalBackdrop__flesh {
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.RE_ModalBackdrop__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100%;
+  visibility: hidden;
+}
+
+.RE_ModalBackdrop__container--window {
+  padding: 50px;
+}
+
+.RE_ModalBackdrop__container--fullScreen {
+  width: 100%;
+  height: 100%;
+}
+
+:where(.RE_ModalBackdrop__container>*) {
+  visibility: visible;
+}
+
+.StickersPopupRootContainer {
+  height: 100%;
+  width: 100%;
+  overflow: inherit;
+}

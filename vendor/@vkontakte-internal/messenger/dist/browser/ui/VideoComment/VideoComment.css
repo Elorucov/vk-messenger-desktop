@@ -1,0 +1,149 @@
+.VideoComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 16px;
+  overflow: hidden;
+}
+
+.VideoComment__peerLink {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--vkui--color_text_primary);
+  overflow: hidden;
+  margin-right: 3px;
+  min-width: 24px;
+}
+
+.VideoComment__peerLink .PeerTitle__title {
+  white-space: normal;
+  text-overflow: inherit;
+}
+
+.VideoComment__attachments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.VideoComment__content,
+.VideoComment__showMore {
+  line-height: 1.3;
+  font-weight: var(--vkui--font_weight_accent2);
+  font-size: 13px;
+  font-family: var(--font);
+}
+
+.VideoComment__content {
+  margin-top: 2px;
+  margin-left: 8px;
+  color: var(--vkui--color_text_contrast);
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.VideoComment__attachments {
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.VideoComment__title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  color: var(--vkui--color_text_secondary);
+  vertical-align: middle;
+}
+
+.VideoComment__message {
+  font: 400 13px/18px var(--font);
+  margin-bottom: 4px;
+}
+
+.VideoComment__message--deleted {
+  color: var(--vkui--color_text_secondary);
+  line-height: 1.5;
+}
+
+.VideoComment__upperActions {
+  margin-top: 2px;
+  margin-left: 4px;
+}
+
+.VideoComment:hover .VideoCommentDropdown__button--hidden {
+  opacity: .72;
+}
+
+.VideoComment:hover .VideoCommentDropdown__button--hidden:hover {
+  opacity: 1;
+}
+
+.VideoComment__showMore {
+  color: var(--vkui--color_text_link);
+  opacity: .8;
+  -webkit-transition: opacity .15s ease;
+  transition: opacity .15s ease;
+  margin-left: 8px;
+}
+
+.VideoComment__showMore:hover {
+  opacity: 1;
+}
+
+.VideoComment .ClampText {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.VideoCommentDropdownDropdown {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.VideoCommentDropdown__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_tertiary);
+  cursor: pointer;
+  opacity: .72;
+  height: 16px;
+  width: 16px;
+  -webkit-transition: opacity .1s ease-in;
+  transition: opacity .1s ease-in;
+}
+
+.VideoCommentDropdown__button:hover {
+  opacity: 1;
+}
+
+.VideoCommentDropdown__button--hidden {
+  opacity: 0;
+}
+
+.VideoCommentDropdown__actionTapArea {
+  position: absolute;
+  inset: -6px;
+}

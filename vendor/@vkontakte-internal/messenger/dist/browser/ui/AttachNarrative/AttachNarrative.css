@@ -1,0 +1,10 @@
+.AttachNarrative {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AttachNarrative:hover,
+.AttachEvent,
+.AttachEvent:hover {
+  text-decoration: none;
+}

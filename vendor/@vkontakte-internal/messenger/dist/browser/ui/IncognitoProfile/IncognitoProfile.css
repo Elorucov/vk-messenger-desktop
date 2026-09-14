@@ -1,0 +1,29 @@
+.IncognitoProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 32px 15px 0;
+}
+
+.IncognitoProfile__name {
+  margin-top: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -.221px;
+}
+
+.IncognitoProfile__desc {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -.15px;
+  color: var(--vkui--color_text_secondary);
+}

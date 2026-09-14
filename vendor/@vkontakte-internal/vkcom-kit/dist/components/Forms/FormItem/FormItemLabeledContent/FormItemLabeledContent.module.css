@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  overflow: hidden;
+}
+
+.root:not(.rootNoPadding) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.in {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.before,
+.after {
+  flex-shrink: 0;
+  align-self: center;
+}

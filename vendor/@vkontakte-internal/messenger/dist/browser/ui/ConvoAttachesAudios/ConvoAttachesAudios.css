@@ -1,0 +1,23 @@
+.ConvoAttachesAudios {
+  padding: 0 8px;
+}
+
+.ConvoAttachesAudios__audio {
+  border-radius: 8px;
+}
+
+.ConvoAttachesAudios__audio:hover {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.ConvoAttachesAudios__separator {
+  font: 600 12px/14px var(--font);
+  color: var(--vkui--color_text_secondary);
+  padding: 0 8px;
+  margin: 8px 0;
+  text-transform: uppercase;
+}
+
+.ConvoAttachesAudios__separator:first-child {
+  margin-top: 0;
+}

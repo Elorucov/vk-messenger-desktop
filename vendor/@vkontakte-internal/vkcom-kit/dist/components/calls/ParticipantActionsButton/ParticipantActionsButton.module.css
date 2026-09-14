@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--vkui--color_search_field_background);
+  cursor: pointer;
+  color: var(--vkui--color_text_primary);
+}

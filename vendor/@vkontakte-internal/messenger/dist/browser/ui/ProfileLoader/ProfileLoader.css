@@ -1,0 +1,204 @@
+.MEApp .ProfileSkeleton {
+  margin-top: 16px;
+  width: 100%;
+  padding: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ProfileSkeleton__mainContainer>div,
+.ProfileSkeleton__container>div:not(.ProfileSkeleton__container) {
+  -webkit-animation: ConvoProfileLoad 1s linear infinite alternate;
+  animation: ConvoProfileLoad 1s linear infinite alternate;
+}
+
+@-webkit-keyframes ConvoProfileLoad {
+  0% {
+    background-color: var(--vkui--color_skeleton_from);
+  }
+  to {
+    background-color: var(--vkui--color_skeleton_to);
+  }
+}
+
+@keyframes ConvoProfileLoad {
+  0% {
+    background-color: var(--vkui--color_skeleton_from);
+  }
+  to {
+    background-color: var(--vkui--color_skeleton_to);
+  }
+}
+
+.ProfileSkeleton__closeButtonContainer {
+  width: 100%;
+  position: absolute;
+  left: 14px;
+}
+
+.ProfileSkeleton__closeButton {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.ProfileSkeleton__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.ProfileSkeleton__name {
+  width: 144px;
+  height: 16px;
+  margin-top: 17px;
+  border-radius: 5px;
+}
+
+.ProfileSkeleton__status {
+  width: 108px;
+  height: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.ProfileSkeleton__buttonContainer {
+  width: 100%;
+  height: 56px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ProfileSkeleton__button {
+  border-radius: 7px;
+  width: 108px;
+}
+
+.ProfileSkeleton__infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  margin-top: 19px;
+}
+
+.ProfileSkeleton__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.ProfileSkeleton__infoText {
+  height: 12px;
+  border-radius: 5px;
+  margin-right: auto;
+}
+
+.ProfileSkeleton__separator {
+  margin-top: 18px;
+  width: 100%;
+  height: 1px;
+}
+
+.ChatInvitationLink {
+  max-width: 100%;
+  padding-top: 8px;
+  font-family: var(--vkui--font_footnote--font_family--regular);
+  font-size: var(--vkui--font_footnote--font_size--regular);
+  line-height: var(--vkui--font_footnote--line_height--regular);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.ChatInvitationLink__tabsControl {
+  position: relative;
+  margin-bottom: 19px;
+  width: 100%;
+}
+
+.SimpleInvitationLink {
+  padding: 12px 16px 0;
+  font-family: var(--vkui--font_footnote--font_family--regular);
+  font-size: var(--vkui--font_footnote--font_size--regular);
+  line-height: var(--vkui--font_footnote--line_height--regular);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.SimpleInvitationLink__tabsControl {
+  position: relative;
+  margin-bottom: 19px;
+  width: 100%;
+}
+
+.ChatInvitationLinkTextTabContent {
+  width: 100%;
+}
+
+.ChatInvitationLinkTextTabContent__inputWrapper {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.ChatInvitationLinkTextTabContent__linkResetWrapper {
+  color: var(--vkui--color_text_secondary);
+  margin-top: -14px;
+  margin-bottom: 20px;
+}
+
+.ChatInvitationLinkTextTabContent__linkReset {
+  color: var(--vkui--color_text_link);
+  cursor: pointer;
+  background: none;
+  display: inline;
+  border: none;
+}
+
+.ChatInvitationLinkTextTabContent__buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}

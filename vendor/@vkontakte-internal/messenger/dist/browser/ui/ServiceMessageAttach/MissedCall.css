@@ -1,0 +1,123 @@
+.ServiceMessageAttach__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.ServiceMessageAttach__photo-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ServiceMessageAttach__photo--size-s .ServiceMessageAttach__photo-image {
+  width: 75px;
+  height: 75px;
+}
+
+.ServiceMessageAttach__photo--size-m .ServiceMessageAttach__photo-image {
+  width: 130px;
+  height: 130px;
+}
+
+.ServiceMessageAttach__photo-image img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.ServiceMessageAttach__missedCall {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.ServiceMessageAttach__missedCall--inBubble {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 0 calc(var(--serviceMessageSidePadding, 0) * -1);
+  padding: 0;
+}
+
+.MissedCall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.MissedCall__wrapper {
+  border-radius: var(--messageBorderRadius)!important;
+}
+
+.MissedCall__wrapper--inBubble {
+  background: var(--vkui--vkontakte_color_im_bubble_incoming_alternate);
+  max-width: 323px;
+}
+
+.MissedCall__wrapper:not(.MissedCall__wrapper--inBubble) {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 8px;
+}
+
+.MissedCall__wrapper:not(.MissedCall__wrapper--inBubble):hover {
+  background: var(--im_classic_message--hover);
+}
+
+.MissedCall__attachmentCell {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.MissedCall__attachmentCell .AttachmentCell__headline,
+.MissedCall .AttachmentCell__footnote {
+  overflow: inherit;
+  text-overflow: inherit;
+  white-space: inherit;
+}
+
+.MissedCall__date {
+  --messageDateVerticalMargin: 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: calc(-1 * (var(--messageDateVerticalMargin) + 2px));
+  color: var(--vkui--color_text_secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 var(--messageDateFontSize) /var(--messageDateFontSize) var(--font);
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  margin: calc(var(--messageDateVerticalMargin) - 4px) 2px var(--messageDateVerticalMargin) var(--messageDateMarginLeft);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.MissedCall__wrapper--inBubble .MissedCall__date {
+  margin-right: 0;
+}

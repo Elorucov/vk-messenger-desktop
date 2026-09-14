@@ -1,0 +1,21 @@
+.ConvoProfileUGCStickersButton {
+  text-decoration: none;
+  color: inherit;
+  word-break: break-all;
+  display: block;
+  padding: 6px;
+  margin: 12px;
+}
+
+.ConvoProfileUGCStickersButton__cell {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ConvoProfileUGCStickersButton__leftIcon {
+  width: 30px;
+}
+
+.ConvoProfileUGCStickersButton__rightIcon {
+  color: var(--vkui--color_icon_tertiary);
+}

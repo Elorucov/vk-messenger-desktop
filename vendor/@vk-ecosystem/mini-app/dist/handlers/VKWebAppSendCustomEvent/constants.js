@@ -1,0 +1,3 @@
+const BridgeEventParams={TYPE:"type",TIMEZONE:"timezone",EVENT:"event",JSON:"json",SCREEN:"screen",TIMESTAMP:"timestamp",VK_PLATFORM:"vk_platform"};const EventTypes={TYPE_NAVGO:"type_navgo",TYPE_VIEW:"type_view",TYPE_CLICK:"type_click",TYPE_ACTION:"type_action"};const StatEventParams={TYPE:"type",TIMEZONE:"timezone",EVENT:"event",JSON:"json",SCREEN:"screen",CLIENT_TIME:"client_time",MINI_APP_ID:"mini_app_id",URL:"url",VK_PLATFORM:"vk_platform",USER_ID:"user_id",TRACK_CODE:"track_code"};const SCREEN_DEFAULT_VALUE="none";
+
+export { BridgeEventParams, EventTypes, SCREEN_DEFAULT_VALUE, StatEventParams };

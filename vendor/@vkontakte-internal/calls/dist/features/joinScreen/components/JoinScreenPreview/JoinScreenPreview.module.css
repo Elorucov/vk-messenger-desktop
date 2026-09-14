@@ -1,0 +1,101 @@
+.root {
+  min-height: var(--call-preview-card-popup-height);
+  width: var(--call-preview-card-popup-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  --call-preview-controls-gap: 40px;
+  --call-preview-controls-bottom: 12px;
+  --call-preview-popup-container-padding-y: 16px;
+  --call-preview-container-padding-x: 12px;
+  --call-preview-card-base-height: 432px;
+  --call-preview-card-popup-height: 360px;
+  --call-preview-card-popup-width: 640px;
+  --call-preview-cross-icon-gap: 56px;
+  --call-preview-modal-padding-x: 12px;
+  --call-preview-modal-padding-y: 8px;
+  --call-preview-container-x-offsets: calc( calc(var(--call-preview-cross-icon-gap) + var(--call-preview-modal-padding-x)) * 2 );
+  --call-preview-container-x-offsets-no-cross-gaps: calc(var(--call-preview-modal-padding-x) * 2);
+  --call-preview-card-x-offsets: calc( var(--call-preview-container-padding-x) + var(--call-preview-container-x-offsets) );
+  --call-preview-adaptive-breakpoint-x: calc( var(--call-preview-card-popup-width) + var(--call-preview-card-x-offsets) );
+  --call-preview-modal-header-height: 70px;
+  --call-preview-modal-footer-height: 118px;
+  --call-preview-container-y-offsets: calc( calc(var(--call-preview-modal-padding-y)) * 2 + var(--call-preview-modal-header-height) + var(--call-preview-modal-footer-height) );
+  --call-preview-card-y-offsets: calc( calc(var(--call-preview-popup-container-padding-y) * 2) + var(--call-preview-container-y-offsets) );
+  --call-preview-modal-y-offsets: calc(var(--call-preview-container-y-offsets));
+  --call-preview-adaptive-breakpoint-y: calc( var(--call-preview-card-popup-height) + var(--call-preview-card-y-offsets) );
+  --call-preview-modal-ratio: calc(688 / 596.8);
+}
+
+@media (max-width: 800px),
+(max-height: 597px) {
+  .root {
+    --call-preview-card-height-with-offsets: calc(100vh - var(--call-preview-card-y-offsets, 0));
+    --call-preview-card-height-from-modal-width: calc( calc(100vw - calc(var(--call-preview-cross-icon-gap, 0) * 2)) / var(--call-preview-modal-ratio, 0) - var(--call-preview-card-y-offsets, 0) );
+    --call-preview-card-max-height: calc(100vh - var(--call-preview-card-y-offsets, 0));
+    --call-preview-container-width-with-offsets: calc(100vw - var(--call-preview-container-x-offsets, 0));
+    --call-preview-width-from-modal-height: calc( 100vh * var(--call-preview-modal-ratio, 0) - var(--call-preview-container-x-offsets-no-cross-gaps, 0) );
+  }
+  .root.authorizedInPopup {
+    width: min(var(--call-preview-container-width-with-offsets, 0),var(--call-preview-width-from-modal-height, 0));
+    min-width: 405px;
+    max-width: var(--call-preview-card-popup-width, 0);
+    min-height: auto;
+  }
+  .root .card.cardInPopup {
+    height: min(var(--call-preview-card-height-with-offsets, 0),var(--call-preview-card-height-from-modal-width, 0));
+    min-height: 205px;
+    max-height: var(--call-preview-card-base-height, 0);
+  }
+}
+
+.anonymousFlat {
+  width: 740px;
+}
+
+.authorized {
+  width: auto;
+}
+
+.authorized,
+.anonymousFlat {
+  padding: 6px var(--call-preview-container-padding-x, 0);
+}
+
+.authorizedInPopup {
+  padding: var(--call-preview-popup-container-padding-y, 0) var(--call-preview-container-padding-x, 0);
+  width: var(--call-preview-card-popup-width, 0);
+}
+
+.card {
+  height: var(--call-preview-card-base-height, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardAnonymous {
+  height: var(--call-preview-card-base-height, 0);
+}
+
+.cardInPopup {
+  height: var(--call-preview-card-popup-height, 0);
+  max-width: var(--call-preview-card-popup-width, 0);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: var(--call-preview-controls-bottom, 0);
+  width: 100%;
+  gap: var(--call-preview-controls-gap, 0);
+}
+
+.controlsNoProfileData {
+  justify-content: end;
+}
+
+.micIcon {
+  max-height: 24px;
+}

@@ -1,0 +1,15 @@
+.ConvoProfileSendGiftLink {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ConvoProfileSendGiftLink__icon {
+  width: 30px;
+}
+
+.ConvoProfileSendGiftLink__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+  word-break: break-all;
+}

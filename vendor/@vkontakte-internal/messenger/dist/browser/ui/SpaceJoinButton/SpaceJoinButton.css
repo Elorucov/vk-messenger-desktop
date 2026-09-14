@@ -1,0 +1,37 @@
+.SpaceJoinButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.SpaceJoinButton__caption {
+  font: 14px/18px var(--font);
+  font-weight: 400;
+}
+
+.SpaceJoinButton__caption--header {
+  color: var(--vkui--color_text_primary);
+  text-align: left;
+}
+
+.SpaceJoinButton__caption--history {
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+}
+
+.SpaceJoinButton__caption--profile {
+  color: var(--vkui--color_text_primary);
+  text-align: center;
+}

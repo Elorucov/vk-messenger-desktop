@@ -1,0 +1,87 @@
+:where(.MessageActionsButtonContainer) {
+  padding: 6px;
+  margin: -6px;
+  cursor: pointer;
+}
+
+:where(.MessageActionsButtonContainer--tappable) {
+  padding: 10px;
+  margin: -10px;
+}
+
+.MessageActionsButtonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--vkui--color_background_modal);
+  border-radius: 20px;
+  height: 28px;
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(0,0,0,.08),0px 0px 2px 0px rgba(0,0,0,.08);
+  box-shadow: 0 8px 24px #00000014,0 0 2px #00000014;
+  overflow: hidden;
+}
+
+.MessageActionsButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 4px;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--vkui--color_icon_secondary);
+  border: none;
+  height: 28px;
+  width: 28px;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translateZ(0);
+}
+
+.MessageActionsButton--animated {
+  -webkit-transition: opacity .18s ease,-webkit-box-shadow .18s ease;
+  transition: opacity .18s ease,-webkit-box-shadow .18s ease;
+  transition: opacity .18s ease,box-shadow .18s ease;
+  transition: opacity .18s ease,box-shadow .18s ease,-webkit-box-shadow .18s ease;
+  -webkit-animation: .18s ease fadeIn;
+  animation: .18s ease fadeIn;
+}
+
+.MessageActionsButton:focus,
+.MessageActionsButton:hover {
+  background-color: var(--vkui--color_background_secondary);
+}
+
+.MessageActionsButton--tap {
+  position: relative;
+  padding: 4px;
+}
+
+.MessageActionsButton--tapArea {
+  position: absolute;
+  inset: -6px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

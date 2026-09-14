@@ -1,0 +1,325 @@
+.ConvoMessageWithoutBubble {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: auto;
+  background: transparent;
+  border-radius: var(--messageBorderRadius);
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  color: var(--vkui--color_text_primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  letter-spacing: -.007em;
+  max-width: var(--messageMaxWidth);
+  padding: var(--messageVerticalIndent) var(--messageHorizontalIndent);
+  padding-left: calc(var(--messageHorizontalIndent) + 36px + var(--messageAuthorAvatarRightIndent));
+  -webkit-transition: background-color var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  transition: background-color var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+}
+
+.ConvoMessageWithoutBubble--withStoryComment .ConvoMessageWithoutBubble__sticker {
+  margin-top: -80px;
+  display: block;
+}
+
+.ConvoMessageWithoutBubble__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.ConvoMessageWithoutBubble__content {
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  width: 100%;
+  max-width: var(--messageMaxContentWidth);
+  min-width: 0;
+}
+
+.ConvoMessageWithoutBubble--withReply .ConvoMessageWithoutBubble__content {
+  min-width: 128px;
+}
+
+.ConvoMessageWithoutBubble__attachments,
+.ConvoMessageWithoutBubble__publicVideo,
+.ConvoMessageWithoutBubble__mediaAttachments,
+.ConvoMessageWithoutBubble__videoMessage {
+  max-width: none;
+  margin-top: 6px;
+}
+
+.ConvoMessageWithoutBubble__gift {
+  background: var(--vkui--color_background_secondary);
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 8px;
+  color: var(--vkui--color_text_secondary);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 224px;
+}
+
+.ConvoMessageWithoutBubble__gift--limited {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.ConvoMessageWithoutBubble__text {
+  display: inline-block;
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
+.ConvoMessageWithoutBubble__editedLabel {
+  color: var(--vkui--color_text_secondary);
+  font: 400 var(--messageDateFontSize) /var(--messageDateFontSize) var(--font);
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ConvoMessageWithoutBubble__gift+.ConvoMessageWithoutBubble__text {
+  margin-top: 4px;
+}
+
+.ConvoMessageWithoutBubble__mediaAttachments+.ConvoMessageWithoutBubble__text {
+  margin-top: var(--messageVerticalIndent);
+}
+
+:is(.ConvoMessageWithoutBubble__mediaAttachments,
+.ConvoMessageWithoutBubble__attachments,
+.ConvoMessageWithoutBubble__publicVideo,
+.ConvoMessageWithoutBubble__videoMessage):first-child {
+  margin-top: 0;
+}
+
+.ConvoMessageWithoutBubble__attachments+.ConvoMessageWithoutBubble__forwardedMessages {
+  margin-top: calc(var(--messageVerticalIndent) + var(--messageAttachmentIndent));
+}
+
+.ConvoMessageWithoutBubble__mediaAttachments+.ConvoMessageWithoutBubble__forwardedMessages {
+  margin-top: calc(var(--messageVerticalIndent) + var(--messageMediaAttachmentIndent));
+}
+
+.ConvoMessageWithoutBubble--withClipOnly.ConvoMessageWithoutBubble--withClipReactionsTrigger .ConvoMessageWithoutBubble__mediaAttachments {
+  mask-image: radial-gradient(circle at 26px calc(100% - 2px),transparent 15px,var(--vkui--color_background_secondary) 0);
+  -webkit-mask-image: radial-gradient(circle at 26px calc(100% - 2px),transparent 15px,var(--vkui--color_background_secondary) 0);
+}
+
+.ConvoMessageWithoutBubble__forwardedMessages--new.ConvoMessageWithoutBubble__forwardedMessages--withMargin {
+  margin-top: calc(var(--messageVerticalIndent) - 2px);
+}
+
+.ConvoMessageWithoutBubble__empty {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoMessageWithoutBubble__reply {
+  max-width: 100%;
+}
+
+.ConvoMessageWithoutBubble__reactions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 4px;
+  margin: 6px 0 0;
+}
+
+.ConvoMessageWithoutBubble__botKeyboard {
+  width: 100%;
+  max-width: var(--messageMaxContentWidth);
+}
+
+.ConvoMessageWithoutBubble__wrapper:has(:where(.ConvoMessageWithoutBubble__mediaAttachments,
+.ConvoMessageWithoutBubble__attachments,
+.ConvoMessageWithoutBubble__forwardedMessages):last-child)+.ConvoMessageWithoutBubble__reactions {
+  margin-top: 10px;
+}
+
+.ConvoMessageWithoutBubble--withClipOnly.ConvoMessageWithoutBubble--withClipReactionsTrigger .ConvoMessageWithoutBubble__reactions {
+  margin-top: 15px;
+}
+
+.ConvoMessage__actions--withoutBubbles {
+  right: -5px;
+  bottom: calc(100% - 6px);
+}
+
+.ConvoMessageWithoutBubble__avatar {
+  position: absolute;
+  left: var(--messageHorizontalIndent);
+  top: 8px;
+  min-width: 36px;
+}
+
+.ConvoMessageWithoutBubble__info--withoutAuthor {
+  min-height: var(--messageLineHeight);
+}
+
+.ConvoMessageWithoutBubble:hover {
+  background-color: var(--im_classic_message--hover);
+}
+
+.ConvoHistory__messageBlockSelected--withoutBubbles .ConvoMessageWithoutBubble {
+  background-color: var(--vkui--color_background_secondary--active);
+}
+
+.ConvoHistory__messageBlockHighlighted--withoutBubbles .ConvoMessageWithoutBubble {
+  background-color: transparent;
+}
+
+.ConvoHistory__messageBlockHighlighted--withoutBubbles .ConvoMessageWithoutBubble:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  background-color: var(--vkui--color_background_secondary--active);
+  border-radius: var(--messageBorderRadius);
+  -webkit-animation: vkmMessageBubblelessHighlight var(--transitionMessageHighlightDuration) ease-in-out 1;
+  animation: vkmMessageBubblelessHighlight var(--transitionMessageHighlightDuration) ease-in-out 1;
+}
+
+.ConvoHistory__messageBlockWithContextMenuActive--withoutBubbles .ConvoMessageWithoutBubble {
+  background-color: var(--vkui--color_background_secondary--active);
+}
+
+@-webkit-keyframes vkmMessageBubblelessHighlight {
+  0%,
+  to {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes vkmMessageBubblelessHighlight {
+  0%,
+  to {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+.ConvoMessageWithoutBubble__clipFastReactions {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+
+.ConvoMessageWithoutBubble__clipFastReactionsTrigger {
+  position: absolute;
+  left: 14px;
+  bottom: -2px;
+}
+
+.ConvoMessageWithoutBubble--withReactions .ConvoMessageWithoutBubble__clipFastReactionsTrigger {
+  bottom: 43px;
+}
+
+.ConvoMessageWithoutBubble__postFastReactions {
+  position: relative;
+}
+
+.ConvoMessageWithoutBubble__postFastReactionsTrigger {
+  background-color: var(--vkui--color_background_secondary);
+  width: 30px;
+  height: 30px;
+}
+
+.ConvoMessageInfoWithoutBubbles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: var(--messageAuthorLinkLineHeight);
+  margin: 0 2px 0 12px;
+  color: var(--vkui--color_text_secondary);
+  font: 400 var(--messageDateFontSize) /var(--messageDateFontSize) var(--font);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ConvoMessageInfoWithoutBubbles__date {
+  cursor: pointer;
+}
+
+.ConvoMessageInfoWithoutBubbles__importantIcon {
+  margin-right: 4px;
+  color: var(--vkui--color_background_accent_themed);
+}
+
+.ConvoMessageInfoWithoutBubbles__bombIcon {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.ConvoMessageInfoWithoutBubbles__statusIcon {
+  margin-right: 2px;
+}
+
+.ConvoMessageInfoWithoutBubbles__views {
+  font: 400 var(--messageDateFontSize) /var(--messageDateFontSize) var(--font);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2px;
+  margin-right: 8px;
+}
+
+.ConvoMessageInfoWithoutBubbles__views--icon {
+  margin-right: 2px;
+}

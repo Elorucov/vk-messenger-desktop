@@ -1,0 +1,51 @@
+.StickersPanel {
+  width: 100%;
+  -webkit-transition: opacity .2s linear,-webkit-transform .2s linear;
+  transition: opacity .2s linear,-webkit-transform .2s linear;
+  transition: opacity .2s linear,transform .2s linear;
+  transition: opacity .2s linear,transform .2s linear,-webkit-transform .2s linear;
+}
+
+.StickersPanel__wrapper {
+  padding: 8px;
+}
+
+.StickersPanel__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.StickersPanel--enter {
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.StickersPanel--enter-active,
+.StickersPanel--exit {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+.StickersPanel--exit-active {
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.StickersPanel--exit-done {
+  display: none;
+}
+
+.StickersPanelBotLink {
+  cursor: pointer;
+  -webkit-transition: opacity ease-in-out .2s;
+  transition: opacity ease-in-out .2s;
+}
+
+.StickersPanelBotLink:hover {
+  opacity: .8;
+}

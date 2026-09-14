@@ -1,0 +1,88 @@
+.UserLikesMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 183px;
+  padding: 8px 12px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  background: #333333e0;
+  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.04),0px 4px 32px rgba(0,0,0,.16);
+  box-shadow: 0 0 4px #0000000a,0 4px 32px #00000029;
+  --userLikesMenuGap: 6px;
+  --userLikesMenuAvatarSize: 32px;
+}
+
+.UserLikesMenu__dropdownSpacer {
+  padding-bottom: 6px;
+}
+
+.UserLikesMenu__title {
+  font: 14px/18px var(--font);
+  color: var(--vkui--color_text_contrast);
+  letter-spacing: .2px;
+}
+
+.UserLikesMenu__peersListWrapper {
+  overflow: hidden;
+}
+
+.UserLikesMenu__peersList {
+  z-index: 0;
+  max-width: calc(5 * var(--userLikesMenuAvatarSize) + 4 * var(--userLikesMenuGap));
+  -webkit-transform: translateX(calc(-1 * var(--userLikesMenuAvatarSize) + -1 * var(--userLikesMenuGap)));
+  transform: translate(calc(-1 * var(--userLikesMenuAvatarSize) + -1 * var(--userLikesMenuGap)));
+  -webkit-transition: -webkit-transform .16s ease-in-out;
+  transition: -webkit-transform .16s ease-in-out;
+  transition: transform .16s ease-in-out;
+  transition: transform .16s ease-in-out,-webkit-transform .16s ease-in-out;
+}
+
+.UserLikesMenu--liked .UserLikesMenu__peersList {
+  -webkit-transform: none;
+  transform: none;
+}
+
+.UserLikesMenu__peersListWrapper,
+.UserLikesMenu__peersList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}
+
+.UserLikesMenu__peerItem {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.UserLikesMenu__moreLiked {
+  z-index: 1;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 4px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: var(--vkui--color_icon_secondary);
+}
+
+.UserLikesMenu__moreLikedCount {
+  font: 600 14px/18px var(--font);
+  letter-spacing: -.004em;
+  color: var(--vkui--color_text_contrast);
+}

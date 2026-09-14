@@ -1,0 +1,90 @@
+.ComposerSelecting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 44px;
+  padding-left: 12px;
+  padding-right: 20px;
+  background-color: var(--composerBackgroundColor);
+  width: 100%;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.08);
+  box-shadow: 0 0 2px #00000014,0 4px 16px #00000014;
+  border-radius: 12px;
+}
+
+.ComposerSelecting--navigating:focus {
+  outline: var(--vkui--color_stroke_accent) solid 2px;
+}
+
+.ComposerSelecting__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.ComposerSelecting__selectedCount {
+  margin-right: auto;
+  font-size: 14px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ComposerSelecting__selectedCount button {
+  margin-right: 8px;
+}
+
+.ComposerSelecting__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  background: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: var(--vkui--color_stroke_accent);
+  opacity: .72;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.ComposerSelecting__action:hover {
+  opacity: 1;
+}
+
+.ComposerSelecting__button svg {
+  color: var(--vkui--color_stroke_accent);
+}
+
+.ComposerSelecting__buttonText {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.ActionsMenu__delete .ActionsMenu__actionIcon,
+.ActionsMenu__delete .ActionsMenu__actionText,
+.ActionsMenu__spam .ActionsMenu__actionIcon,
+.ActionsMenu__spam .ActionsMenu__actionText {
+  color: var(--vkui--color_text_negative);
+}
+
+.ActionsMenu__mark_important .ActionsMenu__actionIcon,
+.ActionsMenu__unmark_important .ActionsMenu__actionIcon {
+  color: var(--vkui--color_icon_accent);
+}

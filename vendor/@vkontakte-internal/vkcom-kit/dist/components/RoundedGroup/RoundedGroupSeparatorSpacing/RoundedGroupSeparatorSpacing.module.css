@@ -1,0 +1,9 @@
+.rootVertical {
+  width: 100%;
+}
+
+.rootHorizontal {
+  height: auto;
+  align-self: stretch;
+  flex-direction: column;
+}

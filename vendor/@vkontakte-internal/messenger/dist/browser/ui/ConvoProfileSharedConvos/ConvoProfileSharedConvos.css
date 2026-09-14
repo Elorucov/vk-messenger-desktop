@@ -1,0 +1,44 @@
+.ConvoProfileSharedConvos {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-height: 50px;
+  padding: 0 8px;
+}
+
+.ConvoProfileSharedConvos__loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%) translateY(-50%);
+  padding: 0;
+}
+
+.ConvoProfileSharedConvos__empty,
+.ConvoProfileSharedConvos__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font: 400 14px/18px var(--font);
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoProfileSharedConvos__empty {
+  padding: 64px 0;
+}
+
+.ConvoProfileSharedConvos__error {
+  gap: 16px;
+}

@@ -1,0 +1,88 @@
+.PostCommentPreview {
+  padding-right: .5ch;
+}
+
+.PostCommentPreview__attach {
+  color: var(--vkui--color_text_link);
+}
+
+.PostCommentPreview__empty {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ComposerAttaches {
+  isolation: isolate;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .ComposerAttaches {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translateZ(0);
+  }
+}
+
+.ComposerAttaches__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: var(--composerAttachListPadding);
+  margin: 0;
+}
+
+.ComposerAttaches__item {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ComposerAttaches__item+.ComposerAttaches__item {
+  margin-left: var(--composerAttachSpacing);
+}
+
+.ComposerAttaches__remove {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: var(--composerAttachRemoveButtonSize);
+  height: var(--composerAttachRemoveButtonSize);
+  color: #fff;
+  background: var(--vkui--color_icon_secondary);
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  box-shadow: 0 2px 4px #00000014;
+  border-radius: 50%;
+  border: var(--composerAttachRemoveButtonBorder);
+  position: absolute;
+  top: var(--composerAttachRemoveButtonOffset);
+  right: var(--composerAttachRemoveButtonOffset);
+  cursor: pointer;
+}
+
+.ComposerAttaches__loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #000000b8;
+  border-radius: var(--composerAttachBorderRadius);
+}

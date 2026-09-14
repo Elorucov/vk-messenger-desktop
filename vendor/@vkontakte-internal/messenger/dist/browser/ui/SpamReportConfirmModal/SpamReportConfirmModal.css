@@ -1,0 +1,55 @@
+.SpamReportConfirmModal__modalPanel {
+  min-width: 400px;
+  width: 400px;
+}
+
+.SpamReportConfirmModal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.SpamReportConfirmModal__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-gap: 16px;
+}
+
+.SpamReportConfirmModalPhoto {
+  position: relative;
+}
+
+.SpamReportConfirmModal__checkboxes {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.SpamReportConfirmModalPhoto__icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.SpamReportConfirmModal__actions {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}

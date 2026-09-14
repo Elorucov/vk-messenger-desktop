@@ -1,0 +1,11 @@
+export const isHoveredOver = ($ref) => (clientX, clientY) => {
+    const element = $ref.current;
+    if (!element) {
+        return;
+    }
+    const rect = element.getBoundingClientRect();
+    return (clientX >= rect.left &&
+        clientX <= rect.left + rect.width &&
+        clientY >= rect.top &&
+        clientY <= rect.top + rect.height);
+};

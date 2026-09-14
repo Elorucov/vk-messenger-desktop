@@ -1,0 +1,14 @@
+.root {
+  position: relative;
+  visibility: hidden;
+}
+
+.children {
+  visibility: hidden;
+}
+
+.skeletons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

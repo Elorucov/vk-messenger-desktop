@@ -1,0 +1,43 @@
+.ClampText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.ClampText__content {
+  --clamp_text_lines: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--clamp_text_lines);
+  overflow: hidden;
+  position: relative;
+}
+
+:where(.ClampText__content) {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.ClampText__content--expanded {
+  cursor: default;
+  -webkit-line-clamp: initial;
+}
+
+:where(.ClampTextTrigger) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--vkui--color_text_link);
+  font: 500 15px/20px var(--font);
+  letter-spacing: -.23px;
+  border: unset;
+  background: unset;
+  cursor: pointer;
+  padding: 0;
+}

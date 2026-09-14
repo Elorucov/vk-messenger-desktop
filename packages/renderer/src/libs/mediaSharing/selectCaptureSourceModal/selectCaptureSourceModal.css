@@ -1,0 +1,44 @@
+.BaseModal.select-capture-source-modal {
+  --thin-border: #ccc;
+  z-index: var(--vkui--z_index_popout);
+}
+
+.select-capture-source-modal .CallsModalBody {
+  padding: 8px 12px;
+  max-height: 520px;
+}
+
+.select-capture-source-modal .BaseModal__content {
+  width: 640px;
+  border-radius: 8px;
+}
+
+.select-capture-source-modal .vkuiCard {
+  text-align: center;
+}
+
+.select-capture-source-modal .RE_ModalPanel {
+  width: 640px;
+}
+
+.select-capture-source-modal .vkuiCard__in picture img {
+  border-radius: var(--vkui--size_card_border_radius--regular, 8px);
+}
+
+.select-capture-source-modal .active .screen-capture__inner-card {
+  box-shadow: 0 0 0 2px var(--vkui--color_accent_blue--active);
+  border-radius: var(--vkui--size_card_border_radius--regular, 8px);
+}
+
+.select-capture-source-modal .footnote-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.select-capture-source-modal .footnote-with-icon img {
+  margin-right: 8px;
+}
+
+.select-capture-source-modal .share-sound-checkbox {
+  margin-right: auto;
+}

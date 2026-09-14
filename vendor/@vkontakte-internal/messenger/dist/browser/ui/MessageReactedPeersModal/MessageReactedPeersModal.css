@@ -1,0 +1,66 @@
+.MessageReactedPeersModal__panel {
+  width: 400px;
+  max-height: calc(100vh - 150px);
+}
+
+.MessageReactedPeersModal__wrapper {
+  padding: 12px;
+}
+
+.MessageReactedPeersModal__content {
+  height: 574px;
+}
+
+.MessageReactedPeersModal__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin-left: -15px;
+}
+
+.MessageReactedPeersModal__tabsContent {
+  padding: 0 24px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.MessageReactedPeersModal__tabCount {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--vkui--color_text_tertiary);
+}
+
+.MessageReactedPeersModal__tabReaction {
+  display: block;
+}
+
+.MessageReactedPeersModal__item--stub {
+  opacity: 0;
+  -webkit-animation: .3s ease var(--animation-delay) normal forwards 1 stub-fadein;
+  animation: .3s ease var(--animation-delay) normal forwards 1 stub-fadein;
+}
+
+.MessageReactedPeersModal__peer {
+  position: relative;
+  width: var(--message-reacted-size);
+}
+
+@-webkit-keyframes stub-fadein {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stub-fadein {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+/release/
+/packages/main/dist/
+/packages/preload/dist/
+/packages/renderer/dist/
+*.log
+.DS_Store
+/_recovery/
+/RESTORE-NOTES.md

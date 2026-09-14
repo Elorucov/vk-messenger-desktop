@@ -1,0 +1,132 @@
+.container.container {
+  overflow: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.container[disabled] {
+  pointer-events: none;
+}
+
+.containerSizeS.container {
+  min-height: 32px;
+}
+
+.containerSizeM.container {
+  min-height: 34px;
+}
+
+.containerSizeS.containerHasSubtitle {
+  min-height: 48px;
+}
+
+.containerSizeM.containerHasSubtitle {
+  min-height: 54px;
+}
+
+.containerSizeS.container+.container {
+  margin-top: 1px;
+}
+
+.containerSizeM.container+.container {
+  margin-top: 2px;
+}
+
+.before {
+  color: var(--vkui--color_icon_accent);
+  transform: translateZ(0);
+}
+
+.containerTypeDestructive .before {
+  color: var(--vkui--color_icon_negative);
+}
+
+.containerTypeContrast .before {
+  color: var(--vkui--color_icon_contrast);
+}
+
+.container[disabled] .before {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.in {
+  display: flex;
+}
+
+.containerSizeS>*:not(.before) {
+  margin: -2px 0;
+}
+
+.containerSizeM>*:not(.before) {
+  margin: -1px 0;
+}
+
+.container[disabled] .in {
+  color: var(--vkui--color_text_secondary);
+}
+
+.containerTypeHeader .in {
+  color: var(--vkui--color_text_subhead);
+}
+
+.containerTypeDestructive .in {
+  color: var(--vkui--color_text_negative);
+}
+
+.containerTypeContrast .in {
+  color: var(--vkui--color_text_contrast);
+}
+
+.containerTypeDestructive.containerHasBefore:not(.container[disabled]) .in {
+  color: inherit;
+}
+
+.subtitle.subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.containerTypeHeader .subtitle {
+  margin-top: 6px;
+}
+
+.containerTypeContrast:not([disabled]) .subtitle {
+  color: var(--white_alpha60, rgba(255, 255, 255, .6));
+}
+
+.titleBadge {
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.subtitleBefore {
+  margin-right: 6px;
+}
+
+.meta {
+  margin-left: 6px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.containerTypeContrast:not([disabled]) .meta {
+  color: var(--white_alpha60, rgba(255, 255, 255, .6));
+}
+
+.after {
+  color: var(--vkui--color_icon_accent);
+  margin-left: 16px;
+}
+
+.container[disabled] .after {
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+.container :global(.vkuiInternalSimpleCell__after):global(.vkuiInternalSimpleCell__after) :global(.vkuiIconButton__host):last-child {
+  margin-right: unset;
+}
+
+.container:global(.vkuiSimpleCell__mult) :global(.vkuiSimpleCell__children),
+.container:global(.vkuiSimpleCell__mult) :global(.vkuiSimpleCell__subtitle) {
+  flex-grow: 1;
+}

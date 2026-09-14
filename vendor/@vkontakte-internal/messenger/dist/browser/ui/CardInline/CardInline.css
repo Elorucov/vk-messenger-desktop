@@ -1,0 +1,28 @@
+.CardInline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.CardInline__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.CardInline__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.CardInline__actions {
+  margin-left: 10px;
+}

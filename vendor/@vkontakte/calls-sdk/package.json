@@ -1,0 +1,16 @@
+{
+  "name": "@vkontakte/calls-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./calls-sdk.esm.js",
+  "module": "./calls-sdk.esm.js",
+  "dependencies": {
+    "@vkontakte/libvpx": "2.0.9",
+    "bit-buffer": "0.2.5",
+    "fflate": "0.8.2",
+    "messagepack": "1.1.12",
+    "simple-ebml-builder": "0.2.2",
+    "webrtc-adapter": "8.2.4"
+  }
+}

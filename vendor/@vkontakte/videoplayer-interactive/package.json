@@ -1,0 +1,15 @@
+{
+  "name": "@vkontakte/videoplayer-interactive",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./esnext.esm.js",
+  "module": "./esnext.esm.js",
+  "dependencies": {
+    "@interactiveplatform/movika-graph-editor": "2.1.7",
+    "@interactiveplatform/movika-manifest": "1.0.1",
+    "@vkontakte/videoplayer-core": "*",
+    "@vkontakte/videoplayer-shared": "*",
+    "@vkontakte/videoplayer-statistics": "*"
+  }
+}

@@ -1,0 +1,206 @@
+.ConvoProfileMembers__content {
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-height: 100%;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.ConvoProfileMembers__list {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ConvoProfileMembers__list--invitations {
+  margin-top: 6px;
+}
+
+.ConvoProfileMembers__showMembersButton {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.ConvoProfileMembers__loader {
+  padding: 10px 0 20px;
+}
+
+.ConvoProfileMembers__add {
+  position: sticky;
+  top: 142px;
+  padding: 12px 8px;
+  margin: -6px 0 -3px;
+  z-index: 1;
+  width: 100%;
+  background: -webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_background_content)),color-stop(93%,var(--vkui--color_background_content)),to(transparent));
+  background: linear-gradient(to bottom,var(--vkui--color_background_content) 0%,var(--vkui--color_background_content) 93%,transparent 100%);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ConvoProfileMembers__addButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: var(--vkui--color_background_secondary);
+  color: var(--vkui--color_accent_blue);
+}
+
+.ConvoProfileMembers__addText {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--vkui--color_text_link);
+  margin-left: 12px;
+}
+
+.ConvoProfileMembers__add:hover .ConvoProfileMembers__addText {
+  text-decoration: underline;
+}
+
+.ConvoProfileMembers__member {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "avatar name actions" "avatar description actions";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-column-gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.ConvoProfileMembers__member--clickable:hover {
+  cursor: pointer;
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.ConvoProfileMembers__memberAvatar {
+  grid-area: avatar;
+}
+
+.ConvoProfileMembers__memberName {
+  grid-area: name;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.ConvoProfileMembers__memberDescription {
+  grid-area: description;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--vkui--color_text_secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ConvoProfileMembers__memberDescription:first-letter {
+  text-transform: lowercase;
+}
+
+.ConvoProfileMembers__memberDescription:empty {
+  display: none;
+}
+
+.ConvoProfileMembers__memberActions {
+  grid-area: actions;
+  cursor: pointer;
+  align-self: center;
+  margin-right: 4px;
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ConvoProfileMembers__memberLink,
+.ConvoProfileMembers__memberLink:hover {
+  text-decoration: none;
+  color: var(--vkui--color_text_primary);
+}
+
+.ConvoProfileMembers__emptySearchResult {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ChatMember__action:hover {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.ConvoProfileMembers__searchArea {
+  position: sticky;
+  top: 102px;
+  margin-top: -9px;
+  background-color: var(--vkui--color_background_content);
+  z-index: 1;
+}
+
+.ConvoProfileMembers__action {
+  background: none;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  color: var(--vkui--color_icon_medium);
+}
+
+.ConvoProfileMembers__action:disabled {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.ConvoProfileMembers__actionTapArea {
+  position: absolute;
+  inset: -6px;
+}
+
+.ConvoProfileMembers__member--admin .ConvoProfileMembers__dropdown {
+  width: 20px;
+  opacity: 0;
+  margin-left: 6px;
+  -webkit-transition: all 90ms ease-out;
+  transition: all 90ms ease-out;
+  overflow: hidden;
+  -webkit-transform: translateX(100%);
+  transform: translate(100%);
+}
+
+.ConvoProfileMembers__dropdown--open.ConvoProfileMembers__dropdown,
+.ConvoProfileMembers__member--admin:hover .ConvoProfileMembers__dropdown {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translate(0);
+}
+
+.ConvoProfileMembers__tooltip-skeleton {
+  --skeleton-from: #232324;
+  --skeleton-to: #2c2d2e;
+}

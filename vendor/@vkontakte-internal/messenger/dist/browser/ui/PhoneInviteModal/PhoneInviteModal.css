@@ -1,0 +1,60 @@
+.PhoneInviteModal {
+  padding: 24px;
+  max-width: 400px;
+  position: relative;
+}
+
+.PhoneInviteModal__panel {
+  overflow: visible;
+}
+
+.PhoneInviteModal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.PhoneInviteModal__closeInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  background-color: var(--vkui--color_overlay_primary);
+  color: var(--vkui--color_icon_contrast);
+}
+
+.PhoneInviteModal__close:hover .PhoneInviteModal__closeInner {
+  background-color: var(--vkui--color_overlay_primary--hover);
+}
+
+@media screen and (min-width: 640px) {
+  .PhoneInviteModal__close {
+    right: auto;
+    left: 100%;
+  }
+}

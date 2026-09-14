@@ -1,0 +1,29 @@
+.iconAnimated {
+  animation: horizontalTremble var(--vkui--animation_duration_l) ease-in-out;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+.stickerAnimationIsPlaying {
+  transform-origin: center;
+  scale: .8;
+  opacity: var(--vkui--opacity_disable);
+}
+
+@keyframes horizontalTremble {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(2px);
+  }
+  50% {
+    transform: translate(-2px);
+  }
+  75% {
+    transform: translate(1px);
+  }
+  to {
+    transform: translate(0);
+  }
+}

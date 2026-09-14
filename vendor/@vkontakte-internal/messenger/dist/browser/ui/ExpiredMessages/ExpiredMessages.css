@@ -1,0 +1,58 @@
+.ExpiredMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  scroll-margin: 24px 0;
+  outline: none;
+}
+
+.ExpiredMessage__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 9.5px 12px 8.5px;
+  border: .5px solid var(--vkui--color_separator_primary_alpha);
+  border-radius: 18px;
+}
+
+.ExpiredMessage--themed .ExpiredMessage__container {
+  border: none;
+  background-color: var(--vkui--color_overlay_primary);
+}
+
+.ExpiredMessage__icon {
+  margin-right: 9px;
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.ExpiredMessage--themed .ExpiredMessage__icon {
+  color: var(--vkui--color_icon_contrast);
+}
+
+.ExpiredMessage__text {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .005em;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ExpiredMessage--themed .ExpiredMessage__text {
+  color: var(--vkui--color_text_contrast);
+}
+
+.ExpiredMessage--navigating:focus .ExpiredMessage__container {
+  outline: var(--vkui--color_stroke_accent) solid 2px;
+}

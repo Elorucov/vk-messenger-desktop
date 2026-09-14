@@ -1,0 +1,18 @@
+{
+  "name": "@vk-ecosystem/components",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte-internal/icons-private": "*",
+    "@vkontakte/icons": "*",
+    "@vkontakte/vk-bridge": "*",
+    "@vkontakte/vk-qr": "2.1.1",
+    "@vkontakte/vkui": "7.6.1",
+    "awesome-phonenumber": "5.0.0",
+    "react": "18.3.1",
+    "react-lottie-player": "1.5.6"
+  }
+}

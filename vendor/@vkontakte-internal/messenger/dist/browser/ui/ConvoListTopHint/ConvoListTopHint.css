@@ -1,0 +1,70 @@
+.ConvoList__topHint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 8px 4px;
+  border: .33px solid var(--vkui--color_image_border_alpha);
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  background-color: var(--vkui--color_background_secondary);
+  padding: 12px;
+  color: var(--vkui--color_text_secondary);
+  font: 400 var(--convoListTopHintTextFontSize) /var(--convoListTopHintTextLineHeight) var(--font);
+  letter-spacing: -.004em;
+  gap: 12px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.ConvoList__topHintIcon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ConvoList__topHintContainer {
+  cursor: default;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.ConvoList__topHintContainer--closing {
+  opacity: 0;
+}
+
+.ConvoList__topHintContainer--closed {
+  display: none;
+}
+
+.ConvoList__topHintTitle {
+  color: var(--vkui--color_text_primary);
+  font: 500 var(--convoListTopHintTitleFontSize) /var(--convoListTopHintTitleLineheight) var(--font);
+  letter-spacing: -.01em;
+  margin-bottom: 4px;
+}
+
+.ConvoList__topHintSettingsButton {
+  outline: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: currentColor;
+  text-decoration: underline;
+}
+
+.ConvoList__topHintSettingsButton:hover {
+  text-decoration: underline;
+}
+
+.ConvoList__topHintCloseButton {
+  outline: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: currentColor;
+  opacity: .72;
+  -webkit-transition: opacity .14s ease;
+  transition: opacity .14s ease;
+}
+
+.ConvoList__topHintCloseButton:hover {
+  opacity: 1;
+}

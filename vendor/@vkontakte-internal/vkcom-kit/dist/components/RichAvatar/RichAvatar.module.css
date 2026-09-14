@@ -1,0 +1,7 @@
+.rootNft.rootNft {
+  border-radius: unset;
+}
+
+.rootNft>img {
+  clip-path: url(#AvatarHeptagonSvgClip);
+}

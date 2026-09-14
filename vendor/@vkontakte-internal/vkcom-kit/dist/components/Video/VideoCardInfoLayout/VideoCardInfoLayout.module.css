@@ -1,0 +1,85 @@
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.containerWithEpisodes {
+  flex-wrap: wrap;
+}
+
+.containerHorizontal {
+  position: relative;
+  margin-left: 12px;
+  margin-bottom: 8px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.containerHorizontalBig {
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.containerOverlayed {
+  opacity: .2;
+}
+
+.containerFullWidth {
+  padding: var(--vkui--size_base_padding_horizontal--regular);
+  padding-top: 0;
+}
+
+.avatar {
+  margin-right: 12px;
+}
+
+.info {
+  flex-direction: column;
+  flex: 1;
+  word-break: break-word;
+  position: relative;
+}
+
+.infoWithAction {
+  padding-right: 32px;
+}
+
+.title {
+  color: var(--vkui--color_text_primary);
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.title:hover {
+  text-decoration: none;
+}
+
+.titleLink {
+  width: fit-content;
+}
+
+.additionalInfo {
+  max-width: 100%;
+  color: var(--vkui--color_text_secondary);
+}
+
+.description {
+  max-width: 100%;
+  margin-top: 6px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.content {
+  overflow: hidden;
+  width: 100%;
+}
+
+.contentWithEpisodes {
+  flex: 1;
+}
+
+.action {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

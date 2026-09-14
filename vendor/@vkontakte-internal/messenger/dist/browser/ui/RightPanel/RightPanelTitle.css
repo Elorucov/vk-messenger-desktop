@@ -1,0 +1,34 @@
+.RightPanelTitle {
+  display: grid;
+  grid-template-areas: "left content right";
+  grid-template-columns: 48px 1fr 48px;
+  height: var(--title_height);
+  min-height: var(--title_height);
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+}
+
+.RightPanelTitle__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.RightPanelTitle__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+}

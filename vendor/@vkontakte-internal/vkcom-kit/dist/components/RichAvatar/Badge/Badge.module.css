@@ -1,0 +1,43 @@
+.root.root {
+  right: unset;
+  bottom: unset;
+  transform: translate(50%,50%);
+}
+
+.rootRaster.rootRaster:before {
+  box-shadow: none;
+}
+
+.rootTopLeft.rootTopLeft,
+.rootTopRight.rootTopRight {
+  bottom: 85%;
+}
+
+.rootBottomLeft.rootBottomLeft,
+.rootBottomRight.rootBottomRight {
+  bottom: 15%;
+}
+
+.rootTopLeft.rootTopLeft,
+.rootBottomLeft.rootBottomLeft {
+  right: 85%;
+}
+
+.rootTopRight.rootTopRight,
+.rootBottomRight.rootBottomRight {
+  right: 15%;
+}
+
+.rootBottomCenter.rootBottomCenter {
+  right: 50%;
+  bottom: 0;
+}
+
+.rootOnHover {
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_m);
+}
+
+:global(.vkuiInternalRichAvatar):hover .rootOnHover {
+  opacity: 1;
+}

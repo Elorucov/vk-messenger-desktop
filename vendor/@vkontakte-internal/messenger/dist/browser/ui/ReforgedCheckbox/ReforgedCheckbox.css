@@ -1,0 +1,12 @@
+.ReforgedCheckbox {
+  padding-left: var(--vkui--size_base_padding_horizontal--regular);
+  margin-left: calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+}
+
+.ReforgedCheckbox .vkuiCheckbox__children {
+  font-size: 13px;
+}
+
+.ReforgedCheckbox .vkuiTappable__hoverShadow {
+  display: none;
+}

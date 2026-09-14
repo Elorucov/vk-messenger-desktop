@@ -1,0 +1,76 @@
+.ChannelPostDonutPlaceholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 22px;
+  color: var(--vkui--color_text_subhead);
+  font: 16px/20px var(--font);
+  width: var(--channelPostCommentsMaxContentWidth);
+  max-width: 100%;
+}
+
+.ChannelPostDonutPlaceholder__icon {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ChannelPostDonutPlaceholderNew {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: var(--channelPostDonutPlaceholderWidth);
+  height: var(--channelPostDonutPlaceholderHeight);
+  max-width: 100%;
+  padding: 16px;
+  gap: 16px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--channelPostBorderRadius);
+}
+
+.ChannelPostDonutPlaceholderNew--hasPhoto {
+  color: var(--vkui--color_text_contrast);
+}
+
+.ChannelPostDonutPlaceholderNew--hasPhoto:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--vkui--color_overlay_primary);
+  border-radius: inherit;
+}
+
+.ChannelPostDonutPlaceholderNew__text {
+  font: 14px/18px var(--font);
+  text-wrap: balance;
+  position: relative;
+}
+
+.MEAppThemeStylesContrastEnable .ChannelPostDonutPlaceholderNew__actionButton.ChannelPostDonutPlaceholderNew__actionButton,
+.ChannelPostDonutPlaceholderNew--hasPhoto .ChannelPostDonutPlaceholderNew__actionButton {
+  color: var(--vkui--color_text_primary_invariably);
+  background-color: var(--vkui--color_background_contrast);
+}

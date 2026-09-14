@@ -1,0 +1,26 @@
+.roomItem+.roomItem {
+  margin-top: 2px;
+}
+
+.nameWrapper {
+  display: flex;
+}
+
+.roomName {
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.icon:hover {
+  color: var(--vkui--color_icon_medium);
+}
+
+.counter {
+  margin-right: 4px;
+}

@@ -1,0 +1,96 @@
+.MessageActionsContent__menu {
+  min-width: 200px;
+}
+
+.MessageActionsContent__menu--bottom {
+  margin: 8px 0;
+}
+
+.MessageActionsContent__menu--side {
+  margin: 0 8px;
+}
+
+.MessageActionsContent__wrapper {
+  position: relative;
+  --reaction-picker-offset: calc(12px + var(--reaction-picker-height));
+}
+
+.MessageActionsContent__wrapper--with-reactions {
+  padding-top: var(--reaction-picker-offset);
+  margin-left: 19px;
+}
+
+.MessageActionsContent__wrapper--with-reactions .MessageActionsContent__menu--bottom {
+  margin: 0 16px 8px;
+}
+
+.MesageActionsContent__wrapper--in-contextMenu {
+  margin-top: calc(-1 * var(--reaction-picker-offset));
+  margin-left: 0;
+}
+
+.MessageActionsContent__reactions {
+  position: absolute;
+  top: 0;
+  left: auto;
+  margin: 0 -24px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .1s ease-in 70ms,visibility .1s linear 70ms;
+  transition: opacity .1s ease-in 70ms,visibility .1s linear 70ms;
+}
+
+.MessageActionsContent__reactions--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.MessageActionsContent__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+[data-position=left] .MessageActionsContent__content {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.MessageActionsMenu--withViewers {
+  min-width: var(--messageActionsMenuWithViewersMinWidth);
+}
+
+.MessageActionsContent--mobile {
+  margin: 0;
+}
+
+.MessageActionsContent--mobile .MessageActionsContent__content {
+  display: block;
+}
+
+.MessageActionsContent--mobile .MessageActionsContent__menu {
+  margin: 0;
+}
+
+.MessageViewersModal {
+  width: 400px;
+  height: 574px;
+  max-height: calc(100vh - 150px);
+}
+
+.MessageViewersModal__header--stubbed {
+  display: inline-block;
+  width: 140px;
+  height: 16px;
+  background-color: var(--vkui--color_skeleton_from);
+  border-radius: 4px;
+}
+
+.MessageViewersModal__content {
+  padding: 12px;
+}
+
+.MessageViewersModal__spinnerWrapper {
+  width: 100%;
+}

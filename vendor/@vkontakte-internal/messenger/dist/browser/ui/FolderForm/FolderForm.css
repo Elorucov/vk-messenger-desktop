@@ -1,0 +1,226 @@
+.FolderForm__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.FolderForm__row--disabled {
+  margin-bottom: 16px;
+}
+
+.FolderForm__row+.FolderForm__row {
+  margin-top: 16px;
+}
+
+.FolderForm__nameLengthCounter--error {
+  color: var(--vkui--color_text_negative);
+}
+
+.FolderForm__convosWrapper {
+  margin: 0 -16px;
+}
+
+.FolderForm__convosList {
+  list-style-type: none;
+  padding: 0;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.FolderForm__deleteBtn {
+  background-color: transparent;
+  border: none;
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.FolderForm__deleteBtn:hover {
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+}
+
+.FolderForm__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: var(--vkui--color_field_background);
+  border: 1px solid var(--vkui--color_field_border_alpha);
+  border-radius: 6px;
+  height: 36px;
+  padding: 0 12px;
+}
+
+.FolderForm__input:hover {
+  border-color: var(--vkui--color_icon_tertiary_alpha);
+}
+
+.FolderForm__input--focus,
+.FolderForm__input--focus:hover {
+  border-color: var(--vkui--color_background_accent);
+}
+
+.FolderForm__input--error {
+  background-color: var(--vkui--color_background_negative_tint);
+  border-color: var(--vkui--color_stroke_negative);
+}
+
+.FolderForm__input--error:hover {
+  border-color: var(--vkui--color_stroke_negative);
+}
+
+.FolderForm__input.FolderForm__input--disabled {
+  border-color: var(--vkui--color_field_border_alpha);
+}
+
+.FolderForm__inputControl {
+  font-size: 15px;
+  line-height: 20px;
+  -webkit-appearance: none;
+  color: var(--vkui--color_text_primary);
+  background-color: transparent;
+  border: none;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.FolderForm__inputControl::-webkit-input-placeholder {
+  color: var(--vkui--color_icon_medium);
+}
+
+.FolderForm__inputControl::-moz-placeholder {
+  color: var(--vkui--color_icon_medium);
+}
+
+.FolderForm__inputControl:-ms-input-placeholder {
+  color: var(--vkui--color_icon_medium);
+}
+
+.FolderForm__inputControl::-ms-input-placeholder {
+  color: var(--vkui--color_icon_medium);
+}
+
+.FolderForm__inputControl::placeholder {
+  color: var(--vkui--color_icon_medium);
+}
+
+.FolderForm__inputControl:focus,
+.FolderForm__inputControl:focus-within,
+.FolderForm__inputControl:focus-visible {
+  outline: none;
+}
+
+.FolderForm__loader {
+  padding: 20px 0;
+}
+
+.FolderForm__subTitle {
+  padding-bottom: 16px;
+}
+
+.FolderForm__sublistAvatar {
+  color: var(--vkui--color_icon_contrast);
+  background: linear-gradient(135deg,var(--vkui--vkontakte_gradient_gray));
+}
+
+.FolderForm__sublistAvatar--businessNotify {
+  background: linear-gradient(135deg,var(--vkui--vkontakte_gradient_blue));
+}
+
+.FolderForm__sublistAvatar--unread {
+  background: linear-gradient(135deg,var(--vkui--vkontakte_gradient_green));
+}
+
+.FolderForm__sublistAvatar--personal {
+  background: linear-gradient(135deg,var(--vkui--vkontakte_gradient_turquoise));
+}
+
+.FolderForm__checkbox {
+  padding: 0 16px;
+}
+
+.FolderListRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0 var(--vkui--size_base_padding_horizontal--regular);
+  height: 56px;
+}
+
+.FolderListRow--clickable {
+  cursor: pointer;
+}
+
+.FolderListRow--clickable:hover,
+.FolderListRow--clickable:focus {
+  background-color: var(--vkui--color_field_background);
+  outline: none;
+}
+
+.FolderListRow__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.FolderListRow__avatar {
+  margin-right: 12px;
+}
+
+.FolderListRow__title {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--vkui--color_text_primary);
+}
+
+.FolderListRow__sub-title {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 2px;
+}
+
+.FolderListRow__checkbox {
+  margin-right: 16px;
+  color: var(--vkui--color_icon_secondary);
+}
+
+.FolderListRow__checkbox--active {
+  color: var(--vkui--color_text_accent);
+}
+
+.FolderListRow__before,
+.FolderListRow__after {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.FolderAddButton__text {
+  color: var(--vkui--color_icon_accent);
+}

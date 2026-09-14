@@ -1,0 +1,67 @@
+.ConvoCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 275px;
+  border-radius: 12px;
+  gap: 8px;
+  padding: 16px;
+  background-color: var(--vkui--color_background_content);
+  text-align: center;
+}
+
+.ConvoCard__title {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--vkui--color_text_primary);
+  line-height: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ConvoCard__subtitle {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--vkui--color_text_tertiary);
+  text-align: center;
+}
+
+.ConvoCard__divider {
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  background: -webkit-gradient(linear,left top,right top,from(rgba(215,216,217,0)),color-stop(50%,#d7d8d9),color-stop(95.5%,rgba(215,216,217,0)));
+  background: linear-gradient(90deg,#d7d8d900,#d7d8d9 50%,#d7d8d900 95.5%);
+}
+
+.ConvoCard__content {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--vkui--color_text_subhead);
+}
+
+.ConvoCard__actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(90px,1fr));
+  grid-template-rows: auto;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.ConvoCard__snackIcon {
+  color: var(--vkui--color_icon_positive--active);
+}

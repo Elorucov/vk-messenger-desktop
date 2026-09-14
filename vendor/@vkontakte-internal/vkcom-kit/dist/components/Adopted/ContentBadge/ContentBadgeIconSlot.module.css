@@ -1,0 +1,25 @@
+.rootSizeM {
+  max-block-size: 12px;
+  max-inline-size: 12px;
+}
+
+.rootSizeL {
+  margin-inline-start: -2px;
+  margin-inline-end: -2px;
+  max-block-size: 16px;
+  max-inline-size: 16px;
+}
+
+.rootSingleIconSizeM {
+  padding-block: 1px;
+  margin-inline: -2px;
+  max-block-size: 16px;
+  max-inline-size: 16px;
+}
+
+.rootSingleIconSizeL {
+  margin-block: -2px;
+  margin-inline: -4px;
+  max-block-size: 20px;
+  max-inline-size: 20px;
+}

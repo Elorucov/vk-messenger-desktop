@@ -1,0 +1,9 @@
+var QR_SIZE = 180;
+var QR_SIZE_PADDING = 8;
+var QR_ECC_LEVEL = {
+  LOW: 0,
+  MEDIUM: 1,
+  QUARTER: 2,
+  HIGH: 3
+};
+export { QR_ECC_LEVEL, QR_SIZE, QR_SIZE_PADDING };

@@ -1,0 +1,3 @@
+function e(e){return navigator.clipboard.writeText(e).then(function(){return true})}function t(e){return new Promise(function(t,n){var r=document.createElement("textarea");var o=document.createRange();r.value=e;r.style.position="fixed";r.contentEditable="true";document.body.appendChild(r);r.focus();r.select();o.selectNodeContents(r);var c=window.getSelection();if(c){c.removeAllRanges();c.addRange(o);}r.setSelectionRange(0,999999);try{var a=document.execCommand("copy");if(a){t(true);}else {n(new Error("copy failed"));}}catch(e){n(e);}if(c){c.removeAllRanges();}document.body.removeChild(r);})}function copyTextToClipboard(n){if(navigator.clipboard){return e(n).catch(function(){return t(n)})}else {return t(n)}}
+
+export { copyTextToClipboard };

@@ -1,0 +1,17 @@
+.content {
+  min-height: 48px;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.overlay {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayStretched {
+  position: absolute;
+  inset: 0;
+}

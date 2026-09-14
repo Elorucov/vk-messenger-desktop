@@ -1,0 +1,169 @@
+.HorizontalScroll {
+  position: relative;
+  width: 100%;
+}
+
+.HorizontalScroll--primary {
+  --bordersColor: var(--vkui--color_background_content);
+}
+
+.HorizontalScroll--secondary {
+  --bordersColor: var(--vkui--color_background);
+}
+
+.HorizontalScroll__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+.HorizontalScroll__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.HorizontalScroll__leftBorder,
+.HorizontalScroll__rightBorder {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 20px;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .16s;
+  transition: opacity .16s;
+  will-change: opacity;
+}
+
+.HorizontalScroll__leftBorder {
+  left: 0;
+  background: -webkit-gradient(linear,left top,right top,from(var(--bordersColor)),color-stop(70%,transparent));
+  background: linear-gradient(90deg,var(--bordersColor),transparent 70%);
+}
+
+.HorizontalScroll__rightBorder {
+  right: 0;
+  background: -webkit-gradient(linear,right top,left top,from(var(--bordersColor)),color-stop(70%,transparent));
+  background: linear-gradient(-90deg,var(--bordersColor),transparent 70%);
+}
+
+.HorizontalScroll__leftBorder--active,
+.HorizontalScroll__rightBorder--active {
+  opacity: 1;
+}
+
+.HorizontalScroll__borderTrigger {
+  min-width: 1px;
+  pointer-events: none;
+}
+
+.HorizontalScroll__borderTrigger--left {
+  margin-right: -1px;
+}
+
+.HorizontalScroll__borderTrigger--right {
+  margin-left: -1px;
+}
+
+.HorizontalScrollArrow {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity .16s;
+  transition: opacity .16s;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  will-change: opacity;
+}
+
+.HorizontalScrollArrow--size-s {
+  --iconSize: 24px;
+  --iconPadding: 12px;
+}
+
+.HorizontalScrollArrow--size-m {
+  --iconSize: 40px;
+  --iconPadding: 16px;
+}
+
+.HorizontalScrollArrow--left {
+  left: 0;
+  padding-left: var(--iconPadding);
+}
+
+.HorizontalScrollArrow--right {
+  right: 0;
+  padding-right: var(--iconPadding);
+}
+
+.HorizontalScroll:hover .HorizontalScrollArrow {
+  opacity: .72;
+}
+
+.HorizontalScroll:hover .HorizontalScrollArrow:hover {
+  opacity: 1;
+}
+
+.HorizontalScrollArrow__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: var(--iconSize);
+  height: var(--iconSize);
+  color: var(--vkui--color_icon_secondary);
+  background-color: var(--vkui--color_background_modal);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px rgb(0 0 0/12%),0 0 10px rgb(0 0 0/20%);
+  box-shadow: 0 0 2px #0000001f,0 0 10px #0003;
+}
+
+.HorizontalScrollArrow--left .HorizontalScrollArrow__icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.HorizontalScroll__content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: -webkit-transform .16s;
+  transition: -webkit-transform .16s;
+  transition: transform .16s;
+  transition: transform .16s,-webkit-transform .16s;
+  -webkit-transition-delay: 32ms;
+  transition-delay: 32ms;
+}
+
+.HorizontalScrollArrow--left:hover~.HorizontalScroll__wrapper .HorizontalScroll__content {
+  -webkit-transform: translateX(8px);
+  transform: translate(8px);
+}
+
+.HorizontalScrollArrow--right:hover~.HorizontalScroll__wrapper .HorizontalScroll__content {
+  -webkit-transform: translateX(-8px);
+  transform: translate(-8px);
+}
+
+.ComposerAttachPhoto {
+  position: relative;
+  width: var(--composerAttachWidth);
+  height: var(--composerAttachHeight);
+}

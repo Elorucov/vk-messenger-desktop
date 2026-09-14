@@ -1,0 +1,7 @@
+import { CommonErrorReasons, ERROR_CODES } from '../constants/errors.js';
+import { MiniAppEvents } from '../constants/events.js';
+import l$1 from './VKWebAppHandlerBase.js';
+
+class s extends l$1{constructor(...n){super(...n),this.handlerName=MiniAppEvents.ConversionHit,this.handle=e=>{return this.parseHandlerParams(e).then(e=>this.controller.requestApiMethod("ads.conversionHit",e)).then(({response:e})=>this.handleSuccess({result:!e})).catch(this.handleFailed)},this.parseHandlerParams=o=>{if(!o.pixel_code){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("pixel_code")})}else if(typeof o.pixel_code!=="string"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("pixel_code","string")})}if(!o.conversion_event){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("conversion_event")})}else if(typeof o.conversion_event!=="string"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("conversion_event","string")})}if(!o.conversion_value){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("conversion_value")})}else if(typeof o.conversion_value!=="number"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("conversion_value","number")})}return Promise.resolve(o)};}}
+
+export { s as default };

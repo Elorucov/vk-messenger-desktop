@@ -1,0 +1,38 @@
+.SkeletonLoader {
+  overflow: hidden;
+  contain: strict;
+  -webkit-animation: load 1s linear infinite alternate;
+  animation: load 1s linear infinite alternate;
+}
+
+@-webkit-keyframes load {
+  0% {
+    background-color: var(--animation-start-color);
+  }
+  to {
+    background-color: var(--animation-end-color);
+  }
+}
+
+@keyframes load {
+  0% {
+    background-color: var(--animation-start-color);
+  }
+  to {
+    background-color: var(--animation-end-color);
+  }
+}
+
+.SearchMessageTab {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  -webkit-transition: opacity .2s ease-out,visibility .2s ease-out,-webkit-transform .2s ease-out;
+  transition: opacity .2s ease-out,visibility .2s ease-out,-webkit-transform .2s ease-out;
+  transition: transform .2s ease-out,opacity .2s ease-out,visibility .2s ease-out;
+  transition: transform .2s ease-out,opacity .2s ease-out,visibility .2s ease-out,-webkit-transform .2s ease-out;
+}
+
+.SearchMessageTab__resultsContainer {
+  padding: 0 8px;
+}

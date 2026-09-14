@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+}
+
+.mainRequired:after {
+  content: "*";
+  color: var(--vkui--color_text_negative);
+  margin-left: 3px;
+}
+
+.aside {
+  margin-left: auto;
+  padding-left: 12px;
+}

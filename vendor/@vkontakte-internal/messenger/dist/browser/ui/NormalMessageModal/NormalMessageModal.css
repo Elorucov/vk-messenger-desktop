@@ -1,0 +1,41 @@
+.NormalMessageModal {
+  width: 638px;
+}
+
+.NormalMessageModal__body {
+  background-color: var(--vkui--color_background);
+  padding: 15px;
+}
+
+.NormalMessageModal__flowStack {
+  position: relative;
+  contain: style layout;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  max-width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.NormalMessageModal__flowStack+.INormalMessageModal__flowStack {
+  margin-top: var(--messageVerticalIndent);
+}
+
+.NormalMessageModal__flowStack .ConvoStack__content {
+  overflow: hidden;
+  width: auto;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.NormalMessageModal__flowStack .ConvoMessage {
+  width: 100%;
+}

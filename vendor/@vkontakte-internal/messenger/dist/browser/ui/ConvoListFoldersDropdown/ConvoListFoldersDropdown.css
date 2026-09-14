@@ -1,0 +1,147 @@
+.ConvoListFoldersDropdown {
+  background-color: var(--vkui--color_background_content);
+  position: sticky;
+  margin: 0 var(--vkui--spacing_size_m,8px);
+  z-index: 1;
+  top: 0;
+}
+
+.ConvoListFoldersDropdown.ConvoList__tabs--slide-exit-active {
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 0;
+}
+
+.ConvoListFoldersDropdown {
+  margin: 0;
+}
+
+.ConvoListFoldersDropdown:after {
+  display: block;
+  content: "";
+  height: var(--separator-height);
+  background: var(--vkui--color_separator_primary);
+  margin: var(--separator-margin) calc(-1 * var(--vkui--spacing_size_m, 8px)) 0;
+  width: 100%;
+  margin-left: 0;
+}
+
+.ConvoListFoldersDropdown__Trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  cursor: pointer;
+  min-width: 56px;
+}
+
+.ConvoListFoldersDropdown__Trigger:hover {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.ConvoListFoldersDropdown__ActionsMenu {
+  min-width: 186px;
+}
+
+.ConvoListFoldersDropdown__ActionsMenuItemLeftIcon {
+  color: var(--vkui--vkontakte_color_icon_outline_medium);
+}
+
+.ConvoListFoldersDropdown__ActionsMenuItemTitle {
+  font-size: 13px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  gap: 0 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ConvoListFoldersDropdown__Icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--vkui--color_image_border_alpha);
+  background: var(--vkui--color_background_secondary);
+  color: var(--vkui--color_icon_secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.ConvoListFoldersDropdown__Caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_text_subhead);
+  font: 11px/11px var(--font);
+}
+
+.ConvoListFoldersDropdown__Title {
+  text-overflow: ellipsis;
+  max-width: 38px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ConvoListFoldersDropdown__Counter {
+  position: absolute;
+  border: 2px solid var(--vkui--color_background_content);
+  width: initial;
+  height: initial;
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0 4px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 12px;
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_background_content);
+  top: -6px;
+  left: -4px;
+}
+
+.ConvoListFoldersDropdown__Counter--muted {
+  background: var(--vkui--color_icon_secondary);
+}

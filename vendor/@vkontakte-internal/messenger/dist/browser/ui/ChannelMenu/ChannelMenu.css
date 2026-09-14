@@ -1,0 +1,75 @@
+.ChannelMenu {
+  background-color: var(--vkui--color_background_content);
+  width: 100%;
+  max-width: calc(var(--channelHistoryMaxContentWidth) - var(--channelPostsHistoryContentHorizontalPadding) * 2);
+  margin: 0 auto;
+  border-radius: 12px;
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+  padding: 12px 0;
+}
+
+.ChannelMenu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 12px;
+  padding: 0 14px;
+}
+
+.ChannelMenuItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ChannelMenuItem__imageWrapper {
+  min-width: 135px;
+  max-width: 135px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.ChannelMenuItem__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ChannelMenuItem__imageStub {
+  background-color: var(--vkui--color_background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ChannelMenuItem__title {
+  max-width: 135px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--vkui--color_text_primary);
+}

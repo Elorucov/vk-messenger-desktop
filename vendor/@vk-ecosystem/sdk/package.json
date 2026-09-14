@@ -1,0 +1,11 @@
+{
+  "name": "@vk-ecosystem/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "crypto-js": "4.2.0"
+  }
+}

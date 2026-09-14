@@ -1,0 +1,18 @@
+.banner {
+  --character-padding-x: 12px;
+  --character-padding-y: 6px;
+  --character-size: calc(84px - var(--character-padding-y) * 2);
+  cursor: pointer;
+  padding-bottom: calc(4px + var(--stickers-vertical-gap, 8px));
+}
+
+.character {
+  background-color: var(--vkui--color_background_modal);
+  background-position: left var(--character-padding-x, 12px) bottom var(--character-padding-y, 6px);
+  background-size: var(--character-size, 72px) var(--character-size, 72px);
+  background-repeat: no-repeat;
+}
+
+.placeholder {
+  width: var(--character-size, 72px);
+}

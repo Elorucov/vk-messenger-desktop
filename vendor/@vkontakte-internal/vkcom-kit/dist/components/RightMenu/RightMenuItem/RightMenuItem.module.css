@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2px;
+  padding: 0 var(--vkui--size_button_padding_horizontal--regular);
+  min-height: 36px;
+  font-size: var(--vkui--font_footnote--font_size--regular);
+  line-height: var(--vkui--font_footnote--line_height--regular);
+  color: var(--vkui--color_text_primary);
+  background: var(--vkui--color_background_content);
+}
+
+.containerSecondary {
+  padding-left: 20px;
+  color: var(--vkui--color_text_subhead);
+}
+
+.containerHover,
+.containerActive {
+  background: var(--vkui--vkontakte_background_hover_alpha);
+}
+
+.containerActive {
+  color: var(--vkui--color_text_primary);
+}
+
+.before {
+  margin-right: 12px;
+}
+
+.content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.after {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+}
+
+.afterTitle {
+  margin-left: 4px;
+}
+
+.afterInactive {
+  visibility: hidden;
+}
+
+.afterHidden {
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_m) var(--vkui--animation_easing_default);
+}
+
+.container:hover .afterHidden,
+.container:focus-within .afterHidden {
+  opacity: .8;
+}
+
+.spinner {
+  position: absolute;
+  right: var(--vkui--size_button_padding_horizontal--regular);
+}

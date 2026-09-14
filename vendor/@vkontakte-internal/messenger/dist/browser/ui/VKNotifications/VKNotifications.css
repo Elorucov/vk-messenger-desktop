@@ -1,0 +1,55 @@
+.VKNotifications {
+  margin: 8px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  row-gap: 8px;
+  font-weight: 400;
+}
+
+.VKNotifications__close-button {
+  color: var(--vkui--color_icon_medium);
+  cursor: pointer;
+  height: 20px;
+}
+
+.VKNotifications__notification {
+  padding: 12px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.08),0px 8px 24px rgba(0,0,0,.08);
+  box-shadow: 0 0 2px #00000014,0 8px 24px #00000014;
+  border-radius: 8px;
+  background-color: var(--vkui--color_background_content);
+  color: var(--vkui--color_text_primary);
+  display: grid;
+  grid-template-columns: auto 20px;
+  word-break: break-all;
+}
+
+.VKNotifications__item-enter {
+  opacity: 0;
+  width: 100%;
+}
+
+.VKNotifications__item-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+}
+
+.VKNotifications__item-exit {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.VKNotifications__item-exit-active {
+  -webkit-transform: translateY(-44px);
+  transform: translateY(-44px);
+  opacity: 0;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}

@@ -1,0 +1,36 @@
+.ConvoHistoryPlaceholderContactInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoHistoryPlaceholderContactInfo__photoWrap {
+  margin-bottom: 11px;
+}
+
+.ConvoHistoryPlaceholderContactInfo__name {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 9px;
+  text-align: center;
+  color: var(--vkui--color_text_primary);
+}
+
+.ConvoHistoryPlaceholderContactInfo__description {
+  font-size: 16px;
+  color: var(--vkui--color_text_subhead);
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 18px;
+}

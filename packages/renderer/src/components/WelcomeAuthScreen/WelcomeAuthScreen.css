@@ -1,0 +1,82 @@
+.VkMeLogin__text {
+  color: var(--vkui--color_text_secondary);
+  font-size: 15px;
+  line-height: 20px;
+  margin: 16px 0 0;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.VkMeLogin .VkMeLogin__buttons .VkMeLogin__sferumLoginButton {
+  background-color: var(--vkui--color_accent_purple);
+  color: var(--vkui--color_text_contrast);
+}
+
+.VkMeLogin .VkMeLogin__buttons .VkMeLogin__sferumLoginButton.vkuiButton--hover,
+.VkMeLogin__buttons .VkMeLogin__sferumLoginButton.vkuiButton--hover {
+  background-color: var(--vkui--color_accent_purple--hover);
+}
+
+.VkMeLogin .VkMeLogin__buttons .VkMeLogin__sferumLoginButton.vkuiButton--active {
+  background-color: var(--vkui--color_accent_purple--active);
+}
+
+.VkMeLogin__action {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: none;
+  transition: background-color .18s ease;
+}
+
+.VkMeLogin__action:hover {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.VkMeLogin {
+  background-color: var(--vkui--color_background_content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+.VkMeLogin__title {
+  color: var(--vkui--color_text_primary);
+  font-weight: 600;
+  font-size: 32px;
+  margin: 32px 0 0;
+}
+
+.VkMeLogin__text {
+  color: var(--vkui--color_text_secondary);
+  font-size: 15px;
+  line-height: 20px;
+  margin: 16px 0 0;
+  white-space: pre-wrap;
+  text-align: center;
+  display: inline-block;
+  max-width: 400px;
+}
+
+.VkMeLogin__buttons {
+  margin-top: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 308px;
+}
+
+@media (max-width: 375px) {
+  .VkMeLogin__buttons {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  .VkMeLogin .VkMeLogin__buttons .VkMeLogin__sferumLoginButton {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 12px;
+    width: calc(100% - 32px);
+  }
+}

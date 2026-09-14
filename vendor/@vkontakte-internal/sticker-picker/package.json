@@ -1,0 +1,24 @@
+{
+  "name": "@vkontakte-internal/sticker-picker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@tanstack/react-virtual": "3.13.12",
+    "@vkontakte-internal/api": "*",
+    "@vkontakte-internal/browser-store": "*",
+    "@vkontakte-internal/help-hints": "*",
+    "@vkontakte-internal/icons-private": "*",
+    "@vkontakte-internal/langs": "*",
+    "@vkontakte-internal/shared": "*",
+    "@vkontakte-internal/sticker": "*",
+    "@vkontakte-internal/vkcom-kit": "*",
+    "@vkontakte/icons": "*",
+    "@vkontakte/vkjs": "2.0.1",
+    "effector": "22.8.8",
+    "effector-react": "22.5.4",
+    "react": "18.3.1"
+  }
+}

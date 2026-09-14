@@ -1,0 +1,22 @@
+.container {
+  margin: 0 auto;
+}
+
+.containerStretched {
+  height: 100%;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+
+.containerOverlay {
+  color: var(--vkui--color_text_contrast);
+}
+
+.containerOverlay :global(.vkuiIcon),
+.containerOverlay :global(.vkuiPlaceholder__title) {
+  color: var(--vkui--color_icon_contrast);
+}
+
+.containerOverlay .text {
+  color: var(--white_alpha60, rgba(255, 255, 255, .6));
+}

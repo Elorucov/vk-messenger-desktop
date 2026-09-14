@@ -1,0 +1,13 @@
+.tabbar {
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px 12px;
+  box-shadow: 0 calc(var(--vkui--size_border--regular) * -1) var(--vkui--color_separator_primary);
+}
+
+.item {
+  padding: 0 21px;
+}

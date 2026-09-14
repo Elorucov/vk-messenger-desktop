@@ -1,0 +1,15 @@
+{
+  "name": "@vkontakte-internal/rlottie",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte-internal/react-utils": "*",
+    "@vkontakte-internal/utils": "*",
+    "@vkontakte/vkjs": "2.0.1",
+    "react": "18.3.1",
+    "threads-es": "1.0.0"
+  }
+}

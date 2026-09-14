@@ -1,0 +1,8 @@
+.scrollView {
+  max-height: inherit;
+  padding-right: var(--vkit_internal--dropdown_action_sheet_padding, 0);
+}
+
+.icon {
+  color: var(--vkui--color_icon_secondary);
+}

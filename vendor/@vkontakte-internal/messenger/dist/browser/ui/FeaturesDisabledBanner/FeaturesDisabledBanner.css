@@ -1,0 +1,33 @@
+.FeaturesDisabledBanner {
+  position: relative;
+  padding: 12px;
+  border-radius: 8px;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  background-color: var(--vkui--color_background_secondary);
+}
+
+.FeaturesDisabledBanner__wrapper {
+  padding-left: 40px;
+}
+
+.FeaturesDisabledBanner__text {
+  color: var(--vkui--color_text_subhead);
+}
+
+.FeaturesDisabledBanner__icon {
+  color: var(--vkui--color_icon_accent);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+
+.SferumConvoOffboardingBanner__icon {
+  width: 56px;
+  height: 56px;
+}
+
+.SferumConvoOffboardingBanner {
+  word-break: break-word;
+  padding: 12px;
+  background: linear-gradient(88.22deg,#5e31de66 1.21%,#aa33c833);
+}

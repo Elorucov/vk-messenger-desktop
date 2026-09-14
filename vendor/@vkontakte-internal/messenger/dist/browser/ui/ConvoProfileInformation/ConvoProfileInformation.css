@@ -1,0 +1,73 @@
+.ConvoProfileInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ConvoProfileInformationCopyButton {
+  color: var(--vkui--color_text_link);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.ConvoProfileInformationIcon {
+  width: 30px;
+  height: 100%;
+}
+
+.ConvoProfileInformation>.ConvoProfileInformation__description {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.ConvoProfileInformation__infoCellText,
+.ConvoProfileInformation__descriptionText,
+.ConvoProfileInformation__descriptionButtonText {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ConvoProfileInformation__link {
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+  word-break: break-all;
+}
+
+.ConvoProfileInformation__profileLink {
+  border-top: 1px solid var(--vkui--color_separator_primary);
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+}
+
+.ConvoProfileInformationCopyButton__icon {
+  color: var(--vkui--color_text_link);
+}
+
+.ConvoProfileInformation__sharedConvosPicker {
+  width: 500px;
+  height: 400px;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ConvoProfileInformation__screenName,
+.ConvoProfileInformation__id {
+  cursor: pointer;
+  color: var(--vkui--color_text_link);
+}
+
+.ConvoProfileInformation__casperTooltip {
+  text-align: center;
+  display: inline-block;
+  white-space: pre;
+}

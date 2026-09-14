@@ -1,0 +1,109 @@
+.FilePicker__title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.FilePicker__panel {
+  width: 576px;
+}
+
+.FilePicker__uploader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px 16px;
+}
+
+.FilePicker__uploaderText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--vkui--color_text_accent);
+  cursor: pointer;
+}
+
+.FilePicker__search {
+  padding: 0 16px;
+}
+
+.FilePicker__searchIcon {
+  color: var(--vkui--color_icon_medium);
+}
+
+.FilePicker__items {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 8px 8px;
+}
+
+.FilePicker__item {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: none;
+}
+
+.FilePicker__item:focus,
+.FilePicker__item:hover {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.FilePicker__item--selected {
+  cursor: default;
+  background: var(--vkui--color_transparent--hover);
+}
+
+.FilePicker__item--selected .AttachmentCell:hover {
+  opacity: 1;
+  cursor: default;
+}
+
+.FilePicker__document {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: start;
+}
+
+.FilePicker__subtitleSeparator {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--vkui--color_text_secondary);
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+.FilePicker__spinner {
+  padding: 20px 0;
+  height: 60px;
+}
+
+.FilePicker__empty {
+  padding: 20px 20px 40px;
+  text-align: center;
+  color: var(--vkui--color_text_secondary);
+}
+
+.FilePicker__input {
+  display: none;
+}

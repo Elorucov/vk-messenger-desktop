@@ -1,0 +1,39 @@
+.in {
+  min-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+.inFadeLeft {
+  -webkit-mask-image: linear-gradient(to left,#000 90%,#0000);
+  mask-image: linear-gradient(to left,#000 90%,#0000);
+}
+
+.inFadeRight {
+  -webkit-mask-image: linear-gradient(to right,#000 90%,#0000);
+  mask-image: linear-gradient(to right,#000 90%,#0000);
+}
+
+.inFadeLeft.inFadeRight {
+  -webkit-mask-image: linear-gradient(to right,#0000,#000 10% 90%,#0000);
+  mask-image: linear-gradient(to right,#0000,#000 10% 90%,#0000);
+}
+
+.scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollIn {
+  transition: transform var(--vkui--animation_duration_m);
+  display: flex;
+  align-items: stretch;
+  flex: 1 0 100%;
+}

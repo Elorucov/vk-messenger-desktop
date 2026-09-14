@@ -1,0 +1,8 @@
+import { CommonErrorReasons, ERROR_CODES } from '../constants/errors.js';
+import { MiniAppEvents } from '../constants/events.js';
+import { GroupActions } from '../entries/MiniAppBase/constants.js';
+import l$1 from './VKWebAppHandlerBase.js';
+
+class n extends l$1{confirm(o){return new Promise((s,n)=>{this.handleModal({type:"JoinLeaveGroupModal",data:{action:GroupActions.JOIN,avatar:o.photo_100||"",group:o.name||""},actions:{onAccept:s,onDeny:()=>n({error_code:ERROR_CODES.USER_DENIED,error_reason:CommonErrorReasons.userDenied()})}});})}constructor(...t){super(...t),this.handlerName=MiniAppEvents.JoinGroup,this.handle=async r=>{return this.parseHandlerParams(r).then(r=>{return this.getGroupInfo(r).then(e=>{if(e.is_member){return this.handleSuccess({result:true})}return this.confirm(e).then(()=>this.updateModalData({loading:true})).then(()=>this.joinGroup(r)).then(()=>this.handleSuccess({result:true}))})}).catch(this.handleFailed).finally(()=>this.updateModalData({shouldClosed:true}))},this.getGroupInfo=({group_id:r})=>{return this.controller.requestApiMethod("groups.getById",{group_ids:r,fields:"is_member"}).then(r=>r.response.groups[0])},this.joinGroup=({group_id:r})=>{return this.controller.requestApiMethod("groups.join",{group_id:r})},this.parseHandlerParams=o=>{if(!o.group_id){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("group_id")})}if(typeof o.group_id!=="number"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("group_id","number")})}return Promise.resolve({request_id:o.request_id,group_id:o.group_id})};}}
+
+export { n as default };

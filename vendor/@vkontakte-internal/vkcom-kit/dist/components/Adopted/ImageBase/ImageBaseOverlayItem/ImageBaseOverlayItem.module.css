@@ -1,0 +1,38 @@
+.root {
+  display: flex;
+  position: absolute;
+}
+
+.rootOnHover {
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_m);
+}
+
+:global(.vkuiInternalImage):hover .rootOnHover,
+:global(.vkuiInternalImageBase):hover .rootOnHover {
+  opacity: 1;
+}
+
+.rootTopLeft,
+.rootTopCenter,
+.rootTopRight {
+  top: 0;
+}
+
+.rootBottomLeft,
+.rootBottomCenter,
+.rootBottomRight {
+  bottom: 0;
+}
+
+.rootTopLeft,
+.rootCenterLeft,
+.rootBottomLeft {
+  left: 0;
+}
+
+.rootTopRight,
+.rootCenterRight,
+.rootBottomRight {
+  right: 0;
+}

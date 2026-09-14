@@ -1,0 +1,12 @@
+.modal {
+  z-index: var(--calls-modal-z-index, 1002);
+}
+
+.modal :global(.BaseModal__content) {
+  width: 560px;
+  max-width: none;
+}
+
+.modal :global(.CallsModalBody) {
+  padding: 0 10px;
+}

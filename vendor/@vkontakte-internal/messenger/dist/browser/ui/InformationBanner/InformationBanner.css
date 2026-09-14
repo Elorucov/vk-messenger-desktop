@@ -1,0 +1,71 @@
+.InformationBanner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 9px 12px;
+}
+
+.InformationBanner__icon {
+  margin-right: 12px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.InformationBanner__icon--primary {
+  color: var(--vkui--color_icon_accent);
+}
+
+.InformationBanner__icon--danger {
+  color: var(--vkui--color_icon_negative);
+}
+
+.InformationBanner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.InformationBanner__title {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.InformationBanner__subtitle {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 2px;
+  color: var(--vkui--color_text_secondary);
+}
+
+@media screen and (max-width: 720px) {
+  .InformationBanner__container {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .InformationBanner__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}

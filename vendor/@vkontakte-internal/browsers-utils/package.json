@@ -1,0 +1,8 @@
+{
+  "name": "@vkontakte-internal/browsers-utils",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js"
+}

@@ -1,0 +1,895 @@
+.ConvoListItemWrapper {
+  padding: 1px 8px;
+}
+
+.ConvoListItemWrapper--collapsed {
+  position: relative;
+}
+
+.ConvoListItem {
+  contain: strict;
+  position: relative;
+  height: var(--convoListItemHeight);
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 2px;
+  padding: 8px var(--vkui--size_base_padding_horizontal--regular,12px);
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  font: 13px/16px var(--font);
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  background: none;
+  border-width: 0;
+}
+
+.ConvoListItemWrapper--collapsed .ConvoListItem {
+  height: 56px;
+  position: relative;
+  padding: 8px;
+}
+
+.ConvoListItem--tap {
+  grid-template-areas: "avatar header icons" "avatar message icons";
+}
+
+.ConvoListItem--click {
+  grid-template-areas: "avatar header header" "avatar message icons";
+}
+
+.ConvoListItem:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  background: var(--vkui--color_transparent--hover);
+  opacity: 0;
+  z-index: -1;
+}
+
+:is(.ConvoListItemWrapper:hover .ConvoListItem,
+.ConvoListItem:focus):before {
+  opacity: 1;
+}
+
+.ConvoListItem.ConvoListItem--selected:before {
+  opacity: 1;
+  background: var(--vkui--color_transparent--active);
+}
+
+.ConvoListItem__avatar {
+  grid-area: avatar;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.ConvoListItem__header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font: 500 var(--convoListItemHeaderFontSize) /var(--convoListItemHeaderLineHeight) var(--font);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ConvoListItem__tags {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42%;
+  flex: 1 1 42%;
+}
+
+.ConvoListItem__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  height: 24px;
+  width: .1px;
+  min-width: 0;
+  margin-right: -4px;
+  color: var(--vkui--color_icon_secondary);
+  -webkit-transition: visibility .18s linear,opacity .18s ease,width 90ms ease 90ms,margin 90ms ease 90ms;
+  transition: visibility .18s linear,opacity .18s ease,width 90ms ease 90ms,margin 90ms ease 90ms;
+}
+
+.ConvoListItemWrapper--collapsed .ConvoListItem__action {
+  border-radius: 12px;
+  border: 1px solid var(--vkui--color_transparent--hover);
+  background: var(--vkui--color_background_content);
+  font-size: 12px;
+  height: 20px;
+  min-width: 26px;
+  margin-right: 0;
+}
+
+.ConvoListItemWrapper--collapsed:hover .ConvoListItem__action {
+  width: initial;
+}
+
+.ConvoListItem__actionTap {
+  position: relative;
+}
+
+.ConvoListItem__actionTapArea {
+  position: absolute;
+  inset: -6px;
+}
+
+.ConvoListItem__action--navigating {
+  border-radius: 6px;
+  visibility: visible;
+}
+
+.ConvoListItemWrapper:focus-within .ConvoListItem__action--navigating,
+.ConvoListItemWrapper:hover .ConvoListItem__action:not(.ConvoListItem__action--navigating),
+.ConvoListItem--tap .ConvoListItem__action {
+  opacity: 1;
+  visibility: visible;
+  width: 24px;
+  -webkit-transition: visibility .18s linear,opacity .18s ease,width 90ms ease;
+  transition: visibility .18s linear,opacity .18s ease,width 90ms ease;
+}
+
+.ConvoListItem__action--navigating:focus {
+  border: var(--vkui--color_stroke_accent) solid 2px;
+  margin-right: 0;
+}
+
+.ConvoListItem__actionsMenu--bottom {
+  margin: 12px -4px 12px 12px;
+}
+
+.ConvoListItem__actionsMenu--right {
+  margin: 12px;
+}
+
+.ConvoListItem__message {
+  grid-area: message;
+  align-self: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: var(--convoListItemMessageFontSize) /var(--convoListItemMessageLineHeight) var(--font);
+  color: var(--vkui--color_text_tertiary);
+}
+
+.ConvoListItem__typing {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_text_subhead);
+  max-width: 100%;
+}
+
+.ConvoListItem__typingText {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: .7ch;
+}
+
+.ConvoListItem__typingIndicator {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--vkui--color_icon_medium);
+  margin-top: 1px;
+}
+
+.ConvoListItem__author {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoListItem__draftLabel {
+  color: var(--vkui-light-text-text-negative,var(--text-negative,#e64646));
+}
+
+.ConvoListItem__text {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--vkui--color_text_subhead);
+}
+
+.ConvoListItem__date {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font: var(--convoListItemDateFontSize) /var(--convoListItemDateLineHeight) var(--font);
+  color: var(--vkui--color_text_tertiary);
+}
+
+.ConvoListItem__icons {
+  grid-area: icons;
+  align-self: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  gap: 4px;
+  padding-left: .75ch;
+}
+
+.ConvoListItem__icons--hide .ConvoListItem__icon {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.ConvoListItem--tap .ConvoListItem__icons {
+  height: 100%;
+  padding-left: 1.5ch;
+}
+
+.ConvoListItem__icons:empty {
+  padding: 0;
+}
+
+.ConvoListItem__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_icon_contrast_themed);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .2s opacity,.2s -webkit-transform;
+  transition: .2s opacity,.2s -webkit-transform;
+  transition: .2s opacity,.2s transform;
+  transition: .2s opacity,.2s transform,.2s -webkit-transform;
+}
+
+.ConvoListItemWrapper--collapsed .ConvoListItem__icon {
+  position: absolute;
+  bottom: 1px;
+  top: initial;
+  left: 2px;
+  border: 2px solid var(--vkui--color_background_content);
+  min-width: 22px;
+  min-height: 22px;
+  height: initial;
+  width: initial;
+}
+
+.ConvoListItemWrapper--collapsed .ConvoListItem__icon--unreadCounter {
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_icon_contrast_themed);
+  top: 1px;
+  bottom: initial;
+}
+
+.ConvoListItem--muted .ConvoListItem__icon {
+  background: var(--vkui--color_icon_secondary);
+  color: var(--vkui--color_background_content);
+}
+
+.ConvoListItem--muted .ConvoListItem__icon--unmute {
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_icon_contrast_themed);
+}
+
+.ConvoListItem__unreadOut {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: var(--vkui--color_background_accent_themed);
+}
+
+.ConvoListItem__clockIcon,
+.ConvoListItem__pinIcon {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.ConvoListItem__outStatusIcon {
+  margin-bottom: -2px;
+}
+
+.ConvoListItemWrapper--collapsed .ConvoListItem__dropdownWrapper {
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .2s opacity,.2s -webkit-transform;
+  transition: .2s opacity,.2s -webkit-transform;
+  transition: .2s opacity,.2s transform;
+  transition: .2s opacity,.2s transform,.2s -webkit-transform;
+}
+
+.ConvoListItemWrapper--collapsed .ConvoListItem__dropdownWrapper--hide {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.ConvoListItem__replyButton {
+  color: var(--vkui--color_text_accent);
+}
+
+.ConvoTitle {
+  color: var(--vkui--color_text_primary);
+  font-family: var(--font);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.ConvoTitle__icon {
+  --icon-margin-left: 5px;
+  margin-left: var(--icon-margin-left);
+}
+
+.ConvoTitle__icon--inactive {
+  opacity: .64;
+}
+
+.ConvoTitle__employeeIcon {
+  color: var(--vkui--color_icon_accent_themed);
+  --employee-icon-shift: 2px;
+  margin-left: calc(var(--icon-margin-left) - var(--employee-icon-shift));
+  padding-left: var(--employee-icon-shift);
+}
+
+.ConvoTitle__verifiedIcon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ConvoTitle__mutedIcon {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.ConvoTitle__author {
+  display: inline;
+}
+
+.ConvoTitle--singleLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.ConvoTitle--singleLine .ConvoTitle__title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ConvoTitle--singleLine .ConvoTitle__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ConvoTitle--multiLine .ConvoTitle__title {
+  display: inline;
+  vertical-align: top;
+}
+
+.ConvoTitle--multiLine .ConvoTitle__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+.ConvoTitle__forbidedWritingIcon {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.CasperIcon__container {
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.CasperIcon__icon {
+  color: var(--vkui--color_accent_blue);
+}
+
+.CasperIcon__tooltip {
+  display: inline-block;
+  white-space: pre;
+  text-align: center;
+}
+
+.TypingIndicator {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  --typingAnimationDuration: 1s;
+}
+
+.TypingIndicator--text .TypingIndicator__particle,
+.TypingIndicator--text:before,
+.TypingIndicator--text:after {
+  width: 4px;
+  height: 4px;
+  margin: 0 2px;
+  background: currentColor;
+  border-radius: 3px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: TypingAnimationText var(--typingAnimationDuration) linear infinite;
+  animation: TypingAnimationText var(--typingAnimationDuration) linear infinite;
+}
+
+.TypingIndicator--text:before,
+.TypingIndicator--text:after {
+  content: "";
+  display: block;
+  margin: 0 1px;
+}
+
+.TypingIndicator.TypingIndicator--text:before {
+  -webkit-animation-delay: calc(-1 / 6 * var(--typingAnimationDuration));
+  animation-delay: calc(-1 / 6 * var(--typingAnimationDuration));
+}
+
+.TypingIndicator.TypingIndicator--text:after {
+  -webkit-animation-delay: calc(1 / 6 * var(--typingAnimationDuration));
+  animation-delay: calc(1 / 6 * var(--typingAnimationDuration));
+}
+
+@-webkit-keyframes TypingAnimationText {
+  0%,
+  66.7%,
+  to {
+    opacity: .4;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes TypingAnimationText {
+  0%,
+  66.7%,
+  to {
+    opacity: .4;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+.TypingIndicator--voice .TypingIndicator__particle,
+.TypingIndicator--voice:before,
+.TypingIndicator--voice:after {
+  width: 3px;
+  height: 12px;
+  margin-right: 3px;
+  border-radius: 2px;
+  background: currentColor;
+  -webkit-transform: scaleY(.45);
+  transform: scaleY(.45);
+  -webkit-animation: TypingAnimationVoice var(--typingAnimationDuration) linear infinite;
+  animation: TypingAnimationVoice var(--typingAnimationDuration) linear infinite;
+}
+
+.TypingIndicator--voice:before,
+.TypingIndicator--voice:after {
+  content: "";
+  display: block;
+}
+
+.TypingIndicator--voice:before {
+  margin-left: 2px;
+}
+
+.TypingIndicator:before {
+  -webkit-animation-delay: calc(-1 / 6 * var(--typingAnimationDuration));
+  animation-delay: calc(-1 / 6 * var(--typingAnimationDuration));
+}
+
+.TypingIndicator:after {
+  -webkit-animation-delay: calc(1 / 6 * var(--typingAnimationDuration));
+  animation-delay: calc(1 / 6 * var(--typingAnimationDuration));
+}
+
+@-webkit-keyframes TypingAnimationVoice {
+  0%,
+  66.7%,
+  to {
+    opacity: .4;
+    -webkit-transform: scaleY(.67);
+    transform: scaleY(.67);
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes TypingAnimationVoice {
+  0%,
+  66.7%,
+  to {
+    opacity: .4;
+    -webkit-transform: scaleY(.67);
+    transform: scaleY(.67);
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+.TypingIndicator--file .TypingIndicator__particle {
+  width: 20px;
+  height: 6px;
+  border-radius: 2px;
+  overflow: hidden;
+  -webkit-animation: none;
+  animation: none;
+  position: relative;
+  background: none;
+}
+
+.TypingIndicator--file .TypingIndicator__particle:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: .3;
+}
+
+.TypingIndicator--file .TypingIndicator__particle:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: 2px;
+  background: currentColor;
+  -webkit-animation: TypingAnimationFile var(--typingAnimationDuration) linear infinite;
+  animation: TypingAnimationFile var(--typingAnimationDuration) linear infinite;
+}
+
+@-webkit-keyframes TypingAnimationFile {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translate(-100%);
+  }
+  to {
+    -webkit-transform: translateX(200%);
+    transform: translate(200%);
+  }
+}
+
+@keyframes TypingAnimationFile {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translate(-100%);
+  }
+  to {
+    -webkit-transform: translateX(200%);
+    transform: translate(200%);
+  }
+}
+
+.ConvoListItemActionsMenu__folder {
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+
+.ConvoListItemActionsMenu__folderAction {
+  min-width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.ConvoListItemActionsMenu__folderActionTitle {
+  width: 100%;
+  min-width: 51px;
+}
+
+.ConvoListItemTags {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.ConvoListItemTags__itemWrapper {
+  overflow: hidden;
+}
+
+.AdaptiveItemsLine {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.AdaptiveItemsLine__hiddenFullLine {
+  left: 0;
+  max-height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.AdaptiveItemsLine__itemWrapper {
+  overflow: hidden;
+}
+
+.TagBadge__ad .TagBadge__text {
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.TagBadge__ad .TagBadge__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+}
+
+.SearchTabs {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  isolation: isolate;
+}
+
+.SearchTabs__tabsContainer {
+  padding: 0 calc(var(--vkui--size_base_padding_horizontal--regular, 12px) + var(--vkui--spacing_size_m, 8px));
+}
+
+.SearchTabs__tabPanel {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.SearchConvoTab {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  -webkit-transition: opacity .2s ease-out,visibility .2s ease-out,-webkit-transform .2s ease-out;
+  transition: opacity .2s ease-out,visibility .2s ease-out,-webkit-transform .2s ease-out;
+  transition: transform .2s ease-out,opacity .2s ease-out,visibility .2s ease-out;
+  transition: transform .2s ease-out,opacity .2s ease-out,visibility .2s ease-out,-webkit-transform .2s ease-out;
+}
+
+.SearchConvoTab--hidden {
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translate(-100%);
+  opacity: 0;
+}
+
+.SearchConvoTab__resultsContainer {
+  padding: 0 8px;
+}
+
+.SearchConvoTab__scrollbar-content {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.SearchConvoTab__contentSpinner {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0;
+}
+
+.SearchConvoTab__loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.SearchConvoTab__sectionSeparator {
+  background-color: var(--vkui--color_separator_secondary);
+  height: 1px;
+  margin: 8px 16px 6px;
+}
+
+.SearchConvoTab__horizontalScroll {
+  --bottomOffset: 27px;
+  margin-top: calc(var(--bottomOffset) * -1);
+}
+
+.SearchConvoTab__importantUsersContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: var(--bottomOffset);
+  margin-left: 4px;
+}
+
+.SearchConvoTab__importantUsersContainer .SearchConvoTab__importantUser * {
+  max-width: 100%;
+}
+
+.SearchConvoTab__importantUsersContainer .SearchConvoTab__importantUserName {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: normal;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.SearchConvoTab__recentSelectedClear {
+  border: 0;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: var(--vkui--color_text_link);
+  cursor: pointer;
+  font: 400 14px/18px var(--font);
+}
+
+.SearchConvoTab__recentSelectedClear:hover {
+  text-decoration: underline;
+}
+
+.SearchConvoTab__sectionHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 12px calc(var(--vkui--size_base_padding_horizontal--regular, 12px) + var(--vkui--spacing_size_m, 8px)) 9px;
+}
+
+.SearchConvoTab__sectionHeaderText {
+  text-transform: uppercase;
+  color: var(--vkui--color_text_secondary);
+  font: 600 12px/14px var(--font);
+  letter-spacing: .005em;
+}
+
+.SearchConvoTab__importantUserSkeletonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 8px;
+}
+
+.SearchConvoTab_importantUserSkeleton {
+  width: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 88px;
+  padding: 4px 8px 8px;
+}
+
+.SearchConvoTab_importantUserSkeleton--avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.SearchConvoTab_importantUserSkeleton--name {
+  width: 42px;
+  height: 8px;
+  margin: 8px auto 0;
+  border-radius: 4px;
+  overflow: hidden;
+}

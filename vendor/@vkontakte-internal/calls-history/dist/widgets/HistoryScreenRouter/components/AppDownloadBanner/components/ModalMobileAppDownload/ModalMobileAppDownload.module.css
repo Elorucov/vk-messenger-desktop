@@ -1,0 +1,8 @@
+.wrap {
+  box-sizing: border-box;
+  padding: 48px 52px;
+}
+
+.text {
+  text-align: center;
+}

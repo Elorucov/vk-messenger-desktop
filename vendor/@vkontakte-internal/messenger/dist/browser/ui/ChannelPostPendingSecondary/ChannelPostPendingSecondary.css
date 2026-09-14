@@ -1,0 +1,37 @@
+.ChannelPostPendingSecondary {
+  display: grid;
+  grid-template-areas: "avatar header" "avatar content";
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+.ChannelPostPendingSecondary__avatar {
+  grid-area: avatar;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+}
+
+.ChannelPostPendingSecondary__content {
+  grid-area: content;
+}
+
+.ChannelPostPendingSecondary__mainContent {
+  max-width: 100%;
+  width: 580px;
+}
+
+.ChannelPostPendingSecondary__attaches {
+  margin-top: 6px;
+}
+
+.ChannelPostPendingSecondary--withText .ChannelPostPendingSecondary__mediaAttaches--withPublicVideo {
+  margin-top: 6px;
+  --mediaAttachBorderRadius: 0;
+}
+
+.ChannelPostPendingSecondary--fitMediaAttachesWidth {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}

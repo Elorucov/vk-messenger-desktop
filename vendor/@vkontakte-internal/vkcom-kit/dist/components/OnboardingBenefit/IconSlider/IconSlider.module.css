@@ -1,0 +1,23 @@
+.container {
+  height: inherit;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.slides {
+  width: 200%;
+  height: inherit;
+}
+
+.slide {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: inherit;
+}
+
+.slidesAnimated {
+  transform: translate(-50%);
+  transition: transform var(--vkui--animation_duration_m);
+}

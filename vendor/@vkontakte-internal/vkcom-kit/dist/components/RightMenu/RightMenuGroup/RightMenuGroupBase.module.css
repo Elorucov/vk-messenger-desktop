@@ -1,0 +1,7 @@
+.chevron {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.chevronFlipped {
+  transform: rotate(180deg);
+}

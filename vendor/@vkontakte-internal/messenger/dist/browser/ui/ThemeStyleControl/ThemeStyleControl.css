@@ -1,0 +1,60 @@
+.ThemeStyleControl__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 14px;
+}
+
+.ThemeStylePreview {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ThemeStylePreview:hover {
+  cursor: pointer;
+}
+
+.ThemeStylePreview__background {
+  position: relative;
+  width: 94px;
+  height: 94px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--vkui--color_image_border_alpha);
+  background-color: var(--convoHistoryBackgroundColor);
+}
+
+.ThemeStylePreview__backgroundBubbles {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 68px;
+  height: 48px;
+  background: var(--bubblesColor);
+  clip-path: url(#themeStylePreviewbubbles);
+}
+
+.ThemeStylePreview__icon {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  color: var(--vkui--color_icon_contrast);
+}
+
+.ThemeStylePreview__title {
+  font: 400 13px/16px var(--font);
+}

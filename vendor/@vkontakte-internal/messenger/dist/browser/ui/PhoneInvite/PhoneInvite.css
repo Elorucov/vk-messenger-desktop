@@ -1,0 +1,11 @@
+.PhoneInvite {
+  text-align: center;
+}
+
+.PhoneInvite__icon {
+  margin: 0 auto;
+}
+
+.PhoneInvite__title {
+  color: var(--vkui--color_text_primary);
+}

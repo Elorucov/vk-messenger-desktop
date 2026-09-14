@@ -1,0 +1,10 @@
+.episodes {
+  width: 100%;
+  margin-top: var(--vkui--spacing_size_l);
+  background-color: var(--vkui--color_background_secondary);
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+.text.text {
+  display: inline;
+}

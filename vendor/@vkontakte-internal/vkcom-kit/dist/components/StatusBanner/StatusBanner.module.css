@@ -1,0 +1,63 @@
+.root {
+  padding: 12px var(--vkui--size_base_padding_horizontal--regular);
+  border-radius: var(--vkui--size_border_radius--regular);
+  background: var(--vkui--color_background_secondary);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.rootModeTransparent {
+  background: var(--vkui--color_transparent);
+}
+
+.rootModeNegative {
+  background: var(--vkui--color_background_negative_tint);
+}
+
+.rootModeWarning {
+  background: var(--vkui--color_background_warning);
+}
+
+.rootModePositive {
+  background: var(--vkui--color_background_positive_tint);
+}
+
+.before {
+  margin-right: 12px;
+  color: var(--vkui--color_icon_accent);
+}
+
+.after {
+  margin-left: auto;
+}
+
+.rootModeNegative .before {
+  color: var(--vkui--color_icon_negative);
+}
+
+.rootModeWarning .before {
+  color: var(--vkui--color_accent_orange);
+}
+
+.rootModePositive .before {
+  color: var(--vkui--color_icon_positive);
+}
+
+.text {
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+.text.text {
+  margin-top: 2px;
+}
+
+.actions {
+  margin-top: 12px;
+}
+
+.progress {
+  background: var(--vkui--color_transparent--hover);
+  transition: width 1s ease-in;
+}

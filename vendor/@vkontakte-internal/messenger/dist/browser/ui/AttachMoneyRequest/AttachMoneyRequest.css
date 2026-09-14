@@ -1,0 +1,54 @@
+.AttachMoneyRequest,
+.AttachMoneyRequest:hover {
+  text-decoration: none;
+}
+
+span.AttachMoneyRequest:hover .AttachmentCell {
+  opacity: 1;
+  cursor: default;
+}
+
+.AttachMoneyRequest__icon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.AttachMoneyRequest__image {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 400;
+  background-color: var(--vkui--color_background_accent);
+  border-radius: 50%;
+  color: var(--vkui--color_icon_contrast);
+}
+
+.AttachMoneyRequest__image--transparent {
+  background-color: transparent;
+}
+
+.AttachMoneyRequest__progressbarProgress {
+  fill: transparent;
+  stroke: var(--vkui--color_stroke_contrast);
+  stroke-linecap: round;
+  stroke-width: 10;
+}
+
+.AttachMoneyRequest__progressbarBack {
+  fill: transparent;
+  stroke: var(--vkui--color_stroke_contrast);
+  stroke-opacity: .5;
+  stroke-width: 10;
+}
+
+.AttachMoneyRequest__currencyIcon {
+  position: absolute;
+}

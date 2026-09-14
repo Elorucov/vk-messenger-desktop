@@ -1,0 +1,145 @@
+.ConvoAttachesPhotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ConvoAttachesPhotos--separated {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 2px;
+  -moz-column-gap: 2px;
+  column-gap: 2px;
+  row-gap: 2px;
+}
+
+.ConvoAttachesPhotos__dateSeparator {
+  font: 600 12px/14px var(--font);
+  color: var(--vkui--color_text_secondary);
+  padding: 0 16px 9px;
+  text-transform: uppercase;
+}
+
+.ConvoAttachesPhotos--separated+.ConvoAttachesPhotos__dateSeparator {
+  margin-top: 15px;
+}
+
+.ConvoAttachesPhotos__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--vkui--color_transparent--active);
+}
+
+.ConvoAttachesPhotos__item:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.ConvoAttachPhoto__img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ConvoAttachesPhotos__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ConvoAttachPhoto__dropdown {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.ConvoAttachPhoto__action {
+  position: relative;
+  background: none;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--vkui--color_icon_medium);
+  background: var(--vkui--color_background_content);
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.08);
+  box-shadow: 0 0 2px #00000014,0 8px 24px #00000014;
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  cursor: pointer;
+}
+
+.ConvoAttachesPhotos__item:hover .ConvoAttachPhoto__action {
+  opacity: .72;
+}
+
+.ConvoAttachesPhotos__item:hover .ConvoAttachPhoto__action:hover,
+.ConvoAttachPhoto__dropdown.DropdownReforged--opened .ConvoAttachPhoto__action,
+.ConvoAttachesPhotos__item:focus-within .ConvoAttachPhoto__action {
+  opacity: 1;
+}
+
+.ConvoAttachPhoto__actionTapArea {
+  position: absolute;
+  inset: -6px;
+}
+
+.ConvoAttachesPhotos__restore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoAttachesPhoto__restore-button {
+  margin: 8px;
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid var(--vkui--color_field_border_alpha);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--vkui--color_text_secondary);
+  opacity: .8;
+  background: var(--vkui--color_background_content);
+  font-size: 12px;
+}
+
+.ConvoAttachesPhoto__restore-button:hover {
+  opacity: 1;
+}

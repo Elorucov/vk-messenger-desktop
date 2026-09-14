@@ -1,0 +1,346 @@
+.ChannelPostSecondary__contentWrapper {
+  background-color: transparent;
+  padding-top: 0;
+  min-width: 100%;
+}
+
+.ChannelPostSecondary {
+  display: grid;
+  grid-template-areas: "avatar header" "avatar content";
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  container: post/inline-size;
+}
+
+.ChannelPostSecondary--withText .ChannelPostSecondary__mediaAttaches--withPublicVideo {
+  margin-top: 6px;
+  --mediaAttachBorderRadius: 0;
+}
+
+.ChannelPostSecondary__content {
+  grid-area: content;
+}
+
+.ChannelPostHeader {
+  display: grid;
+  gap: 8px 8px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  grid-template-areas: "title meta" "marks marks";
+  grid-template-columns: auto 1fr;
+  grid-area: header;
+}
+
+.ChannelPostHeader__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ChannelPostHeader__titleWrapper {
+  cursor: pointer;
+  color: var(--vkui--color_text_accent);
+  overflow: hidden;
+  max-width: 100%;
+  grid-area: title;
+}
+
+.ChannelPostAvatar {
+  grid-area: avatar;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+}
+
+.ChannelPostSecondary__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  margin: 8px 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ChannelPostSecondary__mainContent {
+  max-width: 100%;
+  width: 580px;
+}
+
+.ChannelPostSecondary__comments {
+  color: var(--vkui--color_icon_accent);
+  padding: 15px;
+  margin: -15px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 16px auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.ChannelPostSecondary__comments--disabled {
+  color: var(--vkui--color_text_secondary);
+  cursor: default;
+}
+
+.ChannelPostSecondary__comments--disabled .vkuiIcon {
+  width: 16px!important;
+  height: 16px!important;
+}
+
+.ChannelPostSecondary__commentsCount {
+  display: none;
+}
+
+.ChannelPostSecondary__meta {
+  grid-area: meta;
+}
+
+.ChannelPostSecondary__metaWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  container: metaWrapper/inline-size;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.ChannelPostSecondary__attaches {
+  margin-top: 6px;
+}
+
+.ChannelPostSecondary__commentsText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ChannelPostHeader__marks {
+  grid-area: marks;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px 8px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ChannelPostSecondaryDeleted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 24px 44px;
+  text-align: center;
+}
+
+.ChannelPostSecondaryDeleted__icon {
+  color: var(--vkui--vkontakte_color_icon_outline_secondary);
+}
+
+.ChannelPostSecondaryDeleted__title {
+  margin-top: 16px;
+  color: var(--vkui--color_text_subhead);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.ChannelPostSecondaryDeleted__desc {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ChannelPostHighlightWrapper--active .ChannelPostSecondary__content {
+  background: transparent;
+}
+
+@container post (width < 500px) {
+  .ChannelPostSecondary__commentsText {
+    display: none;
+  }
+  .ChannelPostSecondary__commentsCount {
+    display: block;
+  }
+  .ChannelPostHeader {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@container post (width < 400px) {
+  .ChannelPostSecondary__commentsText {
+    display: none;
+  }
+  .ChannelPostSecondary__commentsCount {
+    display: block;
+  }
+  .ChannelPostHeader {
+    grid-template-columns: 40% 1fr;
+  }
+}
+
+@container metaWrapper (width < 250px) {
+  .ChannelPostSecondary__commentsText {
+    display: none;
+  }
+  .ChannelPostSecondary__commentsCount {
+    display: block;
+  }
+}
+
+.ChannelPostSecondary--fitMediaAttachesWidth {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.ChannelPostAuthor {
+  color: var(--vkui--color_text_tertiary);
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  grid-template-columns: 12px auto;
+  gap: 2px;
+}
+
+.ChannelPostAuthor__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ChannelPostWrapper {
+  position: relative;
+}
+
+.ChannelPostWrapper__actions {
+  position: absolute;
+  right: 0;
+  top: -29px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity .16s ease,-webkit-transform .16s ease;
+  transition: opacity .16s ease,-webkit-transform .16s ease;
+  transition: opacity .16s ease,transform .16s ease;
+  transition: opacity .16s ease,transform .16s ease,-webkit-transform .16s ease;
+}
+
+.ChannelPostWrapper:hover .ChannelPostWrapper__actions,
+.ChannelPostActionsDropdown--opened {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.ChannelPostActionsDropdown--closed {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.ChannelPostActionsDropdown__menu--bottom {
+  margin: 8px 0;
+}
+
+.ChannelPostActionsDropdown__menu--side {
+  margin: 0 8px;
+}
+
+.ChannelPostActionsContent__wrapper {
+  position: relative;
+}
+
+.ChannelPostActionsContent__wrapper--withReactions {
+  margin-left: 10px;
+}
+
+.ChannelPostActionsContent__wrapper {
+  margin-left: 0;
+}
+
+.ChannelPostActionsMenu__copyNotification {
+  color: var(--vkui--color_text_link);
+}
+
+.ChannelPostActionsMenu__link {
+  text-decoration: none;
+}
+
+.ChannelPostContentWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  min-width: 100px;
+  max-width: 100%;
+  background: var(--vkui--vkontakte_color_im_bubble_incoming_alternate);
+  border-radius: var(--channelPostBorderRadius);
+  gap: 8px;
+}
+
+.ChannelPostContentWrapper--dark:not(.ChannelPostContentWrapper--bubble) {
+  background: transparent;
+}
+
+.ChannelPostContentWrapper:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vkui--color_background_accent);
+  -webkit-box-shadow: 0 0 0 2px var(--vkui--color_background_content);
+  box-shadow: 0 0 0 2px var(--vkui--color_background_content);
+  z-index: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .16s ease;
+  transition: -webkit-transform .16s ease;
+  transition: transform .16s ease;
+  transition: transform .16s ease,-webkit-transform .16s ease;
+}
+
+.ChannelPostContentWrapper--unread:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.ChannelPostSecondaryHighlightWrapper.ChannelPostHighlightWrapper--active:before {
+  left: calc(var(--vkui--spacing_size_m) * -1);
+  right: auto;
+  top: calc(var(--vkui--spacing_size_m) * -1);
+  bottom: auto;
+  width: calc(100% + var(--vkui--spacing_size_m) * 2);
+  height: calc(100% + var(--vkui--spacing_size_m) * 2);
+  opacity: 0;
+  background-color: var(--vkui--color_background_secondary--active);
+  border-radius: var(--messageBorderRadius);
+  -webkit-animation: vkmMessageBubblelessHighlight var(--transitionMessageHighlightDuration) ease-in-out 1;
+  animation: vkmMessageBubblelessHighlight var(--transitionMessageHighlightDuration) ease-in-out 1;
+}

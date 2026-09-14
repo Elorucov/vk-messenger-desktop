@@ -1,0 +1,400 @@
+.ChatInvitePanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: var(--vkui--color_background_modal);
+  border-radius: 12px;
+  width: 400px;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.ChatInvitePanel--plain {
+  background: transparent;
+  border-radius: 0;
+  padding: 16px;
+  width: auto;
+}
+
+.ChatInviteByMRPanel__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ChatInviteByMRPanel {
+  width: 400px;
+  max-width: 100%;
+}
+
+.ChatInvitePanel__panel {
+  border-radius: 12px;
+  width: 400px;
+}
+
+.ChatInvitePanel__spinner .vkuiSpinner__host {
+  color: var(--vkui--color_text_contrast);
+}
+
+.ChatInvitePanel__avatarAndTitleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.ChatInvitePanel__avatar {
+  position: relative;
+}
+
+.ChatInvitePanel--error {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.ChatInvitePanel__avatarContainer {
+  position: relative;
+  margin: 0 16px 8px;
+}
+
+.ChatInvitePanel__donutIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  inset: auto 2px 2px auto;
+}
+
+.ChatInvitePanel__casperIcon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  inset: auto -3px -3px auto;
+  border: 2px solid var(--vkui--color_text_contrast);
+  background-color: var(--vkui--color_background_accent);
+  color: var(--vkui--color_text_contrast);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ChatInvitePanel__title {
+  font: 500 20px/24px var(--font);
+  letter-spacing: -.002em;
+  text-align: center;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+}
+
+.ChatInvitePanel__senderName {
+  font: 400 13px/16px var(--font);
+  letter-spacing: -.0004em;
+  text-align: center;
+  color: var(--vkui--color_text_secondary);
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ChatInvitePanel__membersContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 16px 24px;
+  max-width: 100%;
+}
+
+.ChatInvitePanel__members {
+  color: var(--vkui--color_text_secondary);
+  max-width: 100%;
+  overflow: hidden;
+  font: 400 13px/16px var(--font);
+  text-align: center;
+}
+
+.ChatInvitePanel__memberLinkWrapper,
+.ChatInvitePanel__memberLinkWrapper .ChatInvitePanel__memberLink {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ChatInvitePanel__memberLink {
+  text-decoration: none;
+}
+
+.ChatInvitePanel__memberLink:hover {
+  text-decoration: underline;
+}
+
+.ChatInvitePanel__grayed {
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+}
+
+.ChatInvitePanel__description {
+  font: 400 13px/16px var(--font);
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+  max-width: 280px;
+}
+
+.ChatInvitePanel__actionsButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: auto;
+  gap: 12px;
+  width: 100%;
+}
+
+.ChatInvitePanel__action {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+}
+
+.ChatInvitePanel__account-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 350px;
+}
+
+.ChatInvitePanel__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_icon_accent);
+}
+
+.ChatInvitePanel__icon--edu {
+  color: var(--vkui--color_accent_purple);
+}
+
+.ChatInvitePanel__caption {
+  font: 500 20px var(--font);
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--vkui--color_text_primary);
+  margin-top: 16px;
+}
+
+.ChatInvitePanel__description {
+  font: 400 13px/16px var(--font);
+  text-align: center;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 8px;
+}
+
+.ChatInvitePanel__button {
+  margin-top: 24px;
+}
+
+.ChatInvitePanel__button--edu.vkuiButton__host.vkuiButton__appearanceAccent {
+  background-color: var(--vkui--color_accent_purple);
+}
+
+.ChatInvitePanel__button--edu.vkuiButton__host.vkuiButton__appearanceAccent.vkuiButton__hover {
+  background-color: var(--vkui--color_accent_purple--hover);
+}
+
+.ModalWindow {
+  height: 100%;
+  position: relative;
+}
+
+.ModalWindow__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.ModalWindow__closeInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  background-color: var(--vkui--color_overlay_primary);
+  color: var(--vkui--color_icon_contrast);
+}
+
+.ModalWindow__close:hover .ModalWindow__closeInner {
+  background-color: var(--vkui--color_overlay_primary--hover);
+}
+
+@media screen and (min-width: 640px) {
+  .ModalWindow__close {
+    right: auto;
+    left: 100%;
+  }
+}
+
+.UnifiedServiceModal__panel {
+  border-radius: 12px;
+  background-color: var(--vkui--color_background_content);
+  padding: 32px 24px 24px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.UnifiedServiceModal__closer {
+  --size: 56px;
+  border: none;
+  width: var(--size);
+  height: var(--size);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: calc(var(--size) * -1);
+}
+
+.UnifiedServiceModal__closer:hover {
+  cursor: pointer;
+  opacity: .8;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.UnifiedServiceModal__closerContent {
+  background: var(--black-alpha-35,var(--vkui--color_overlay_primary));
+  border-radius: 50%;
+}
+
+.UnifiedServiceModal__closer svg {
+  padding: 4px;
+}
+
+.UnifiedServiceModal__image {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.UnifiedServiceModal__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.UnifiedServiceModal__subtitle {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: .2px;
+  text-align: center;
+  color: var(--vkui--color_text_subhead);
+}
+
+.UnifiedServiceModal__title+.UnifiedServiceModal__subtitle {
+  margin-top: 8px;
+}
+
+.UnifiedServiceModal__footer {
+  margin-top: 20px;
+}

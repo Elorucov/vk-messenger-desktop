@@ -1,0 +1,503 @@
+.AttachWallNew {
+  margin: calc(var(--messageVerticalIndent) - var(--messageAttachmentIndent)) calc(var(--messageHorizontalIndent) - var(--messageAttachmentIndent));
+  margin-bottom: 0;
+}
+
+.AttachWallNew .AttachWallNew {
+  margin-right: 0;
+}
+
+.ForwardedMessage .AttachWallNew {
+  margin: 0;
+}
+
+.AttachWallNew__content>:not(.AttachWallNew__attaches) {
+  padding: 0 10px;
+}
+
+.ForwardedMessageNew__main .AttachWallNew {
+  margin: 0;
+}
+
+.ForwardedMessageNew__main .AttachWallNew__content>:not(.AttachWallNew__attaches) {
+  padding: 0;
+}
+
+.AttachWallNew__attaches--sticker {
+  padding: 0 10px;
+}
+
+.ConvoMessage:not(.ConvoMessage--withWallOrWallReplyOnly) .AttachWallNew__content--withLeft>.AttachWallNew__small {
+  padding-right: 0;
+}
+
+.ConvoMessage__mediaAttachments~.ConvoMessage__attachments .AttachWallNew__content>:not(.AttachWallNew__attaches),
+.ConvoMessage__attachments>.Attachments>.AttachWallNew:not(:first-child) .AttachWallNew__content>:not(.AttachWallNew__attaches) {
+  padding: 0;
+}
+
+.AttachWallNew__content {
+  position: relative;
+}
+
+.AttachWallNew__content.AttachWallNew__content--withLeft:before {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  content: "";
+  background-color: var(--vkui--vkontakte_im_reply_separator);
+  opacity: .24;
+}
+
+.AttachWallNew__content--withLeft {
+  margin-left: 5px;
+}
+
+.ConvoMessageWithoutBubble__wrapper .AttachWallNew__content--withLeft {
+  margin-left: 0;
+  padding-left: 10px;
+}
+
+.AttachWallNew__attaches .AttachPhotos--inBubble {
+  border-radius: 2px;
+}
+
+.ForwardedMessage .AttachWallNew__content:not(.AttachWallNew__content--withLeft)>:not(.AttachWallNew__attaches) {
+  padding: 0;
+}
+
+.AttachWallNew--withMessage {
+  margin-top: 0;
+}
+
+.AttachWallNew__info {
+  font-weight: 400;
+  line-height: var(--AttachWallNewInfoMessageLineHeight);
+  font-size: var(--AttachWallNewInfoMessageFontSize);
+  letter-spacing: .005em;
+  color: var(--vkui--color_text_primary);
+  opacity: .4;
+}
+
+.AttachWallNew__link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.AttachWallNew__titleLink .AttachWallNew__link {
+  color: var(--vkui--color_text_link);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.AttachWallNew__link:hover {
+  text-decoration: none;
+}
+
+.AttachWallNew__authorsLink {
+  cursor: pointer;
+}
+
+.AttachWallNew__authorsLink:hover {
+  text-decoration: underline;
+}
+
+.AttachWallNew__authorLink {
+  color: inherit;
+  overflow: hidden;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  outline-offset: -1px;
+}
+
+.AttachWallNew__donut,
+.AttachWallNew__deleted {
+  min-width: 256px;
+  min-height: 166px;
+  background: var(--vkui--color_background_secondary_alpha);
+  border: .5px solid #00000014;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_text_secondary);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 12px 10px 10px;
+  text-align: center;
+  gap: 8px;
+}
+
+.AttachWallNew__donut {
+  font-weight: 300;
+}
+
+.AttachWallNew__link--post {
+  border: 1px solid var(--vkui--color_stroke_accent);
+  width: 100%;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font: 500 13px/16px var(--font);
+  color: var(--vkui--color_stroke_accent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: var(--messageHorizontalIndent);
+}
+
+.AttachWallNew__link--post:hover {
+  text-decoration: none;
+}
+
+.AttachWallNew__link--text {
+  padding: 1px 0;
+  color: var(--vkui--color_text_link);
+}
+
+.AttachWallNew__link--text:hover {
+  text-decoration: none;
+}
+
+.AttachWallNew__header {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-areas: "icon avatar title" "icon avatar date";
+  grid-template-columns: 20px auto 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.AttachWallNew__avatar {
+  grid-area: avatar;
+  margin-right: 8px;
+}
+
+.AttachWallNew__titleLink {
+  grid-area: title;
+  color: var(--vkui--color_text_link);
+  line-height: var(--messageAuthorLinkLineHeight);
+  font-size: var(--messageAuthorLinkFontSize);
+  font-weight: var(--messageAuthorLinkFontWeight);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.AttachWallNew__verified {
+  margin-left: 4px;
+}
+
+.AttachWallNew__icon {
+  grid-area: icon;
+  color: var(--vkui--color_icon_tertiary_alpha);
+}
+
+.AttachWallNew--themed .AttachWallNew__icon {
+  color: var(--vkui--color_text_secondary);
+}
+
+.AttachWallNew__subtitle {
+  grid-area: date;
+  color: var(--vkui--color_text_primary);
+  opacity: .4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: var(--forwardedMessageDateLineHeight);
+  font-size: var(--forwardedMessageDateFontSize);
+}
+
+.AttachWallNew__message {
+  display: block;
+  margin-top: 8px;
+  word-break: break-word;
+}
+
+.AttachWallNew__attaches:not(:empty) {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: var(--messageAttachmentGap);
+  margin-top: 6px;
+}
+
+.AttachWallNew__small .AttachWallNew__message {
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.AttachWallNew__small--secondary {
+  color: var(--vkui--color_text_secondary);
+  width: 272px;
+}
+
+.ConvoMessageWithoutBubble .AttachWallNew {
+  margin: calc(var(--messageVerticalIndent) - var(--messageAttachmentIndent)) 0;
+}
+
+.ConvoMessageWithoutBubble .AttachWallNew__content>:not(.AttachWallNew__attaches) {
+  padding: 0;
+}
+
+.ConvoMessageWithoutBubble .AttachWallNew__content .AttachWallNew__deleted,
+.ConvoMessageWithoutBubble .AttachWallNew__content .AttachWallNew__donut {
+  margin: 12px 0 10px;
+}
+
+.AttachWallNew__attaches .AttachCard .AttachmentCell {
+  margin-left: 2px;
+}
+
+.ConvoMessage .ForwardedMessage__attachments .AttachWallNew--withMessage,
+.ConvoMessage .ForwardedMessage__attachments .AttachWallNew--withMessage .AttachWallNew__content--withLeft {
+  margin-left: 0;
+}
+
+.AttachWallNew__WallReply {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: .2px;
+  text-align: left;
+  color: var(--vkui--color_text_secondary);
+  margin-bottom: 8px;
+}
+
+.AttachWallNew__modalHeader .RE_ModalHeader__title {
+  padding: 0 24px;
+}
+
+.AttachWallNew__modalContext .RE_ModalBody {
+  padding: 12px;
+  max-width: 420px;
+}
+
+.AttachWallNew--fitMediaAttachesWidth {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.AttachWall {
+  margin: calc(var(--messageVerticalIndent) - var(--messageAttachmentIndent)) calc(var(--messageHorizontalIndent) - var(--messageAttachmentIndent));
+  margin-bottom: 0;
+}
+
+.AttachWall--withMessage {
+  margin-top: 0;
+}
+
+.AttachWall__info {
+  font-weight: 400;
+  line-height: var(--attachWallInfoMessageLineHeight);
+  font-size: var(--attachWallInfoMessageFontSize);
+  letter-spacing: .005em;
+  color: var(--vkui--color_text_primary);
+  opacity: .4;
+}
+
+.AttachWall__content {
+  position: relative;
+  margin-top: var(--messageVerticalIndent);
+  padding: 0 0 0 8px;
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+}
+
+.AttachWall__content:before {
+  border-radius: 1px 1px 0 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  content: "";
+  background-color: var(--vkui--vkontakte_im_reply_separator);
+  opacity: .24;
+}
+
+.AttachWall__link {
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+  cursor: pointer;
+}
+
+.AttachWall__link:hover {
+  text-decoration: underline;
+}
+
+.AttachWall__link--post {
+  border: 1px solid var(--vkui--color_text_link);
+  width: 100%;
+  border-radius: 4px;
+  padding: 4px 30px;
+  font: 500 13px/16px var(--font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: var(--messageHorizontalIndent);
+}
+
+.AttachWall__link--post:hover {
+  text-decoration: none;
+}
+
+.AttachWall__link--text {
+  padding: 1px 0;
+}
+
+.AttachWall__header {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-areas: "avatar title" "avatar date";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+.AttachWall__avatar {
+  grid-area: avatar;
+  margin-right: 8px;
+}
+
+.AttachWall__titleLink {
+  grid-area: title;
+  color: var(--vkui--color_text_link);
+  line-height: var(--messageAuthorLinkLineHeight);
+  font-size: var(--messageAuthorLinkFontSize);
+  font-weight: var(--messageAuthorLinkFontWeight);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.AttachWall__subtitle {
+  grid-area: date;
+  color: var(--vkui--color_text_primary);
+  opacity: .4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: var(--forwardedMessageDateLineHeight);
+  font-size: var(--forwardedMessageDateFontSize);
+}
+
+.AttachWall__message {
+  display: block;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.AttachWall__attaches {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: var(--messageAttachmentGap);
+  margin-top: 4px;
+}
+
+.AttachWallHistory {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-areas: "icon title" "icon meta";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--vkui--color_text_primary);
+  margin-right: 5px;
+}
+
+.AttachWallHistory__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--vkui--color_background_accent);
+  grid-area: icon;
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_background_contrast);
+}
+
+.AttachWallHistory__title {
+  grid-area: title;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: end;
+}
+
+.AttachWallHistory__meta {
+  grid-area: meta;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--vkui--color_text_secondary);
+}
+
+.AttachPhotoAlbum {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AttachPhotoAlbum:hover {
+  text-decoration: none;
+}
+
+.AttachMarketAlbum {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AttachMarketAlbum:hover {
+  text-decoration: none;
+}

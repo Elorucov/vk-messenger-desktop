@@ -1,0 +1,33 @@
+import React, { forwardRef } from 'react';
+export const SferumLogo = forwardRef(function SferumLogo({ width = '56', height = '56', ...props }, ref) {
+    return (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 56 56", ...props, width: width, height: height, ref: ref },
+        React.createElement("path", { fill: "#07F", d: "M0 26.623C0 14.073 0 7.798 3.899 3.899 7.798 0 14.073 0 26.623 0h2.754c12.55 0 18.825 0 22.724 3.899C56 7.798 56 14.073 56 26.623v2.754c0 12.55 0 18.825-3.899 22.724C48.202 56 41.927 56 29.377 56h-2.754c-12.55 0-18.825 0-22.724-3.899C0 48.202 0 41.927 0 29.377v-2.754Z" }),
+        React.createElement("path", { fill: "url(#logo_sferum_custom_a)", d: "M0 26.623C0 14.073 0 7.798 3.899 3.899 7.798 0 14.073 0 26.623 0h2.754c12.55 0 18.825 0 22.724 3.899C56 7.798 56 14.073 56 26.623v2.754c0 12.55 0 18.825-3.899 22.724C48.202 56 41.927 56 29.377 56h-2.754c-12.55 0-18.825 0-22.724-3.899C0 48.202 0 41.927 0 29.377v-2.754Z" }),
+        React.createElement("path", { fill: "url(#logo_sferum_custom_b)", d: "M41.468 19.586c-.898-.897-2.067-1.436-3.412-1.643-.206-1.344-.745-2.513-1.642-3.411-6.042-6.043-15.84-6.043-21.882 0-6.043 6.042-6.043 15.84 0 21.882.898.898 2.067 1.436 3.411 1.643.207 1.345.745 2.514 1.643 3.411 6.042 6.043 15.84 6.043 21.882 0 6.043-6.042 6.043-15.84 0-21.882Z" }),
+        React.createElement("path", { fill: "url(#logo_sferum_custom_c)", d: "M24.12 24.12c4.51-4.511 9.98-6.785 13.937-6.177-.206-1.344-.745-2.514-1.642-3.411-3.539-3.539-11.306-1.51-17.348 4.534-6.043 6.042-8.073 13.81-4.534 17.348.898.898 2.067 1.436 3.411 1.643-.609-3.956 1.665-9.427 6.176-13.938Z" }),
+        React.createElement("defs", null,
+            React.createElement("radialGradient", { id: "logo_sferum_custom_a", cx: "0", cy: "0", r: "1", gradientTransform: "matrix(29.98957 -32.53844 17.18804 15.84163 27.683 27.922)", gradientUnits: "userSpaceOnUse" },
+                React.createElement("stop", { offset: ".281", stopColor: "#4BF9E8" }),
+                React.createElement("stop", { offset: ".319", stopColor: "#41D8D3" }),
+                React.createElement("stop", { offset: ".384", stopColor: "#32A4B2" }),
+                React.createElement("stop", { offset: ".451", stopColor: "#247696" }),
+                React.createElement("stop", { offset: ".518", stopColor: "#19517E" }),
+                React.createElement("stop", { offset: ".584", stopColor: "#11356C" }),
+                React.createElement("stop", { offset: ".65", stopColor: "#0B205F" }),
+                React.createElement("stop", { offset: ".716", stopColor: "#071458" }),
+                React.createElement("stop", { offset: ".779", stopColor: "#061055" })),
+            React.createElement("radialGradient", { id: "logo_sferum_custom_c", cx: "0", cy: "0", r: "1", gradientTransform: "rotate(-128.972 23.696 8.511) scale(13.7017 20.209)", gradientUnits: "userSpaceOnUse" },
+                React.createElement("stop", { stopColor: "#0B25CE" }),
+                React.createElement("stop", { offset: ".486", stopColor: "#2C93DB" }),
+                React.createElement("stop", { offset: ".838", stopColor: "#42DCE4" }),
+                React.createElement("stop", { offset: "1", stopColor: "#4BF9E8" })),
+            React.createElement("linearGradient", { id: "logo_sferum_custom_b", x1: "16.716", x2: "39.042", y1: "37.874", y2: "18.339", gradientUnits: "userSpaceOnUse" },
+                React.createElement("stop", { stopColor: "#0000C9" }),
+                React.createElement("stop", { offset: ".128", stopColor: "#2006C9" }),
+                React.createElement("stop", { offset: ".322", stopColor: "#4A0EC8" }),
+                React.createElement("stop", { offset: ".511", stopColor: "#6B14C8" }),
+                React.createElement("stop", { offset: ".691", stopColor: "#8318C7" }),
+                React.createElement("stop", { offset: ".858", stopColor: "#911BC7" }),
+                React.createElement("stop", { offset: "1", stopColor: "#961CC7" })))));
+});
+//# sourceMappingURL=SferumLogo.js.map

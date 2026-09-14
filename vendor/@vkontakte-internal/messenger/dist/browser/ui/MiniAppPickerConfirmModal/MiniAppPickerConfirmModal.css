@@ -1,0 +1,38 @@
+.MiniAppPickerConfirmModal__confirmBody {
+  width: 350px;
+  padding: 32px 16px 16px;
+  text-align: center;
+}
+
+.MiniAppPickerConfirmModal__confirmBodyImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.MiniAppPickerConfirmModal__modalPanel {
+  min-width: 240px;
+  max-width: 560px;
+}
+
+@media (max-width: 639px) {
+  .MiniAppPickerConfirmModal__confirmBody {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}

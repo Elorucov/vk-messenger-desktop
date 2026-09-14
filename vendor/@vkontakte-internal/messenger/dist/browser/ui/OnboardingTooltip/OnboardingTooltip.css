@@ -1,0 +1,36 @@
+.OnboardingTooltip {
+  --tooltipBackground: var(--vkui--color_background_accent_tint);
+  color: #fff;
+}
+
+.OnboardingTooltip__content {
+  cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.OnboardingTooltip__close {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: currentColor;
+  padding: 1px;
+  opacity: .72;
+  -webkit-transition: opacity .14s ease;
+  transition: opacity .14s ease;
+}
+
+.OnboardingTooltip__close:hover {
+  opacity: 1;
+}
+
+:where(.OnboardingTooltip__target) {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}

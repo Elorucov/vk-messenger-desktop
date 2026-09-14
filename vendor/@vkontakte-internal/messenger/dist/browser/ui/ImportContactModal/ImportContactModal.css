@@ -1,0 +1,8 @@
+.ImportContactModal {
+  margin: 8px;
+  max-width: 416px;
+}
+
+.ImportContactModal--fullScreen {
+  max-width: 100%;
+}

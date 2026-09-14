@@ -1,0 +1,17 @@
+.Timer__loaderProgress circle {
+  stroke: var(--vkui--color_stroke_accent);
+}
+
+.Timer__loaderProgress {
+  -webkit-box-shadow: 0 0 0 2px var(--vkui--color_image_border_alpha) inset;
+  box-shadow: 0 0 0 2px var(--vkui--color_image_border_alpha) inset;
+}
+
+.Timer__loaderContent {
+  font: 13px/16px var(--font);
+  font-weight: 600;
+}
+
+.Timer__loaderContent--dark {
+  color: var(--vkui--color_text_contrast);
+}

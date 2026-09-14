@@ -1,0 +1,79 @@
+.ActionCell {
+  padding: 9px 0;
+  background-color: var(--vkui--color_background_tertiary);
+  border-radius: 8px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-transition: background-color ease-out .1s;
+  transition: background-color ease-out .1s;
+  gap: 4px;
+  border: none;
+}
+
+.ActionCell:hover,
+.ActionCell:focus {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.ActionCell__icon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ActionCell__name {
+  text-align: center;
+  width: 100%;
+  color: var(--vkui--color_text_link);
+  font-size: 12px;
+  line-height: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ChannelSettings {
+  padding-top: 15px;
+}
+
+.ChannelSettings__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ChannelSettings__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0 16px;
+}
+
+.ChannelSettings__canMessage {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.ChannelSettings__canMessageSwitch {
+  padding-top: 10px;
+}

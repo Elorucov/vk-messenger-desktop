@@ -1,0 +1,15 @@
+.ConvoProfileEmployeeCardLink {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ConvoProfileEmployeeCardLink__icon {
+  width: 30px;
+}
+
+.ConvoProfileEmployeeCardLink__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+  word-break: break-all;
+}

@@ -1,0 +1,23 @@
+.root {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  height: fit-content;
+  color: var(--vkui--color_icon_contrast);
+  opacity: var(--vkui--opacity_disable_accessibility);
+  transition: opacity var(--vkui--animation_duration_m);
+}
+
+.rootLeft {
+  left: -48px;
+}
+
+.rootRight {
+  right: -48px;
+}
+
+.rootHover,
+.rootActive {
+  opacity: 1;
+}

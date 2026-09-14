@@ -1,0 +1,13 @@
+.rootNoMinWidth.rootNoMinWidth.rootNoMinWidth {
+  min-width: unset;
+}
+
+.rootGradient :global(.vkuiTabsItem__underline) {
+  background-image: var(--tabsitem-gradient, unset);
+}
+
+.gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--tabsitem-gradient, unset);
+}

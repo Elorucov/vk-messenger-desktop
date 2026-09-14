@@ -1,0 +1,43 @@
+.containerIn {
+  padding: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.ownerName {
+  color: var(--vkui--color_text_muted);
+}
+
+.ownerName:not(:first-child) {
+  margin-left: 8px;
+}
+
+.date {
+  color: var(--vkui--color_text_secondary);
+  white-space: nowrap;
+  flex: 1;
+  margin-top: 1px;
+  margin-left: 6px;
+  min-width: fit-content;
+}
+
+.body {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+  color: var(--vkui--color_text_primary);
+}
+
+.attach {
+  overflow: hidden;
+  position: relative;
+  margin-left: 12px;
+}

@@ -1,0 +1,32 @@
+.root {
+  overflow: hidden;
+}
+
+.rootCentered {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.items {
+  --vkit_internal--grid_horizontal_scroll_padding: var(--grid-padding, 0);
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+:global(.vkuiInternalGroupExpandedContent) .items {
+  --vkit_internal--grid_horizontal_scroll_padding: calc(var(--grid-padding, 0) + var(--group-padding, 0));
+}
+
+.itemsWithPadding {
+  padding-left: var(--vkit_internal--grid_horizontal_scroll_padding, 0);
+}
+
+.itemsWithPadding:after {
+  content: "";
+  display: block;
+  appearance: none;
+  visibility: hidden;
+  pointer-events: none;
+  flex: 0 0 var(--vkit_internal--grid_horizontal_scroll_padding, 0);
+}

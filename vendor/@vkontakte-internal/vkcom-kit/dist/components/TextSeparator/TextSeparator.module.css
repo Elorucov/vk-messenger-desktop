@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.separator {
+  flex: 1;
+}
+
+.text {
+  max-width: 75%;
+  color: var(--vkui--color_text_subhead);
+}

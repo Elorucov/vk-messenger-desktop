@@ -1,0 +1,57 @@
+.MEMiniApps {
+  position: relative;
+  width: 700px;
+  height: 600px;
+  overflow: visible;
+}
+
+.MEMiniApps__Spinner {
+  background-color: transparent;
+}
+
+.MEMiniApps__close {
+  position: absolute;
+  right: -44px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  background: none;
+  color: var(--vkui--vkontakte_im_bubble_button_outgoing_background_alpha);
+  cursor: pointer;
+  opacity: .7;
+}
+
+.MEMiniApps__close:hover {
+  opacity: 1;
+}
+
+.MEMiniApps__container {
+  position: relative;
+}
+
+.MiniApp__errorModal {
+  width: 400px;
+}
+
+.MiniAppPickerSendToChats__convoPicker {
+  height: 100%;
+}
+
+.MiniAppPickerSendToChats__modalPanel {
+  width: 420px;
+  min-height: 500px;
+}
+
+@media screen and (max-width: 480px) {
+  .MiniAppPickerSendToChats__modalPanel {
+    width: 100%;
+  }
+}

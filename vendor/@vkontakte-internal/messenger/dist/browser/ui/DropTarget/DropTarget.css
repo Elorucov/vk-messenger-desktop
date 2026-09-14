@@ -1,0 +1,110 @@
+.DropTarget {
+  --margin: 12px;
+  position: relative;
+  width: calc(100% - var(--margin) * 2);
+  height: calc(100% - var(--margin) * 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: var(--margin);
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+.DropTarget__area {
+  pointer-events: none;
+  display: grid;
+  grid-template: "icon" 56px "info" auto/auto;
+  grid-gap: var(--margin);
+}
+
+.DropTarget__icon {
+  grid-area: icon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_icon_secondary);
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.DropTarget__info {
+  grid-area: info;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.DropTarget__infoTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.DropTarget__infoText {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--vkui--color_text_secondary);
+  white-space: pre-wrap;
+}
+
+.DropTarget__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.DropTarget__border rect {
+  fill: none;
+  stroke: var(--vkui--color_text_secondary);
+  stroke-width: 2.5;
+  stroke-dasharray: 6.5;
+  -webkit-transition: stroke .2s ease,stroke-width .2s ease;
+  transition: stroke .2s ease,stroke-width .2s ease;
+}
+
+.DropTarget--hovered rect {
+  stroke: var(--vkui--color_stroke_accent);
+  stroke-width: 4.5;
+}
+
+.DropTarget--hovered .DropTarget__infoTitle,
+.DropTarget--hovered .DropTarget__icon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.DropTarget+.DropTarget {
+  margin-top: 0;
+}

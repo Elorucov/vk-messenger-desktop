@@ -1,0 +1,489 @@
+.MEAppConfig.MEAppConfig__withoutBubbles {
+  --messageBorderRadius: 12px;
+  --messageHorizontalIndent: 8px;
+  --composerBackgroundColor: var(--vkui--color_background_modal);
+  --hopNavigationButtonBackgroundColor: var(--vkui--color_background_modal);
+  --convoHistoryBackgroundColor: var(--vkui--color_background_content);
+  --historyItemVerticalIndent: 1px;
+  --historyUnreadSeparatorPadding: 14px 12px;
+  --historyUnreadSeparatorFontSize: 13px;
+  --historyUnreadSeparatorLineHeight: 16px;
+  --historyDateSeparatorVerticalIndent: 9px;
+  --historyTypingPaddingSide: 40px;
+  --convoMainMaxWidth: 100%;
+  --messageMaxWidth: 100%;
+  --messageMaxContentWidth: 580px;
+  --convoMainComposerPaddingSide: 28px;
+  --messageAuthorAvatarRightIndent: 12px;
+  --channelHistoryMaxContentWidth: 100%;
+  --channelPostsHistoryMaxContentWidth: 100%;
+  --channelContentBackground: var(--vkui--color_background_content);
+  --channelPostListContentMargin: 0 auto;
+  --channelPostCommentsMaxContentWidth: 100%;
+  --channelPostCommentsContentAlign: flex-start;
+  --im_reaction_chip_incoming: #cce4ff;
+  --im_reaction_chip_incoming_text: var(--vkui--color_text_accent);
+  --im_reaction_chip_incoming--active: var(--vkui--color_background_accent);
+  --im_reaction_chip_incoming_text--active: var(--vkui--color_text_contrast);
+  --im_reaction_chip_outgoing: var(--im_reaction_chip_incoming);
+  --im_reaction_chip_outgoing_text: var(--im_reaction_chip_incoming_text);
+  --im_reaction_chip_outgoing--active: var(--im_reaction_chip_incoming--active);
+  --im_reaction_chip_outgoing_text--active: var( --im_reaction_chip_incoming_text--active );
+  --im_reaction_chip_outside_bubble: var(--im_reaction_chip_incoming);
+  --im_reaction_chip_outside_bubble_text: var(--im_reaction_chip_incoming_text);
+  --im_reaction_chip_outside_bubble--active: var( --im_reaction_chip_incoming--active );
+  --im_reaction_chip_outside_bubble_text--active: var( --im_reaction_chip_incoming_text--active );
+}
+
+:is([scheme=vkcom_dark],
+[scheme=space_gray],
+.vkui--vkBase--dark,
+.vkui--vkCom--dark) .MEAppConfig.MEAppConfig__withoutBubbles {
+  --im_reaction_chip_incoming: #1e2f42;
+  --im_reaction_chip_incoming_text: var(--vkui--color_text_contrast);
+}
+
+.MEApp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--vkui--color_background);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: min(416px,100%);
+  overflow: hidden;
+  overflow: clip;
+  -webkit-transition: var(--transitionAll);
+  transition: var(--transitionAll);
+  -moz-osx-font-smoothing: grayscale;
+  container-type: inline-size;
+}
+
+.MEApp__convoList--hidden {
+  visibility: hidden;
+}
+
+.MEApp__oneColumn.MEApp__mainPanel--primary+.MEApp__content--switch,
+.MEApp__mobile.MEApp__mainPanel--primary+.MEApp__content--switch {
+  display: none;
+}
+
+.MEApp__aside {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.MEApp__aside--slide-enter {
+  opacity: 0;
+  width: 0;
+}
+
+.MEApp__aside--slide-enter-active {
+  opacity: 1;
+  width: var(--aside_folders_width);
+  -webkit-transition: opacity .3s,width .3s;
+  transition: opacity .3s,width .3s;
+}
+
+.MEApp__aside--slide-exit {
+  opacity: 1;
+  width: var(--aside_folders_width);
+}
+
+.MEApp__aside--slide-exit-active {
+  opacity: 0;
+  width: 0;
+  -webkit-transition: opacity .3s,width .3s;
+  transition: opacity .3s,width .3s;
+}
+
+.MEApp__aside-inner {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  height: 0px;
+}
+
+.MEApp__aside+.MEApp__route {
+  border-radius: 12px 0 0 12px;
+}
+
+.MEApp__route {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  -webkit-transition: var(--transitionAll);
+  transition: var(--transitionAll);
+}
+
+.MEApp__contentShiftFix {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-width: 0;
+  width: 0;
+  max-width: 0;
+}
+
+.MEApp__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 65%;
+  flex-basis: 65%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.MEApp__loading {
+  contain: strict;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  inset: 0;
+  background: var(--vkui--color_background_content);
+  color: var(--vkui--color_text_accent);
+}
+
+.MEApp__reconnecting {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+@media (min-width: 640px) {
+  .MEApp__reconnecting {
+    left: calc(max(min(40%,400px),300px)/2);
+  }
+}
+
+.MEApp__mainPanel {
+  position: relative;
+  -ms-flex-preferred-size: 35%;
+  flex-basis: 35%;
+  max-width: 400px;
+  min-width: 320px;
+  height: 100%;
+  border-right: 1px solid var(--vkui--color_separator_primary);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+.MEApp__mainPanel--compact {
+  border: 0;
+  max-width: 345px;
+}
+
+.MEApp--one-column .MEApp__mainPanel,
+.MEApp--mobile .MEApp__mainPanel {
+  width: 100%;
+  max-width: initial;
+  border-right: none;
+}
+
+.MEApp__oneColumn.MEApp__mainPanel,
+.MEApp__mobile.MEApp__mainPanel {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+}
+
+.MEApp__oneColumn.MEApp__mainPanel--primary,
+.MEApp__mobile.MEApp__mainPanel--primary {
+  visibility: visible;
+  pointer-events: all;
+  position: static;
+}
+
+.MEApp__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.MEApp__noConvo {
+  width: 100%;
+  height: 100%;
+  background-color: var(--vkui--color_background_content);
+}
+
+.MEApp__convoSpinner {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.MEApp__settings {
+  width: 443px;
+}
+
+.MEApp__BotNotification {
+  top: 0;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .MEApp__BotNotification {
+    top: unset;
+    bottom: 0;
+    max-width: max(min(40%,400px),300px);
+  }
+}
+
+.MEApp__fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: var(--vkui--color_background);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 24px 16px;
+  width: 100%;
+}
+
+.MEApp--one-column .MEApp__fixed,
+.MEApp--mobile .MEApp__fixed {
+  padding: 0;
+}
+
+.MEApp__fixed-inner {
+  max-width: 911px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.MEApp__rightPanelContainer {
+  background-color: var(--vkui--color_background);
+}
+
+.EmptyConvoList {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding: 0 24px;
+  font: 14px/120% var(--font);
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+  letter-spacing: -.078px;
+}
+
+.EmptyConvoList--collapsed {
+  padding: 0 12px;
+  font: 12px/14px var(--font);
+}
+
+.EmptyConvoList__icon {
+  color: var(--vkui--color_icon_secondary);
+  margin-bottom: 12px;
+}
+
+.EmptyConvoList--collapsed .EmptyConvoList__icon {
+  display: none;
+}
+
+.EmptyConvoList__link {
+  color: var(--vkui--color_text_link);
+  margin-top: 8px;
+  background: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.EmptyConvoList__link:hover {
+  text-decoration: underline;
+}
+
+.EmptyConvoList--collapsed .EmptyConvoList__link {
+  font: 12px/14px var(--font);
+}
+
+.CollapsibleContainer.CollapsibleContainer--inited {
+  position: relative;
+  height: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.CollapsibleContainer.CollapsibleContainer--uninited {
+  position: relative;
+  -ms-flex-preferred-size: 35%;
+  flex-basis: 35%;
+  max-width: 400px;
+  min-width: 320px;
+  height: 100%;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+.CollapsibleContainer:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--vkui--color_separator_primary);
+}
+
+.CollapsibleContainer--collapsed .CollapsibleContainer__widthControllerButton {
+  -webkit-transform: translateX(-8px) scaleX(-1);
+  transform: translate(-8px) scaleX(-1);
+}
+
+.CollapsibleContainer--collapsed .sbarThumbY:before {
+  width: 4px;
+}
+
+.CollapsibleContainer--collapsed .sbarTrack,
+.CollapsibleContainer--collapsed .sbarThumb {
+  width: 7px;
+}
+
+.CollapsibleContainer__wrapper,
+.CollapsibleContainer__content {
+  height: 100%;
+}
+
+.CollapsibleContainer__wrapper {
+  overflow: hidden;
+}
+
+.CollapsibleContainer__widthControllerArea {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  height: 100%;
+  z-index: 1;
+  cursor: col-resize;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.CollapsibleContainer__widthControllerArea:active {
+  width: 500vh;
+  right: -250vh;
+}
+
+.CollapsibleContainer__widthControllerButton {
+  position: absolute;
+  right: 8px;
+  bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  color: var(--vkui--color_icon_secondary);
+  border-radius: 40px;
+  border: .5px solid var(--vkui--color_separator_primary);
+  background: var(--vkui--color_background_modal);
+  -webkit-box-shadow: var(--vkui--elevation2);
+  box-shadow: var(--vkui--elevation2);
+  -webkit-transform: translateX(0px) scaleX(1);
+  transform: translate(0) scaleX(1);
+  outline: none;
+  -webkit-transition: opacity .2s linear,-webkit-transform .2s;
+  transition: opacity .2s linear,-webkit-transform .2s;
+  transition: opacity .2s linear,transform .2s;
+  transition: opacity .2s linear,transform .2s,-webkit-transform .2s;
+}
+
+.CollapsibleContainer__widthControllerButtonIcon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.CollapsibleContainer__widthControllerButton:hover .CollapsibleContainer__widthControllerButtonIcon {
+  background: var(--vkui--color_transparent--active);
+}

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.containerOverlayDark {
+  background-color: var(--vkui--color_avatar_overlay);
+}
+
+.containerCenter {
+  align-items: center;
+}
+
+.containerLeft {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.textPrimary {
+  color: var(--vkui--color_text_primary);
+}
+
+.textSecondary {
+  color: var(--vkui--color_text_secondary);
+}

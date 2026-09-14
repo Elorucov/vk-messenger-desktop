@@ -1,0 +1,32 @@
+.HighlightWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.HighlightWrapper:before,
+.HighlightWrapper--active:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.HighlightWrapper:before {
+  opacity: 0;
+}
+
+.HighlightWrapper--active:before {
+  pointer-events: none;
+  background: var(--vkui--color_transparent--active);
+  -webkit-animation: messageHighlightBackground var(--transitionMessageHighlightDuration) ease-in-out 1;
+  animation: messageHighlightBackground var(--transitionMessageHighlightDuration) ease-in-out 1;
+}

@@ -1,0 +1,67 @@
+.SpaceHeader {
+  width: 100%;
+  border-bottom: 1px solid var(--vkui--color_separator_secondary);
+}
+
+.SpaceHeader__info {
+  display: grid;
+  grid-template-areas: "avatar title icon" "avatar members icon";
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 18px 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 11px 8px 10px 12px;
+  text-decoration: none;
+}
+
+.SpaceHeader__avatar {
+  grid-area: avatar;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.SpaceHeader__title {
+  grid-area: title;
+  font-weight: 400;
+  color: var(--vkui--color_text_primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-self: center;
+  font: 14px/18px var(--font);
+}
+
+.SpaceHeader__members {
+  grid-area: members;
+  font-weight: 400;
+  color: var(--vkui--color_text_secondary);
+  font: 13px/16px var(--font);
+}
+
+.SpaceHeader__reconnect {
+  grid-area: members;
+  font-weight: 400;
+  color: var(--vkui--color_text_secondary);
+  text-transform: lowercase;
+  font: 13px/16px var(--font);
+}
+
+.SpaceHeader__icon {
+  grid-area: icon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_icon_secondary);
+  width: 40px;
+  height: 40px;
+}

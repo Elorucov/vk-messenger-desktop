@@ -1,0 +1,161 @@
+.METooltip {
+  --tooltipBackground: rgba(0,0,0,.72);
+  --tailWidth: 5px;
+  --tailHeight: 5px;
+  --arrowOffsetX: 0;
+  --arrowOffsetY: 0;
+  position: relative;
+  -webkit-animation: fadeIn .3s ease;
+  animation: fadeIn .3s ease;
+  -webkit-transition: opacity .2s ease,visibility .2s ease;
+  transition: opacity .2s ease,visibility .2s ease;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font: 12.5px/18px var(--font);
+  background: var(--tooltipBackground);
+  color: #fff;
+  white-space: break-spaces;
+}
+
+.METooltip--removed {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.METooltip--vkuiStyle {
+  --tooltipBackground: var(--vkui--color_background_contrast_inverse);
+  --tailWidth: 20px;
+  --tailHeight: 8px;
+  padding: 9px 12px 10px;
+  border-radius: 8px;
+  color: var(--vkui--color_text_contrast);
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+}
+
+[data-position=top]>.METooltip {
+  margin-bottom: var(--tailHeight);
+}
+
+[data-position=right]>.METooltip {
+  margin-left: var(--tailHeight);
+}
+
+[data-position=bottom]>.METooltip {
+  margin-top: var(--tailHeight);
+}
+
+[data-position=left]>.METooltip {
+  margin-right: var(--tailHeight);
+}
+
+.METooltip__arrow {
+  color: var(--tooltipBackground);
+}
+
+.METooltip:not(.METooltip--vkuiStyle):after {
+  position: absolute;
+  border: var(--tailHeight) solid transparent;
+  content: "";
+}
+
+[data-position=top]>.METooltip:after {
+  top: 100%;
+  border-top-color: var(--tooltipBackground);
+}
+
+[data-position=right]>.METooltip:after {
+  top: calc(50% - var(--tailHeight));
+  right: 100%;
+  border-right-color: var(--tooltipBackground);
+}
+
+[data-position=bottom]>.METooltip:after {
+  bottom: 100%;
+  border-bottom-color: var(--tooltipBackground);
+}
+
+[data-position=left]>.METooltip:after {
+  top: calc(50% - var(--tailHeight));
+  left: 100%;
+  border-left-color: var(--tooltipBackground);
+}
+
+[data-position=top][data-align=left]>.METooltip:after,
+[data-position=bottom][data-align=left]>.METooltip:after {
+  left: calc(5px + var(--arrowOffsetX));
+}
+
+[data-position=top][data-align=center]>.METooltip:after,
+[data-position=bottom][data-align=center]>.METooltip:after {
+  left: calc(50% - var(--tailWidth));
+}
+
+[data-position=top][data-align=right]>.METooltip:after,
+[data-position=bottom][data-align=right]>.METooltip:after {
+  right: calc(5px + var(--arrowOffsetX));
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.MEPopper {
+  display: flex;
+  width: max-content;
+  z-index: var(--me-dialog-layer,auto);
+}
+
+.MEPopper--top {
+  align-items: flex-end;
+}
+
+.MEPopper--right {
+  justify-content: left;
+  align-items: center;
+}
+
+.MEPopper--bottom {
+  align-items: flex-start;
+}
+
+.MEPopper--left {
+  justify-content: left;
+  align-items: center;
+  direction: rtl;
+}
+
+.MEPopper--alignLeft {
+  justify-content: left;
+}
+
+.MEPopper--alignCenter {
+  justify-content: center;
+}
+
+.MEPopper--alignRight {
+  direction: rtl;
+  justify-content: right;
+}
+
+.MEPopper>* {
+  direction: ltr;
+}
+
+.MEPopper--noPointerEvents {
+  pointer-events: none;
+}

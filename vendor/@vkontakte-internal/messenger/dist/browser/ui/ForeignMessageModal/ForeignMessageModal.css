@@ -1,0 +1,13 @@
+.ForeignMessageModal {
+  width: 638px;
+}
+
+.ForeignMessageModal__body {
+  padding: 15px;
+}
+
+.ForeignMessageModal__bubble {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}

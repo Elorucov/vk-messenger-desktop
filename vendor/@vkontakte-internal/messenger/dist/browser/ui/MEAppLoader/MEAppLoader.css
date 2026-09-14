@@ -1,0 +1,7 @@
+.MEAppLoader {
+  contain: strict;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+}

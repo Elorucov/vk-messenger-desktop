@@ -1,0 +1,31 @@
+.root {
+  overflow: hidden;
+}
+
+.video {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  vertical-align: top;
+  background: var(--vkui--color_background);
+  transition: opacity var(--vkui--animation_duration_s) ease;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.mirrored {
+  transform: scaleX(-1);
+}
+
+.circle {
+  border-radius: 50%;
+}

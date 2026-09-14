@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 33%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--vkui--color_avatar_overlay);
+  color: var(--vkui--color_text_contrast);
+}
+
+.containerHorizontal {
+  width: 25%;
+  min-width: 40px;
+}
+
+.icon {
+  margin-bottom: 6px;
+}

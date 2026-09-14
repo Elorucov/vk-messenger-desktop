@@ -1,0 +1,19 @@
+.rootLive.rootLive {
+  border-radius: 5px;
+}
+
+.rootLive .icon {
+  width: 100%;
+}
+
+.rootLiveOutline.rootLiveOutline {
+  background-color: unset;
+}
+
+.rootContentUnseen.rootContentUnseen {
+  padding: 0;
+}
+
+.rootContentUnseen .icon {
+  color: var(--vkui--color_accent_blue);
+}

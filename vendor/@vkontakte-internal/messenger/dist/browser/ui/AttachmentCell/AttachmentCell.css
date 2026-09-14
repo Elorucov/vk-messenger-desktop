@@ -1,0 +1,241 @@
+.AttachmentCell {
+  --attachmentCellHeight: 56px;
+  --attachmentCellImageHeight: 40px;
+  --attachmentCellVerticalPadding: calc((var(--attachmentCellHeight) - var(--attachmentCellImageHeight)) / 2);
+  --attachmentCellHorizontalPadding: 8px;
+  min-height: var(--attachmentCellHeight);
+  min-width: 150px;
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr);
+  gap: 0 12px;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  margin: auto 0;
+  text-decoration: none;
+  color: var(--vkui--color_text_primary);
+  padding: var(--attachmentCellVerticalPadding) var(--attachmentCellHorizontalPadding);
+  cursor: default;
+}
+
+.AttachmentCell--withButton {
+  grid-template-columns: auto minmax(0,1fr) auto;
+}
+
+.AttachmentCell--clickable:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.AttachmentCell__imageBlockContainer {
+  position: relative;
+  width: var(--attachmentCellImageHeight);
+  height: var(--attachmentCellImageHeight);
+  color: var(--vkui--color_icon_medium);
+}
+
+.AttachmentCell__imageBlockContainer--inOutBubble {
+  color: var(--vkui--color_icon_accent);
+}
+
+.AttachmentCell__imageBlock {
+  position: relative;
+  width: var(--attachmentCellImageHeight);
+  height: var(--attachmentCellImageHeight);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.AttachmentCell__imageBlockBackground {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--vkui--color_background_secondary);
+}
+
+.AttachmentCell__imageBlockContainer--inOutBubble:not(.AttachmentCell__imageBlockContainer--roundWithBorder) .AttachmentCell__imageBlockBackground {
+  background: var(--vkui--color_background_accent);
+  opacity: .1;
+}
+
+.AttachmentCell__imageBlockContainer:not(.AttachmentCell__imageBlockContainer--roundWithBorder) .AttachmentCell__imageBlock:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid .5px var(--vkui--color_image_border_alpha);
+}
+
+.AttachmentCell__imageBlockContainer--roundWithBorder .AttachmentCell__imageBlock {
+  border-radius: 50%;
+  border: solid 1px var(--vkui--color_icon_medium);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.AttachmentCell__imageBlockContainer--round .AttachmentCell__imageBlockBackground,
+.AttachmentCell__imageBlockContainer--round .AttachmentCell__imageBlock,
+.AttachmentCell__imageBlockContainer--round .AttachmentCell__imageBlock:after,
+.AttachmentCell__imageBlockContainer--roundWithBorder .AttachmentCell__photoItem {
+  border-radius: 50%;
+}
+
+.AttachmentCell__imageBlockContainer--square .AttachmentCell__imageBlockBackground,
+.AttachmentCell__imageBlockContainer--square .AttachmentCell__imageBlock,
+.AttachmentCell__imageBlockContainer--square .AttachmentCell__imageBlock:after {
+  border-radius: 8px;
+}
+
+.AttachmentCell__imageBlockContainer--roundWithBorder .AttachmentCell__imageBlockBackground,
+.AttachmentCell__imageBlockContainer--roundWithBorder .AttachmentCell__imageBlock {
+  background: none;
+}
+
+.AttachmentCell__imageBlockContainer--roundWithBorder .AttachmentCell__photoItem:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: solid .5px var(--vkui--color_image_border_alpha);
+}
+
+.AttachmentCell__icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.AttachmentCell__icon--withImage {
+  background: #2c2d2e80;
+  color: var(--vkui--color_icon_contrast);
+}
+
+.AttachmentCell__icon--roundWithBorder,
+.AttachmentCell__icon--round {
+  border-radius: 50%;
+}
+
+.AttachmentCell__icon--square {
+  border-radius: 8px;
+}
+
+.AttachmentCell__imageDetailLeftBottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: calc(var(--attachmentCellImageHeight) / -2 + 6px);
+  right: calc(var(--attachmentCellImageHeight) / -2 + 6px);
+}
+
+.AttachmentCell__infoBlockContainer {
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.AttachmentCell__infoBlock {
+  margin-bottom: 2px;
+  display: grid;
+}
+
+.AttachmentCell__headline {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.AttachmentCell__headline--unavailable {
+  white-space: unset;
+  color: var(--vkui--color_text_subhead);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(var(--vkui--font_headline1--line_height--compact) * 2);
+}
+
+.AttachmentCell__footnote {
+  color: var(--vkui--color_text_subhead);
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AttachmentCell__footnote--inOutBubble {
+  color: var(--vkui--color_text_accent);
+}
+
+.ConvoMessage__attachments .AttachmentCell {
+  --attachesIndent: calc(var(--messageAttachmentIndent) - var(--messageHorizontalIndent));
+  margin-left: calc(-1 * (var(--attachesIndent) + var(--attachmentCellHorizontalPadding)));
+}
+
+.ForwardedMessage__attachments .AttachmentCell,
+.ForwardedMessageNew__attachments .AttachmentCell,
+.AttachWall__attaches .AttachmentCell,
+.ChannelPostAttaches .AttachmentCell,
+.ConvoMessageWithoutBubble__attachments .AttachmentCell {
+  margin-left: calc(-1 * var(--attachmentCellHorizontalPadding));
+}
+
+.AttachWallNew__attaches .AttachmentCell {
+  margin-left: 0;
+}
+
+.AttachmentCell_buttonContainer,
+.AttachmentCell_additionalBlockContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.AttachmentCell_additionalBlockContainer {
+  margin-left: 12px;
+}

@@ -1,0 +1,55 @@
+.item {
+  height: 200%;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  color: var(--vkui--color_icon_tertiary);
+  transition: all var(--vkui--animation_duration_m);
+}
+
+.item:not(.itemActive):hover {
+  opacity: var(--vkui--opacity_disable_accessibility);
+  color: var(--vkui--color_background_accent_tint--hover);
+}
+
+.item:not(.itemActive):active {
+  transform: scale(var(--active-scale, .95));
+}
+
+.item:not(.itemActive):active,
+.itemActive {
+  color: var(--vkui--color_icon_accent);
+}
+
+.itemActive {
+  cursor: default;
+  pointer-events: none;
+}
+
+.indicator:before {
+  content: "";
+  top: -2px;
+  right: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  transition: background var(--vkui--animation_duration_l);
+}
+
+.indicatorNone:before {
+  display: none;
+}
+
+.indicatorPrimary:before {
+  background: var(--vkui--color_accent_blue);
+}
+
+.indicatorSecondary:before {
+  background: var(--vkui--color_icon_tertiary);
+}
+
+.indicatorDestructive:before {
+  background: var(--vkui--color_accent_red);
+}

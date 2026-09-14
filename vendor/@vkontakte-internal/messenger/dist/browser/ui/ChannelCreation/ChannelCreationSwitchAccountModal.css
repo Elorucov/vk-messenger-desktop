@@ -1,0 +1,227 @@
+.ChannelCreationSwitchAccountModal__panel {
+  border-radius: 12px;
+  width: 400px;
+}
+
+.ChannelCreationSwitchAccountModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 24px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: var(--vkui--color_background_modal);
+  border-radius: 12px;
+  width: 400px;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.ChannelCreationSwitchAccountModal__description {
+  color: var(--vkui--color_text_subhead);
+  font: 400 13px/16px var(--font);
+  margin-top: 8px;
+}
+
+.ChannelCreationSwitchAccountModal__title {
+  font: 500 20px/24px var(--font);
+  letter-spacing: -.002em;
+  text-align: center;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 16px;
+}
+
+.ChannelCreationSwitchAccountModal__buttonWrapper {
+  margin-top: 20px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ChannelProfile {
+  position: relative;
+  height: 100%;
+}
+
+.ChannelProfile__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  height: 100%;
+}
+
+.ChannelProfile__anchor {
+  height: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ChannelProfile__anchor--information {
+  margin-top: 28px;
+}
+
+.ChannelProfile__anchor--members {
+  height: 28px;
+  margin-top: -28px;
+}
+
+.ChannelProfile__scroll {
+  height: 100%;
+}
+
+.ChannelProfile__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ChannelProfile__section {
+  padding: 0 18px;
+  margin: 18px 0;
+}
+
+.ChannelProfile__section+.ChannelProfile__anchor+.ChannelProfile__section,
+.ChannelProfile__section+.ChannelProfile__section {
+  margin-top: 0;
+}
+
+.ChannelProfile__link {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 12px;
+  cursor: pointer;
+  color: var(--vkui--color_text_link);
+}
+
+.ChannelProfile__avatarCard {
+  margin-top: 0;
+  margin-bottom: var(--vkui--spacing_size_2xl);
+}
+
+.ChannelProfile__loader {
+  margin-top: 32px;
+  -webkit-animation: ChannelProfileLoad 1s linear infinite alternate;
+  animation: ChannelProfileLoad 1s linear infinite alternate;
+}
+
+@-webkit-keyframes ChannelProfileLoad {
+  0% {
+    fill: var(--vkui--color_skeleton_from);
+  }
+  to {
+    fill: var(--vkui--color_skeleton_to);
+  }
+}
+
+@keyframes ChannelProfileLoad {
+  0% {
+    fill: var(--vkui--color_skeleton_from);
+  }
+  to {
+    fill: var(--vkui--color_skeleton_to);
+  }
+}
+
+.ChannelProfile__name {
+  width: 100%;
+  text-align: center;
+  line-height: 22px;
+  word-break: break-word;
+}
+
+.ChannelProfile__name--clickable {
+  cursor: pointer;
+}
+
+.ChannelProfile__descriptionIcon {
+  width: 30px;
+  height: 100%;
+}
+
+.ChannelProfile__descriptionParagraph {
+  margin-top: var(--vkui--spacing_size_xs);
+}
+
+.ChannelProfile__information .ChannelProfile__description {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.ChannelProfile__descriptionText,
+.ChannelProfile__descriptionButtonText {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ChannelProfile__descriptionLink {
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+  cursor: pointer;
+}
+
+.ChannelProfile__descriptionLink:hover {
+  text-decoration: none;
+}
+
+.ChannelProfile__verifiedIcon {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+}
+
+.ChannelProfile__lastNameWord {
+  display: inline-block;
+}
+
+.ChannelProfile__avatar--clickable {
+  cursor: pointer;
+}
+
+.ChannelProfile__privateStub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  padding: 22px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  background: var(--vkui--color_background_secondary);
+}

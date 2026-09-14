@@ -1,0 +1,41 @@
+.AttachFinishedCall {
+  border: none;
+  background: none;
+  text-align: inherit;
+}
+
+.AttachFinishedCall__headlineContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.AttachFinishedCall__headlineIcon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: var(--vkui--color_icon_medium);
+}
+
+.AttachFinishedCall__headlineIcon--upturned {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.AttachFinishedCall__headlineIcon--reached {
+  color: var(--vkui--color_icon_accent);
+}
+
+.AttachFinishedCall__headlineIcon--canceled {
+  color: var(--vkui--color_icon_negative);
+}
+
+.AttachFinishedCall__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}

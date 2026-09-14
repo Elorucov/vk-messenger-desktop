@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../fonts/roboto300.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../fonts/roboto400.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../fonts/roboto500.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../fonts/roboto700.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: VK Sans Display;
+  font-weight: 500;
+  src: url(../../fonts/VK_Sans_Display_Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: VK Sans Display;
+  font-weight: 600;
+  src: url(../../fonts/VK_Sans_Display_SemiBold.woff2) format("woff2");
+}
+
+[class^="@"] {
+  width: 16px;
+  height: 16px;
+}

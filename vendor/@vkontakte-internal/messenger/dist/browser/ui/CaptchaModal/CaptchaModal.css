@@ -1,0 +1,112 @@
+.Captcha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.Captcha__content {
+  width: 260px;
+  min-width: min(260px,100%);
+  max-width: 100%;
+}
+
+.Captcha__image {
+  width: 100%;
+  height: 100px;
+}
+
+.Captcha__input {
+  margin: 10px 0 12px;
+  width: 100%;
+}
+
+.Captcha__audioWave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 5px;
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.Captcha__audioWave--active {
+  color: var(--vkui--color_icon_accent_themed);
+}
+
+.Captcha__audioWave--right {
+  -webkit-transform: scale(-1);
+  transform: scale(-1);
+  margin-left: 5px;
+}
+
+.Captcha__audio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_text_accent_themed);
+}
+
+.Captcha__container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--vkui--color_background_secondary);
+  background-size: cover;
+  color: var(--vkui--color_icon_secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  isolation: isolate;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  min-width: 252px;
+  min-height: 96px;
+  height: 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--vkui--color_image_border_alpha);
+}
+
+.Captcha__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.Captcha__loader {
+  position: absolute;
+  inset: auto;
+}
+
+.Captcha__captcha--hidden {
+  display: none;
+}
+
+.Captcha__reloadBtn {
+  color: var(--vkui--color_text_link);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Captcha__reloadBtn:hover {
+  text-decoration: underline;
+}

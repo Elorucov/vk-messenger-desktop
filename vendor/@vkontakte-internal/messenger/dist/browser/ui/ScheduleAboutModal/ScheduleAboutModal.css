@@ -1,0 +1,88 @@
+.ScheduleAboutModal__content {
+  border-radius: 20px;
+  background-color: var(--vkui--color_background_content);
+  padding: 32px 24px 24px;
+  max-width: 698px;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 18px;
+  margin: 0 12px;
+}
+
+.ScheduleAboutModal__title {
+  font-family: var(--fontVkSans)!important;
+  margin-top: 12px;
+  margin-bottom: 21px;
+}
+
+.ScheduleAboutModal__cell {
+  padding: 10px 0;
+}
+
+.ScheduleAboutModal__desc {
+  color: var(--vkui--color_text_secondary);
+  margin-top: 2px;
+}
+
+.ScheduleAboutModal__action {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.ScheduleAboutModal__closer {
+  border: none;
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: -56px;
+}
+
+.ScheduleAboutModal__closer:hover {
+  cursor: pointer;
+  opacity: .8;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.ScheduleAboutModal__closer svg {
+  padding: 4px;
+}
+
+.ScheduleAboutModal__closerContent {
+  background: var(--black-alpha-35,var(--vkui--color_overlay_primary));
+  border-radius: 50%;
+}
+
+.ScheduleAboutModal__image {
+  padding: 24px 32px 24px 24px;
+}
+
+@media (max-width: 700px) {
+  .ScheduleAboutModal__image {
+    display: none;
+  }
+}

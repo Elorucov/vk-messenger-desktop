@@ -1,0 +1,25 @@
+.row {
+  width: 100%;
+  padding-top: 4px;
+  display: grid;
+  box-sizing: border-box;
+  margin-bottom: calc(var(--emoji-padding, 8px) / 2);
+  grid-template-columns: repeat(var(--emoji-columns, 15),minmax(var(--emoji-size, 16),1fr));
+}
+
+.rowWide,
+.rowRegular,
+.rowAdaptive,
+.rowSmall {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rowCompact {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emoji {
+  justify-self: center;
+}

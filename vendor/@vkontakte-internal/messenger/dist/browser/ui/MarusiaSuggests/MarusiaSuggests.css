@@ -1,0 +1,95 @@
+.MarusiaSuggests {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.MarusiaSuggests--compact {
+  margin-top: -1px;
+  border-bottom: 1px solid var(--vkui--color_separator_secondary);
+  background: var(--vkui--color_background);
+}
+
+.MarusiaSuggests.MarusiaSuggests--visible {
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+
+.MarusiaSuggests--compact.MarusiaSuggests--visible {
+  padding-bottom: 12px;
+}
+
+.MarusiaSuggests__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-weight: 500;
+  font-size: 14px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.MarusiaSuggests__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.MarusiaSuggests--compact .MarusiaSuggests__wrapper {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.MarusiaSuggests__item {
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 12px;
+  height: 28px;
+  background: var(--vkui--color_background_modal);
+  border-radius: 14px;
+  font-style: normal;
+  line-height: 18px;
+  text-align: center;
+  color: var(--vkui--color_text_link);
+  white-space: nowrap;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MarusiaSuggests--withoutBubbles .MarusiaSuggests__item {
+  border: 1px solid var(--vkui--vkontakte_color_im_bubble_incoming_expiring);
+  background: var(--vkui--color_background_content);
+}
+
+.MarusiaSuggests--compact .MarusiaSuggests__item {
+  margin-bottom: 0;
+}
+
+.MarusiaSuggests__space {
+  min-width: 2px;
+}
+
+.MarusiaSuggests--compact .MarusiaSuggests__item:first-child {
+  margin-left: 10px;
+}
+
+.MarusiaSuggests__item--less svg {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

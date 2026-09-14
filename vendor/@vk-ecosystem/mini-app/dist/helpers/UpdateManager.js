@@ -1,0 +1,3 @@
+class UpdateManager{static getDefaultEventParams(){return {selectedSlot:0,alreadyUsedSlots:[],skippedReasons:[]}}getUpdateTs(){return this.lastUpdateTimestamp}saveUpdateTs(){this.lastUpdateTimestamp=Date.now();}setInProgress(t){this.updateInProgress=t;}getInProgress(){return this.updateInProgress}getAbortController(){return this.abortController}setAbortController(t){this.abortController=t;}setAdsEvent(t){this.adsEventParams=t;}getAdsEventParams(){return this.adsEventParams}constructor(){this.lastUpdateTimestamp=0;this.updateInProgress=false;this.abortController=new AbortController;this.adsEventParams=UpdateManager.getDefaultEventParams();}}
+
+export { UpdateManager };

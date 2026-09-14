@@ -1,0 +1,368 @@
+.SpacesNavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 72px;
+  height: 100%;
+  border-right: 1px solid var(--vkui--color_separator_secondary);
+  background: var(--vkui--color_background_content);
+}
+
+.SpacesNavbar--scrolled .SpacesNavbar__listWrapper:before {
+  opacity: 1;
+}
+
+.SpacesNavbar__menuButton {
+  margin: 12px 0 6px;
+}
+
+.SpacesNavbar__chatsButton {
+  padding-bottom: 5px;
+}
+
+.SpacesNavbar__catalogButton {
+  padding: 0 0 10px;
+}
+
+.SpacesNavbar__listWrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.SpacesNavbar__listWrapper:after,
+.SpacesNavbar__listWrapper:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+}
+
+.SpacesNavbar__listWrapper:before {
+  top: -1px;
+  height: 7px;
+  -webkit-transition: opacity .1s ease;
+  transition: opacity .1s ease;
+  background: -webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_background_content)),to(transparent));
+  background: linear-gradient(180deg,var(--vkui--color_background_content) 0%,transparent 100%);
+}
+
+.SpacesNavbar__listWrapper:after {
+  bottom: 0;
+  height: 15px;
+  background: -webkit-gradient(linear,left bottom,left top,from(var(--vkui--color_background_content)),color-stop(90%,transparent));
+  background: linear-gradient(0deg,var(--vkui--color_background_content) 0%,transparent 90%);
+}
+
+.SpacesNavbar__list {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 26px 10px 0;
+  margin: 0 -26px 0 0;
+  overflow-y: auto;
+}
+
+.SpacesNavbar__item {
+  display: inline-block;
+}
+
+.SpacesNavbar__itemLink {
+  display: inline-block;
+  padding: 3px;
+  margin: 1px;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  position: relative;
+}
+
+.SpacesNavbar__itemLink:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid transparent;
+  border-radius: 13px;
+}
+
+.SpacesNavbar__itemLink:hover:after {
+  border-color: var(--vkui--color_background_secondary_alpha--hover);
+}
+
+.SpacesNavbar__itemLink:focus:after,
+.SpacesNavbar__itemLink:active:after {
+  border-color: var(--vkui--color_background_secondary_alpha--active);
+}
+
+.SpacesNavbar__itemLink.SpacesNavbar__itemLink--selected:after {
+  border-color: var(--vkui--color_background_accent--active);
+}
+
+.SpacesNavbar__itemLink.SpacesNavbar__itemLink--selected:hover:after {
+  border-color: var(--vkui--color_accent_secondary);
+}
+
+.SpacesNavbar__itemLink.SpacesNavbar__itemLink--selected:active:after {
+  border-color: var(--vkui--color_background_accent--active);
+}
+
+.SpacesNavbar__catalogButton .SpacesNavbar__itemLink:after {
+  display: none;
+}
+
+.SpacesNavbar__itemCell {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: var(--vkui--color_background_secondary_alpha);
+  color: var(--vkui--color_icon_medium);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.SpacesNavbar__itemLink:hover .SpacesNavbar__itemCell {
+  color: var(--vkui--color_background_accent--hover);
+}
+
+.SpacesNavbar__itemCell--withBorder:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 10px;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+}
+
+.SpacesNavbar__userAvatar {
+  border-radius: 10px;
+}
+
+.SpacesNavbarCounter__counter {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  font: 12px/14px var(--font);
+  font-weight: 400;
+  text-align: center;
+  border-radius: 12px;
+  padding: 0 3px;
+  border: 2px solid var(--vkui--color_background_content);
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_text_contrast_themed);
+}
+
+.SpacesNavbarCounter__counter--muted {
+  background: var(--vkui--color_icon_secondary);
+}
+
+.SpaceAvatar {
+  position: relative;
+}
+
+.SpaceAvatar__image {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: var(--vkui--color_background_secondary);
+  color: var(--vkui--color_icon_accent);
+}
+
+.SpaceAvatar__image--size-20 {
+  border-radius: 6px;
+}
+
+.SpaceAvatar__image--size-32,
+.SpaceAvatar__image--size-36,
+.SpaceAvatar__image--size-40 {
+  border-radius: 10px;
+}
+
+.SpaceAvatar__image--size-64 {
+  border-radius: 16px;
+}
+
+.SpaceAvatar__image--size-72 {
+  border-radius: 24px;
+}
+
+.SpaceAvatar__image:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+}
+
+.SpaceScreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--vkui--color_background_content);
+}
+
+.SpaceScreen__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-preferred-size: 35%;
+  flex-basis: 35%;
+  max-width: 400px;
+  min-width: 320px;
+  border-right: 1px solid var(--vkui--color_separator_primary);
+}
+
+.SpaceScreen__cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 128px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.SpaceScreen__guest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  border: .33px solid var(--vkui--color_field_border_alpha);
+  background: var(--vkui--color_background_tertiary);
+  margin: 8px;
+  padding: 12px;
+}
+
+.SpaceScreen__main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+}
+
+.SpaceScreen__skeleton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 19px 0;
+  margin: 24px 15px 12px 16px;
+}
+
+.SpaceScreen__skeleton~.SpaceScreen__skeleton {
+  margin: 35px 15px 12px 16px;
+}
+
+.SpaceScreen__skeletonItem {
+  display: grid;
+  gap: 12px 14px;
+  margin-left: 2px;
+  grid-template-areas: "avatar title counter" "avatar subtitle counter";
+  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.SpaceScreen__skeletonItem {
+  margin-top: 1px;
+}
+
+.SpaceScreen__skeletonItem~.SpaceScreen__skeletonItem {
+  margin-top: 0;
+}
+
+.SpaceScreen__skeletonAvatar {
+  grid-area: avatar;
+}
+
+.SpaceScreen__skeletonTitle {
+  grid-area: title;
+  margin-top: 3px;
+}
+
+.SpaceScreen__skeletonSubtitle {
+  grid-area: subtitle;
+}
+
+.SpaceScreen__skeletonCounter {
+  grid-area: counter;
+  align-self: center;
+  margin-top: 5px;
+}

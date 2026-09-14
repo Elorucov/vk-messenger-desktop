@@ -1,0 +1,10 @@
+.AttachUGCSticker {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: bottom;
+}
+
+.AttachUGCSticker--clickable {
+  cursor: pointer;
+}

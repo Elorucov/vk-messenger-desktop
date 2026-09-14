@@ -1,0 +1,25 @@
+.root {
+  align-items: stretch;
+}
+
+.root :global(.vkuiInternalTwoColumnLayoutColumn) {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+:global .vkuiInternalTwoColumnLayoutColumn+.vkuiInternalTwoColumnLayoutColumn {
+  --vkui_internal--twocolumnlayout-column-spacing: 16px;
+  margin-left: var(--vkui_internal--twocolumnlayout-column-spacing, 0);
+}
+
+.rootWithSeparator :global(.vkuiInternalTwoColumnLayoutColumn)+:global(.vkuiInternalTwoColumnLayoutColumn):before {
+  content: " ";
+  top: 0;
+  left: calc((var(--vkui_internal--twocolumnlayout-column-spacing, 0) + var(--vkui--size_border--regular)) / 2 * -1);
+  width: var(--vkui--size_border--regular);
+  height: calc(100% - var(--vkui--size_base_padding_vertical--regular) * 2);
+  display: flex;
+  position: absolute;
+  margin: var(--vkui--size_base_padding_vertical--regular) 0;
+  background-color: var(--vkui--color_separator_primary);
+}

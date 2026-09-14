@@ -1,0 +1,203 @@
+.PeersPicker {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.PeersPicker__empty {
+  max-width: 300px;
+}
+
+.PeersPicker__ListSubHeader {
+  width: 100%;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.PeersPicker__ListSubHeaderTitle {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: var(--vkui--color_text_secondary);
+}
+
+.PeersPicker__ListSubHeaderTitle--org {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.PeersPicker__ListSubHeaderAsideButton {
+  background: none;
+  border: 0;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--vkui--color_text_link);
+  padding: 4px 0;
+  opacity: 1;
+  -webkit-transition: opacity .05s;
+  transition: opacity .05s;
+}
+
+.PeersPicker__ListSubHeaderAsideButton:hover {
+  opacity: .7;
+}
+
+.PeersPicker__chip {
+  margin: 2px;
+}
+
+.ChatCreation {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ChatCreation__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 14px 32px 20px 16px;
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+}
+
+.ChatCreation__selector {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ChatCreation__picker {
+  height: 100%;
+}
+
+.ChatCreation__footer {
+  text-align: right;
+  padding: 10px;
+  border-top: 1px solid var(--vkui--color_separator_primary);
+}
+
+.ChatCreation__settingsButton {
+  margin-right: 10px;
+}
+
+.ChatCreation__image {
+  margin-right: 18px;
+}
+
+.ChatCreation__fieldset {
+  width: 100%;
+}
+
+.ChatCreation .ChatCreation__row {
+  padding: 0;
+}
+
+.ChatSettings {
+  font-size: 13px;
+  width: 600px;
+}
+
+.ChatSettings__footer {
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background: var(--vkui--color_background_tertiary);
+  border-top: 1px solid var(--vkui--color_separator_primary);
+}
+
+.ChatSettings__footerButton+.ChatSettings__footerButton {
+  margin-left: 10px;
+}
+
+.ChatSettings__presets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ChatSettings__preset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 0;
+  width: 145px;
+  margin: 0 12px;
+  border: 2px solid var(--vkui--color_image_border_alpha);
+  border-radius: 10px;
+  cursor: pointer;
+  background: none;
+}
+
+.ChatSettings__presetIcon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ChatSettings__presetName {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 8px;
+  color: var(--vkui--color_text_primary);
+}
+
+.ChatSettings__preset--active {
+  border-color: var(--vkui--color_background_accent);
+}
+
+.ChatSettings__options {
+  margin-top: 14px;
+}

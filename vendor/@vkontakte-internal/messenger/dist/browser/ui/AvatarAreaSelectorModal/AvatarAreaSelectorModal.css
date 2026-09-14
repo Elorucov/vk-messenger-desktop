@@ -1,0 +1,14 @@
+.AvatarAreaSelectorModal {
+  position: relative;
+  z-index: calc(var(--me-dialog-layer) + 1);
+}
+
+.AvatarAreaSelectorModal__content {
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+}
+
+.AvatarAreaSelectorModal__hidden {
+  display: none;
+}

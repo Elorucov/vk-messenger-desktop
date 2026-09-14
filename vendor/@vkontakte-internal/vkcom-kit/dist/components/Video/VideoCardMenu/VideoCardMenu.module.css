@@ -1,0 +1,15 @@
+.icon {
+  color: var(--vkui--color_icon_tertiary);
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_m);
+  margin-left: 8px;
+}
+
+.icon:hover {
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+}
+
+.iconVisible {
+  opacity: 1;
+}

@@ -1,0 +1,79 @@
+.ChannelsOnboardingBanner {
+  background: linear-gradient(92.58deg,#2e9bff -7.36%,#2447ff 118.83%);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 14px 16px;
+  margin: 24px 16px;
+  position: relative;
+}
+
+.ChannelsOnboardingBanner:hover {
+  cursor: pointer;
+}
+
+.ChannelsOnboardingBanner__text {
+  margin-right: auto;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 200px;
+}
+
+@media screen and (min-width: 350px) {
+  .ChannelsOnboardingBanner__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+  .ChannelsOnboardingBanner__text {
+    font-size: 14px;
+  }
+}
+
+.ChannelsOnboardingBanner__actionButton {
+  border: none;
+  background: transparent;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  -webkit-transition: opacity .1s ease-in;
+  transition: opacity .1s ease-in;
+}
+
+.ChannelsOnboardingBanner__actionButton:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.ChannelsOnboardingBanner__actionIcon {
+  margin-left: 8px;
+  color: #fff;
+}
+
+@media screen and (max-width: 350px) {
+  .ChannelsOnboardingBanner__actionText {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+  .ChannelsOnboardingBanner__actionIcon {
+    margin-left: 4px;
+  }
+  .ChannelsOnboardingBanner__actionText {
+    display: none;
+  }
+}

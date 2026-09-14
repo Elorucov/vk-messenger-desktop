@@ -1,0 +1,58 @@
+.BotKeyboard--inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 8px;
+  --negativeSideMargin: calc(var(--messageKeyboardIndent) - var(--messageHorizontalIndent));
+  margin-left: var(--negativeSideMargin);
+  margin-right: var(--negativeSideMargin);
+  width: calc(100% - 2 * var(--negativeSideMargin));
+}
+
+.BotKeyboard--full {
+  padding: 8px;
+  max-height: 210px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.BotKeyboard__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.BotKeyboard__row:last-child {
+  margin-bottom: 0;
+}
+
+.BotKeyboard--compact .BotKeyboard__row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.BotKeyboard--compact .BotKeyboard__button:last-child:nth-child(odd) {
+  grid-column: 1/3;
+}
+
+.BotButton__vkpay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

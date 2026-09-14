@@ -1,0 +1,27 @@
+.root {
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 32px;
+}
+
+.rootWithBackground .content {
+  position: absolute;
+  inset: 0;
+}
+
+.iconAccent {
+  color: var(--vkui--color_icon_accent);
+}
+
+.iconSecondary {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.iconPositive {
+  color: var(--vkui--color_accent_green);
+}

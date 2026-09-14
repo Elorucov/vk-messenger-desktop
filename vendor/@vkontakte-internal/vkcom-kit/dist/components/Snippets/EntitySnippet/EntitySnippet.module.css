@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+  margin-right: 12px;
+}
+
+.header {
+  color: var(--vkui--color_text_primary);
+}
+
+.caption {
+  margin-top: 4px;
+  color: var(--vkui--color_text_secondary);
+}

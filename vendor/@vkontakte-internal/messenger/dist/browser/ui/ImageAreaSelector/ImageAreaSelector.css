@@ -1,0 +1,44 @@
+.ImageAreaSelector {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ImageAreaSelector__viewport {
+  position: absolute;
+  border: 2px solid var(--vkui--color_icon_contrast);
+  margin: auto;
+  inset: 0;
+  -webkit-box-shadow: 0 0 2000px 2000px rgba(0,0,0,.5);
+  box-shadow: 0 0 2000px 2000px #00000080;
+  z-index: 0;
+}
+
+.ImageAreaSelector__viewport--circle {
+  border-radius: 50%;
+}
+
+.ImageAreaSelector__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ImageAreaSelector__slider {
+  position: absolute;
+  width: 80%;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.ImageAreaSelector .ImageAreaSelector__image {
+  position: absolute;
+  max-width: none;
+  -webkit-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+}

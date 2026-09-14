@@ -1,0 +1,7 @@
+import { AdsDevNullEventType } from '../../../constants/ads.js';
+import { CustomStatCollector } from '../CustomStatCollector.js';
+import { DevNullStatCollector } from '../DevNullStatCollector.js';
+
+class AdsDevNullStatCollector{logEvent({event:e}){this.devNullStatCollector.logEvent({event:e});}logAdsRequest({adFormat:l,count:t,isMotion:s,isValidResponse:v,isInterstitialMulti:a,motionExpGroup:o,motionRewardExpGroup:u,appId:r,slotId:n}){const i={key:AdsDevNullEventType.MiniAppsAdsResponse,value:t,value_str:l+"_request",value2:s?1:0,value3:a?1:0,value4:v?1:0,value5:o,value6:u,value7:r,value8:n};this.logEvent({event:i});}logAdsResponse({adFormat:l,count:t,isMotion:s,isValidResponse:v,isInterstitialMulti:a,error:o,motionExpGroup:u,motionRewardExpGroup:r,appId:n,slotId:i}){const p={key:AdsDevNullEventType.MiniAppsAdsResponse,value:t,value_str:l,value2:s?1:0,value3:a?1:0,value4:v?1:0,value5:u,value6:r,value7:n,value8:i};if(o){p.value_str2=o;}this.logEvent({event:p});}logAdsShow({adFormat:l,stage:t,bannerId:s,isMotion:v,isInterstitialMulti:a,error:o,motionExpGroup:u,motionRewardExpGroup:r,appId:n,slotId:i}){const p={key:AdsDevNullEventType.MiniAppsAdsResponse,value:t,value_str:l+"_show",value2:v?1:0,value3:a?1:0,value4:1,value_str3:s,value5:u,value6:r,value7:n,value8:i};if(o){p.value_str2=o;}this.logEvent({event:p});}constructor(e){this.devNullStatCollector=new DevNullStatCollector(new CustomStatCollector(e));}}
+
+export { AdsDevNullStatCollector };

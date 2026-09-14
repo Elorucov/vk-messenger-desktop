@@ -1,0 +1,9 @@
+.bodyDragging {
+  cursor: grabbing;
+  user-select: none;
+  overflow: hidden;
+}
+
+.fallback {
+  visibility: hidden;
+}

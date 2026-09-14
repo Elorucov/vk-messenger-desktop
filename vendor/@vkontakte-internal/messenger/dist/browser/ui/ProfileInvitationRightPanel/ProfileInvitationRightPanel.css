@@ -1,0 +1,38 @@
+.ProfileInvitationRightPanel__icon {
+  width: 30px;
+  height: 100%;
+}
+
+.ProfileInvitationRightPanel__rightBlockContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  padding-left: 8px;
+}
+
+.ProfileInvitationRightPanel__rightBlock {
+  background: none;
+  border: none;
+  padding: 4px;
+  margin: -4px;
+  cursor: pointer;
+  color: var(--vkui--color_icon_accent);
+}
+
+.ProfileInvitationRightPanel__link {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--vkui--color_text_link);
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ProfileInvitationRightPanel__notificationIcon {
+  color: var(--vkui--color_text_link);
+}

@@ -1,0 +1,20 @@
+.root.root :global(.vkuiUsersStack__counter) {
+  padding: 0 5px;
+}
+
+.rootOverlay.rootOverlay :global(.vkuiUsersStack__counter) {
+  color: var(--vkui--color_text_contrast);
+  background-color: var(--vkui--color_separator_primary_alpha);
+}
+
+.rootPhotosVerticalAlignTop :global(.vkuiUsersStack__photos) {
+  align-self: flex-start;
+}
+
+.rootPhotosVerticalAlignCenter :global(.vkuiUsersStack__photos) {
+  align-self: center;
+}
+
+.rootPhotosVerticalAlignBottom :global(.vkuiUsersStack__photos) {
+  align-self: flex-end;
+}

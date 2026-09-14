@@ -1,0 +1,10 @@
+.FieldGroup {
+  -webkit-transition: var(--transitionAll);
+  transition: var(--transitionAll);
+}
+
+@media (max-width: 765px) {
+  .FieldGroup {
+    border-radius: var(--vkui--size_border_radius_paper--regular)!important;
+  }
+}

@@ -1,0 +1,7 @@
+export function getIcon24LogoSferumColor() {
+    return {
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="url(#logo_sferum_color_24__a)" d="M20.98 6.39a4 4 0 0 0-2.28-1.1 4 4 0 0 0-1.1-2.27A10.32 10.32 0 0 0 3.03 17.61a4 4 0 0 0 2.28 1.1 4 4 0 0 0 1.09 2.27A10.32 10.32 0 0 0 20.98 6.39Z"/><path fill="url(#logo_sferum_color_24__b)" d="M9.41 9.41c3.01-3 6.66-4.52 9.3-4.11a4 4 0 0 0-1.1-2.28c-2.36-2.36-7.54-1-11.57 3.02-4.02 4.03-5.38 9.21-3.02 11.57a4 4 0 0 0 2.28 1.1c-.41-2.64 1.1-6.29 4.11-9.3Z"/><defs><radialGradient id="logo_sferum_color_24__b" cx="0" cy="0" r="1" gradientTransform="matrix(-5.74504 -7.10162 10.4744 -8.47353 14.655 14.858)" gradientUnits="userSpaceOnUse"><stop stop-color="#0B25CE"/><stop offset=".49" stop-color="#2C93DB"/><stop offset=".84" stop-color="#42DCE4"/><stop offset="1" stop-color="#4BF9E8"/></radialGradient><linearGradient id="logo_sferum_color_24__a" x1="4.48" x2="19.36" y1="18.58" y2="5.56" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor"/><stop offset=".13" stop-color="#2006C9"/><stop offset=".32" stop-color="#4A0EC8"/><stop offset=".51" stop-color="#6B14C8"/><stop offset=".69" stop-color="#8318C7"/><stop offset=".86" stop-color="#911BC7"/><stop offset="1" stop-color="#961CC7"/></linearGradient></defs></svg>`,
+        name: 'logo_sferum_color_24',
+    };
+}
+//# sourceMappingURL=getIcon24LogoSferumColor.js.map

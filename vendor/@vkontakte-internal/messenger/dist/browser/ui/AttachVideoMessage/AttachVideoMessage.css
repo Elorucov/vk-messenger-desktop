@@ -1,0 +1,290 @@
+.AttachVideoMessage {
+  cursor: pointer;
+  position: relative;
+  width: 216px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  --default-status-transform: scale(1) translate(0px,0px);
+  --playing-status-transform: scale(1.625) translate(41.5px,41.5px);
+}
+
+.AttachVideoMessage--right {
+  margin-left: auto;
+}
+
+.AttachVideoMessage--playing,
+.AttachVideoMessage--paused {
+  width: 351px;
+}
+
+.AttachVideoMessage__preview {
+  width: 216px;
+  height: 216px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: var(--default-status-transform);
+  transform: var(--default-status-transform);
+}
+
+.AttachVideoMessage--playing .AttachVideoMessage__preview,
+.AttachVideoMessage--paused .AttachVideoMessage__preview {
+  -webkit-transform: var(--playing-status-transform);
+  transform: var(--playing-status-transform);
+}
+
+.AttachVideoMessage__canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.AttachVideoMessage__canvas--hidden {
+  display: none;
+}
+
+.AttachVideoMessage__video {
+  display: block;
+  height: 100%;
+  width: 100%;
+  will-change: filter;
+  -webkit-transition: -webkit-filter .15s;
+  transition: -webkit-filter .15s;
+  transition: filter .15s;
+  transition: filter .15s,-webkit-filter .15s;
+}
+
+.AttachVideoMessage__video--blurred {
+  -webkit-filter: blur(12.5px);
+  filter: blur(12.5px);
+}
+
+.AttachVideoMessage__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000003d;
+  opacity: 0;
+  will-change: opacity;
+  -webkit-transition: opacity .15s;
+  transition: opacity .15s;
+}
+
+.AttachVideoMessage__overlay--visible {
+  opacity: 1;
+}
+
+.AttachVideoMessage__reload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.AttachVideoMessage__reloadButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--vkui--color_overlay_primary);
+  color: var(--vkui--color_background_contrast);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.AttachVideoMessage__reloadButton:hover,
+.AttachVideoMessage__reloadButton:focus {
+  background-color: var(--vkui--color_overlay_primary--hover);
+}
+
+.AttachVideoMessage__reloadButton:active {
+  background-color: var(--vkui--color_overlay_primary--active);
+}
+
+.AttachVideoMessage__reloadIcon {
+  fill: var(--vkui--color_background_contrast);
+}
+
+.AttachVideoMessage__videoInfo {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  bottom: 0;
+  background: var(--vkui--color_overlay_primary);
+  color: var(--vkui--color_text_contrast);
+  mix-blend-mode: normal;
+  border-radius: 10px;
+  padding: 3px 6px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0 0 calc(var(--messageVerticalIndent) / 2) calc(var(--messageVerticalIndent) / 2);
+}
+
+.AttachVideoMessage__notPlayedIndicator {
+  background-color: var(--vkui--color_text_contrast);
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+}
+
+.AttachVideoMessage__transcriptionToggle {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--vkui--color_overlay_primary);
+  color: var(--vkui--color_text_contrast);
+  mix-blend-mode: normal;
+  border-radius: 10px;
+  padding: 0 9px;
+  font-weight: 400;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.AttachVideoMessage__volume,
+.AttachVideoMessage__pause,
+.AttachVideoMessage__loading {
+  color: var(--vkui--color_text_contrast);
+  mix-blend-mode: normal;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+  backdrop-filter: blur(8px);
+}
+
+.AttachVideoMessage__volume {
+  padding: 9px;
+  background-color: var(--vkui--color_overlay_primary);
+  left: calc(50% - 17px);
+  bottom: 12px;
+}
+
+.AttachVideoMessage__pause {
+  padding: 8px;
+  background-color: var(--vkui--color_overlay_primary);
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.AttachVideoMessage__loading {
+  padding: 2px;
+  background-color: var(--vkui--color_overlay_primary);
+  top: calc(50% - 22px);
+  left: calc(50% - 22px);
+}
+
+.AttachVideoMessage__volume--hidden,
+.AttachVideoMessage__pause--hidden,
+.AttachVideoMessage__loading--hidden {
+  opacity: 0;
+  -webkit-transform: scale(.75);
+  transform: scale(.75);
+  visibility: hidden;
+}
+
+.AttachVideoMessage__loading .vkuiSpinner__host {
+  color: var(--vkui--color_text_contrast);
+}
+
+.AttachVideoMessage__transcript {
+  padding-left: 12px;
+  position: relative;
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  color: var(--vkui--color_text_primary);
+}
+
+.AttachVideoMessage__transcript:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  border-radius: 1px;
+  background-color: var(--vkui--vkontakte_im_reply_separator);
+  opacity: .24;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+
+.AttachVideoMessage__transcriptBlock {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: auto;
+  background-color: var(--vkui--vkontakte_color_im_bubble_incoming_alternate);
+  border-radius: var(--messageBorderRadius);
+  padding: var(--messageVerticalIndent) var(--messageHorizontalIndent);
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  color: var(--vkui--color_text_primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  letter-spacing: -.007em;
+  -webkit-transition: background-color .1s ease-in;
+  transition: background-color .1s ease-in;
+  margin: 10px var(--outerMargin) 0 0;
+}
+
+.AttachVideoMessage__transcriptBlock--out {
+  background: var(--vkui--vkontakte_color_im_bubble_outgoing);
+  margin: 10px 0 0 var(--outerMargin);
+}
+
+.AttachVideoMessageBorder {
+  -webkit-transform: var(--default-status-transform);
+  transform: var(--default-status-transform);
+}
+
+.AttachVideoMessage--playing .AttachVideoMessageBorder,
+.AttachVideoMessage--paused .AttachVideoMessageBorder {
+  -webkit-transform: var(--playing-status-transform);
+  transform: var(--playing-status-transform);
+}
+
+.AttachVideoMessageBorder path {
+  stroke: var(--vkui--vkontakte_color_im_bubble_incoming_alternate);
+}
+
+.AttachVideoMessageBorder--out path {
+  stroke: var(--vkui--vkontakte_color_im_bubble_outgoing);
+}

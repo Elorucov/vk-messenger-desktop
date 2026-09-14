@@ -1,0 +1,52 @@
+.EmptyChannelsList {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding: 0 24px;
+  font: 14px/120% var(--font);
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+  letter-spacing: -.078px;
+}
+
+.EmptyChannelsList--collapsed {
+  padding: 0 12px;
+  font: 12px/14px var(--font);
+}
+
+.EmptyChannelsList__icon {
+  color: var(--vkui--color_icon_secondary);
+  margin-bottom: 12px;
+}
+
+.EmptyChannelsList--collapsed .EmptyChannelsList__icon {
+  display: none;
+}
+
+.EmptyChannelsList__link {
+  color: var(--vkui--color_text_link);
+  margin-top: 8px;
+  background: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.EmptyChannelsList__link:hover {
+  text-decoration: underline;
+}

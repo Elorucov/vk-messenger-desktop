@@ -1,0 +1,11 @@
+{
+  "name": "@vkontakte-internal/gifts-kit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "react": "18.3.1"
+  }
+}

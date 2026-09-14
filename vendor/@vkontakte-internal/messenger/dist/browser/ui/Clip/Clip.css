@@ -1,0 +1,14 @@
+.Clip__ActionsMenu {
+  min-width: 150px;
+  margin-bottom: 7px;
+  margin-left: -6px;
+}
+
+.Clip__ActionsMenu .ActionsMenu__actionIcon {
+  margin-right: 14px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.Clip__input {
+  display: none;
+}

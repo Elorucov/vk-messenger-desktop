@@ -1,0 +1,40 @@
+.containerContrast.containerContrast {
+  background: var(--vkui--color_background_contrast);
+}
+
+.containerTransparent.containerTransparent {
+  background: transparent;
+}
+
+.containerPaddingM img {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.containerShadowS {
+  box-shadow: var(--vkui--elevation1);
+}
+
+.containerShadowM {
+  box-shadow: var(--vkui--elevation2);
+}
+
+.containerShadowL {
+  box-shadow: var(--vkui--elevation3);
+}
+
+.borderRadiusDefault {
+  border-radius: var(--vkui--size_border_radius--regular)!important;
+}
+
+.borderRadiusPaper {
+  border-radius: var(--vkui--size_border_radius_paper--regular)!important;
+}
+
+.borderRadiusPromo {
+  border-radius: var(--vkui--size_border_radius_promo--regular)!important;
+}
+
+.borderRadiusCircle {
+  border-radius: 50%!important;
+}

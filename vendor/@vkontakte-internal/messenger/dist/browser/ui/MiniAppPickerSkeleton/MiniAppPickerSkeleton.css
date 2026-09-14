@@ -1,0 +1,47 @@
+.MiniAppPickerSkeleton__skeletonItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 400px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.MiniAppPickerSkeleton__skeletonItemBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.MiniAppPickerSkeleton__skeletonItemTitle {
+  margin-bottom: 8px;
+}
+
+.MiniAppPickerSkeleton__skeleton {
+  padding: 25px var(--vkui--size_base_padding_horizontal--regular,16px);
+}
+
+.MiniAppPickerSkeleton__skeletonTitle {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 639px) {
+  .MiniAppPickerSkeleton__skeletonItem {
+    min-width: auto;
+  }
+  .MiniAppPickerSkeleton__skeletonItemAction {
+    display: none;
+  }
+}

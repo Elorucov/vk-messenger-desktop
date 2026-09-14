@@ -1,0 +1,9 @@
+.tooltip {
+  height: auto;
+  max-width: 268px;
+  pointer-events: none;
+}
+
+.icon {
+  margin-left: 4px;
+}

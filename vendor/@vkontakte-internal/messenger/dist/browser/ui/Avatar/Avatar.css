@@ -1,0 +1,441 @@
+.MEAvatar {
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  isolation: isolate;
+}
+
+.MEAvatar__imgWrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.MEAvatar__activityIndicator,
+.MEAvatar__imgWrapper:after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.MEAvatar__activityIndicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.MEAvatar__imgWrapper:after {
+  content: "";
+  background: #0006;
+  opacity: 0;
+}
+
+.MEAvatar--animated .MEAvatar__imgWrapper {
+  -webkit-transition: opacity .14s ease;
+  transition: opacity .14s ease;
+}
+
+.MEAvatar--withActivity .MEAvatar__imgWrapper:after {
+  opacity: 1;
+}
+
+.MEAvatar__svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  visibility: visible;
+}
+
+.MEAvatar__shadow {
+  fill: none;
+  stroke: var(--vkui--color_image_border_alpha);
+  stroke-width: .5px;
+}
+
+.MEAvatar__online {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  background-color: #4bb34b;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.MEAvatar--size-32 .MEAvatar__online {
+  right: 1px;
+  bottom: 1px;
+}
+
+.MEAvatar--size-24 .MEAvatar__online {
+  right: 0;
+  bottom: 0;
+}
+
+.MEAvatar__icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.MEAvatar__icon--hidden {
+  display: none;
+}
+
+.MEAvatar--collapsed .MEAvatar__icon {
+  border: 2px solid var(--vkui--color_background_content);
+  min-width: 22px;
+  min-height: 22px;
+  height: initial;
+  width: initial;
+}
+
+.MEAvatar__icon--upper-right {
+  top: 1px;
+  right: -3px;
+}
+
+.MEAvatar--collapsed .MEAvatar__icon--upper-right {
+  top: -6px;
+  right: -4px;
+}
+
+.MEAvatar__icon--bottom-right {
+  bottom: 1px;
+  right: -3px;
+}
+
+.MEAvatar--collapsed .MEAvatar__icon--bottom-right {
+  bottom: -4px;
+  right: -4px;
+}
+
+.MEAvatar__call {
+  background: linear-gradient(135deg,#50c750,#32b332);
+}
+
+.MEAvatar__call--empty {
+  background: linear-gradient(135deg,#b1b6bd,#99a2ad);
+}
+
+.MEAvatar__birthday {
+  background: linear-gradient(135deg,#937ff5,#735ce6);
+}
+
+.MEAvatar--size-40:not(.MEAvatar--collapsed) .MEAvatar__icon--upper-right {
+  top: 0;
+}
+
+.MEAvatar__upperRightIconSvg {
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+}
+
+.MEAvatar--size-32:not(.MEAvatar--collapsed) .MEAvatar__icon--upper-right {
+  top: -2px;
+  right: -2px;
+}
+
+.MEAvatar--size-32:not(.MEAvatar--collapsed) .MEAvatar__icon {
+  width: 12px;
+  height: 12px;
+}
+
+.MEAvatar--size-32:not(.MEAvatar--collapsed) .MEAvatar__upperRightIconSvg {
+  width: 8px;
+  height: 8px;
+}
+
+@media not all and (-webkit-min-device-pixel-ratio: 0),
+not all and (min-resolution: .001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .MEAvatar {
+      -webkit-transform: translate3d(0,0,0);
+      transform: translateZ(0);
+    }
+  }
+}
+
+.BasicAvatar {
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font: 600 18px/16px var(--font);
+  min-width: 16px;
+  width: 16px;
+}
+
+.BasicAvatar:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  content: "";
+  z-index: 1;
+  -webkit-box-shadow: inset 0 0 0 1px var(--vkui--color_image_border_alpha);
+  box-shadow: inset 0 0 0 1px var(--vkui--color_image_border_alpha);
+}
+
+.BasicAvatar__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.BasicAvatar--size-16 {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+.BasicAvatar--size-18 {
+  min-width: 18px;
+  width: 18px;
+  height: 18px;
+  font-size: 9px;
+  line-height: 12px;
+}
+
+.BasicAvatar--size-20 {
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.BasicAvatar--size-24 {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.BasicAvatar--size-28 {
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.BasicAvatar--size-32 {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.BasicAvatar--size-36 {
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.BasicAvatar--size-40 {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.BasicAvatar--size-44 {
+  min-width: 44px;
+  width: 44px;
+  height: 44px;
+  font-size: 15px;
+}
+
+.BasicAvatar--size-46 {
+  min-width: 46px;
+  width: 46px;
+  height: 46px;
+  font-size: 16px;
+}
+
+.BasicAvatar--size-48 {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+}
+
+.BasicAvatar--size-56 {
+  min-width: 56px;
+  width: 56px;
+  height: 56px;
+  font-size: 17px;
+}
+
+.BasicAvatar--size-64 {
+  min-width: 64px;
+  width: 64px;
+  height: 64px;
+  font-size: 19px;
+}
+
+.BasicAvatar--size-72 {
+  min-width: 72px;
+  width: 72px;
+  height: 72px;
+  font-size: 26px;
+}
+
+.BasicAvatar--size-80 {
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+}
+
+.BasicAvatar--size-92 {
+  min-width: 92px;
+  width: 92px;
+  height: 92px;
+  font-size: 30px;
+}
+
+.BasicAvatar--size-96 {
+  min-width: 96px;
+  width: 96px;
+  height: 96px;
+  font-size: 30px;
+}
+
+.BasicAvatar__noImg {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  background: radial-gradient(circle at center 0px,#bac2cc,#8c97a3);
+}
+
+.BasicAvatar__noImg--color-0 {
+  background: radial-gradient(circle at center 0px,#ff6952,#e6404b);
+}
+
+.BasicAvatar__noImg--color-1 {
+  background: radial-gradient(circle at center 0px,#ffb829,#fa7f14);
+}
+
+.BasicAvatar__noImg--color-2 {
+  background: radial-gradient(circle at center 0px,#ffdc50,#f2b40b);
+}
+
+.BasicAvatar__noImg--color-3 {
+  background: radial-gradient(circle at center 0px,#78e070,#46b864);
+}
+
+.BasicAvatar__noImg--color-4 {
+  background: radial-gradient(circle at center 0px,#78f1fa,#46bddb);
+}
+
+.BasicAvatar__noImg--color-5 {
+  background: radial-gradient(circle at center 0px,#e664fa,#a73ddb);
+}
+
+.BasicAvatar__noImg--color-contact {
+  background: radial-gradient(circle at center 0px,#6cf,#3f8ae0);
+}
+
+.ReImage {
+  position: relative;
+}
+
+.ReImage__blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: var(--thumbhashUrl);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ReImage__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0;
+  -webkit-transition: opacity .15s;
+  transition: opacity .15s;
+}
+
+.ReImage__img--loaded {
+  opacity: 1;
+}
+
+.AvatarFavorites {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: linear-gradient(91.54deg,#70b2ff,#5c9ce6);
+  border-radius: 50%;
+  color: #fff;
+}

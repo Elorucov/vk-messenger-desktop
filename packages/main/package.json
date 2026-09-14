@@ -1,0 +1,37 @@
+{
+  "name": "main",
+  "version": "6.0.57",
+  "private": true,
+  "main": "dist/index.js",
+  "dependencies": {
+    "@sentry/electron": "4.15.1",
+    "@vk-ecosystem/sdk": "*",
+    "@vkontakte-internal/api-schema-typescript": "*",
+    "@vkontakte-internal/messenger": "*",
+    "auto-launch": "5.0.6",
+    "electron-context-menu": "3.6.1",
+    "electron-dl": "3.5.2",
+    "electron-is-dev": "2.0.0",
+    "electron-log": "5.2.2",
+    "electron-store": "8.1.0",
+    "electron-unhandled": "4.0.1",
+    "electron-updater": "6.6.8",
+    "electron-windows-badge": "1.1.0",
+    "js-yaml": "4.1.0",
+    "json-schema-typed": "7.0.3",
+    "mime-types": "2.1.35",
+    "node-powershell": "5.0.1",
+    "tldts": "7.0.12",
+    "uuid": "9.0.1",
+    "active-win": "*",
+    "vkme-common": "*"
+  },
+  "devDependencies": {
+    "@types/auto-launch": "5.0.5",
+    "@types/js-yaml": "4.0.9",
+    "@types/mime-types": "2.1.4",
+    "@types/uuid": "9.0.8",
+    "electron-devtools-installer": "3.2.0",
+    "node-downloader-helper": "2.1.9"
+  }
+}

@@ -1,0 +1,38 @@
+.ConvoProfileUserLink {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ConvoProfileUserLink__icon {
+  width: 30px;
+}
+
+.ConvoProfileUserLink__link {
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+  word-break: break-all;
+}
+
+.ChannelProfileMenu__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ChannelProfileMenu__actionItemWrapper {
+  display: contents;
+}
+
+.ChannelProfileMenu__action.ChannelProfileMenu__action {
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 112px;
+}
+
+.ChannelProfileMenu__menuContent {
+  margin-top: 4px;
+}

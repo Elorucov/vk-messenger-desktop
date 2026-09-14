@@ -1,0 +1,37 @@
+.ComposerInput {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  font: 400 var(--messageFontSize) /var(--messageLineHeight) var(--font);
+}
+
+.ComposerInput__input.ComposerInput__input.ComposerInput__input {
+  display: block;
+  position: relative;
+  font: inherit;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: auto;
+  background-color: transparent;
+  cursor: text;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+}
+
+.ComposerInput__input.ComposerInput__input.ComposerInput__input.ComposerInput____input--whitesSpaceRefactored {
+  white-space: normal;
+}
+
+.ComposerInput__placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--vkui--color_text_secondary);
+  font: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

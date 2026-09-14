@@ -1,0 +1,18 @@
+.rootWithPrimaryButton :global(.vkuiCalendarTime__button)>:global(.vkuiButton__host) {
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_content);
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_accent_themed);
+  color: var(--vkui--color_text_contrast_themed);
+  background-color: var(--vkui--color_background_accent_themed);
+}
+
+.rootWithPrimaryButton :global(.vkuiCalendarTime__button)>:global(.vkuiButton__host):global(.vkuiButton__hover) {
+  background-color: var(--vkui--color_background_accent_themed--hover);
+}
+
+.rootWithPrimaryButton :global(.vkuiCalendarTime__button)>:global(.vkuiButton__host):global(.vkuiButton___active) {
+  background-color: var(--vkui--color_background_accent_themed--active);
+}
+
+:global .vkuiHorizontalCell__sizeS {
+  --vkui_internal--cell_width: 80px;
+}

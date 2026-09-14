@@ -1,0 +1,533 @@
+.ChannelPostComments {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ChannelPostComments__header,
+.ChannelPostComments__banners {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+}
+
+.ChannelPostComments__header {
+  border-bottom: 1px solid var(--vkui--color_transparent--active);
+}
+
+.ChannelPostComments__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: var(--channelPostCommentsContentAlign);
+  -ms-flex-align: var(--channelPostCommentsContentAlign);
+  align-items: var(--channelPostCommentsContentAlign);
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 16px;
+  gap: 16px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  max-width: var(--channelPostCommentsMaxContentWidth);
+  margin: var(--channelPostListContentMargin);
+  padding: 0 var(--channelPostsHistoryContentHorizontalPadding) 40px var(--channelPostsHistoryContentHorizontalPadding);
+}
+
+.ChannelPostComments__themeWrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ChannelPostComments__composerContainer {
+  max-width: var(--channelPostCommentsMaxContentWidth);
+  padding: 0 var(--convoMainComposerPaddingSide) var(--convoMainComposerPaddingBottom);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ChannelPostComments__post--secondary {
+  width: 100%;
+}
+
+.ChannelPostComments--secondary .ChannelPostComments__wrapper,
+.ChannelPostComments--primary .ChannelPostComments__wrapper {
+  padding-top: 36px;
+  padding-left: var(--channelPostsHistoryContentHorizontalPadding);
+  padding-right: var(--channelPostsHistoryContentHorizontalPadding);
+}
+
+.PostCommentsHistory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--vkui--color_separator_primary);
+  background-color: var(--vkui--vkontakte_color_im_bubble_incoming_alternate);
+  --post-comment-h-padding: 12px;
+  --thread-avatar-size: 28px;
+  --replies-indent: calc(var(--post-comment-h-padding) * 2 + var(--thread-avatar-size));
+}
+
+.PostCommentsHistory__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.PostCommentHistory__commentsCounter {
+  color: var(--vkui--color_text_secondary);
+}
+
+.PostCommentsHistory--withoutBubbles {
+  border: none;
+  background-color: transparent;
+}
+
+.PostCommentsHistory__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.PostCommentsHistory--empty {
+  background: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  padding: 0;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.PostCommentsHistory__initialSpinner {
+  padding: 16px 0;
+}
+
+.PostCommentsHistory__emptyPlaceholder {
+  font: 400 var(--serviceMessageAndConvoDateFontSize) /var(--serviceMessageAndConvoDateLineHeight) var(--font);
+  padding: 4px 12px;
+  color: var(--vkui--color_text_subhead);
+  letter-spacing: -.004em;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-box-shadow: var(--vkui--elevation2);
+  box-shadow: var(--vkui--elevation2);
+  background-color: var(--vkui--color_background_modal);
+}
+
+.PostCommentsHistory__loadMoreButton {
+  margin-left: var(--replies-indent);
+  color: var(--vkui--color_text_secondary);
+}
+
+.PostCommentsHistory__loadMoreButtonIcon {
+  width: 16px;
+  color: var(--vkui--color_icon_accent_themed);
+}
+
+.CommentsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.CommentsListItem__comment,
+.CommentsListItem__comment:before {
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.CommentsListItem__comment:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.CommentsListItem__replies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.CommentsListItem__replies .CommentsList {
+  gap: 4px;
+}
+
+.CommentsListItem__replies .CommentsListItem__comment {
+  margin-top: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: var(--replies-indent);
+}
+
+.PostComment {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--postCommentColumnGap);
+  --postCommentColumnGap: 12px;
+  --postCommentRowGap: 4px;
+}
+
+.PostComment__avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.PostComment__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: var(--postCommentRowGap);
+}
+
+.PostComment__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+  opacity: .72;
+  height: 16px;
+  width: 16px;
+  -webkit-transition: opacity .1s ease-in;
+  transition: opacity .1s ease-in;
+}
+
+@media (hover: hover) {
+  .PostComment__button--hidden {
+    opacity: 0;
+  }
+  .PostComment:hover .PostComment__button--hidden:hover {
+    opacity: 1;
+  }
+  .PostComment:hover .PostComment__button--hidden:not(:hover) {
+    opacity: .8;
+  }
+  .PostComment__button:hover {
+    opacity: 1;
+  }
+}
+
+.PostComment__likePanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+  -webkit-transition: opacity .1s ease-in;
+  transition: opacity .1s ease-in;
+}
+
+.PostComment__likePanelCounter {
+  font: 400 14px/18px var(--font);
+  letter-spacing: .15px;
+}
+
+.PostComment__likePanel--active,
+.PostComment__likePanel--active .PostComment__button {
+  color: var(--vkui--color_text_negative);
+  opacity: 1;
+}
+
+.PostComment__likePanel--animate .PostComment__button {
+  -webkit-animation: PostCommentLikePanelAnimation .3s ease 1;
+  animation: PostCommentLikePanelAnimation .3s ease 1;
+}
+
+@-webkit-keyframes PostCommentLikePanelAnimation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes PostCommentLikePanelAnimation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.PostComment:hover .PostComment__button--hidden {
+  opacity: .8;
+}
+
+.PostCommentNormal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.PostCommentNormal__headerStart {
+  display: block;
+}
+
+.PostCommentNormal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.PostCommentNormal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.PostCommentNormal__footerStart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.PostCommentNormal__replyButton {
+  font: 400 13px/16px var(--font);
+  letter-spacing: .15px;
+  text-align: center;
+  background: none;
+  border: unset;
+  color: var(--defaultLinkColor);
+  cursor: pointer;
+  -webkit-transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+}
+
+.PostCommentNormal__replyButton:hover {
+  opacity: .7;
+}
+
+.PostCommentNormal__contentAttaches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.PostCommentNormal__time {
+  font: 400 13px/16px var(--font);
+  letter-spacing: .15px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.PostCommentNormal__peerTitle {
+  display: grid;
+  font: 500 14px/18px var(--font);
+  letter-spacing: .15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--vkui--color_text_primary);
+  overflow: hidden;
+}
+
+.PostCommentNormal__replyLabel {
+  color: var(--Text-Secondary,#818c99);
+  margin-left: 6px;
+  display: inline;
+  cursor: pointer;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  -webkit-transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+}
+
+.PostCommentNormal__replyLabel:hover {
+  opacity: .7;
+}
+
+.PostCommentNormal__messageText {
+  font: 400 13px/16px var(--font);
+  letter-spacing: .15px;
+}
+
+.PostCommentNormal__content {
+  position: relative;
+}
+
+.PostCommentNormal__clampTriggerWrapper {
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.PostCommentNormal__clampText:not(.ClampText__content--expanded) {
+  --show-more-text-blur-size: 20px;
+  --show-more-text-blur-dynamic-size: 20px;
+  --show-more-text-after-width: 95px;
+  --show-more-text-after-height: 20px;
+  -webkit-mask: -webkit-gradient(linear,left bottom,left top,from(transparent),color-stop(0%,#fff)),-webkit-gradient(linear,left top,right top,from(#fff),to(transparent));
+  -webkit-mask: linear-gradient(to top,transparent var(--show-more-text-after-height,0),#fff 0%),linear-gradient(to right,#fff calc(100% - var(--show-more-text-after-width, 0) - var(--show-more-text-blur-size, 0)),transparent calc(100% - var(--show-more-text-after-width, 0)));
+  mask: -webkit-gradient(linear,left bottom,left top,from(transparent),color-stop(0%,#fff)),-webkit-gradient(linear,left top,right top,from(#fff),to(transparent));
+  mask: linear-gradient(to top,transparent var(--show-more-text-after-height,0),#fff 0%),linear-gradient(to right,#fff calc(100% - var(--show-more-text-after-width, 0) - var(--show-more-text-blur-size, 0)),transparent calc(100% - var(--show-more-text-after-width, 0)));
+}
+
+.PostCommentNormal__clampTrigger {
+  font: 500 13px/16px var(--font);
+  letter-spacing: .15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 4px;
+  color: var(--vkui--color_text_secondary);
+  opacity: 1;
+  -webkit-transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+}
+
+.PostCommentNormal__clampTrigger:hover {
+  opacity: .7;
+}
+
+.PostCommentNormal__attachDocsItem {
+  margin: -8px;
+}
+
+.PostCommentActionsMenuDropdown {
+  height: 19px;
+}

@@ -1,0 +1,50 @@
+.ThemeBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  isolation: isolate;
+  contain: strict;
+}
+
+.ThemeBackgroundRaster,
+.ThemeBackgroundVector,
+.ThemeBackgroundVector__canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ThemeBackgroundRaster {
+  background: var(--themeBackgroundRasterImage);
+  background-size: cover;
+  background-position: center;
+}
+
+.ThemeBackgroundVector__pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ThemeBackgroundVector__pattern--overlay {
+  -webkit-mask: var(--themeBackgroundVectorPatternUrl);
+  mask: var(--themeBackgroundVectorPatternUrl);
+  -webkit-mask-size: var(--themeBackgroundVectorPatternSize) auto;
+  mask-size: var(--themeBackgroundVectorPatternSize) auto;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  mix-blend-mode: overlay;
+  background-color: var(--themeBackgroundVectorPatternColor);
+  opacity: var(--themeBackgroundVectorPatternOpacity);
+}
+
+.ThemeBackgroundVector__pattern--full {
+  background: var(--themeBackgroundVectorPatternUrl);
+  background-size: var(--themeBackgroundVectorPatternSize) auto;
+}

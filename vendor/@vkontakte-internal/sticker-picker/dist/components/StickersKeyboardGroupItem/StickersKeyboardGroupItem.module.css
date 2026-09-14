@@ -1,0 +1,102 @@
+.in {
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  color: var(--vkui--color_icon_tertiary);
+  transition: all var(--vkui--animation_duration_m);
+}
+
+.in:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  will-change: background;
+  transition: all var(--vkui--animation_duration_m);
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+.inPlaceholder {
+  cursor: default;
+}
+
+.in:active:before,
+.inActive:before,
+.inHidden:before,
+.inPlaceholder:before {
+  background: var(--vkui--color_transparent--active);
+}
+
+.in:not(.inActive):active:before {
+  transform: scale(var(--active-scale, .95));
+}
+
+.in:hover:not(.inActive,
+.inHidden):before {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.icon {
+  opacity: 1;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  pointer-events: none;
+  transition: all var(--vkui--animation_duration_m);
+}
+
+.inHidden img {
+  opacity: 0;
+}
+
+.inPlaceholder img {
+  visibility: hidden;
+}
+
+.iconService {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transition: transform var(--vkui--animation_duration_m);
+}
+
+.in:hover:not(.inActive) .iconService {
+  will-change: transform;
+  transform: scale(1.05);
+}
+
+.in:after {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: all var(--vkui--animation_duration_s);
+}
+
+.inIndicator:after {
+  background: var(--vkui--color_accent_blue);
+}
+
+.inIndicatorRed:after {
+  background: var(--vkui--color_accent_red);
+}
+
+.inIndicatorGray:after {
+  background: var(--vkui--color_icon_tertiary);
+}
+
+.tooltip {
+  height: auto;
+  white-space: pre-line;
+}

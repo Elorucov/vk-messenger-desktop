@@ -1,0 +1,70 @@
+.ConvoMessageDeleted__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  outline: none;
+  scroll-margin: 24px 0;
+}
+
+.ConvoMessageDeleted {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--vkui--vkontakte_color_im_bubble_incoming_alternate);
+  border-radius: var(--messageBorderRadius);
+  padding: calc(var(--messageVerticalIndent) + 1px) var(--messageHorizontalIndent);
+  font: var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  color: var(--vkui--color_text_primary);
+}
+
+.ConvoMessageDeleted__wrapper--out {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.ConvoMessageDeleted__wrapper--out .ConvoMessageDeleted {
+  background: var(--messageOutBubbleBackground);
+  background-size: 800px max(800px,200%);
+  background-position: right center;
+}
+
+.ConvoMessageDeleted__restoreButton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  color: var(--vkui--color_text_link);
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ConvoMessageDeleted--themed .ConvoMessageDeleted__restoreButton,
+.ConvoMessageDeleted__restoreButton:hover {
+  text-decoration: underline;
+}
+
+.ConvoMessageDeleted__wrapper--navigating:focus .ConvoMessageDeleted {
+  outline: var(--vkui--color_stroke_accent) solid 2px;
+}
+
+.ConvoMessageDeleted--wrapperWithoutBubbles {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoMessageDeleted--wrapperWithoutBubbles .ConvoMessageDeleted--withoutBubbles {
+  background: none;
+  font-size: var(--serviceMessageAndConvoDateFontSize);
+}

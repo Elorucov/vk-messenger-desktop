@@ -1,0 +1,28 @@
+.card {
+  min-height: 168px;
+  padding: 8px 16px 16px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--vkui--color_background_secondary);
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+.image {
+  margin: 0;
+  background-size: contain;
+}
+
+.title {
+  margin-bottom: 5px;
+  white-space: pre;
+  text-align: center;
+  color: var(--vkui--color_text_primary);
+  font-family: VK Sans Display,sans-serif;
+}
+
+.action {
+  margin-top: 10px;
+}

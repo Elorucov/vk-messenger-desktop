@@ -1,0 +1,11 @@
+{
+  "name": "@vkontakte-internal/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@sentry/browser": "7.120.4"
+  }
+}

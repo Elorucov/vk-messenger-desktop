@@ -1,0 +1,15 @@
+.ComposerAttachDoc {
+  position: relative;
+  width: var(--composerAttachWidth);
+  height: var(--composerAttachHeight);
+}
+
+.ComposerAttachDoc--withTools:hover .ComposerAttachPreviewMeta {
+  opacity: 0;
+}
+
+.ComposerAttachDoc__meta {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

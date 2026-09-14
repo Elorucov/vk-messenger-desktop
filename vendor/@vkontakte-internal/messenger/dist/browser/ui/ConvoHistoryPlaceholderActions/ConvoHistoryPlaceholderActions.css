@@ -1,0 +1,10 @@
+.ConvoHistoryPlaceholderActions {
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  margin-top: 16px;
+}
+
+.ConvoHistoryPlaceholderActions__button:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,16 @@
+.trailer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  opacity: 0;
+  transition-duration: 0s;
+}
+
+.trailerActive {
+  opacity: 1;
+  transition: opacity var(--videocard-hover-transition-duration, var(--vkui--animation_duration_l)) var(--videocard-hover-transition-fn, ease-in-out);
+}

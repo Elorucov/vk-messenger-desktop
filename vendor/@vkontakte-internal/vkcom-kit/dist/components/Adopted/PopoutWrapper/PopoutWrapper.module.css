@@ -1,0 +1,3 @@
+.masked :global(.vkuiPopoutWrapper__overlay) {
+  background: #000000b3;
+}

@@ -1,0 +1,72 @@
+.vkmeLoginQR {
+  background-color: var(--vkui--color_background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+.qrContent {
+  width: 304px;
+  padding: 28px;
+  background-color: var(--vkui--color_background_content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.qrContent_backarrow {
+  align-self: start;
+}
+
+.qrHeader {
+  padding: 3px 0 1px;
+  width: 304px;
+  font-weight: 700;
+}
+
+.qrHeader b {
+  font-weight: 700;
+}
+
+.qrHeader .vkuiHeader__content {
+  font-weight: 700!important;
+}
+
+.qrHeader .vkuiTypography {
+  justify-content: center;
+  text-align: center;
+}
+
+.qrHeader .vkuiSubhead {
+  padding: 0 16px;
+}
+
+.qrContent__link {
+  text-align: center;
+}
+
+.qrContent_container {
+  position: relative;
+}
+
+.qrRefresh_background {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  opacity: .8;
+  border-radius: 35px;
+  background-color: var(--vkui--color_background_contrast);
+}
+
+.qrRefresh_button {
+  position: absolute;
+  top: 58px;
+  left: 58px;
+  background-color: var(--vkui--color_background_content);
+}

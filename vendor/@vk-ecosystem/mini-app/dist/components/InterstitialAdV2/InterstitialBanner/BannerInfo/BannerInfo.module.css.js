@@ -1,0 +1,5 @@
+import e$1 from './../../../../deps/style-inject/dist/style-inject.es.js';
+
+var e=".BannerInfo-module_infoVertical__b1ilC{margin-bottom:unset;max-width:100%;padding:4px 0 0;width:100%}.BannerInfo-module_subtitleBox__6Jyqq{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;align-items:center;color:var(--vkui--color_text_subhead)}.BannerInfo-module_icon__QYz3I{color:var(--vkui--color_icon_tertiary);margin-left:4px}.BannerInfo-module_head__7ibOw{z-index:1}.BannerInfo-module_head__7ibOw>div{overflow:unset}.BannerInfo-module_head__7ibOw .BannerInfo-module_adsIcon__wGq9Q{color:var(--vkui--color_icon_secondary);margin-right:-4px;padding-right:0}";var d = {"infoVertical":"BannerInfo-module_infoVertical__b1ilC","subtitleBox":"BannerInfo-module_subtitleBox__6Jyqq","icon":"BannerInfo-module_icon__QYz3I","head":"BannerInfo-module_head__7ibOw","adsIcon":"BannerInfo-module_adsIcon__wGq9Q"};e$1(e);
+
+export { d as default };

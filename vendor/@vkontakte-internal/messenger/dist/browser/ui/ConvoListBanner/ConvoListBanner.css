@@ -1,0 +1,62 @@
+.ConvoListBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 12px 20px 16px;
+  border-radius: 12px;
+  background-color: var(--vkui--color_background_secondary_alpha);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.ConvoListBanner:hover .ConvoListBanner__arrow {
+  -webkit-transform: translateX(3px);
+  transform: translate(3px);
+}
+
+.ConvoListBanner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.ConvoListBanner__subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 2px;
+}
+
+.ConvoListBanner__title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font);
+}
+
+.ConvoListBanner__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ConvoListBanner__arrow {
+  color: var(--vkui--color_icon_tertiary);
+  -webkit-transition: -webkit-transform ease-in-out .1s;
+  transition: -webkit-transform ease-in-out .1s;
+  transition: transform ease-in-out .1s;
+  transition: transform ease-in-out .1s,-webkit-transform ease-in-out .1s;
+}

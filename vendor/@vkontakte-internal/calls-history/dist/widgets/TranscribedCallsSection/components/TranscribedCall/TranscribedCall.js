@@ -1,0 +1,11 @@
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
+import { DropdownActionSheet, IconButton, Image, Cell, getColorClass } from '@vkontakte-internal/vkcom-kit';
+import { Icon24ArticlesOutline, Icon24MoreHorizontal, Icon20DownloadOutline, Icon20DeleteOutline, } from '@vkontakte/icons';
+import { useLangs } from '@vkontakte-internal/plugins';
+export const TranscribedCall = ({ title, subtitle, id, fileUrl, isDeleted, onDownload, onDelete, }) => {
+    const langs = useLangs();
+    return (_jsx(Cell, { "data-testid": "calls_decoding_page_item", before: _jsx(Image, { "data-testid": "calls_decoding_page_item_image", children: _jsx(Icon24ArticlesOutline, { className: getColorClass(isDeleted ? 'color_icon_secondary' : 'color_icon_primary') }) }), subtitle: _jsx("span", { "data-testid": "calls_decoding_page_item_subtitle", children: subtitle }), after: _jsx(DropdownActionSheet, { "data-testid": "calls_decoding_page_menu_root", content: _jsxs(_Fragment, { children: [fileUrl && (_jsx(DropdownActionSheet.Item, { "data-testid": "calls_decoding_page_menu_download", before: _jsx(Icon20DownloadOutline, {}), onClick: () => onDownload(id, fileUrl), children: langs.getLang('calls_decoded_page_download_action') })), _jsx(DropdownActionSheet.Item, { "data-testid": "calls_decoding_page_menu_delete", before: _jsx(Icon20DeleteOutline, {}), onClick: () => onDelete(id), type: "destructive", children: fileUrl
+                            ? langs.getLang('calls_decoded_page_delete_action')
+                            : langs.getLang('calls_decoded_page_delete_from_list_action') })] }), children: _jsx(IconButton, { "data-testid": "calls_decoding_page_menu_button", label: "", children: _jsx(Icon24MoreHorizontal, { className: getColorClass('color_icon_secondary') }) }) }), children: _jsx("span", { "data-testid": "calls_decoding_page_item_title", className: getColorClass(isDeleted ? 'color_text_secondary' : 'color_text_primary'), children: title }) }));
+};
+//# sourceMappingURL=TranscribedCall.js.map

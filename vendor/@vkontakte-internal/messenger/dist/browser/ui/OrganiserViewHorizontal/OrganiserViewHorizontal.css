@@ -1,0 +1,59 @@
+.OrganiserViewHorizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  gap: 12px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.OrganiserViewHorizontal__itemContainer {
+  display: contents;
+}
+
+.OrganiserViewHorizontal .OrganiserViewHorizontal__item {
+  min-width: 48px;
+}
+
+.OrganiserViewHorizontal__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 6px;
+}
+
+.OrganiserViewHorizontal__gear {
+  opacity: .72;
+  -webkit-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+  color: var(--vkui--vkontakte_color_icon_outline_medium);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.OrganiserViewHorizontal__gear:hover {
+  opacity: 1;
+}
+
+.OrganiserViewHorizontal__gear:focus-visible {
+  outline: 2px auto var(--vkui--color_stroke_accent);
+}
+
+.OrganiserViewHorizontal__Blocker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.OrganiserViewHorizontal__fallback {
+  width: 100%;
+  height: 48px;
+}

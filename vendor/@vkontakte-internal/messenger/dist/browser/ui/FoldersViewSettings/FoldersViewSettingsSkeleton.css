@@ -1,0 +1,191 @@
+.FoldersViewSettings {
+  padding: 13px 16px 40px;
+  border: 1px solid var(--vkui--color_separator_secondary);
+}
+
+.FoldersViewSettings__title {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -.004em;
+  color: var(--vkui--color_text_secondary);
+  margin-bottom: 17px;
+}
+
+.FoldersViewSettings__variants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 7px 12px;
+  gap: 32px;
+}
+
+.FoldersViewSettings__variant {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.FoldersViewSettings__variant:not(.FoldersViewSettings__variant--active):not(:active):focus .FoldersViewSettings__variantSkeleton {
+  -webkit-box-shadow: 0 0 0 4px var(--vkui--color_transparent--hover);
+  box-shadow: 0 0 0 4px var(--vkui--color_transparent--hover);
+}
+
+.FoldersViewSettings__variantSkeleton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 230px;
+  height: 110px;
+  border-radius: 12px;
+  border: 1px solid var(--vkui--color_separator_primary_alpha);
+  padding-left: 1px;
+}
+
+.FoldersViewSettings__variantTitle {
+  font-size: var(--vkui--font_footnote--font_size--regular);
+  margin-top: 14px;
+  text-align: center;
+  color: var(--vkui--color_text_secondary);
+}
+
+.FoldersViewSettings__variant--active .FoldersViewSettings__variantSkeleton {
+  padding-left: 0;
+  border: 2px solid var(--vkui--color_background_accent);
+}
+
+.FoldersViewSettings__variant--active .FoldersViewSettings__variantTitle {
+  color: var(--vkui--color_text_primary);
+}
+
+.FoldersViewSettingsSkeleton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 16px;
+}
+
+.FoldersViewSettingsSkeleton--horizontal.FoldersViewSettingsSkeleton {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.FoldersViewSettingsSkeleton--vertical.FoldersViewSettingsSkeleton {
+  height: 110px;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 14px;
+}
+
+.FoldersViewSettingsSkeleton__row,
+.FoldersViewSettingsSkeleton--light .FoldersViewSettingsSkeleton__row {
+  background: var(--vkui--color_skeleton_to);
+}
+
+.FoldersViewSettingsSkeleton--dark .FoldersViewSettingsSkeleton__row {
+  background: var(--vkui--color_skeleton_from);
+}
+
+.FoldersViewSettingsSkeleton--blinking .FoldersViewSettingsSkeleton__row {
+  -webkit-animation: Blinking 1s linear infinite alternate;
+  animation: Blinking 1s linear infinite alternate;
+}
+
+@-webkit-keyframes Blinking {
+  0% {
+    background: var(--vkui--color_skeleton_from);
+  }
+  to {
+    background: var(--vkui--color_skeleton_to);
+  }
+}
+
+@keyframes Blinking {
+  0% {
+    background: var(--vkui--color_skeleton_from);
+  }
+  to {
+    background: var(--vkui--color_skeleton_to);
+  }
+}
+
+.FoldersViewSettingsSkeleton__folders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.FoldersViewSettingsSkeleton--vertical .FoldersViewSettingsSkeleton__folders {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-right: 16px;
+  margin-right: 10px;
+  border-right: 1px solid var(--vkui--color_separator_primary_alpha);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.FoldersViewSettingsSkeleton--horizontal .FoldersViewSettingsSkeleton__folders {
+  width: 100%;
+  margin-bottom: 17px;
+  margin-top: 5px;
+}
+
+.FoldersViewSettingsSkeleton__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 12px;
+  row-gap: 12px;
+}
+
+.FoldersViewSettingsSkeleton--horizontal .FoldersViewSettingsSkeleton__items {
+  margin-left: -2px;
+}
+
+.FoldersViewSettingsSkeleton__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.FoldersViewSettingsSkeleton__itemAvatar {
+  margin-right: 12px;
+}
+
+.FoldersViewSettingsSkeleton__itemContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}

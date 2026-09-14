@@ -1,0 +1,226 @@
+.CommentsComposer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--composerBackgroundColor);
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+  border-radius: 12px;
+}
+
+.CommentsComposer__stickerEmojiMenuPopper {
+  width: 388px;
+  height: 550px;
+}
+
+.CommentsComposer__authorMenu {
+  margin-bottom: 7px;
+  margin-left: -6px;
+}
+
+.CommentsComposer__attaches,
+.CommentsComposer__reply,
+.CommentsComposer__editing {
+  border-bottom: 1px solid var(--vkui--color_separator_secondary);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.CommentsComposer__attaches {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.CommentsComposer__inputPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 6px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.CommentsComposer__inputWrapper {
+  margin: 8px 6px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.CommentsComposer__input.CommentsComposer__input.CommentsComposer__input {
+  min-height: var(--messageLineHeight);
+  max-height: calc(12 * var(--messageLineHeight));
+}
+
+.CommentsComposer__input:focus {
+  outline: none;
+}
+
+.CommentsComposer__mentionLink {
+  font: 400 var(--messageFontSize) /var(--messageLineHeight) var(--font);
+  letter-spacing: .15px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  text-decoration: none;
+  color: var(--vkui--color_text_link);
+}
+
+.CommentsComposer__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_medium);
+  cursor: pointer;
+  opacity: .72;
+}
+
+.CommentsComposer__button,
+.CommentsComposer__authorButton {
+  height: 36px;
+  min-width: 36px;
+  width: 36px;
+}
+
+.CommentsComposer__button:hover {
+  opacity: 1;
+}
+
+.CommentsComposer__button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.CommentsComposer__buttonIcon {
+  --offset: calc((100% - 30px)/2);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 30px;
+  top: var(--offset);
+  left: 0;
+  right: 0;
+  bottom: var(--offset);
+}
+
+.CommentsComposer__buttonIcon--submit,
+.CommentsComposer__buttonIcon--edit,
+.CommentsComposer__buttonIcon--loading,
+.CommentsComposer__buttonIcon--delete,
+.CommentsComposer__buttonIcon--block {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s,-webkit-transform .2s;
+}
+
+.CommentsComposer__button--submit .CommentsComposer__buttonIcon--submit,
+.CommentsComposer__button--edit .CommentsComposer__buttonIcon--edit,
+.CommentsComposer__button--loading .CommentsComposer__buttonIcon--loading,
+.CommentsComposer__button--delete .CommentsComposer__buttonIcon--delete,
+.CommentsComposer__button--block .CommentsComposer__buttonIcon--block {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.CommentsComposer__button--submitActive .CommentsComposer__buttonIcon--submit {
+  color: var(--vkui--color_icon_accent);
+}
+
+.CommentsComposerAuthorMenu__button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.CommentsComposerAuthorMenu__scrollbar {
+  max-height: 160px;
+}
+
+.BurgerMenu {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.BurgerMenu__button {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+  padding: 6px;
+  -webkit-transition: background-color .18s ease;
+  transition: background-color .18s ease;
+}
+
+.BurgerMenu__button:hover,
+.BurgerMenu .DropdownReforged--opened .BurgerMenu__button {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.BurgerMenu__button:focus-visible {
+  outline: 2px auto var(--vkui--color_stroke_accent);
+}
+
+.BurgerMenu__hiddenFilterTooltipContainer {
+  position: relative;
+}
+
+.BurgerMenu__actionsMenu {
+  min-width: 262px;
+  margin: 4px 0;
+}
+
+@media (max-width: 262px) {
+  .BurgerMenu__actionsMenu {
+    min-width: calc(100vw - 50px);
+  }
+}
+
+.BurgerMenuOwnerAction__sferumLogo {
+  display: inline-block;
+  line-height: 16px;
+  margin-left: 4px;
+  text-align: center;
+  width: 16px;
+}

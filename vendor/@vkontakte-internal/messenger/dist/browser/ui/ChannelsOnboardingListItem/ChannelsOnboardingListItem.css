@@ -1,0 +1,99 @@
+.ChannelsOnboardingListItem {
+  contain: strict;
+  position: relative;
+  min-height: 60px;
+  max-height: 60px;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-areas: "avatar header header action" "avatar activity activity action";
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: 1fr 1fr;
+  padding: 6px 16px;
+  font: 13px/16px var(--font);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 12px;
+  background: var(--vkui--color_background_content);
+}
+
+.ChannelsOnboardingListItem:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity .16s ease;
+  transition: opacity .16s ease;
+  background: var(--vkui--color_field_background);
+  opacity: 0;
+  z-index: -1;
+}
+
+.ChannelsOnboardingListItem:hover:before,
+.ChannelsOnboardingListItem:focus:before {
+  opacity: 1;
+}
+
+.ChannelsOnboardingListItem__avatar {
+  grid-area: avatar;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.ChannelsOnboardingListItem__header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-self: end;
+  font: 400 16px/20px var(--font);
+  max-width: 100%;
+}
+
+.ChannelsOnboardingListItem__action {
+  grid-area: action;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  border: 1px solid var(--vkui--color_icon_tertiary);
+  -webkit-transition: border-color .2s ease-in;
+  transition: border-color .2s ease-in;
+}
+
+.ChannelsOnboardingListItem--active .ChannelsOnboardingListItem__action {
+  border-color: transparent;
+}
+
+.ChannelsOnboardingListItem__actionIcon {
+  color: var(--vkui--color_icon_accent);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
+}
+
+.ChannelsOnboardingListItem--active .ChannelsOnboardingListItem__actionIcon {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ChannelsOnboardingListItem__activity {
+  grid-area: activity;
+  color: var(--vkui--color_text_tertiary);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}

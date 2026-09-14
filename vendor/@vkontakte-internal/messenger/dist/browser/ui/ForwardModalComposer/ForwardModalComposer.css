@@ -1,0 +1,94 @@
+.ForwardModalComposer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 8px 16px;
+  border-top: 1px solid var(--vkui--color_separator_primary_alpha);
+}
+
+.ForwardModalComposer__inputWrapper {
+  margin: 8px 0;
+  letter-spacing: .2px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.ForwardModalComposer__input {
+  min-height: var(--messageLineHeight);
+  max-height: calc(3 * var(--messageLineHeight));
+}
+
+.ForwardModalComposer__input:focus {
+  outline: none;
+}
+
+.ForwardModalComposer__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_accent);
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: 36px;
+}
+
+.ForwardModalComposer__button[disabled],
+.ForwardModalComposer__button--emoji {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ForwardModalComposer__emojiPopper {
+  z-index: var( --me-dialog-layer,auto );
+  height: 440px;
+  width: 320px;
+}
+
+.UserChatInvite__modal {
+  width: 464px;
+  height: 680px;
+}
+
+.UserChatInvite__convoPicker {
+  padding-top: 13px;
+  height: 100%;
+}
+
+.UserChatInvite__footer {
+  width: 100%;
+}
+
+.UserChatInvite__createChatButton {
+  height: 56px;
+  max-height: 56px;
+}
+
+.UserChatInvite__error {
+  padding: 20px;
+  width: 464px;
+  font: 15px/20px var(--font);
+}
+
+.UserChatInvite__tint {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--vkui--color_background_content);
+  opacity: .3;
+}

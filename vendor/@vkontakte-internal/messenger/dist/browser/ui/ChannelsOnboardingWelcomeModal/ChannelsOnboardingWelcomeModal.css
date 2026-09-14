@@ -1,0 +1,178 @@
+.ChannelsOnboardingWelcomeModal {
+  grid-auto-rows: 1fr auto;
+}
+
+.ChannelsOnboardingWelcomeModal__head {
+  height: 212px;
+  max-height: 50%;
+  background-color: var(--vkui--color_field_background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ChannelsOnboardingWelcomeModal__body {
+  background-color: var(--vkui--color_background_content);
+  padding: 24px 28px;
+  min-width: 100%;
+  width: 414px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ChannelsOnboardingWelcomeModal__bodySlideNumber {
+  color: var(--vkui--color_text_secondary);
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: .005em;
+  margin-bottom: 4px;
+}
+
+.ChannelsOnboardingWelcomeModal__bodyTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -.02em;
+  color: var(--vkui--color_text_primary);
+}
+
+.ChannelsOnboardingWelcomeModal__bodyDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -.01em;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 12px;
+}
+
+.ChannelsOnboardingWelcomeModal__actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ChannelsOnboardingWelcomeModal__action:last-of-type {
+  margin-left: auto;
+}
+
+.ChannelsOnboardingWelcomeModal .RE_ModalFooter {
+  padding: 12px;
+}
+
+.ChannelsOnboardingPickerModal {
+  grid-auto-rows: 1fr auto;
+}
+
+.ChannelsOnboardingPickerModal_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ChannelsOnboardingPickerModal__head {
+  background-color: var(--vkui--color_background_content);
+  padding: 24px 28px;
+  min-width: 100%;
+  width: 414px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ChannelsOnboardingPickerModal__body {
+  min-height: 400px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ChannelsOnboardingPickerModal__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -.02em;
+  color: var(--vkui--color_text_primary);
+}
+
+.ChannelsOnboardingPickerModal__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -.01em;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 12px;
+}
+
+.ChannelsOnboardingPickerModal__actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ChannelsOnboardingPickerModal__action:last-of-type {
+  margin-left: auto;
+}
+
+.ChannelsOnboardingPickerModal .RE_ModalFooter {
+  padding: 12px;
+}
+
+.ChannelsOnboardingPickerModal__itemsLoader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 0;
+}

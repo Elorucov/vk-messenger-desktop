@@ -1,0 +1,226 @@
+.OrganisersViewVertical {
+  width: var(--aside_folders_width);
+  height: 100%;
+  padding-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.OrganisersViewVertical__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.OrganisersViewVertical__overlay:before {
+  display: block;
+  content: "";
+  height: 32px;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 0;
+}
+
+.OrganisersViewVertical__overlay:before {
+  top: 0;
+  background: -webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_background)),to(transparent));
+  background: linear-gradient(to bottom,var(--vkui--color_background),transparent);
+}
+
+.OrganisersViewVertical__overlay--upScroll:before {
+  opacity: 1;
+}
+
+.OrganisersViewVertical__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+  padding-bottom: 78px;
+}
+
+.OrganisersViewVertical__content--smallPadding {
+  padding-bottom: 52px;
+}
+
+.OrganisersViewVertical__activeSlide {
+  width: 3px;
+  height: calc(var(--organisers_view_vertical_height) - 8px);
+  background-color: var(--vkui--color_background_accent);
+  border-radius: 4px;
+  -webkit-transform: translateY(var(--organisers_view_vertical_offset));
+  transform: translateY(var(--organisers_view_vertical_offset));
+  top: 4px;
+  left: 2px;
+  position: absolute;
+  -webkit-transition: height .15s ease,-webkit-transform .15s cubic-bezier(.895,.22,.13,.74);
+  transition: height .15s ease,-webkit-transform .15s cubic-bezier(.895,.22,.13,.74);
+  transition: transform .15s cubic-bezier(.895,.22,.13,.74),height .15s ease;
+  transition: transform .15s cubic-bezier(.895,.22,.13,.74),height .15s ease,-webkit-transform .15s cubic-bezier(.895,.22,.13,.74);
+}
+
+.OrganisersViewVertical__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.OrganisersViewVertical__item {
+  padding: 12px 8px 6px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.OrganisersViewVertical__item:hover,
+.OrganisersViewVertical__item:not(.OrganisersViewVertical__item--active):focus {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.OrganisersViewVertical__item-content {
+  -webkit-transition: color .15s;
+  transition: color .15s;
+}
+
+.OrganisersViewVertical__itemBottom {
+  min-width: 0;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.OrganisersViewVertical__itemTitle {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.OrganisersViewVertical__item--active .OrganisersViewVertical__itemTitle {
+  color: var(--vkui--color_text_accent);
+}
+
+.OrganisersViewVertical__settings {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 78px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  background-color: var(--vkui--color_background);
+  border-top: 1px solid var(--vkui--color_image_border_alpha);
+}
+
+.OrganisersViewVertical__settings--small {
+  height: 52px;
+}
+
+.OrganisersViewVertical__gear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--vkui--vkontakte_color_icon_outline_medium);
+  background-color: var(--vkui--color_background_content);
+  opacity: .72;
+  -webkit-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+  z-index: 3;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.OrganisersViewVertical__gear:hover {
+  opacity: 1;
+}
+
+.FolderAvatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.FolderAvatar--size-40 {
+  width: 40px;
+  height: 40px;
+}
+
+.FolderAvatar--variant-light {
+  background-color: var(--vkui--color_background_tertiary);
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.FolderAvatar--variant-dark {
+  background-color: var(--vkui--color_background_secondary);
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.FolderAvatar__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 16px;
+  height: 16px;
+}
+
+.FolderAvatar__counter {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  border: 2px solid var(--vkui--color_background);
+  border-radius: 12px;
+}

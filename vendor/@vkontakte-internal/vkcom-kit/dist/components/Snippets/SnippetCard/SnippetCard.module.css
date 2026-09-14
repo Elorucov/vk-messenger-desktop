@@ -1,0 +1,9 @@
+.container.container {
+  background-color: var(--vkui--color_background_modal);
+  border: var(--vkui--size_border--regular) solid var(--vkui--color_image_border_alpha);
+  box-shadow: 0 0 6px #0000000a,0 2px 4px #00000003;
+  border-radius: var(--vkui--size_border_radius_paper--regular);
+  user-select: none;
+  text-decoration: none;
+  display: block;
+}

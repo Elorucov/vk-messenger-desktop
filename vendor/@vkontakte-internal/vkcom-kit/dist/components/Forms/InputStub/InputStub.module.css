@@ -1,0 +1,12 @@
+.root input {
+  cursor: default;
+}
+
+.rootSecondary input {
+  color: var(--vkui--color_text_secondary);
+}
+
+.rootPointer input,
+.rootPointer {
+  cursor: pointer;
+}

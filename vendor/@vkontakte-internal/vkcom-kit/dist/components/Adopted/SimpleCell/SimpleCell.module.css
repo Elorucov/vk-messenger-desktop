@@ -1,0 +1,3 @@
+.rootDisableOpacity {
+  opacity: var(--vkui--opacity_disable_accessibility);
+}

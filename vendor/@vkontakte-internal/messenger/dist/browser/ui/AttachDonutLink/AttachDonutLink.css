@@ -1,0 +1,80 @@
+.AttachDonutLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: calc(var(--messageVerticalIndent) - var(--messageAttachmentIndent)) calc(var(--messageHorizontalIndent) - var(--messageAttachmentIndent));
+  margin-bottom: 0;
+  gap: 8px;
+  text-decoration: none;
+  border-radius: 12px;
+  color: var(--vkui--color_text_primary);
+  font-size: var(--messageFontSize);
+  line-height: var(--messageLineHeight);
+  position: relative;
+  overflow: hidden;
+}
+
+.AttachDonutLink__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.AttachDonutLink__avatarContainer {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 0;
+}
+
+.AttachDonutLink__avatarIcon {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  z-index: 1;
+}
+
+.AttachDonutLink__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.AttachDonutLink__text,
+.AttachDonutLink__donorsCount {
+  color: var(--vkui--color_text_secondary);
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.FCApp .AttachDonutLink__text,
+.FCApp .AttachDonutLink__donorsCount {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.AttachDonutLink .AttachDonutLink__content .AttachDonutLink__button {
+  margin-top: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.AttachDonutLink .AttachDonutLink__content .AttachDonutLink__button:hover {
+  text-decoration: none;
+}

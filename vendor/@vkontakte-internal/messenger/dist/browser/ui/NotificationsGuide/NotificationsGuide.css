@@ -1,0 +1,44 @@
+.NotificationsGuide {
+  max-width: 420px;
+}
+
+.NotificationsGuide__header {
+  height: auto;
+  padding: 20px 20px 20px 5px;
+}
+
+.NotificationsGuide__title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: initial;
+}
+
+.NotificationsGuide__subtitle {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 4px;
+  white-space: initial;
+}
+
+.NotificationsGuide__content {
+  padding: 12px 24px 24px;
+}
+
+.NotificationsGuide__list {
+  padding-left: 14px;
+}
+
+.NotificationsGuide__list li {
+  padding: 6px 0 6px 8px;
+}
+
+.NotificationsGuide__preview {
+  margin-top: 24px;
+}
+
+.NotificationsGuide__previewText {
+  color: var(--vkui--color_text_subhead);
+  margin-bottom: 12px;
+}

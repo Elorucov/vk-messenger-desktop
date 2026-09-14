@@ -1,0 +1,17 @@
+.rootOverlay.rootOverlay {
+  background-color: transparent;
+  border-color: var(--vkui--color_stroke_contrast);
+  border-radius: 18px;
+}
+
+.rootOverlay textarea::placeholder {
+  color: var(--vkui--color_text_contrast);
+}
+
+.rootOverlay.rootOverlay.rootOverlay>span {
+  border-color: var(--vkui--color_stroke_contrast);
+}
+
+.rootOverlay>div {
+  border-color: var(--vkui--color_stroke_contrast);
+}

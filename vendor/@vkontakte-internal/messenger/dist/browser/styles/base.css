@@ -1,0 +1,50 @@
+/* html,
+body,
+#root,
+#media-root,
+.MEConfig {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+*/
+
+#media-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  visibility: hidden;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+#media-root>* {
+  visibility: visible;
+}
+
+.MediaBackdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  isolation: isolate;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--vkui--color_overlay_primary);
+}
+
+.MediaBackdrop__flesh {
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+
+@media (min-width: 640px) {
+  .MediaConfig .SnackbarContainer {
+    bottom: 8px;
+  }
+}

@@ -1,0 +1,35 @@
+.root {
+  --vkit_internal--grid_item_vertical_padding: calc(var(--grid-row-spacing, 0) / 2);
+  --vkit_internal--grid_item_horizontal_padding: calc(var(--grid-column-spacing, 0) / 2);
+  padding: var(--vkit_internal--grid_item_vertical_padding, 0) var(--vkit_internal--grid_item_horizontal_padding, 0);
+  width: calc(100% / var(--grid-columns, 1) - var(--vkit_internal--grid_item_horizontal_padding, 0) * 2);
+}
+
+.rootCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rootHasHorizontalScroll {
+  flex-shrink: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: calc(100% / var(--grid-columns, 1) - var(--vkit_internal--grid_item_horizontal_padding, 0) * 2 * (var(--grid-columns, 1) - 1) / var(--grid-columns, 1));
+}
+
+.rootHasHorizontalScroll:first-child {
+  padding-left: 0;
+}
+
+.rootHasHorizontalScroll:last-child {
+  padding-right: 0;
+}
+
+.rootMultiline {
+  width: fit-content;
+}
+
+.rootHasSeparator+.rootHasSeparator {
+  box-shadow: calc(-1 * var(--vkui--size_border--regular, 1px)) 0 0 0 var(--vkui--color_separator_primary);
+}

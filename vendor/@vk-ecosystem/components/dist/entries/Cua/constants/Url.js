@@ -1,0 +1,3 @@
+var CHANGE_PHONE_SUPPORT_URL = 'https://vk.com/faq21250';
+var PHONE_BANNED_SUPPORT_URL = 'https://vk.com/faq20431';
+export { CHANGE_PHONE_SUPPORT_URL, PHONE_BANNED_SUPPORT_URL };

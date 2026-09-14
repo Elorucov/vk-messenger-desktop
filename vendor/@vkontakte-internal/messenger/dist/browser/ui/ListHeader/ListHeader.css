@@ -1,0 +1,75 @@
+.vkmListHeader {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: var(--vkui--spacing_size_m,8px);
+  min-height: 54px;
+}
+
+.vkmListHeader__title {
+  font: 500 15px/20px var(--font);
+  color: var(--vkui--color_text_primary);
+  -webkit-transition: var(--transitionAll);
+  transition: var(--transitionAll);
+}
+
+.vkmListHeader__after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.vkmListHeader__button {
+  position: relative;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: background-color .18s ease;
+  transition: background-color .18s ease;
+  width: 32px;
+}
+
+.vkmListHeader__button:hover {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.vkmListHeader__button:focus-visible {
+  outline: 2px auto var(--vkui--color_stroke_accent);
+}
+
+.vkmListHeader__buttonMention {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--vkui--color_background_content);
+  background-color: var(--vkui--color_icon_secondary);
+}

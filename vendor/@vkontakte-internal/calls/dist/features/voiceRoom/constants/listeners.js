@@ -1,0 +1,10 @@
+export const COUNT_LISTENERS_IN_LINE = 4;
+export const LISTENERS_PAGE_SIZE = 48;
+export const LISTENER_CELL_SIZE = 56;
+export const LISTENER_FULL_SCREEN_CELL_SIZE = 72;
+export const LISTENERS_CARD_HEIGHT = 88;
+export const LISTENERS_CARD_WIDTH = 72;
+export const LISTENERS_FULL_SCREEN_CARD_HEIGHT = 104;
+export const LISTENERS_FULL_SCREEN_CARD_WIDTH = 84;
+export const MIN_LISTENERS_PAGE = 0;
+//# sourceMappingURL=listeners.js.map

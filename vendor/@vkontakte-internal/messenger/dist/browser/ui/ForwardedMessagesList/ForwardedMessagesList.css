@@ -1,0 +1,33 @@
+.ForwardedMessagesList__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ForwardedMessagesList--themed .ForwardedMessagesList__info {
+  opacity: .6;
+}
+
+.ForwardedMessagesList__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ForwardedMessagesList--withoutBubbles .ForwardedMessagesList__content {
+  gap: 2px;
+}
+
+.ForwardedMessagesList__action {
+  margin-top: 8px;
+}

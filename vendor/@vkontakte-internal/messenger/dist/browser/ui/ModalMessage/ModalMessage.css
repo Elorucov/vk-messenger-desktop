@@ -1,0 +1,53 @@
+.ModalMessage {
+  max-width: 700px;
+}
+
+.ModalMessage__body {
+  background-color: var(--vkui--color_background);
+  padding: 15px;
+  min-height: 100%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.ModalMessage__spinner {
+  padding: 10px;
+  height: 100%;
+}
+
+.ModalMessage__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ModalMessage__themeWrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ModalMessage__themeWrapper .ConvoMessage--withNativeBackground,
+.ModalMessage__themeWrapper .ConvoMessage__background {
+  background: var(--messageOutBubbleBackground);
+}

@@ -1,0 +1,169 @@
+.RE_ModalHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+:where(.RE_ModalHeader) {
+  background-color: var(--vkui--color_background_modal);
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+  height: 54px;
+  font: 14px/16px var(--font);
+}
+
+.RE_ModalHeader__back {
+  position: relative;
+  background: none;
+  border: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  min-width: 20%;
+  padding: 0 0 0 3px;
+  font-size: 14px;
+  color: var(--vkui--color_text_primary);
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.RE_ModalHeader__back:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear,left top,right top,from(var(--vkui--color_separator_primary)),to(var(--vkui--color_background_tertiary)));
+  background: linear-gradient(to right,var(--vkui--color_separator_primary),var(--vkui--color_background_tertiary));
+  border-top-left-radius: 8px;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: opacity .14s;
+  transition: opacity .14s;
+}
+
+.RE_ModalHeader__backIcon {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.RE_ModalHeader__back:hover:before,
+.RE_ModalHeader__back:focus:before {
+  opacity: 1;
+}
+
+.RE_ModalHeader__title {
+  margin: 0;
+  padding: 0 15px;
+  font: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--vkui--color_text_primary);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.RE_ModalHeader__back+.RE_ModalHeader__title {
+  position: absolute;
+  padding: 0 20%;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.RE_ModalHeader__container {
+  max-height: 100%;
+}
+
+.RE_ModalHeader__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.ModalCloseButton {
+  border: 0;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--vkui--color_icon_medium);
+  opacity: .7;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.ModalCloseButton:hover,
+.ModalCloseButton:focus {
+  opacity: 1;
+}
+
+.ModalCloseButton--modalHeaderMode {
+  height: 100%;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.ModalCloseButton--modalHeaderMode.ModalCloseButton--outside {
+  --size: 28px;
+  border-radius: 21px;
+  background: var(--vkui--color_overlay_primary);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: var(--size);
+  height: var(--size);
+  padding: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: calc((var(--size) + 14px) * -1);
+  top: 14px;
+  opacity: 1;
+}
+
+.ModalCloseButton--modalHeaderMode.ModalCloseButton--outside.ModalCloseButton--dark {
+  background: var(--vkui-dark-other-overlay-secondary,rgba(53,54,55,.4));
+}
+
+.ModalCloseButton--modalPanelMode {
+  margin: 16px;
+  padding: 0;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  height: 20px;
+}

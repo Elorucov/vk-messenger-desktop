@@ -1,0 +1,44 @@
+.RE_ContextMenu__contentWrapper {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.RE_ContextMenu__contentWrapper--IOSTouchCalloutNone {
+  -webkit-touch-callout: none;
+}
+
+.RE_ContextMenu__contentWrapper--appear {
+  pointer-events: none;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  opacity: 0;
+}
+
+.RE_ContextMenu__contentWrapper--appear-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: opacity linear .1s,-webkit-transform linear .1s;
+  transition: opacity linear .1s,-webkit-transform linear .1s;
+  transition: opacity linear .1s,transform linear .1s;
+  transition: opacity linear .1s,transform linear .1s,-webkit-transform linear .1s;
+}
+
+.RE_ContextMenu__contentWrapper--exit {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.RE_ContextMenu__contentWrapper--exit-active {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  opacity: 0;
+  -webkit-transition: opacity linear .1s,-webkit-transform linear .1s;
+  transition: opacity linear .1s,-webkit-transform linear .1s;
+  transition: opacity linear .1s,transform linear .1s;
+  transition: opacity linear .1s,transform linear .1s,-webkit-transform linear .1s;
+}

@@ -1,0 +1,30 @@
+export const BridgeErrorCodes = {
+    UNKNOWN: 1,
+    MISSING_PARAMS: 2,
+    CONNECTION_LOST: 3,
+    USER_DENIED: 4,
+    INVALID_PARAMS: 5,
+    UNSUPPORTED: 6,
+    DEVICE_PERMISSION: 7,
+    USER_PERMISSION: 8,
+    NO_BACKGROUND: 9,
+    REQUEST_LIMIT: 10,
+    ACCESS_DENIED: 11,
+    UNINITIALIZED: 12,
+    CUSTOM: 13,
+};
+export const BridgeErrorReasons = {
+    UNKNOWN: `Unknown error`,
+    MISSING_PARAMS: `Missing required params`,
+    CONNECTION_LOST: `Connection lost`,
+    USER_DENIED: `User denied`,
+    INVALID_PARAMS: `Invalid params`,
+    UNSUPPORTED: `Unsupported platform`,
+    DEVICE_PERMISSION: `No device permission`,
+    USER_PERMISSION: `Need user permission`,
+    NO_BACKGROUND: `This action cannot be performed in the background`,
+    REQUEST_LIMIT: `Requests limit reached`,
+    ACCESS_DENIED: `Access denied`,
+    UNINITIALIZED: `Uninitialized App`,
+};
+//# sourceMappingURL=MiniApp.js.map

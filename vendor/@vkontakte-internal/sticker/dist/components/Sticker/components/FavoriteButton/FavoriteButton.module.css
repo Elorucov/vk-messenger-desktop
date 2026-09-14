@@ -1,0 +1,25 @@
+.favorite {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  top: calc(4px * var(--sticker-scale, 1));
+  right: calc(4px * var(--sticker-scale, 1));
+  color: var(--vkui--color_icon_tertiary);
+  transition: all var(--vkui--animation_duration_m);
+  transition-property: color,opacity;
+}
+
+.favorite use {
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  stroke: var(--vkui--color_icon_contrast);
+}
+
+.favorite:hover {
+  color: var(--vkui--color_background_accent_tint--hover);
+}
+
+.favorite:active,
+.active {
+  color: var(--vkui--color_background_accent);
+}

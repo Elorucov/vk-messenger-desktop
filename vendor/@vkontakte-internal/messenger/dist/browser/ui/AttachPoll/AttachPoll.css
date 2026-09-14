@@ -1,0 +1,329 @@
+.AttachPoll {
+  position: relative;
+  background: var(--vkui--color_background_modal);
+  border: 1px solid var(--vkui--color_separator_primary_alpha);
+  --pollBorderRadius: 12px;
+  border-radius: var(--pollBorderRadius);
+  isolation: isolate;
+  min-width: 0;
+}
+
+.AttachPoll--voted {
+  cursor: pointer;
+}
+
+.ConvoMessageWithoutBubble .AttachPoll,
+.ConvoMessage--noBackground .AttachPoll {
+  --pollBorderRadius: var(--messageBorderRadius);
+}
+
+.AttachPoll--customBackground {
+  border: none;
+}
+
+.AttachPoll__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 25px 40px;
+  min-height: 160px;
+}
+
+.AttachPoll__headerPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.AttachPoll__headerPhotoGradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.AttachPoll__headerPhotoImage {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--pollBorderRadius) var(--pollBorderRadius) 0 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.AttachPoll__moreWrapper {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+.AttachPoll__more {
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+}
+
+.AttachPoll__action--loading {
+  position: relative;
+  display: block;
+  color: transparent;
+}
+
+.AttachPoll__actionSpinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.AttachPoll__more,
+.AttachPoll__title,
+.AttachPoll__author,
+.AttachPoll__info {
+  z-index: 1;
+}
+
+.AttachPoll--customBackground .AttachPoll__more,
+.AttachPoll--customBackground .AttachPoll__title,
+.AttachPoll--customBackground .AttachPoll__author,
+.AttachPoll--customBackground .AttachPoll__info,
+.AttachPoll--customBackground .AttachPoll__answer,
+.AttachPoll--customBackground .AttachPoll__footer {
+  color: var(--vkui--color_text_contrast);
+  opacity: .9;
+}
+
+.AttachPoll__title {
+  font: 600 calc(var(--messageFontSize) + 4px) /calc(var(--messageLineHeight) + 4px) var(--fontVkSans);
+  color: var(--vkui--color_text_primary);
+  padding-bottom: 10px;
+  word-break: break-word;
+}
+
+.AttachPoll__author {
+  display: block;
+  color: var(--vkui--color_text_secondary);
+  text-decoration: none;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.AttachPoll__author:hover {
+  text-decoration: underline;
+}
+
+.AttachPoll__info {
+  color: var(--vkui--color_text_secondary);
+}
+
+.AttachPoll__answers {
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.AttachPoll__answer {
+  position: relative;
+  padding: 8px 10px;
+  color: var(--vkui--color_text_primary);
+  --pollAnswerBorderRadius: 4px;
+}
+
+.AttachPoll__answer:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.AttachPoll--canVote .AttachPoll__answer:not(.AttachPoll__answer--voted):hover {
+  cursor: pointer;
+}
+
+.AttachPoll__answer:before,
+.AttachPoll__answerBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--pollAnswerBorderRadius);
+  background: var(--vkui--vkontakte_color_poll_option_background);
+}
+
+.AttachPoll--customBackground .AttachPoll__answer:before,
+.AttachPoll--customBackground .AttachPoll__answerBar {
+  background: var(--vkui--color_text_contrast);
+}
+
+.AttachPoll__answer:before {
+  content: "";
+  opacity: .1;
+  -webkit-transition: opacity .15s;
+  transition: opacity .15s;
+}
+
+.AttachPoll--canVote:not(.AttachPoll--voted) .AttachPoll__answer:hover:before {
+  opacity: .18;
+}
+
+.AttachPoll__answer.AttachPoll__answer.AttachPoll__answer.AttachPoll__answer--selected:before {
+  opacity: .25;
+}
+
+.AttachPoll__answerBar {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  opacity: .1;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s,-webkit-transform .5s;
+}
+
+.AttachPoll__answerBar--leader {
+  opacity: .25;
+}
+
+.AttachPoll__answerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  word-break: break-word;
+  position: relative;
+}
+
+.AttachPoll__answerVotes {
+  color: var(--vkui--color_text_subhead);
+}
+
+.AttachPoll--customBackground .AttachPoll__answerVotes {
+  color: var(--vkui--color_text_contrast);
+  opacity: .4;
+}
+
+.AttachPoll__answerRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 4px;
+  min-width: 65px;
+}
+
+.AttachPoll__answerCheckbox {
+  height: var(--messageLineHeight)!important;
+  margin: 0 calc((var(--messageLineHeight) - 20px) / 2);
+}
+
+.AttachPoll__answerCheckbox--off {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.AttachPoll--customBackground .AttachPoll__answerCheckbox--off {
+  color: var(--vkui--color_text_contrast);
+  opacity: .8;
+}
+
+.AttachPoll__answerCheckbox--on {
+  color: var(--vkui--color_text_accent);
+}
+
+.AttachPoll--customBackground .AttachPoll__answerCheckbox--on {
+  color: var(--vkui--color_text_contrast);
+  opacity: .95;
+}
+
+.AttachPoll__answerVotedIcon {
+  color: var(--vkui--color_icon_accent);
+  margin-right: 4px;
+}
+
+.AttachPoll--customBackground .AttachPoll__answerVotedIcon {
+  color: var(--vkui--color_text_contrast);
+}
+
+.AttachPoll__footer {
+  margin: 20px;
+  color: var(--vkui--color_text_secondary);
+  position: relative;
+  z-index: 1;
+}
+
+.AttachPoll__footer,
+.AttachPoll__votedUsersInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 24px;
+}
+
+.AttachPoll__votedUsersInfo--hidden {
+  visibility: hidden;
+}
+
+.AttachPoll__voteButton.AttachPoll__voteButton {
+  position: absolute;
+}
+
+.AttachPoll__spinner.AttachPoll__spinner {
+  position: absolute;
+  color: inherit;
+}
+
+.AttachPoll__usersStack {
+  margin-right: 10px;
+}
+
+.AttachPoll__fade {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--pollBorderRadius);
+  background: #0006;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.AttachPoll--hasPhoto .AttachPoll__fade {
+  display: block;
+}
+
+.AttachPoll__widthFiller {
+  min-width: 300px;
+}

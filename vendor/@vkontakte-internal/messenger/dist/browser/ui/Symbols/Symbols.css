@@ -1,0 +1,95 @@
+.Symbols {
+  display: none;
+}
+
+.ChannelMain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ChannelMain__content {
+  position: absolute;
+  inset: 0;
+  background: var(--channelContentBackground);
+  isolation: isolate;
+}
+
+.CopyPostUrlButton {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.CopyPostUrlButton:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity .16s ease;
+  transition: opacity .16s ease;
+  background: var(--vkui--color_transparent--hover);
+  opacity: 0;
+}
+
+.CopyPostUrlButton:hover:before {
+  opacity: 1;
+}
+
+.CopyPostUrlButton__icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--vkui--color_background_secondary);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.CopyPostUrlButton__label {
+  color: var(--vkui--color_text_accent);
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.CopyPostUrlSnackbarIcon {
+  color: var(--vkui--color_text_link);
+}
+
+.ModerationBanner_bannerPostLink {
+  color: var(--vkui--color_text_accent);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ModerationBanner_buttonContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}

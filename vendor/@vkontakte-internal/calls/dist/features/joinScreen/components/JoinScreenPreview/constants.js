@@ -1,0 +1,10 @@
+const previewModalMinWidthForIcon = 560;
+const modalSidesGapForCrossSign = 56;
+const iconScreenMinWidth = previewModalMinWidthForIcon + modalSidesGapForCrossSign * 2;
+const previewModalMinHeightForIcon = 450;
+const iconScreenMinHeight = previewModalMinHeightForIcon;
+export const placeholderHeightMediaQuery = `screen and (max-height: ${iconScreenMinHeight}px)`;
+export const placeholderWidthMediaQuery = `screen and (max-width: ${iconScreenMinWidth}px)`;
+export const modalFooterButtonStretchedMediaQueryWidth = `screen and (max-width: 800px)`;
+export const modalFooterButtonStretchedMediaQueryHeight = `screen and (max-height: 597px)`;
+//# sourceMappingURL=constants.js.map

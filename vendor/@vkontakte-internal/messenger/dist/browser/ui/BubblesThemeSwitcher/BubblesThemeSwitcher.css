@@ -1,0 +1,82 @@
+.BubblesThemeSwitcher {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0,1fr);
+  grid-column-gap: 30px;
+  margin: 12px;
+}
+
+.BubblesThemeSwitcher__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-row-gap: 12px;
+  cursor: pointer;
+}
+
+.BubblesThemeSwitcher__convoHistory {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--vkui--size_border_radius--regular);
+  padding: 26px 10px;
+  outline: var(--vkui--size_border1x--regular) solid var(--vkui--color_image_border_alpha);
+  outline-offset: calc(var(--vkui--size_border1x--regular) * -1);
+  -webkit-transition: outline .2s ease;
+  transition: outline .2s ease;
+  pointer-events: none;
+  background-color: var(--convoHistoryBackgroundColor);
+}
+
+.BubblesThemeSwitcher__option .ThemeBackground {
+  clip-path: inset(var(--vkui--size_border1x--regular) round calc(var(--vkui--size_border_radius--regular) - var(--vkui--size_border1x--regular)));
+}
+
+.BubblesThemeSwitcher__convoHistory--bubbled {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.BubblesThemeSwitcher__option--selected .BubblesThemeSwitcher__convoHistory {
+  outline: var(--vkui--spacing_size_2xs) solid var(--vkui--color_stroke_accent);
+  outline-offset: calc(var(--vkui--spacing_size_2xs) * -1);
+}
+
+.BubblesThemeSwitcher__option--selected .ThemeBackground {
+  clip-path: inset(var(--vkui--spacing_size_2xs) round calc(var(--vkui--size_border_radius--regular) - var(--vkui--spacing_size_2xs)));
+}
+
+.BubblesThemeSwitcher__label {
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+  color: var(--vkui--color_text_secondary);
+  font-size: var(--vkui--font_footnote--font_size--regular);
+}
+
+.BubblesThemeSwitcher__option--selected .BubblesThemeSwitcher__label {
+  color: var(--vkui--color_text_primary);
+}
+
+.BubblesThemeSwitcher__convoHistory .ConvoStack+.ConvoStack {
+  margin-top: var(--vkui--spacing_size_xs);
+}
+
+.BubblesThemeSwitcher__convoHistory--bubbled .ConvoStack+.ConvoStack {
+  margin-top: 0;
+}

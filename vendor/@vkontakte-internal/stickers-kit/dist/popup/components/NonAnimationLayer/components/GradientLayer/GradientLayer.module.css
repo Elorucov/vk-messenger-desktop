@@ -1,0 +1,7 @@
+.wrapperWithLinearGradient {
+  background: linear-gradient(var(--gradient-deg, 0deg),var(--gradient-color) 0%,rgba(255,255,255,0) 100%);
+}
+
+.wrapperWithRadialGradient {
+  background: radial-gradient(50.13% 50.13% at 50.13% 50.13%,var(--gradient-color) 0%,rgba(255,255,255,0) 100%);
+}

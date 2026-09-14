@@ -1,0 +1,1 @@
+var t=function(t,c){try{localStorage.setItem(t,c)}catch(t){}},c=function(t){try{return localStorage.getItem(t)}catch(t){}},e=function(t){try{localStorage.removeItem(t)}catch(t){}};export{c as getItemFromStorage,e as removeItemFromStorage,t as setItemToStorage};

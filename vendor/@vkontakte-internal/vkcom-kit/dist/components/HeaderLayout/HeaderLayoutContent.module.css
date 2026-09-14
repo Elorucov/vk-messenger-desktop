@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: 100%;
+}
+
+.top,
+.bottom {
+  flex-basis: 0;
+}
+
+:not(.rootAlignTop)>.top,
+:not(.rootAlignBottom)>.bottom {
+  flex-grow: 1;
+}
+
+.bottom {
+  min-height: 8px;
+}

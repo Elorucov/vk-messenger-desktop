@@ -1,0 +1,48 @@
+.overlayIcon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--vkui--color_icon_contrast);
+  background-color: var(--vkui--color_overlay_primary);
+  transition: background-color var(--vkui--animation_duration_s) linear,opacity var(--vkui--animation_duration_s) ease;
+}
+
+.overlayIconSizeS {
+  width: 48px;
+  height: 48px;
+}
+
+.overlayIconSizeM {
+  width: 64px;
+  height: 64px;
+}
+
+.overlayIconLoading,
+.overlayIconMuted {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.overlayIconLoading {
+  color: var(--vkui--color_text_contrast);
+}
+
+.overlayIconHoverRegular:hover,
+.overlayIconHoverRegular.overlayIconHovered {
+  background-color: var(--vkui--color_overlay_primary--hover);
+}
+
+.overlayIconHoverDark:hover,
+.overlayIconHoverDark.overlayIconHovered {
+  background-color: var(--vkui--color_avatar_overlay);
+}
+
+.overlayIconShowOnHover {
+  opacity: var(--video-card-overlay-icon-opacity, 0);
+  transition: opacity var(--vkui--animation_duration_s) ease;
+}

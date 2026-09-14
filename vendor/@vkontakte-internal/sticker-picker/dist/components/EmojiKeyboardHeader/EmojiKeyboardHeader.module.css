@@ -1,0 +1,6 @@
+.header {
+  background: var(--vkui--color_background_modal);
+  user-select: none;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}

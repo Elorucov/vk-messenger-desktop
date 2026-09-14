@@ -1,0 +1,20 @@
+.root {
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--vkui_internal--textclamp-lines, 1);
+  line-clamp: var(--vkui_internal--textclamp-lines, 1);
+}
+
+.root.root {
+  display: -webkit-box;
+}
+
+.rootSingleLine {
+  word-break: break-all;
+}
+
+.rootPreserveWhitespaces {
+  white-space: pre-wrap;
+}

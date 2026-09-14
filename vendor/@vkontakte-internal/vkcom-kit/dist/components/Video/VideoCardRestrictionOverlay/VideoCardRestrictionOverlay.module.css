@@ -1,0 +1,46 @@
+.restriction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+.restrictionBackground {
+  background-color: var(--vkui--color_image_placeholder);
+  color: var(--vkui--color_text_tertiary);
+}
+
+.title {
+  max-width: 90%;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.titleSmall {
+  margin-top: 2px;
+}
+
+.titleXSmall {
+  max-width: 95%;
+  margin-top: 2px;
+}
+
+.restrictionLayoutLight {
+  color: var(--vkui--color_icon_contrast);
+}
+
+.restrictionLayoutDark {
+  background-color: var(--vkui--color_avatar_overlay--active);
+  color: var(--vkui--color_icon_contrast);
+}
+
+.restrictionLayoutDarkBlurred {
+  background-color: var(--vkui--color_avatar_overlay--active);
+  backdrop-filter: blur(15px);
+}
+
+.restrictionLayoutSecondary {
+  background: var(--vkui--color_background_secondary);
+  color: var(--vkui--color_text_secondary);
+}

@@ -1,0 +1,47 @@
+:global(.CallsBaseModal).modal {
+  z-index: 1002;
+}
+
+.modal :global(.CallsModalHeader) {
+  background: transparent;
+  border-bottom: unset;
+  height: 0;
+}
+
+.modal :global(.CallsBaseModal__content) {
+  width: 450px;
+  height: fit-content;
+  border-radius: var(--vkui--size_border_radius_paper--regular);
+}
+
+.modal :global(.CallsModalHeader__cross) {
+  top: 20px;
+  height: fit-content;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  padding: 55px 25px;
+}
+
+.icon {
+  color: var(--vkui--color_icon_accent);
+}
+
+.title {
+  margin: unset;
+  margin-top: 26px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--vkui--color_text_primary);
+}
+
+.subheader {
+  margin: 14px 0 32px;
+  font-size: 14px;
+  color: var(--vkui--color_text_subhead);
+}

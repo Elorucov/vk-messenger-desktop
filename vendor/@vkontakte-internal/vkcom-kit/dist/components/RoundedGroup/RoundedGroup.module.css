@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rootLeft,
+.rootRight {
+  z-index: 2;
+  position: absolute;
+}
+
+.rootLeft {
+  left: 0;
+}
+
+.rootRight {
+  right: 0;
+}
+
+.rootWithGap.rootHorizontal:not(.rootCenter) {
+  max-height: fit-content;
+}
+
+.rootWithGap.rootVertical:not(.rootCenter) {
+  max-width: fit-content;
+}
+
+.rootVertical {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rootHorizontal {
+  flex-direction: row;
+}
+
+.rootHorizontal:not(.rootWithGap) {
+  justify-content: space-between;
+}
+
+.rootHorizontal.rootCenter {
+  width: 100%;
+  justify-content: center;
+}
+
+.rootVertical.rootWithGap>*:not(:last-child) {
+  margin-bottom: var(--rounded-group-gap, 0);
+}
+
+.rootHorizontal.rootWithGap>*:not(:last-child) {
+  margin-right: var(--rounded-group-gap, 0);
+}

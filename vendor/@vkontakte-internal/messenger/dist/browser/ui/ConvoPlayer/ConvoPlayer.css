@@ -1,0 +1,214 @@
+.ConvoPlayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  gap: 12px;
+}
+
+.ConvoPlayer__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+}
+
+.ConvoPlayer__control {
+  background-color: transparent;
+  border: none;
+  color: var(--vkui--color_text_accent);
+  cursor: pointer;
+}
+
+.ConvoPlayer__control--disabled {
+  opacity: .3;
+}
+
+.ConvoPlayer__info {
+  display: grid;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  gap: 2px;
+}
+
+.ConvoPlayer__info--hovered {
+  cursor: pointer;
+}
+
+.ConvoPlayer__estimateTime {
+  width: 38px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -.004em;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoPlayer__playbackRate {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+  background-color: transparent;
+  min-width: 36px;
+  height: 20px;
+  padding: 0 4px;
+  border: 1px solid var(--vkui--color_icon_tertiary);
+  border-radius: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ConvoPlayer__playbackRateValue {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .005em;
+  color: var(--vkui--color_text_subhead);
+}
+
+.ConvoPlayer__volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100px;
+  cursor: pointer;
+}
+
+.ConvoPlayer__mute {
+  background-color: transparent;
+  border: none;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+}
+
+.ConvoPlayer__volumeSlider {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 12px;
+}
+
+.ConvoPlayer__close {
+  background-color: transparent;
+  border: none;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+}
+
+.ConvoPlayer__progress {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--vkui--color_transparent--active);
+}
+
+.ConvoPlayer__progressState {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: var(--vkui--color_background_accent);
+}
+
+.ConvoPlayer__progress-interactive {
+  -webkit-transition: height .2s;
+  transition: height .2s;
+  cursor: pointer;
+}
+
+.ConvoPlayer__progress-interactive:hover {
+  height: 5px;
+}
+
+.ConvoPlayer__shuffle,
+.ConvoPlayer__repeat {
+  background-color: transparent;
+  border: none;
+  color: var(--vkui--color_icon_secondary);
+  cursor: pointer;
+}
+
+.ConvoPlayer__shuffle--active,
+.ConvoPlayer__repeat--active {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ConvoPlayer__volumeRange {
+  position: relative;
+  width: 100%;
+  height: 18px;
+  margin-left: 12px;
+  padding: 8px 0;
+}
+
+.ConvoPlayer__volumeRange:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  border-radius: 1px;
+  width: 100%;
+  background-color: var(--vkui--color_accent_gray);
+}
+
+.ConvoPlayer__volumeValue {
+  height: 100%;
+  background: var(--vkui--color_background_accent);
+  border-radius: 1px;
+  position: relative;
+}
+
+.ConvoPlayer__volumeValue:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateX(50%) translateY(-50%);
+  transform: translate(50%) translateY(-50%);
+  border-radius: 50%;
+  background-color: inherit;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.ConvoPlayer__volumeRange:hover .ConvoPlayer__volumeValue:after,
+.ConvoPlayer__volumeRange--active .ConvoPlayer__volumeValue:after {
+  opacity: 1;
+}
+
+.VKUITouch--blockSVGPointerEvents svg {
+  pointer-events: none;
+}

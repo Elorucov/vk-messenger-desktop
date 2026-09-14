@@ -1,0 +1,3 @@
+:global(.vkuiInternalTwoColumnLayout) .root.root {
+  flex-grow: 1;
+}

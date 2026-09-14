@@ -1,0 +1,105 @@
+.PeerListItem {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+
+.PeerListItem--clickable:hover {
+  cursor: pointer;
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.PeerListItem__main {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 12px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 30px;
+  min-width: 0;
+}
+
+.PeerListItem__content {
+  overflow: hidden;
+}
+
+.PeerListItem__name {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -.14px;
+  text-decoration: none;
+  color: var(--vkui--color_text_primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.PeerListItem__subtitle {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_secondary);
+  text-decoration: none;
+  margin-top: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.PeerListItem__after {
+  margin-left: auto;
+}
+
+.PeerListItem__before {
+  margin-right: 12px;
+}
+
+.PeerListItemStub {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.PeerListItemStub__avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--vkui--color_skeleton_from);
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.PeerListItemStub__name {
+  width: 150px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: var(--vkui--color_skeleton_from);
+}
+
+.PeerListItemLink,
+.PeerListItemLink:hover {
+  display: block;
+  text-decoration: none;
+}
+
+.PeerList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+}

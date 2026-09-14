@@ -1,0 +1,250 @@
+.ChannelsListItem {
+  contain: strict;
+  position: relative;
+  height: var(--channelsListItemHeight);
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 2px;
+  padding: 8px 12px;
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  font: 13px/16px var(--font);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.ChannelsListItem--tap {
+  grid-template-areas: "avatar header icons" "avatar info icons";
+}
+
+.ChannelsListItem--click {
+  grid-template-areas: "avatar header header" "avatar info icons";
+}
+
+.ChannelsListItem--collapsed {
+  height: 56px;
+  padding: 8px;
+}
+
+.ChannelsListItem:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  transition: opacity var(--transitionHoverDuration) var(--transitionHoverAnimationFunction);
+  background: var(--vkui--color_transparent--hover);
+  opacity: 0;
+  z-index: -1;
+}
+
+.ChannelsListItem:where(:hover,
+:focus):before {
+  opacity: 1;
+}
+
+.ChannelsListItem.ChannelsListItem--active:before {
+  background: var(--vkui--color_transparent--active);
+  opacity: 1;
+}
+
+.ChannelsListItem__avatar {
+  grid-area: avatar;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.ChannelsListItem__header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-self: end;
+  font: 500 var(--channelsListItemHeaderFontSize) /var(--channelsListItemHeaderLineHeight) var(--font);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ChannelsListItem__post,
+.ChannelsListItem__membersCount {
+  grid-area: info;
+  max-width: 100%;
+  align-self: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ChannelsListItem__post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font: var(--channelsListItemPostFontSize) /var(--channelsListItemPostLineHeight) var(--font);
+  color: var(--vkui--color_text_tertiary);
+}
+
+.ChannelsListItem__membersCount {
+  font: var(--channelsListItemPostFontSize) /var(--channelsListItemPostLineHeight) var(--font);
+  color: var(--vkui--color_text_subhead);
+}
+
+.ChannelsListItem__text {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--vkui--color_text_subhead);
+}
+
+.ChannelsListItem__date {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font: var(--channelsListItemDateFontSize) /var(--channelsListItemDateLineHeight) var(--font);
+  color: var(--vkui--color_text_tertiary);
+}
+
+.ChannelsListItem__icons {
+  grid-area: icons;
+  align-self: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  gap: 4px;
+  padding-left: .75ch;
+}
+
+.ChannelsListItem__icon--hidden {
+  display: none;
+}
+
+.ChannelsListItem--collapsed .ChannelsListItem__icon {
+  position: absolute;
+  bottom: 1px;
+  top: initial;
+  left: 2px;
+  border: 2px solid var(--vkui--color_background_content);
+  min-width: 22px;
+  min-height: 22px;
+  height: initial;
+  width: initial;
+}
+
+.ChannelsListItem--collapsed .ChannelsListItem__icon--unreadCounter {
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_icon_contrast_themed);
+  top: 1px;
+  bottom: initial;
+}
+
+.ChannelsListItem--collapsed .ChannelsListItem__icon--muted {
+  background: var(--vkui--color_icon_secondary);
+}
+
+.ChannelsListItem--tap .ChannelsListItem__icons {
+  height: 100%;
+  padding-left: 1.5ch;
+}
+
+.ChannelsListItem__icons:empty {
+  padding: 0;
+}
+
+.ChannelsListItem__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  height: 24px;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  min-width: 0;
+  margin-right: -4px;
+  color: var(--vkui--color_icon_secondary);
+  -webkit-transition: visibility .18s linear,opacity .18s ease,width 90ms ease 90ms;
+  transition: visibility .18s linear,opacity .18s ease,width 90ms ease 90ms;
+}
+
+.ChannelsListItem--collapsed .ChannelsListItem__action {
+  border-radius: 12px;
+  border: 1px solid var(--vkui--color_transparent--hover);
+  background: var(--vkui--color_background_content);
+  font-size: 12px;
+  height: 20px;
+  min-width: 26px;
+  margin-right: 0;
+}
+
+.ChannelsListItem--collapsed:hover .ChannelsListItem__action {
+  width: initial;
+}
+
+.ChannelsListItem__actionsMenuBottom {
+  margin: 12px -4px 12px 12px;
+}
+
+.ChannelsListItem__actionsMenuRight {
+  margin: 12px;
+}
+
+.ChannelsListItem__actionTap {
+  position: relative;
+}
+
+.ChannelsListItem__actionTapArea {
+  position: absolute;
+  inset: -6px;
+}
+
+.ChannelsListItem:hover .ChannelsListItem__action,
+.ChannelsListItem--tap .ChannelsListItem__action {
+  opacity: 1;
+  visibility: visible;
+  width: 24px;
+  -webkit-transition: visibility .18s linear,opacity .18s ease,width 90ms ease;
+  transition: visibility .18s linear,opacity .18s ease,width 90ms ease;
+}
+
+.ChannelsListItem--collapsed .ChannelsListItem__dropdownWrapper {
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  z-index: 1;
+}
+
+.ChannelActionModal__panel {
+  min-width: 460px;
+  max-width: 560px;
+}

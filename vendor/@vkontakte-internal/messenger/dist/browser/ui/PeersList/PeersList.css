@@ -1,0 +1,70 @@
+.PeersListModal {
+  width: 420px;
+  height: 574px;
+}
+
+.PeersList {
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.PeersList__list {
+  height: 100%;
+  padding: 12px;
+}
+
+.PeersList__rowItem {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.PeersList__rowItemInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.PeersList__rowItem:hover {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.PeersList__loader {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.PeersList__rowItemAvatar {
+  grid-area: avatar;
+}
+
+.PeersList__rowItemTitle {
+  grid-area: name;
+  font: 15px/20px var(--font);
+  color: var(--vkui--color_text_primary);
+  letter-spacing: -.007em;
+}
+
+.PeersList__rowItemOnlineStatus {
+  text-decoration: none;
+  font: 13px/16px var(--font);
+  color: var(--vkui--color_text_secondary);
+}
+
+.PeersList__rowItemOnlineStatus:hover {
+  text-decoration: underline;
+}

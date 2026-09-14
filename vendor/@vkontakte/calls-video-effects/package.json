@@ -1,0 +1,8 @@
+{
+  "name": "@vkontakte/calls-video-effects",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./video-effects.esm.js",
+  "module": "./video-effects.esm.js"
+}

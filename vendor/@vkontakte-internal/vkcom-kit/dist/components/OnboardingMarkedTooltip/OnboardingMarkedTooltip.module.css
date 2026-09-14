@@ -1,0 +1,41 @@
+.root {
+  color: var(--vkui--color_text_contrast_themed);
+  background: var(--vkui--color_background_modal_inverse);
+  box-shadow: var(--vkui--elevation3);
+  padding: 8px 12px 10px;
+  border-radius: 10px;
+  transform-origin: var(--onboarding-tooltip-content-transform-origin, center);
+  visibility: hidden;
+  white-space: normal;
+  text-align: left;
+  will-change: transform;
+}
+
+.rootIn {
+  visibility: visible;
+  opacity: 0;
+  transform: rotate(0) translateY(var(--onboarding-tooltip-content-animation-start, 0%));
+  animation: fadeIn var(--vkui--animation_duration_l) cubic-bezier(.17,.17,.17,1.6) var(--vkui--animation_duration_s) forwards;
+}
+
+.rootOut {
+  transform: rotate(var(--onboarding-tooltip-content-tilt-degree, 0deg)) translateY(0);
+  visibility: visible;
+  opacity: 1;
+  animation: fadeOut var(--vkui--animation_duration_m) cubic-bezier(.7,0,.7,1) var(--vkui--animation_duration_m) forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  to {
+    transform: rotate(var(--onboarding-tooltip-content-tilt-degree, 0deg)) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: rotate(0) translateY(var(--onboarding-tooltip-content-animation-start, 0%));
+  }
+}

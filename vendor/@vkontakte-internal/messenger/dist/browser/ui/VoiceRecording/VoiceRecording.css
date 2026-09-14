@@ -1,0 +1,105 @@
+.VoiceRecording {
+  --svgHeight: 21px;
+  display: grid;
+  grid-template: "icon track duration" 32px/-webkit-min-content auto -webkit-min-content;
+  grid-template: "icon track duration" 32px/min-content auto min-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 10px;
+  background-color: var(--vkui--vkontakte_im_toolbar_voice_msg_background);
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 4px;
+  padding-right: 12px;
+}
+
+.VoiceRecording__adornment,
+.VoiceRecording__buttons {
+  grid-area: icon;
+}
+
+.VoiceRecording__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.VoiceRecording__track {
+  grid-area: track;
+  height: var(--svgHeight);
+  position: relative;
+}
+
+.VoiceRecording__svg {
+  display: block;
+  height: var(--svgHeight);
+  max-height: var(--svgHeight);
+  max-width: 100%;
+  -webkit-transition: clip-path 1s ease-out;
+  transition: clip-path 1s ease-out;
+}
+
+.VoiceRecording__svg--shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.VoiceRecording__duration {
+  grid-area: duration;
+  font: 12px/16px var(--font);
+  color: var(--vkui--color_text_contrast);
+}
+
+.VoiceRecording__play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--vkui--vkontakte_im_toolbar_voice_msg_background);
+  background-color: var(--vkui--color_text_contrast);
+  outline: none;
+  cursor: pointer;
+}
+
+.VoiceRecording__play--withMargin {
+  margin: 4px 0 4px 8px;
+}
+
+.VoiceRecording__play i {
+  opacity: .72;
+}
+
+.VoiceRecording__play:hover i {
+  opacity: 1;
+}
+
+.VoiceRecording__path,
+.VoiceRecording__progress {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  fill: none;
+  stroke: var(--vkui--color_text_contrast);
+}
+
+.VoiceRecording--active .VoiceRecording__path,
+.VoiceRecording--active .VoiceRecording__progress {
+  -webkit-transition: clip-path .25s linear;
+  transition: clip-path .25s linear;
+}
+
+.VoiceRecording--active .VoiceRecording__path {
+  stroke: var(--vkui--color_text_contrast);
+  opacity: .4;
+}

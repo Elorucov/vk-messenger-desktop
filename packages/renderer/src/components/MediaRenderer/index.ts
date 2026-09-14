@@ -1,0 +1,1 @@
+export { mediaRenderer } from './MediaRenderer'

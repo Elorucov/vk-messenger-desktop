@@ -1,0 +1,21 @@
+.noIsolation :global(.vkuiCell__content) {
+  isolation: unset;
+}
+
+.noIsolation :global(.vkuiCell__content) :global(.vkuiSimpleCell__before) {
+  z-index: unset;
+}
+
+.alignIconsStart :global(.vkuiSimpleCell__before) {
+  height: fit-content;
+  padding-top: 16px;
+}
+
+.alignIconsStart :global(.vkuiRemovable__action) {
+  align-self: start;
+  padding-top: 6px;
+}
+
+.alignIconsStart :global(.vkuiSimpleCell__after):global(.vkuiInternalSimpleCell__after) {
+  padding: 0;
+}

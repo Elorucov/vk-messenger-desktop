@@ -1,0 +1,11 @@
+.container {
+  line-height: 19px;
+}
+
+.containerLevel1 {
+  padding: 8px var(--vkui--size_base_padding_horizontal--regular);
+}
+
+.containerLevel2 {
+  padding: 20px var(--vkit_internal--modal_horizontal_padding, 24px);
+}

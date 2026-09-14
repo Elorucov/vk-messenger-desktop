@@ -1,0 +1,18 @@
+.ChannelPostponedHistory__empty {
+  padding: 36px;
+  border-radius: 8px;
+}
+
+.ChannelPostponedHistory__empty--themed {
+  background-color: var(--vkui--color_background_content);
+}
+
+.ChannelPostponedHistory__calendarWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}

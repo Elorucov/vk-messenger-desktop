@@ -1,0 +1,134 @@
+.ConvoHistoryTyping {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: var(--historyPaddingBottom);
+  padding: 0 var(--historyTypingPaddingSide);
+  white-space: nowrap;
+  width: 100%;
+  max-width: var(--convoMainMaxWidth);
+}
+
+.ConvoHistoryTyping__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  padding: 2px 8px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.ConvoHistoryTyping--themed .ConvoHistoryTyping__wrapper {
+  background-color: var(--vkui--color_overlay_primary);
+}
+
+.ConvoHistoryTyping__indicator {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  width: 20px;
+  color: var(--convoTypingsIconColor);
+}
+
+.ConvoHistoryTyping__text {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--convoTypingsTextColor);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.ConvoHistoryPlaceholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 10px;
+  padding: 20px 10px;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoHistoryPlaceholder--themed .ConvoHistoryPlaceholder__wrapper {
+  background-color: var(--vkui--color_background_content);
+}
+
+.ConvoHistoryPlaceholder__wrapper {
+  padding: 24px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoHistoryPlaceholder__description {
+  max-width: 280px;
+  line-height: 20px;
+  margin-top: 8px;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.ConvoHistoryPlaceholder__favoritesImage {
+  margin-bottom: 10px;
+}
+
+.ConvoHistoryPlaceholder__caption {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--vkui--color_text_primary);
+}
+
+.ConvoHistoryPlaceholder__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.ConvoHistoryPlaceholder__postponed {
+  white-space: break-spaces;
+  text-align: center;
+}

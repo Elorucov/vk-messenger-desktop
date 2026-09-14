@@ -1,0 +1,27 @@
+.label {
+  opacity: 0;
+  max-width: 0;
+  transition: max-width var(--vkui--animation_duration_l),opacity var(--vkui--animation_duration_l),margin var(--vkui--animation_duration_m);
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.tappable:hover .label,
+.containerExpanded .label {
+  opacity: 1;
+  max-width: 100px;
+  margin-left: 6px;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 6px;
+  transition: max-width var(--vkui--animation_duration_l),opacity var(--vkui--animation_duration_l);
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+}

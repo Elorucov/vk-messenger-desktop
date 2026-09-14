@@ -1,0 +1,25 @@
+.AttachMoneyTransfer,
+.AttachMoneyTransfer:hover {
+  text-decoration: none;
+}
+
+span.AttachMoneyTransfer:hover .AttachmentCell {
+  opacity: 1;
+  cursor: default;
+}
+
+.AttachMoneyTransfer__icon--outcoming {
+  color: var(--vkui--color_icon_accent);
+}
+
+.AttachMoneyTransfer__icon--incoming {
+  color: var(--vkui--color_icon_positive);
+}
+
+.AttachMoneyTransfer__icon--another {
+  color: var(--vkui--color_icon_accent);
+}
+
+.AttachMoneyTransfer__title--incoming {
+  color: var(--vkui--color_text_positive);
+}

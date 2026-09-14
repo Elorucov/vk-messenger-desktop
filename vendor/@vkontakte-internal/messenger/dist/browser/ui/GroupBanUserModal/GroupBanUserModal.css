@@ -1,0 +1,15 @@
+.GroupBanUserModal .RE_ModalBody {
+  min-width: 650px;
+  padding: 12px;
+}
+
+.GroupBanUserModal.GroupBanUserModal--mobile .RE_ModalBody {
+  padding: 0;
+  min-width: unset;
+}
+
+.GroupBanUserModal .GroupBanUserModal__userInfo .GroupBanUserModal__adminLink {
+  color: var(--vkui--color_text_link);
+  font-weight: var(--messageAuthorLinkFontWeight);
+  text-decoration: none;
+}

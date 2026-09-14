@@ -1,0 +1,22 @@
+{
+  "name": "@vk-ecosystem/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": [
+      "./*",
+      "./*.js",
+      "./dist/*",
+      "./dist/*.js",
+      "./lib/*",
+      "./lib/*.js",
+      "./src/*"
+    ],
+    ".": "./index.js"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts"
+}

@@ -1,0 +1,63 @@
+.ContentPlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--vkui--color_background_content);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: pre;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ContentPlaceholder--convo,
+.ContentPlaceholder--channel {
+  font: 400 14px/18px var(--font);
+}
+
+.ContentPlaceholder--managedGroup {
+  white-space: normal;
+  font: 400 15px/20px var(--font);
+}
+
+.ContentPlaceholder__managedGroupPlaceholderText {
+  max-width: 254px;
+}
+
+.ContentPlaceholder__convoPlaceholderIcon {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ContentPlaceholder__managedGroupPlaceholderIcon {
+  color: var(--vkui--color_icon_secondary);
+  width: 55px;
+  height: 55px;
+}
+
+.ContentPlaceholder__convoPlaceholderButton {
+  color: var(--vkui--color_text_link);
+  font: 400 14px/18px var(--font);
+  padding: 0;
+  border: 0;
+  background: inherit;
+  cursor: pointer;
+}
+
+.ContentPlaceholder__convoPlaceholderButton:hover {
+  opacity: .9;
+}
+
+:root {
+  --photo-viewer-outer-action-color: #fff;
+}

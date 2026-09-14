@@ -1,0 +1,142 @@
+.ComposerAttachCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: var(--composerAttachWidth);
+  height: var(--composerAttachHeight);
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  border-radius: var(--composerAttachBorderRadius);
+  background: var(--vkui--color_background_tertiary_alpha);
+  font-size: 13px;
+  line-height: 16px;
+  padding: var(--composerAttachCardPadding);
+  position: relative;
+  overflow: hidden;
+  cursor: inherit;
+}
+
+.ComposerAttachCard__icon {
+  width: var(--composerAttachCardIconSize);
+  height: var(--composerAttachCardIconSize);
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ComposerAttachCard__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ComposerAttachCard--overflow {
+  white-space: nowrap;
+  color: transparent;
+  width: 100%;
+  background: linear-gradient(to right,var(--vkui--color_text_primary),var(--vkui--color_text_primary) calc(100% - 15px),transparent calc(100% - 3px));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ComposerAttachCard--overflowEllipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ComposerAttachCard__main {
+  font-weight: 500;
+}
+
+.ComposerAttachCard__secondary {
+  opacity: .4;
+  min-height: 16px;
+}
+
+.ComposerAttachCardIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: var(--vkui--color_accent_gray);
+  color: var(--vkui--color_text_contrast);
+  -webkit-box-shadow: 0 0 .5px .5px rgba(0,0,0,.08);
+  box-shadow: 0 0 .5px .5px #00000014;
+}
+
+.ComposerAttachCardIcon:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  content: attr(data-ext);
+  opacity: 0;
+}
+
+.ComposerAttachCardIcon--pdf:after {
+  background-color: #e64646;
+}
+
+.ComposerAttachCardIcon--xls:after {
+  background-color: var(--vkui--color_accent_green);
+}
+
+.ComposerAttachCardIcon--css:after,
+.ComposerAttachCardIcon--html:after {
+  background-color: #000;
+}
+
+.ComposerAttachCardIcon--doc:after {
+  background-color: var(--vkui--color_accent_blue);
+}
+
+.ComposerAttachCardIcon--ppt:after {
+  background-color: var(--vkui--color_accent_orange);
+}
+
+.ComposerAttachCardIcon--pdf:after,
+.ComposerAttachCardIcon--xls:after,
+.ComposerAttachCardIcon--css:after,
+.ComposerAttachCardIcon--html:after,
+.ComposerAttachCardIcon--doc:after,
+.ComposerAttachCardIcon--ppt:after {
+  opacity: 1;
+}

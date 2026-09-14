@@ -1,0 +1,9 @@
+.rootModeOutline :global(.vkuiSearch__field) {
+  background-color: var(--vkui--color_transparent);
+  outline: var(--vkui--size_border--regular) solid var(--vkui--color_field_border_alpha);
+  outline-offset: calc(-1 * var(--vkui--size_border--regular));
+}
+
+.rootModeTransparent :global(.vkuiSearch__field) {
+  background-color: var(--vkui--color_transparent);
+}

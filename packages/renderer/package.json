@@ -1,0 +1,42 @@
+{
+  "name": "renderer",
+  "version": "6.0.57",
+  "private": true,
+  "dependencies": {
+    "@sentry/electron": "4.15.1",
+    "@vk-ecosystem/mini-app": "*",
+    "@vk-ecosystem/sdk": "*",
+    "@vkontakte-internal/api-client": "*",
+    "@vkontakte-internal/api-schema-typescript": "*",
+    "@vkontakte-internal/calls": "*",
+    "@vkontakte-internal/calls-core": "*",
+    "@vkontakte-internal/calls-history": "*",
+    "@vkontakte-internal/di": "*",
+    "@vkontakte-internal/icons-private": "*",
+    "@vkontakte-internal/messenger": "*",
+    "@vkontakte-internal/plugins": "*",
+    "@vkontakte-internal/queue-manager": "*",
+    "@vkontakte-internal/scrollbar": "*",
+    "@vkontakte-internal/shared": "*",
+    "@vkontakte-internal/sticker-picker": "*",
+    "@vkontakte-internal/vk-analytics-events": "*",
+    "@vkontakte-internal/vkcom-kit": "*",
+    "@vkontakte-internal/vkjs": "*",
+    "@vkontakte/calls-sdk": "*",
+    "@vkontakte/icons": "*",
+    "@vkontakte/vkjs": "2.0.1",
+    "@vkontakte/vkui": "7.6.1",
+    "classnames": "2.5.1",
+    "immer": "10.0.3",
+    "nanoid": "3.3.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "url-search-params-polyfill": "8.2.5",
+    "@vk-ecosystem/api": "*",
+    "vkme-common": "*"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0"
+  }
+}

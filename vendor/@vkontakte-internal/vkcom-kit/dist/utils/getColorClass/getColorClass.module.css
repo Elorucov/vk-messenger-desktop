@@ -1,0 +1,191 @@
+.colorAccentLime {
+  color: var(--vkui--color_accent_lime);
+}
+
+.colorAccentOrangePeach {
+  color: var(--vkui--color_accent_orange_peach);
+}
+
+.colorAccentGreen {
+  color: var(--vkui--color_accent_green);
+}
+
+.colorAccentCyan {
+  color: var(--vkui--color_accent_cyan);
+}
+
+.colorAccentAzure {
+  color: var(--vkui--color_accent_azure);
+}
+
+.colorAccentPink {
+  color: var(--vkui--color_accent_pink);
+}
+
+.colorAccentBlue {
+  color: var(--vkui--color_accent_blue);
+}
+
+.colorAccentGray {
+  color: var(--vkui--color_accent_gray);
+}
+
+.colorAccentOrange {
+  color: var(--vkui--color_accent_orange);
+}
+
+.colorAccentRed {
+  color: var(--vkui--color_accent_red);
+}
+
+.colorAccentPurple {
+  color: var(--vkui--color_accent_purple);
+}
+
+.colorAccentViolet {
+  color: var(--vkui--color_accent_violet);
+}
+
+.colorAvatarOverlayInverseAlpha {
+  color: var(--vkui--color_avatar_overlay_inverse_alpha);
+}
+
+.colorBackgroundWarning {
+  color: var(--vkui--color_background_warning);
+}
+
+.colorIconAccent {
+  color: var(--vkui--color_icon_accent);
+}
+
+.colorIconAccentThemed {
+  color: var(--vkui--color_icon_accent_themed);
+}
+
+.colorIconContrast {
+  color: var(--vkui--color_icon_contrast);
+}
+
+.colorIconContrastSecondary {
+  color: var(--vkui--color_icon_contrast_secondary);
+}
+
+.colorIconContrastThemed {
+  color: var(--vkui--color_icon_contrast_themed);
+}
+
+.colorIconMedium {
+  color: var(--vkui--color_icon_medium);
+}
+
+.colorIconMediumAlpha {
+  color: var(--vkui--color_icon_medium_alpha);
+}
+
+.colorIconNegative {
+  color: var(--vkui--color_icon_negative);
+}
+
+.colorIconPositive {
+  color: var(--vkui--color_icon_positive);
+}
+
+.colorIconPrimary {
+  color: var(--vkui--color_icon_primary);
+}
+
+.colorIconPrimaryInvariably {
+  color: var(--vkui--color_icon_primary_invariably);
+}
+
+.colorIconSecondary {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.colorIconTertiary {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.colorIconTertiaryAlpha {
+  color: var(--vkui--color_icon_tertiary_alpha);
+}
+
+.colorIconWarning {
+  color: var(--vkui--color_icon_warning);
+}
+
+.colorStrokeNegative {
+  color: var(--vkui--color_stroke_negative);
+}
+
+.colorTextAccent {
+  color: var(--vkui--color_text_accent);
+}
+
+.colorTextAccentThemed {
+  color: var(--vkui--color_text_accent_themed);
+}
+
+.colorTextContrast {
+  color: var(--vkui--color_text_contrast);
+}
+
+.colorTextContrastThemed {
+  color: var(--vkui--color_text_contrast_themed);
+}
+
+.colorTextLink {
+  color: var(--vkui--color_text_link);
+}
+
+.colorTextLinkTint {
+  color: var(--vkui--color_text_link_tint);
+}
+
+.colorTextLinkVisited {
+  color: var(--vkui--color_text_link_visited);
+}
+
+.colorTextMuted {
+  color: var(--vkui--color_text_muted);
+}
+
+.colorTextNegative {
+  color: var(--vkui--color_text_negative);
+}
+
+.colorTextPositive {
+  color: var(--vkui--color_text_positive);
+}
+
+.colorTextPrimary {
+  color: var(--vkui--color_text_primary);
+}
+
+.colorTextPrimaryAlpha {
+  color: var(--vkui--color_text_primary_alpha);
+}
+
+.colorTextPrimaryInvariably {
+  color: var(--vkui--color_text_primary_invariably);
+}
+
+.colorTextSecondary {
+  color: var(--vkui--color_text_secondary);
+}
+
+.colorTextSubhead {
+  color: var(--vkui--color_text_subhead);
+}
+
+.colorTextTertiary {
+  color: var(--vkui--color_text_tertiary);
+}
+
+.colorStrokePositive {
+  color: var(--vkui--color_stroke_positive);
+}
+
+.colorBackgroundAccent {
+  color: var(--vkui--color_background_accent);
+}

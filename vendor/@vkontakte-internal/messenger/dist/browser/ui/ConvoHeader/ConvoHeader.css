@@ -1,0 +1,192 @@
+.ConvoHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: var(--convoHeaderHeight);
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  background-color: var(--vkui--color_background_content);
+  padding: 4px 8px;
+  position: relative;
+}
+
+.ConvoHeader__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  background: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--vkui--color_icon_secondary);
+  -webkit-transition: background-color .18s ease;
+  transition: background-color .18s ease;
+}
+
+.ConvoHeader__action:hover {
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.ConvoHeader__action:focus-visible {
+  outline: 2px auto var(--vkui--color_stroke_accent);
+}
+
+.ConvoHeader__back {
+  position: relative;
+  margin-right: 8px;
+}
+
+.ConvoHeader__back_onboardingTooltip {
+  left: -3px;
+}
+
+.ConvoHeader__info {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.ConvoHeader__info:focus-visible {
+  outline: 2px auto var(--vkui--color_stroke_accent);
+}
+
+.ConvoHeader__info:hover {
+  text-decoration: none;
+}
+
+.ConvoHeader__avatar {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  isolation: isolate;
+  margin-right: 8px;
+}
+
+.ConvoHeader__infoContainer {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 0;
+}
+
+.ConvoHeader__title {
+  font: 500 13px/16px var(--font);
+}
+
+.ConvoHeader__status {
+  border: 0;
+  outline: none;
+  background: none;
+  color: var(--vkui--color_text_secondary);
+  font: 13px/16px var(--font)!important;
+  cursor: inherit;
+  white-space: nowrap;
+  display: grid;
+  grid-template-columns: -webkit-min-content auto;
+  grid-template-columns: min-content auto;
+}
+
+.ConvoHeader__statusContainer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoHeader__status.ConvoHeader__PostponedStatus {
+  display: inline;
+}
+
+.ConvoHeader__infoAnchor {
+  width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  overflow: hidden;
+}
+
+.ConvoHeader__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.ConvoHeader__info+.ConvoHeader__controls {
+  margin-left: 8px;
+}
+
+.ConvoHeader__postponedCounter {
+  position: absolute;
+  -webkit-transform: translate(55%,40%);
+  transform: translate(55%,40%);
+}
+
+.ConvoHeader__postponedError {
+  position: absolute;
+  -webkit-transform: translate(55%,-40%);
+  transform: translate(55%,-40%);
+}
+
+.CallMenu {
+  margin: 4px 0;
+}
+
+.MarusiaAddToGroupChatButton__container {
+  position: relative;
+}
+
+.MarusiaAddToGroupChatButton__text {
+  max-width: 140px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: normal;
+  text-align: left;
+}
+
+.MarusiaAddToGroupChatButton__tooltip {
+  left: -8px;
+  width: 100%;
+  height: 100%;
+}

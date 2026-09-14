@@ -1,0 +1,14 @@
+{
+  "name": "@vk-ecosystem/mini-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte/icons": "*",
+    "@vkontakte/vkui": "7.6.1",
+    "@webads/motion-ads": "*",
+    "react": "18.3.1"
+  }
+}

@@ -1,0 +1,8 @@
+.nftHeptagon {
+  z-index: -2;
+  position: absolute;
+  top: calc(var(--rich-avatar-nft-frame-width, 2px) * -1);
+  left: calc(var(--rich-avatar-nft-frame-width, 2px) * -1);
+  width: calc(100% + 2 * var(--rich-avatar-nft-frame-width, 2px));
+  height: calc(100% + 2 * var(--rich-avatar-nft-frame-width, 2px));
+}

@@ -1,0 +1,46 @@
+.activityIndicator {
+  display: inline-flex;
+  align-items: center;
+  height: 1em;
+  overflow: hidden;
+}
+
+.activityIndicator:after {
+  text-align: left;
+  content: ".\a..\a...";
+  display: inline-block;
+  white-space: pre-wrap;
+  animation: activityIndicatorAnimation 1s steps(4) infinite;
+  transform: translateY(33.33%);
+}
+
+@supports (clip-path: inset(0 0)) {
+  .activityIndicator {
+    overflow: visible;
+    clip-path: inset(-20% 0);
+  }
+}
+
+@keyframes activityIndicatorAnimation {
+  0% {
+    transform: translateY(33.33%);
+  }
+  24.99% {
+    transform: translateY(33.33%);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  49.99% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-33.33%);
+  }
+  99.99% {
+    transform: translateY(-33.33%);
+  }
+  to {
+    transform: translateY(33.33%);
+  }
+}

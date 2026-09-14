@@ -1,0 +1,30 @@
+.root {
+  border-radius: 48px;
+  box-shadow: var(--vkui--elevation3);
+  height: 48px;
+  position: relative;
+  left: 12px;
+}
+
+.chevronContainer {
+  width: 24px;
+  height: 36px;
+  color: var(--vkui--color_icon_secondary);
+}
+
+.name {
+  color: var(--vkui--color_text_contrast);
+  max-width: 408px;
+}
+
+.nameInPopup {
+  max-width: 324px;
+  min-width: 84px;
+}
+
+@media (max-width: 800px),
+(max-height: 597px) {
+  .nameInPopup {
+    max-width: min(calc(100vw - 456px),calc(100vh - 280px));
+  }
+}

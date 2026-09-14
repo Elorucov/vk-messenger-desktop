@@ -1,0 +1,4 @@
+:where(.vkmConvoPicker) {
+  min-width: 310px;
+  min-height: 200px;
+}

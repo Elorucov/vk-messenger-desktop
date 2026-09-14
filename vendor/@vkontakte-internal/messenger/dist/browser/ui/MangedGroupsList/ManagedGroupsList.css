@@ -1,0 +1,363 @@
+.ManagedGroupsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: min(416px,100%);
+  background-color: var(--vkui--color_background_content);
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.ManagedGroupsList__items {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.ManagedGroupsList__item {
+  padding: 0 8px;
+}
+
+.ManagedGroupsList__scrollbar-content {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ManagedGroupsList__empty {
+  color: var(--vkui--color_text_secondary);
+  font: 14px/120% var(--font);
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0 24px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ManagedGroupsList--collapsed .ManagedGroupsList__empty {
+  padding: 0 12px;
+  font: 12px/14px var(--font);
+}
+
+.ManagedGroupsList__empty-icon {
+  color: var(--vkui--color_icon_secondary);
+  margin-bottom: 12px;
+}
+
+.ManagedGroupsList--collapsed .ManagedGroupsList__empty-icon {
+  display: none;
+}
+
+.ManagedGroupsList__link {
+  color: var(--vkui--color_text_link);
+  margin-top: 8px;
+  background: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.ManagedGroupsList__link:hover {
+  text-decoration: underline;
+}
+
+.ManagedGroupsList--collapsed .ManagedGroupsList__link {
+  font: 12px/14px var(--font);
+}
+
+.ManagedGroupsListModal__header {
+  border-bottom: none;
+  height: 0;
+}
+
+.ManagedGroupsListModal__content {
+  text-align: center;
+  padding: 32px 24px 20px;
+  width: 600px;
+}
+
+.ManagedGroupsListModal__icon {
+  margin: 0 auto;
+}
+
+.ManagedGroupsListModal__title {
+  margin-top: 20px;
+  color: var(--vkui--color_text_primary);
+}
+
+.ManagedGroupsListModal__subhead {
+  margin-top: 8px;
+}
+
+.ManagedGroupsListModal__button {
+  margin: 24px auto 0;
+}
+
+.ManagedGroupsListItem {
+  contain: strict;
+  position: relative;
+  height: 64px;
+  display: grid;
+  grid-template-areas: "avatar header icons" "avatar info icons";
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 4px;
+  padding: 8px 12px;
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  text-decoration: none;
+  font: 13px/16px var(--font);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.ManagedGroupsListItem__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.ManagedGroupsListItem__linkText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.ManagedGroupsListItem--collapsed {
+  height: 56px;
+  padding: 8px;
+}
+
+.ManagedGroupsListItem:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity .16s ease;
+  transition: opacity .16s ease;
+  background: var(--vkui--color_transparent--hover);
+  opacity: 0;
+  z-index: -1;
+}
+
+.ManagedGroupsListItem:where(:hover,
+:focus):before {
+  opacity: 1;
+}
+
+.ManagedGroupsListItem__avatar {
+  grid-area: avatar;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.ManagedGroupsListItem__text {
+  grid-area: info;
+  max-width: 100%;
+  align-self: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: var(--convoListItemMessageFontSize) /var(--convoListItemMessageLineHeight) var(--font);
+  color: var(--vkui--color_text_subhead);
+}
+
+.ManagedGroupsListItem__icons {
+  grid-area: icons;
+  align-self: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  padding-left: 12px;
+  height: 100%;
+}
+
+.ManagedGroupsListItem__chevron {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ManagedGroupsListItem__chevron--hidden {
+  display: none;
+}
+
+.ManagedGroupsListItem__header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-self: end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font: 500 var(--convoListItemHeaderFontSize) /var(--convoListItemHeaderLineHeight) var(--font);
+  max-width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--vkui--color_text_primary);
+}
+
+.ManagedGroupsListItem__info {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+  align-self: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ManagedGroupsListItem--collapsed .ManagedGroupsListItem__counter {
+  position: absolute;
+  bottom: 1px;
+  top: initial;
+  left: 2px;
+  border: 2px solid var(--vkui--color_background_content);
+  min-width: 22px;
+  min-height: 22px;
+  height: initial;
+  width: initial;
+}
+
+.ManagedGroupsListItem--collapsed .ManagedGroupsListItem__counter--unreadCounter {
+  border-radius: 12px;
+  font-size: 12px;
+  background: var(--vkui--color_background_accent_themed);
+  color: var(--vkui--color_icon_contrast_themed);
+  top: 1px;
+  bottom: initial;
+}
+
+.ManagedGroupsListItem__title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ManagedGroupsListItem--collapsed .ManagedGroupsListItem__dropdownWrapper {
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  z-index: 3;
+}
+
+.ManagedGroupsListItem__action {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  height: 24px;
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  min-width: 0;
+  margin-right: -4px;
+  color: var(--vkui--color_icon_secondary);
+  -webkit-transition: visibility .18s linear,opacity .18s ease,width 90ms ease 90ms;
+  transition: visibility .18s linear,opacity .18s ease,width 90ms ease 90ms;
+}
+
+.ManagedGroupsListItem__actionTap {
+  position: relative;
+}
+
+.ManagedGroupsListItem__actionTapArea {
+  position: absolute;
+  inset: -6px;
+  z-index: 3;
+}
+
+.ManagedGroupsListItem--collapsed .ManagedGroupsListItem__action {
+  border-radius: 12px;
+  border: 1px solid var(--vkui--color_transparent--hover);
+  background: var(--vkui--color_background_content);
+  font-size: 12px;
+  height: 20px;
+  min-width: 26px;
+  margin-right: 0;
+}
+
+.ManagedGroupsListItem--collapsed:hover .ManagedGroupsListItem__action {
+  width: initial;
+}
+
+.ManagedGroupsListItem:hover .ManagedGroupsListItem__action,
+.ManagedGroupsListItem--tap .ManagedGroupsListItem__action {
+  opacity: 1;
+  visibility: visible;
+  width: 24px;
+  -webkit-transition: visibility .18s linear,opacity .18s ease,width 90ms ease;
+  transition: visibility .18s linear,opacity .18s ease,width 90ms ease;
+}
+
+.ManagedGroupsListItem__mutedIcon {
+  margin-left: 5px;
+  color: var(--vkui--color_icon_tertiary);
+}

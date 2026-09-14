@@ -1,0 +1,3 @@
+const loadScript=async(e,t,n)=>{return new Promise((r,o)=>{const c=document.createElement("script");c.addEventListener("load",i);c.addEventListener("readystatechange",i);c.addEventListener("error",s);if(n?.nonce){c.nonce=n.nonce;}if(n?.crossOrigin){c.crossOrigin=n.crossOrigin;}if(n?.async){c.async=n.async;}c.src=e;document.head.appendChild(c);let a;if(t){a=window.setTimeout(s,t);}function i(){if(c.readyState&&c.readyState!=="loaded"&&c.readyState!=="complete"){return}d();r();}function s(){d();o();}function d(){clearTimeout(a);c.removeEventListener("load",i);c.removeEventListener("readystatechange",i);c.removeEventListener("error",s);}})};const hasScript=e=>{return document.head.querySelectorAll(`script[src="${e}"]`).length>0};
+
+export { hasScript, loadScript };

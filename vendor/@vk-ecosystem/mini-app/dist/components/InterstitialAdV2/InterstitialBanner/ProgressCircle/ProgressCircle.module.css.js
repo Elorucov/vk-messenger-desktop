@@ -1,0 +1,5 @@
+import e$2 from './../../../../deps/style-inject/dist/style-inject.es.js';
+
+var e=".ProgressCircle-module_box__dHXQZ{color:var(--vkui--color_text_primary);position:relative}.ProgressCircle-module_box__dHXQZ,.ProgressCircle-module_wrapper__PEu-K{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;justify-content:center}.ProgressCircle-module_wrapper__PEu-K{height:100%;left:0;position:absolute;top:0;width:100%}.ProgressCircle-module_svg__H2q1-{-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg)}.ProgressCircle-module_circle__hJ-R-{fill:transparent;stroke:var(--vkui--color_track_buffer);stroke-linecap:round;stroke-width:2px}";var e$1 = {"box":"ProgressCircle-module_box__dHXQZ","wrapper":"ProgressCircle-module_wrapper__PEu-K","svg":"ProgressCircle-module_svg__H2q1-","circle":"ProgressCircle-module_circle__hJ-R-"};e$2(e);
+
+export { e$1 as default };

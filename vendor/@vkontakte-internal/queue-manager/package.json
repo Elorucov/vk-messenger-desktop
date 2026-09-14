@@ -1,0 +1,12 @@
+{
+  "name": "@vkontakte-internal/queue-manager",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "dependencies": {
+    "@vkontakte/vkjs": "2.0.1",
+    "uuid": "9.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+.keyboard {
+  --active-scale: .95;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+}
+
+.keyboardWide {
+  width: 386px;
+}
+
+.keyboardCompact {
+  width: 272px;
+}
+
+.keyboardRegular {
+  width: 316px;
+}
+
+.keyboardAdaptive,
+.keyboardSmall {
+  width: 100%;
+}
+
+.in {
+  z-index: 1;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  background: var(--vkui--color_background_modal);
+}

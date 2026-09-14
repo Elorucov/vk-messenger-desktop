@@ -1,0 +1,29 @@
+.participantItem :global(.CallPhoto--defaultContainer) {
+  width: 40px;
+  height: 40px;
+}
+
+.contentIcon {
+  color: var(--vkui--color_icon_tertiary);
+}
+
+.contentIcon:hover {
+  color: var(--vkui--color_icon_medium);
+}
+
+.participantItemWithOpacity {
+  opacity: .5;
+}
+
+.avatar {
+  position: relative;
+  margin-right: 12px;
+}
+
+.avatarAdmin {
+  margin-left: 40px;
+}
+
+.itemSpace {
+  width: 30px;
+}

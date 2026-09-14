@@ -1,0 +1,36 @@
+.AttachChannelMessageHeader {
+  grid-template-areas: "avatar date forward-icon" "avatar title forward-icon";
+  grid-template-columns: 36px auto 16px;
+  grid-template-rows: 14px 18px;
+  row-gap: 4px;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+}
+
+.AttachChannelMessageHeader--withoutBubble {
+  grid-template-areas: "icon avatar date" "icon avatar title";
+  grid-template-columns: 10px 36px auto;
+}
+
+.AttachChannelMessageHeader__forward-icon {
+  grid-area: forward-icon;
+}
+
+.AttachChannelMessageHeader__forward-icon--link {
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  padding: 5px 0;
+}
+
+.AttachChannelMessageHeader__avatar {
+  border-radius: 7px;
+}
+
+.PeerTitle--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 99%;
+}

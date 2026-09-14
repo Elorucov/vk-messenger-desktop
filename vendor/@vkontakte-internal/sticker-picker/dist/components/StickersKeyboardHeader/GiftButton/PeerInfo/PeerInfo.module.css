@@ -1,0 +1,13 @@
+.tooltip {
+  height: auto;
+}
+
+.text {
+  margin: -2px;
+}
+
+.icon {
+  border-radius: 50%;
+  color: var(--vkui--color_icon_tertiary);
+  box-shadow: 0 0 0 1px var(--vkui--color_icon_contrast);
+}

@@ -1,0 +1,51 @@
+.ChannelClosed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  border-radius: 14px;
+  background-color: var(--vkui--color_background_content);
+}
+
+.ChannelClosed--themed {
+  background-color: var(--vkui--color_background_content);
+}
+
+.ChannelClosed__info {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ChannelClosed__title {
+  font: 500 20px/24px var(--font);
+  color: var(--vkui--color_text_primary);
+}
+
+.ChannelClosed__description {
+  font: 400 15px/20px var(--font);
+  color: var(--vkui--color_text_secondary);
+  letter-spacing: .1px;
+  white-space: pre-wrap;
+}
+
+.ChannelClosed__button {
+  margin-top: 4px;
+}

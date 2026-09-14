@@ -1,0 +1,20 @@
+{
+  "name": "vkme-common",
+  "version": "6.0.57",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*"
+  },
+  "dependencies": {
+    "@sentry/electron": "4.15.1",
+    "@vkontakte-internal/calls-core": "*",
+    "@vkontakte-internal/messenger": "*",
+    "@vkontakte/calls-sdk": "*",
+    "electron-updater": "6.6.8"
+  },
+  "sideEffects": false
+}

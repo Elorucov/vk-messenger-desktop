@@ -1,0 +1,12 @@
+.root {
+  padding: 8px var(--vkui--size_base_padding_horizontal--regular);
+}
+
+.search {
+  height: var(--vkui--size_search_height--regular);
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+.searchCompact {
+  height: var(--vkui--size_search_height--compact);
+}

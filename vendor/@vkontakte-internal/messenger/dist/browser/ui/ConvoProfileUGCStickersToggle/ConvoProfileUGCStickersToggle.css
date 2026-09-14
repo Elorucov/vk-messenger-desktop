@@ -1,0 +1,8 @@
+.ConvoProfileUGCStickersToggle {
+  font-size: var(--profileInfoDescriptionFontSize);
+  line-height: var(--profileInfoDescriptionLineHeight);
+}
+
+.ConvoProfileUGCStickersToggle__icon {
+  width: 30px;
+}

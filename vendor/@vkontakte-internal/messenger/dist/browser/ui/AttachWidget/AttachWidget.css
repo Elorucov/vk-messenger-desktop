@@ -1,0 +1,31 @@
+.AttachWidgetStub {
+  margin: calc(var(--messageVerticalIndent) - var(--messageAttachmentIndent)) calc(var(--messageHorizontalIndent) - var(--messageAttachmentIndent));
+  color: var(--vkui--color_text_subhead);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ConvoStack .SAKWidget__container {
+  --widget-background-color: var( --vkui--vkontakte_color_im_bubble_incoming_alternate );
+}
+
+.ConvoStack--withoutBubbles .SAKWidget__container {
+  --widget-background-color: var(--vkui--color_background_secondary);
+}
+
+.ConvoStack .SAKWidget__scrollBoxInner {
+  overflow-x: unset;
+  overflow-y: unset;
+  z-index: 0;
+}
+
+.ConvoStack .SAKWidget__scrollBox .vkuiScrollArrow__directionLeft .vkuiScrollArrow__icon {
+  -webkit-transform: scale(.7);
+  transform: scale(.7);
+}
+
+.ConvoStack .SAKWidget__headerImage {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}

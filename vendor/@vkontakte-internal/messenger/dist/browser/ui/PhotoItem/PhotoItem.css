@@ -1,0 +1,106 @@
+.PhotoItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.PhotoItem__blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: var(--thumbhashUrl);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.PhotoItem__nothumbhash {
+  background-image: -webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_icon_tertiary_alpha)),to(var(--vkui--color_icon_tertiary_alpha)));
+  background-image: linear-gradient(var(--vkui--color_icon_tertiary_alpha),var(--vkui--color_icon_tertiary_alpha));
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.PhotoItem__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.PhotoItem__img--loaded {
+  opacity: 1;
+}
+
+.PhotoItem__error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #0000003d;
+}
+
+.PhotoItem__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #0006;
+  border-radius: 100%;
+}
+
+.PhotoItem__spinnerIcon {
+  color: #fff;
+}
+
+.PhotoItem__reload {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--vkui--color_overlay_primary);
+  color: var(--vkui--color_background_contrast);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.PhotoItem__reload:hover,
+.PhotoItem__reload:focus {
+  background-color: var(--vkui--color_overlay_primary--hover);
+}
+
+.PhotoItem__reload:active {
+  background-color: var(--vkui--color_overlay_primary--active);
+}
+
+.PhotoItem__reloadIcon {
+  fill: var(--vkui--color_background_contrast);
+}

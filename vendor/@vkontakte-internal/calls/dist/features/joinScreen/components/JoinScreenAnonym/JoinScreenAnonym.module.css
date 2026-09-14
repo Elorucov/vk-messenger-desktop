@@ -1,0 +1,35 @@
+.root {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.preview {
+  padding: 16px 12px;
+}
+
+.agreement {
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 436px;
+  padding-bottom: 20px;
+}
+
+.form {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+
+.textSeparatorContainer {
+  width: 361px;
+  padding: 0 8px;
+}

@@ -1,0 +1,109 @@
+.StickerEmojiMenuPopper {
+  position: relative;
+}
+
+.StickerEmojiMenuPopper__popup {
+  position: relative;
+  height: 100%;
+}
+
+.StickerEmojiMenuPopper__content {
+  contain: content;
+  border-radius: 8px;
+  -webkit-box-shadow: var(--vkui--elevation3);
+  box-shadow: var(--vkui--elevation3);
+  -webkit-transition: opacity .2s linear,-webkit-transform .2s linear;
+  transition: opacity .2s linear,-webkit-transform .2s linear;
+  transition: opacity .2s linear,transform .2s linear;
+  transition: opacity .2s linear,transform .2s linear,-webkit-transform .2s linear;
+}
+
+.StickerEmojiMenu *,
+.StickerEmojiMenu *:before,
+.StickerEmojiMenu *:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.StickerEmojiMenu img {
+  aspect-ratio: auto;
+  max-width: none;
+}
+
+.StickerEmojiMenu [data-scroll-view] {
+  -webkit-overflow-scrolling: touch;
+}
+
+.StickerEmojiMenuPopper__content--enter {
+  opacity: 0;
+}
+
+.StickerEmojiMenuPopper__content--enter-active,
+.StickerEmojiMenuPopper__content--enter-done {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+.StickerEmojiMenuPopper__content--exit {
+  pointer-events: none;
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+.StickerEmojiMenuPopper__content:not(.StickerEmojiMenuPopper__content--enter-done),
+.StickerEmojiMenuPopper__content--exit-active,
+.StickerEmojiMenuPopper__content--exit-done {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sbarTrack {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .sbarTrack {
+    pointer-events: none;
+  }
+}
+
+.sbarTrackX {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 11px;
+}
+
+.sbarTrackY {
+  top: 0;
+  right: 0;
+  width: 11px;
+  height: 100%;
+}
+
+.sbarTrack:before {
+  content: "";
+  position: absolute;
+}
+
+.sbarTrackY:before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 6px;
+  height: 100%;
+}
+
+.sbarTrackX:before {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 100%;
+}

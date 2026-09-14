@@ -1,0 +1,17 @@
+{
+  "name": "@vkontakte-internal/calls-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@vkontakte-internal/shared": "*",
+    "@vkontakte-internal/vkcom-kit": "*",
+    "@vkontakte-internal/vkjs": "*",
+    "@vkontakte/calls-sdk": "*",
+    "@vkontakte/vkjs": "2.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

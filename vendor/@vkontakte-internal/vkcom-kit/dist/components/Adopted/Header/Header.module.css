@@ -1,0 +1,163 @@
+.tappable {
+  text-decoration: none;
+}
+
+.headerPrimary.headerPrimary {
+  padding-top: 3px;
+  padding-bottom: 1px;
+}
+
+.header :global(.vkuiHeader__after):global(.vkuiHeader__after)>* {
+  margin-top: 13px;
+}
+
+.header :global(.vkuiHeader__after):global(.vkuiHeader__after)>:global(.vkuiIcon--24) {
+  margin-block: 11px 5px;
+}
+
+.header :global(.vkuiHeader__after):global(.vkuiHeader__after)>:global(.vkuiIcon--16) {
+  margin-block: 15px 9px;
+}
+
+.header :global(.vkuiHeader__indicator) {
+  margin-left: 6px;
+}
+
+.headerPrimary.headerPrimary :global(.vkuiHeader__indicator) {
+  color: var(--vkui--color_text_subhead);
+}
+
+.headerSecondary.headerSecondary :global(.vkuiHeader__indicator) {
+  margin-left: 8px;
+}
+
+.headerPrimary.headerPrimary :global(.vkuiHeader__subtitleWrapper) {
+  margin-bottom: 6px;
+}
+
+.headerSecondary:not(:global(.vkuiHeader__pi)):not(.withSubtitle) :global(.vkuiHeader__main),
+.headerTertiary.headerTertiary :global(.vkuiHeader__main) {
+  color: var(--vkui--color_text_secondary);
+}
+
+.headerSecondary :global(.vkuiHeader__contentIn) {
+  color: inherit;
+}
+
+.headerSecondary .content {
+  text-transform: uppercase;
+}
+
+.headerTertiary.headerTertiary :global(.vkuiHeader__content) {
+  margin-top: 15px;
+}
+
+.headerTertiary.headerTertiary :global(.vkuiHeader__content):last-child {
+  margin-bottom: 9px;
+}
+
+.headerLarge.headerLarge :global(.vkuiHeader__content) {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.headerLarge.headerLarge.headerLarge :global(.vkuiHeader__content):global(.vkuiTitle__level2) {
+  font-weight: var(--vkui--font_weight_base2);
+}
+
+.headerPrimary.headerSmall :global(.vkuiHeader__subtitle):global(.vkuiCaption__level1),
+.headerSecondary.headerSmall :global(.vkuiHeader__subtitle):global(.vkuiCaption__level1),
+.headerSecondary.headerLarge :global(.vkuiHeader__subtitle):global(.vkuiCaption__level1),
+.headerTertiary.headerTertiary :global(.vkuiHeader__subtitle):global(.vkuiCaption__level1) {
+  font-size: var(--vkui--font_subhead--font_size--regular);
+  line-height: var(--vkui--font_subhead--line_height--regular);
+  font-weight: var(--vkui--font_subhead--font_weight--regular);
+}
+
+:global(.vkuiInternalGroup--mode-card)>.header:not(.headerTertiary):first-child,
+:global(.vkuiInternalGroup--mode-card)>:global(.vkuiInternalTappable):first-child>.header:not(.headerTertiary) {
+  margin-top: -4px;
+}
+
+@media (min-width: 768px) {
+  :global(.vkuiInternalGroup--sizeX-none)>.header:not(.headerTertiary):first-child,
+  :global(.vkuiInternalGroup--sizeX-none)>:global(.vkuiInternalTappable):first-child>.header:not(.headerTertiary) {
+    margin-top: -4px;
+  }
+}
+
+:global(.vkuiInternalHeaderLayout) .header.header :global(.vkuiHeader__content) {
+  align-items: center;
+  margin-top: var(--vkit_internal--header_margin_top, 0);
+  margin-bottom: var(--vkit_internal--header_margin_bottom, 0);
+}
+
+:global(.vkuiInternalHeaderLayout) .header.header :global(.vkuiHeader__after)>* {
+  margin-top: var(--vkit_internal--header_margin_top, 0);
+  margin-bottom: var(--vkit_internal--header_margin_bottom, 0);
+}
+
+.header.header :global(.vkuiHeader__main) {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.headerPrimary.headerMedium {
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+.headerMedium :global(.vkuiHeader__contentIn) {
+  font-size: var(--vkui--font_title3--font_size--regular);
+  line-height: var(--vkui--font_title3--line_height--regular);
+  font-weight: var(--vkui--font_title3--font_weight--regular);
+}
+
+.headerMedium.headerMedium :global(.vkuiHeader__content) {
+  margin-top: 13px;
+}
+
+.headerMedium :global(.vkuiHeader__content):last-child {
+  margin-bottom: 9px;
+}
+
+.headerMedium :global(.vkuiHeader__indicator),
+.headerLarge :global(.vkuiHeader__indicator) {
+  font-size: var(--vkui--font_headline1--font_size--compact);
+  line-height: var(--vkui--font_headline1--line_height--compact);
+  font-weight: var(--vkui--font_weight_accent3);
+}
+
+.header :global(.vkuiHeader__contentIn) {
+  display: flex;
+  align-items: center;
+}
+
+.headerPrimary.headerLarge .content,
+.headerPrimary.headerMedium .content {
+  font-family: var(--vk-sans-display, inherit);
+}
+
+.separator {
+  padding-top: 4px;
+}
+
+.headerNoStretched {
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.before {
+  margin-right: 8px;
+}
+
+.content {
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.subtitle {
+  text-transform: none;
+  color: var(--vkui--color_text_secondary);
+}

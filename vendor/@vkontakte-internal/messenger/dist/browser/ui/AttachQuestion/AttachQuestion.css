@@ -1,0 +1,87 @@
+.AttachQuestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 8px 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 1px;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  border-radius: 2px;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  background: var(--vkui--color_background_tertiary);
+}
+
+.AttachQuestion--outbox {
+  background: var(--vkui--color_background_tertiary_alpha);
+}
+
+.AttachQuestion--topRounded {
+  border-radius: 12px 12px 2px 2px;
+}
+
+.AttachQuestion--rounded {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+}
+
+.AttachQuestion__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.AttachQuestion__icon {
+  color: var(--vkui--color_text_accent);
+  margin-right: 6px;
+}
+
+.AttachQuestion__link {
+  color: var(--vkui--color_text_accent);
+  text-decoration: none;
+}
+
+.AttachQuestion__content {
+  color: var(--vkui--color_text_primary);
+}
+
+.AttachChannelMessage__badge {
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.AttachChannelMessage--fitMediaAttachesWidth {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.AttachChannelMessage__donatePlaceholder {
+  margin-top: 6px;
+}
+
+.AttachChannelMessage__donateMetaInfo {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

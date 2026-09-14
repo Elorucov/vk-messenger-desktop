@@ -1,0 +1,361 @@
+.SearchMessageTab__SearchMessageResult {
+  scroll-margin-top: var(--date_separator_height);
+}
+
+.SearchMessageTab--hiddenLeft,
+.SearchMessageTab--hiddenRight {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.SearchMessageTab--hiddenLeft {
+  -webkit-transform: translateX(-100%);
+  transform: translate(-100%);
+}
+
+.SearchMessageTab--hiddenRight {
+  -webkit-transform: translateX(100%);
+  transform: translate(100%);
+}
+
+.SearchMessageTab__sectionHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: var(--vkui--size_base_padding_horizontal--regular,12px) calc(var(--vkui--size_base_padding_horizontal--regular, 12px) + var(--vkui--spacing_size_m, 8px)) 9px;
+}
+
+.SearchMessageTab__sectionHeaderText {
+  text-transform: uppercase;
+  color: var(--vkui--color_text_secondary);
+  font: 600 12px/14px var(--font);
+  letter-spacing: .005em;
+}
+
+.SearchMessageTab__loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.SearchMessageTab__contentSpinner {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0;
+}
+
+.SearchMessageTab__scrollbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.SearchMessageTab__separatorDate {
+  font: 600 12px/14px var(--font);
+  padding: 11px var(--vkui--size_base_padding_horizontal--regular,12px) 7px;
+  position: sticky;
+  color: var(--vkui--color_text_secondary);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: var(--vkui--color_background_content);
+  letter-spacing: .005em;
+  text-transform: uppercase;
+}
+
+.SearchMessageTab__recentSelectedClear:hover {
+  text-decoration: underline;
+}
+
+.SearchMessageTab__recentSelectedClear {
+  border: 0;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: var(--vkui--color_text_link);
+  cursor: pointer;
+  font: 400 14px/18px var(--font);
+}
+
+.SearchMessageTab__SearchRequest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--vkui--color_icon_secondary);
+  padding: 10px var(--vkui--size_base_padding_horizontal--regular,12px);
+  margin: 2px 0;
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  gap: 8px;
+  font: var(--searchMessageFontSize) /18px var(--font);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.SearchMessageTab__SearchRequest:hover,
+.SearchMessageTab__SearchRequest:focus,
+.SearchMessageTab__SearchRequest--selected {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.SearchMessageTab__SearchRequestText {
+  width: 100%;
+  color: var(--vkui--color_text_primary);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  padding-left: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.SearchMessageTab__SearchRequestDelete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  border: 0;
+  padding: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: transparent;
+  color: var(--vkui--color_text_secondary);
+  opacity: 0;
+  -webkit-transition: opacity .2s ease,visibility .2s ease;
+  transition: opacity .2s ease,visibility .2s ease;
+  cursor: pointer;
+}
+
+.SearchMessageTab__SearchRequest:hover .SearchMessageTab__SearchRequestDelete {
+  opacity: .72;
+  visibility: visible;
+}
+
+.SearchMessageTab__SearchRequest:hover .SearchMessageTab__SearchRequestDelete:hover {
+  opacity: 1;
+}
+
+.SearchMessageResult {
+  position: relative;
+  display: grid;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  grid-template-areas: "avatar header" "avatar message";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  padding: var(--vkui--spacing_size_m,8px) var(--vkui--size_base_padding_horizontal--regular,12px);
+  margin: 2px 0;
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  isolation: isolate;
+}
+
+.SearchMessageResult:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity .16s ease;
+  transition: opacity .16s ease;
+  background: var(--vkui--color_transparent--hover);
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+}
+
+.SearchMessageResult:hover:before,
+.SearchMessageResult:focus:before,
+.SearchMessageResult--selected:before {
+  opacity: 1;
+}
+
+.SearchMessageResult__avatar {
+  grid-area: avatar;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.SearchMessageResult__header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font: 500 var(--convoListItemHeaderFontSize) /18px var(--font);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.SearchMessageResult__titleWithIcon {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.SearchMessageResult__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.SearchMessageResult__date {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font: 12px/14px var(--font);
+  color: var(--vkui--color_text_tertiary);
+  margin-left: 8px;
+}
+
+.SearchMessageResult__message {
+  grid-area: message;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--vkui--color_text_primary);
+  font: 400 var(--searchMessageFontSize) /18px var(--font);
+}
+
+.SearchMessageResult__picture {
+  margin-left: 4px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.SearchMessageResult__pictureImg {
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+}
+
+.SearchMessageResult__author {
+  color: var(--vkui--color_text_tertiary);
+}
+
+.SearchMessageResult__preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.SearchMessageResult__text {
+  position: relative;
+  padding-right: .5ch;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.SearchMessageResult__normalPreview,
+.SearchMessageResult__replyPreview,
+.SearchMessageResult__forwardedPreview {
+  white-space: normal;
+}
+
+.SearchMessageResult__textWithLine {
+  padding-left: 10px;
+  margin: 2px 0 6px;
+}
+
+.SearchMessageResult__replyPreview:before,
+.SearchMessageResult__forwardedPreview:before {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+  content: "";
+}
+
+.SearchMessageResult__replyPreview:before {
+  background: var(--vkui--vkontakte_im_reply_separator);
+}
+
+.SearchMessageResult__forwardedPreview:before {
+  background-color: var(--vkui--vkontakte_color_im_forward_line_alpha);
+}
+
+.SearchMessageResult__text+.SearchMessageResult__attachPreview {
+  padding-top: 4px;
+}
+
+.SearchMessageResult__attachPreview {
+  color: var(--vkui--color_text_link);
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.SearchMessageResult__icon {
+  margin-left: 5px;
+}

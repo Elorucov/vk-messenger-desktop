@@ -1,0 +1,62 @@
+.group {
+  background: var(--vkui--color_background_content);
+  border-radius: var(--vkui--size_border_radius_paper--regular);
+  position: relative;
+  padding: var(--group-padding, 8px);
+  margin-bottom: var(--vkit_internal--group_layout_spacing, 16px);
+}
+
+.group:last-child {
+  margin-top: 0;
+}
+
+.groupPaddingS {
+  --group-padding: 4px;
+}
+
+.groupPaddingNone {
+  --group-padding: 0px;
+}
+
+.groupSticked {
+  margin-bottom: var(--group-layout-sticked-spacing, 2px);
+}
+
+.groupSticked:not(:first-child) {
+  border-top-left-radius: var(--group-layout-sticked-radius, 8px);
+  border-top-right-radius: var(--group-layout-sticked-radius, 8px);
+}
+
+.groupSticked:not(:last-child) {
+  border-bottom-left-radius: var(--group-layout-sticked-radius, 8px);
+  border-bottom-right-radius: var(--group-layout-sticked-radius, 8px);
+}
+
+.groupNoTopRounded {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.groupNoBottomRounded {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.groupStretched {
+  min-height: 100%;
+}
+
+.groupSticked:last-child {
+  margin-bottom: var(--vkit_internal--group_layout_spacing, 16px);
+}
+
+.group>:global(.vkuiTappable__host) {
+  border-radius: inherit;
+}
+
+.group .description {
+  display: block;
+  padding: 4px 16px 16px;
+  color: var(--vkui--color_text_secondary);
+}

@@ -1,0 +1,8 @@
+.wrapper {
+  pointer-events: unset;
+}
+
+.wrapperClickable {
+  pointer-events: auto;
+  cursor: pointer;
+}

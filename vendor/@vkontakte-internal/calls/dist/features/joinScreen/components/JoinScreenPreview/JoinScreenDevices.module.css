@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  column-gap: 8px;
+  right: 12px;
+}
+
+.noProfileData {
+  left: unset;
+}

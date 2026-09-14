@@ -1,0 +1,20 @@
+.modal :global(.CallsModalBody) {
+  padding: 0;
+}
+
+.modal :global(.BaseModal__content) {
+  width: 601px;
+}
+
+.roomCountContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controlsContainer {
+  margin: 16px 12px;
+}
+
+.roomCountInput {
+  flex-basis: 156px;
+}

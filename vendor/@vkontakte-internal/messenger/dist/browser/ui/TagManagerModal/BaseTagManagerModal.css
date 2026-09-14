@@ -1,0 +1,48 @@
+.BaseTagManagerModal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 420px;
+}
+
+.BaseTagManagerModal__listWrapper {
+  max-height: 380px;
+}
+
+.BaseTagManagerModal__list {
+  padding: 24px 24px 0;
+}
+
+.BaseTagManagerModal__addWrapper {
+  padding: 12px 24px 24px;
+}
+
+.BaseTagManagerModal__addWrapper--alone {
+  padding-top: 0;
+}
+
+.BaseTagManagerModal__limitPlaceholder {
+  padding: 5px 0;
+}
+
+.RE_ModalBody--fullScreen .BaseTagManagerModal__content {
+  height: 100%;
+  width: inherit;
+}
+
+.RE_ModalBody--fullScreen .BaseTagManagerModal__listWrapper {
+  max-height: inherit;
+}
+
+.TagRemoveConfirmModal__content {
+  width: 370px;
+}
+
+.RE_ModalBody--fullScreen .TagRemoveConfirmModal__content {
+  height: 100%;
+  width: inherit;
+}

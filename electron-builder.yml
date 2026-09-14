@@ -1,0 +1,52 @@
+appId: com.vk.medesktop
+productName: VK Мессенджер
+copyright: VK
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - package.json
+  - packages/main/dist/**
+  - packages/preload/dist/**
+  - packages/renderer/dist/**
+  - packages/fonts/**
+  - packages/active-win/**
+
+asar: true
+
+protocols:
+  - name: VK
+    schemes:
+      - vk
+
+publish:
+  provider: generic
+  url: ${env.VITE_APP_UPDATE_URL}
+
+win:
+  target:
+    - nsis
+  artifactName: ${productName}-${version}-${arch}.${ext}
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+
+mac:
+  category: public.app-category.social-networking
+  target:
+    - dmg
+  hardenedRuntime: true
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+
+linux:
+  category: Network;InstantMessaging
+  desktop:
+    Name: VK Мессенджер
+  target:
+    - AppImage
+    - deb

@@ -1,0 +1,8 @@
+{
+  "name": "@vkontakte/calls-vmoji",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./vmoji.esm.js",
+  "module": "./vmoji.esm.js"
+}

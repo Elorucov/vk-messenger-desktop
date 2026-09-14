@@ -1,0 +1,142 @@
+.ImportantMessagesList {
+  position: relative;
+  width: 100%;
+  background-color: var(--vkui--color_background);
+  padding: 10px 45px 25px 25px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.ImportantMessagesList .ConvoStack {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.ImportantMessagesList__modal {
+  width: 680px;
+  border-radius: 8px;
+}
+
+.ImportantMessagesList__flowStack {
+  position: relative;
+  contain: style layout;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  max-width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.ImportantMessagesList__flowStack+.ImportantMessagesList__flowStack {
+  margin-top: var(--messageVerticalIndent);
+}
+
+.ImportantMessagesList__flowStack .ConvoMessageBottomInfo__importantIcon {
+  display: none;
+}
+
+.ImportantMessagesList__flowStack .ConvoStack__content {
+  overflow: hidden;
+  width: auto;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.ImportantMessagesList__flowStack:not(.ImportantMessagesList__flowStackRefactored) .ConvoMessage {
+  width: 100%;
+}
+
+.ImportantMessagesList__flowStack:hover .ImportantMessagesList__importantButton {
+  opacity: 1;
+}
+
+.ImportantMessagesList__importantButton {
+  position: absolute;
+  bottom: 0;
+  border-radius: 14px;
+  -webkit-box-shadow: 0 0 2px var(--vkui--color_transparent--active),0 8px 24px var(--vkui--color_transparent--active);
+  box-shadow: 0 0 2px var(--vkui--color_transparent--active),0 8px 24px var(--vkui--color_transparent--active);
+  border: .5px solid var(--vkui--color_transparent--active);
+  right: var(--important-button-absolute-right-margin,-22px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 6px;
+  outline: none;
+  color: var(--vkui--color_background_accent_themed);
+  background: var(--vkui--color_background_content);
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity .18s ease,-webkit-box-shadow .18s ease;
+  transition: opacity .18s ease,-webkit-box-shadow .18s ease;
+  transition: opacity .18s ease,box-shadow .18s ease;
+  transition: opacity .18s ease,box-shadow .18s ease,-webkit-box-shadow .18s ease;
+}
+
+.ImportantMessagesList__importantButton--inactive {
+  color: var(--vkui--color_icon_secondary);
+  opacity: 1;
+}
+
+.ImportantMessagesList__loaderWrapper {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ImportantMessagesList__loader {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.ImportantMessagesList_emptyWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 326px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 25px;
+  font: 13px/16px var(--font);
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+  letter-spacing: -.078px;
+  gap: 8px;
+}
+
+.ImportantMessagesList__markActionTooltip {
+  white-space: nowrap;
+}

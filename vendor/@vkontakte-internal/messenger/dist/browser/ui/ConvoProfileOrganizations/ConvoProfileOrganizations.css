@@ -1,0 +1,30 @@
+.ConvoProfileOrganizations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.ConvoProfileOrganizations__actions {
+  margin: 16px 16px 0;
+}
+
+.ConvoProfileOrganizations__empty {
+  margin: 6px 0;
+}
+
+.ConvoProfileOrganizations__emptyImage {
+  background-color: var(--vkui--color_background_negative_tint);
+  color: var(--vkui--color_icon_negative);
+}
+
+.ConvoProfileOrganizations__emptyBadge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+}

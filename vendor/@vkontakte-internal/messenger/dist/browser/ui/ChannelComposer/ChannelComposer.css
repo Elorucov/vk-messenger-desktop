@@ -1,0 +1,303 @@
+.ChannelComposer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: var(--composerBackgroundColor);
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.08);
+  box-shadow: 0 0 2px #00000014,0 4px 16px #00000014;
+  border-radius: var(--channelComposerBorderRadius);
+  --channelComposerBorderRadius: 12px;
+  --channelComposerPadding: 12px;
+}
+
+.ChannelComposer__main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 10px var(--channelComposerPadding);
+  border-radius: var(--channelComposerBorderRadius) var(--channelComposerBorderRadius) 0 0;
+}
+
+.ChannelComposer__attaches {
+  border-bottom: 1px solid var(--vkui--color_separator_primary);
+}
+
+.ChannelComposer__inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.ChannelComposer__inputPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ChannelComposer__stickerEmojiMenuPopper {
+  height: 480px;
+  width: 388px;
+}
+
+.ChannelComposer__actionsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.ChannelComposer__inputWrapper {
+  margin: 0 12px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.ChannelComposer__input.ChannelComposer__input.ChannelComposer__input {
+  min-height: calc(1 * var(--messageLineHeight));
+  max-height: calc(12 * var(--messageLineHeight));
+  letter-spacing: -.007em;
+}
+
+.ChannelComposer__input:focus,
+.ChannelComposer__input:focus-within,
+.ChannelComposer__input:focus-visible {
+  outline: none;
+}
+
+.ChannelComposer__fileInput {
+  display: none;
+}
+
+.ChannelComposer__donutsActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  gap: 6px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 8px 0 0;
+}
+
+.ChannelComposer__donutsActions:hover {
+  border-radius: 6px;
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+.ChannelComposer__donutsActions .ActionsMenuAction__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ChannelComposer__donutsActions button,
+.ChannelComposer__donutsActions:hover button,
+.ChannelComposer__donutsActions:hover button:hover {
+  background-color: transparent;
+  border-radius: unset;
+}
+
+.ChannelComposer__settingsSelect button .vkuiTappable__ripple,
+.ChannelComposer__donutsActions button .vkuiTappable__ripple {
+  display: none;
+}
+
+.ChannelComposer__postVisibilitySelector {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  gap: 8px;
+}
+
+.ChannelComposer__postVisibilitySelector>.ActionsMenuAction {
+  background-color: unset;
+}
+
+.ChannelComposer__postVisibilitySelector>.ActionsMenuAction,
+.ChannelComposer__postVisibilitySelector>.DropdownReforged {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.ChannelComposer__postVisibilitySelector--disabled .ActionsMenuAction__icon svg.vkuiIcon {
+  cursor: not-allowed;
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+.ChannelComposer__scrollableOptions {
+  max-height: max(72px,calc(100vh - 175px));
+  overflow-y: scroll;
+}
+
+.ChannelComposer__calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ChannelComposer__button {
+  --size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--vkui--color_icon_medium);
+  cursor: pointer;
+  opacity: .72;
+  height: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+}
+
+.ChannelComposer__settingsSelect {
+  max-width: 330px;
+  width: 330px;
+  margin-bottom: 18px;
+}
+
+.ChannelComposer__attachesSelect {
+  margin-bottom: 16px;
+  width: 150px;
+  margin-left: -12px;
+}
+
+.ChannelComposer__button:hover {
+  opacity: 1;
+}
+
+.ChannelComposer__button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.ChannelComposer__buttonIcon {
+  --size: 24px;
+  --offset: calc((100% - var(--size)) / 2);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: var(--size);
+  top: var(--offset);
+  bottom: var(--offset);
+  left: 0;
+  right: 0;
+}
+
+.ChannelComposer__buttonIcon--submit,
+.ChannelComposer__buttonIcon--loading {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s,-webkit-transform .2s;
+}
+
+.ChannelComposer__button--submit .ChannelComposer__buttonIcon--submit,
+.ChannelComposer__button--loading .ChannelComposer__buttonIcon--loading {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.ChannelComposer__button--submitActive {
+  color: var(--vkui--color_icon_accent);
+}
+
+.ChannelComposer__scrollableOptions {
+  width: 142px;
+}
+
+.ChannelComposer__postponedActionTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+
+.ChannelComposer__postponedActionTitleButton {
+  color: var(--vkui--color_accent_blue);
+}
+
+.ChannelComposer__postponedActionCloseIcon,
+.ChannelComposer__postponedActionCloseIcon:hover {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.ChannelComposerPushHint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 12px;
+}
+
+.ChannelComposerPushHint__text {
+  font-size: 13px;
+  line-height: 16px;
+  margin-left: 6px;
+}

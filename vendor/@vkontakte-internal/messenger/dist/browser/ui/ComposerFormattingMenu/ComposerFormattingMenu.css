@@ -1,0 +1,183 @@
+.ComposerFormattingMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  -webkit-transform: translate(-32px,-41px);
+  transform: translate(-32px,-41px);
+}
+
+.ComposerFormattingMenu__panel {
+  height: 36px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-gap: 6px;
+  border-radius: 8px;
+  border: .5px solid var(--vkui--color_image_border_alpha);
+  background: var(--vkui--color_background_modal);
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,.08),0px 4px 16px 0px rgba(0,0,0,.08);
+  box-shadow: 0 0 2px #00000014,0 4px 16px #00000014;
+  overflow: hidden;
+  -webkit-transition: visibility .1s ease-in;
+  transition: visibility .1s ease-in;
+}
+
+.ComposerFormattingMenu__linkPreview {
+  border: none;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 4px;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.ComposerFormattingMenu__linkPreview:hover {
+  background: var(--vkui--color_background_secondary--hover);
+  cursor: pointer;
+}
+
+.ComposerFormattingMenu__linkPreviewIcon {
+  color: var(--vkui--color_icon_accent_themed);
+}
+
+.ComposerFormattingMenu__linkPreview:hover .ComposerFormattingMenu__linkPreviewIcon {
+  color: var(--vkui--vkontakte_color_icon_outline_medium);
+}
+
+.ComposerFormattingMenu__linkPreviewText {
+  color: var(--vkui--color_text_secondary);
+  font-size: 12px;
+  line-height: 14px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  .ComposerFormattingMenu__linkPreviewText {
+    max-width: 100px;
+  }
+}
+
+.ComposerFormattingMenu__linkInputPanel {
+  width: 250px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.ComposerFormattingMenu__linkBackButton {
+  color: var(--vkui--color_icon_medium);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ComposerFormattingMenu__linkClearButton {
+  color: var(--vkui--color_icon_secondary);
+  background: transparent;
+  border: none;
+  padding: 10px 6px 10px 10px;
+  cursor: pointer;
+}
+
+.ComposerFormattingMenu__linkSubmitPanel {
+  padding: 0;
+  width: 44px;
+}
+
+.ComposerFormattingMenu__linkSubmitButton {
+  width: 100%;
+  height: 100%;
+}
+
+.ComposerFormattingMenu__linkSubmitPanel.ComposerFormattingMenu__panel {
+  border: none;
+}
+
+.ComposerFormattingMenu__linkInput {
+  color: var(--vkui--color_text_primary);
+  -webkit-font-feature-settings: "clig" off,"liga" off;
+  font-feature-settings: "clig" off,"liga" off;
+  font-family: var(--font);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  border: none;
+  outline: none;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.ComposerFormattingMenu__linkInput::-webkit-input-placeholder {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ComposerFormattingMenu__linkInput::-moz-placeholder {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ComposerFormattingMenu__linkInput:-ms-input-placeholder {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ComposerFormattingMenu__linkInput::-ms-input-placeholder {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ComposerFormattingMenu__linkInput::placeholder {
+  color: var(--vkui--color_text_secondary);
+}
+
+.ComposerFormattingMenu__panel--hidden {
+  visibility: hidden;
+}
+
+.ComposerFormattingMenu__button {
+  background-color: transparent;
+  border: none;
+  color: var(--vkui--vkontakte_color_icon_outline_medium);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.ComposerFormattingMenu__button--active {
+  background: var(--vkui--color_background_accent);
+  color: var(--vkui--color_icon_contrast);
+}
+
+.ComposerFormattingMenu__button:hover {
+  cursor: pointer;
+}
+
+.ComposerFormattingMenu__button:hover:not(.ComposerFormattingMenu__button--active) {
+  background: var(--vkui--color_background_secondary--hover);
+}
+
+.ComposerFormattingMenu--pointerNone {
+  pointer-events: none;
+}

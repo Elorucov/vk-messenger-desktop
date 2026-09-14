@@ -1,0 +1,178 @@
+.PrivateMessageInvite {
+  width: 560px;
+  padding: 8px 12px;
+  max-width: 100%;
+  max-height: 412px;
+  overflow: auto;
+}
+
+.PrivateMessageInvite__text {
+  font-size: 13px;
+  line-height: 16px;
+  padding: 12px;
+  margin: 0;
+}
+
+.PrivateMessageInvite__list {
+  margin: 0;
+  padding: 0;
+}
+
+.PrivateMessageInviteItem {
+  list-style-type: none;
+}
+
+.PrivateMessageInviteItem--cantWrite {
+  opacity: .64;
+}
+
+.PrivateMessageInviteItem__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.PrivateMessageInviteItem:not(.PrivateMessageInviteItem--cantWrite):hover .PrivateMessageInviteItem__wrapper,
+.PrivateMessageInvite__list:focus .PrivateMessageInviteItem[aria-selected=true] .PrivateMessageInviteItem__wrapper {
+  background-color: var(--vkui--color_transparent--hover);
+  cursor: pointer;
+}
+
+.PrivateMessageInviteItem__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.PrivateMessageInviteItem__control {
+  display: none;
+}
+
+.PrivateMessageInviteItem__title {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.PrivateMessageInviteItem__subtitle {
+  color: var(--vkui--color_text_secondary);
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 2px;
+}
+
+.PrivateMessageInviteItem__before {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.PrivateMessageInviteItem__after {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.PrivateMessageInvite__counter {
+  background-color: var(--vkui--color_background_content);
+  color: var(--vkui--color_text_accent_themed);
+  font-size: 12px;
+  border-radius: 12px;
+  padding: 2px 3px;
+  min-width: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.AnimatedCounter {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  white-space: pre;
+  overflow: hidden;
+  --animatedCounterRotationMultiplier: 1;
+}
+
+.AnimatedCounter--down {
+  --animatedCounterRotationMultiplier: -1;
+}
+
+.AnimatedCounter__digit {
+  visibility: hidden;
+}
+
+.AnimatedCounter__digitWrapper {
+  position: relative;
+}
+
+.AnimatedCounter__prevDigit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: .2s linear rotatePrev forwards;
+  animation: .2s linear rotatePrev forwards;
+}
+
+.AnimatedCounter__nextDigit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-animation: .2s linear rotateNext forwards;
+  animation: .2s linear rotateNext forwards;
+}
+
+@-webkit-keyframes rotatePrev {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(calc(var(--animatedCounterRotationMultiplier) * 100%));
+    transform: translateY(calc(var(--animatedCounterRotationMultiplier) * 100%));
+  }
+}
+
+@keyframes rotatePrev {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(calc(var(--animatedCounterRotationMultiplier) * 100%));
+    transform: translateY(calc(var(--animatedCounterRotationMultiplier) * 100%));
+  }
+}
+
+@-webkit-keyframes rotateNext {
+  0% {
+    -webkit-transform: translateY(calc(var(--animatedCounterRotationMultiplier) * -100%));
+    transform: translateY(calc(var(--animatedCounterRotationMultiplier) * -100%));
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateNext {
+  0% {
+    -webkit-transform: translateY(calc(var(--animatedCounterRotationMultiplier) * -100%));
+    transform: translateY(calc(var(--animatedCounterRotationMultiplier) * -100%));
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

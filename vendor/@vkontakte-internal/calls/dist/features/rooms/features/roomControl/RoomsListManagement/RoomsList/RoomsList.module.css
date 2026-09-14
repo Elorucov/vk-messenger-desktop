@@ -1,0 +1,25 @@
+.root {
+  min-height: 400px;
+  max-height: 465px;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-right: var(--vkui--size_border--regular) solid var(--vkui--color_separator_primary);
+}
+
+.root::-webkit-scrollbar {
+  display: none;
+}
+
+.roomCreate {
+  padding: 0 12px;
+}
+
+.searchWrapper {
+  padding: 8px 12px 0;
+}
+
+.roomsList {
+  padding: 8px 12px;
+}

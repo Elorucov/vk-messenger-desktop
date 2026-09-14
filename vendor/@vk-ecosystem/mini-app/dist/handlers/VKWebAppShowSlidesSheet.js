@@ -1,0 +1,7 @@
+import { CommonErrorReasons, ERROR_CODES } from '../constants/errors.js';
+import { MiniAppEvents } from '../constants/events.js';
+import l$1 from './VKWebAppHandlerBase.js';
+
+class o extends l$1{constructor(...t){super(...t),this.handlerName=MiniAppEvents.ShowSlidesSheet,this.handle=e=>{return new Promise((r,t)=>{const o=e=>r({result:true,action:"reject",slide_index:e});const i=()=>r({result:true,action:"confirm"});const a=()=>r({result:true,action:"cancel"});this.parseHandlerParams(e).then(e=>this.controller.modalRequest&&this.controller.modalRequest({type:"SlidesSheetModal",data:e,handlerName:MiniAppEvents.ShowSlidesSheet,actions:{onDeny:o,onConfirm:i,onClose:a}})).catch(t);}).then(this.handleSuccess).catch(this.handleFailed)},this.parseHandlerParams=s=>{if(!s.slides){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("slides")})}if(!Array.isArray(s.slides)){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("slides","array")})}if(!s.slides.length||s.slides.length>10){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS})}const t=s.slides.some(e=>!e.title||!e.subtitle||!e.media.blob||e.media.type!=="image");if(t){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingOrWrongTypeParam()})}return Promise.resolve(s)};}}
+
+export { o as default };

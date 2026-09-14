@@ -1,0 +1,10 @@
+.blinkText {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_l) ease;
+  user-select: none;
+}
+
+.blinkTextShown {
+  opacity: 1;
+}

@@ -1,0 +1,22 @@
+.ComposerAttachPreviewMeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #0006;
+  border-radius: 6px;
+  color: var(--vkui--color_text_contrast);
+  font: 11px/14px var(--font);
+  padding: 3px 6px;
+  position: absolute;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.ComposerAttachPreviewMeta--rounded {
+  border-radius: 10px;
+}

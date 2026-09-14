@@ -1,0 +1,280 @@
+.ConvoProfileName__nameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.ConvoProfileName__name,
+.ConvoProfileName__name .ConvoProfileName__link {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ConvoProfileName__longName,
+.ConvoProfileName__longName .ConvoProfileName__link {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 22px;
+  word-break: break-word;
+}
+
+.ConvoProfileName__status {
+  margin-left: 6px;
+}
+
+.ConvoProfileName__peerVerifiedIcon {
+  color: var(--vkui--color_icon_accent);
+  margin-left: 5px;
+}
+
+.ConvoProfileName__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ConvoProfileName__badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  height: 26px;
+  line-height: 24px;
+  font-size: 13px;
+  color: var(--vkui--color_accent_orange);
+  border-radius: 13px;
+  background: var(--vkui--color_background_content);
+  border: solid var(--vkui--color_separator_primary) 1px;
+  white-space: nowrap;
+  grid-column-gap: 2px;
+}
+
+.ConvoProfileName__badge--casper {
+  color: var(--vkui--color_accent_purple);
+}
+
+.ConvoProfileName__badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.ConvoProfileName__anchor {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ConvoProfileName__user--description {
+  text-align: center;
+}
+
+.ConvoProfileName__avatarWrapper--clickable {
+  cursor: pointer;
+}
+
+.ConvoProfileName__rolesIcon {
+  display: inline;
+  color: var(--vkui--color_icon_medium);
+  vertical-align: text-bottom;
+}
+
+.ConvoProfileName__rolesIconContainer {
+  width: 20px;
+  display: inline-block;
+}
+
+.ConvoProfileName__noRole {
+  color: var(--vkui--color_text_negative);
+}
+
+.ConvoProfileName__onlineStatus {
+  white-space: nowrap;
+}
+
+.ConvoProfileName__link {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ConvoProfileScheduleStatus__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoProfileScheduleStatus__content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 6px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 5px 12px;
+  background-color: #9985ff1a;
+  border-radius: 10px;
+  border: 1px solid var(--vkui--color_accent_purple);
+  color: var(--vkui--color_accent_purple);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -.15px;
+}
+
+.ConvoProfileScheduleStatus__icon svg {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.ConvoProfileTabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  isolation: isolate;
+}
+
+.ConvoProfileTabs__tabCount {
+  font: 13px/20px var(--font);
+  color: var(--vkui--color_text_tertiary);
+}
+
+.ConvoProfileTabs__tabs {
+  position: sticky;
+  top: 56px;
+  background-color: var(--vkui--color_background_content);
+  z-index: 2;
+  padding: 5px 16px 0 4px;
+  margin-top: -5px;
+}
+
+.ConvoProfileTabs__tab:first-child {
+  margin-left: 0;
+}
+
+.ConvoProfileTabs__tabContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.ConvoProfileAttachments {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-height: 50px;
+}
+
+.ConvoProfileAttachments__loader {
+  padding: 20px 0;
+}
+
+.ConvoProfileAttachments__loader--empty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%) translateY(-50%);
+  padding: 0;
+}
+
+.ConvoProfileAttachments__empty {
+  padding: 52px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ConvoProfileAttachments__emptyText {
+  margin-top: 12px;
+  color: var(--vkui--color_text_secondary);
+  font: 400 14px/18px var(--font);
+}
+
+.ConvoProfileAttachments__action {
+  background: none;
+  position: relative;
+  border: none;
+  color: var(--vkui--color_icon_tertiary);
+  cursor: pointer;
+}
+
+.ConvoProfileAttachments__actionTapArea {
+  position: absolute;
+  inset: -6px;
+}

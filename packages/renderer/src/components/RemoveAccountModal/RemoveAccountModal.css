@@ -1,0 +1,28 @@
+.RemoveAccountModal {
+  width: 420px;
+}
+
+.RemoveAccountModal__spinner {
+  padding: 32px 0;
+}
+
+.RemoveAccountModal__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+}
+
+.RemoveAccountModal__header {
+  font: 500 14px/18px var(--font);
+  letter-spacing: -.01em;
+  padding: 12px 12px 8px;
+}
+
+.RemoveAccountModal__information {
+  white-space: pre-wrap;
+  padding: 12px;
+}
+
+.RemoveAccountModal__textarea {
+  margin-top: 4px;
+}

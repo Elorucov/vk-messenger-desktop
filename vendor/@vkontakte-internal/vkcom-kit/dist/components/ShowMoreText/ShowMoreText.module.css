@@ -1,0 +1,62 @@
+.root {
+  --show-more-text-blur-size: 50px;
+  position: relative;
+  min-width: var(--show-more-text-after-width, 0);
+}
+
+.rootInline:not(.rootExpanded) .after {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.in {
+  word-break: break-word;
+}
+
+.root:not(.rootSingleLine) .in,
+.rootSingleLine.rootExpanded .in {
+  white-space: pre-line;
+}
+
+.rootInline.rootHasAfter:not(.rootExpanded) .in {
+  mask: linear-gradient(to top,transparent var(--show-more-text-after-height, 0),#fff 0%),linear-gradient(to right,#fff calc(100% - var(--show-more-text-after-width, 0) - var(--show-more-text-blur-size, 0)),transparent calc(100% - var(--show-more-text-after-width, 0)));
+}
+
+.rootInline.rootHasAfter.rootAfterLeft:not(.rootExpanded) .in {
+  mask: linear-gradient(to top,transparent var(--show-more-text-after-height, 0),#fff 0%),linear-gradient(to left,transparent calc(100% - var(--show-more-text-after-left, 0)),#fff calc(100% - var(--show-more-text-after-left, 0) + var(--show-more-text-blur-size, 0)));
+}
+
+.rootDynamic.rootHasAfter:not(.rootExpanded):not(.rootInline) .in {
+  mask: linear-gradient(to bottom,rgba(249,249,249,1) calc(100% - var(--show-more-text-blur-dynamic-size, 0)),rgba(249,249,249,.5) 75%,transparent 100%);
+}
+
+.after {
+  width: max-content;
+}
+
+.rootInline.rootExpanded .in,
+.rootInline.rootExpanded .after {
+  display: inline;
+}
+
+.rootInline.rootExpanded .after:before {
+  content: " ";
+}
+
+.rootDynamic {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.rootInteractive {
+  cursor: pointer;
+}
+
+.rootDynamic .in {
+  height: 100%;
+}
+
+.text {
+  display: inline;
+}

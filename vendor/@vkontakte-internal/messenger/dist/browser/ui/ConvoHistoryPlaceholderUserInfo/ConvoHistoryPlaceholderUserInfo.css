@@ -1,0 +1,125 @@
+.ConvoHistoryPlaceholderUserInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ConvoHistoryPlaceholderUserInfo__photoWrap {
+  margin-bottom: 11px;
+}
+
+.ConvoHistoryPlaceholderUserInfo__savedAs {
+  font-size: 15px;
+  color: var(--vkui--color_text_tertiary);
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.ConvoHistoryPlaceholderUserInfo__icon {
+  color: var(--vkui--color_icon_secondary);
+  margin: 0 0 19px;
+}
+
+.ConvoHistoryPlaceholderUserInfo__photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.ConvoHistoryPlaceholderUserInfo__name {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 9px;
+  text-align: center;
+  color: var(--vkui--color_text_primary);
+}
+
+.ConvoHistoryPlaceholderUserInfo__badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  height: 26px;
+  line-height: 24px;
+  font-size: 13px;
+  border-radius: 13px;
+  margin-bottom: 10px;
+  background: var(--vkui--color_background_content);
+  border: solid var(--vkui--color_separator_primary) 1px;
+}
+
+.ConvoHistoryPlaceholderUserInfo__description {
+  font-size: 16px;
+  color: var(--vkui--color_text_subhead);
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.ConvoHistoryPlaceholderUserInfo__additionalInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+  font: 13px/16px var(--font);
+  color: var(--vkui--color_text_secondary);
+}
+
+.ConvoHistoryPlaceholderUserInfo__mutualFriends {
+  margin-bottom: 28px;
+}
+
+.ConvoHistoryPlaceholderUserInfo__mutualFriends .vkuiUsersStack__text {
+  color: var(--vkui--color_text_secondary);
+  font: 13px/16px var(--font);
+}
+
+.ConvoHistoryPlaceholderUserInfo--s .ConvoHistoryPlaceholderUserInfo__photoWrap {
+  margin-bottom: 12px;
+}
+
+.ConvoHistoryPlaceholderUserInfo--s .ConvoHistoryPlaceholderUserInfo__name {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+
+.ConvoHistoryPlaceholderUserInfo--s .ConvoHistoryPlaceholderUserInfo__savedAs {
+  font: 13px/16px var(--font);
+  margin-bottom: 10px;
+  margin-top: -7px;
+}
+
+.ConvoHistoryPlaceholderUserInfo--s .ConvoHistoryPlaceholderUserInfo__description {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ConvoHistoryPlaceholderUserInfo--s .ConvoHistoryPlaceholderUserInfo__additionalInfo {
+  margin-bottom: 0;
+}
+
+.ConvoHistoryPlaceholderUserInfo--s .ConvoHistoryPlaceholderUserInfo__mutualFriends {
+  margin-bottom: 0;
+  margin-top: 8px;
+}

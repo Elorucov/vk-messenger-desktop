@@ -1,0 +1,55 @@
+.root {
+  padding-bottom: 8px;
+}
+
+.input {
+  width: 200px;
+}
+
+.dropdown .input {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.after {
+  padding-right: 12px;
+  font-size: 13px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-left: 12px;
+}
+
+.dropdown .controls {
+  display: block;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.timerPresets {
+  height: 30px;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  align-self: center;
+  align-items: center;
+  cursor: default;
+}
+
+.dropdown .timerPresets {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  white-space: normal;
+}
+
+.dropdown .subtitle {
+  max-width: 290px;
+  display: block;
+}

@@ -1,0 +1,9 @@
+.wrapper {
+  overflow: auto;
+  position: relative;
+}
+
+.scrollWrapper {
+  min-height: 48px;
+  overflow: hidden;
+}

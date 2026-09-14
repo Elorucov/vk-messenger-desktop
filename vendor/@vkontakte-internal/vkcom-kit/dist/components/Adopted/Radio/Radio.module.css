@@ -1,0 +1,13 @@
+.rootHasNoChildren {
+  padding: 0;
+  min-height: 0;
+}
+
+.rootHasNoChildren :global(.vkuiSelectionControlLabel__host) {
+  display: none;
+}
+
+.rootNoHorizontalPadding.rootNoHorizontalPadding {
+  padding-left: 0;
+  padding-right: 0;
+}

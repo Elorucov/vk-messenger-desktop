@@ -1,0 +1,137 @@
+.ConnectionIndicator {
+  --indicator-height: 16px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  margin-top: calc(var(--indicator-height) * -1);
+  font-size: 13px;
+  line-height: var(--indicator-height);
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.ConnectionIndicator--active {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0);
+  margin-top: 0;
+}
+
+.ConnectionIndicator__text {
+  position: relative;
+  color: var(--vkui--color_text_secondary);
+  overflow: hidden;
+}
+
+.ConnectionIndicator__text:before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  top: 0;
+  -webkit-transform: translateX(0%);
+  transform: translate(0);
+  -webkit-animation-name: flashText;
+  animation-name: flashText;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  z-index: 1;
+}
+
+.ConnectionIndicator--light .ConnectionIndicator__text:before {
+  background: radial-gradient(ellipse farthest-corner at 50% 40%,#fffc 0,#fff0 60%);
+}
+
+.ConnectionIndicator--dark .ConnectionIndicator__text:before {
+  background: radial-gradient(ellipse farthest-corner at 50% 40%,#19191acc 0,#19191a00 60%);
+}
+
+@-webkit-keyframes flashText {
+  0%,
+  30% {
+    -webkit-transform: translateX(-200%);
+    transform: translate(-200%);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateX(200%);
+    transform: translate(200%);
+  }
+  70%,
+  to {
+    -webkit-transform: translateX(-200%);
+    transform: translate(-200%);
+  }
+}
+
+@keyframes flashText {
+  0%,
+  30% {
+    -webkit-transform: translateX(-200%);
+    transform: translate(-200%);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateX(200%);
+    transform: translate(200%);
+  }
+  70%,
+  to {
+    -webkit-transform: translateX(-200%);
+    transform: translate(-200%);
+  }
+}
+
+.AccountSwitchBanner {
+  background-color: var(--vkui--color_background_secondary_alpha);
+}
+
+.AccountSwitchBanner--edu .AccountSwitchBanner__counter {
+  background-color: var(--vkui--color_accent_purple);
+}
+
+.AccountSwitchBanner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.AccountSwitchBanner__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 7px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--vkui--color_icon_contrast_themed);
+  background-color: var(--vkui--color_accent_blue);
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out .2s;
+  transition: opacity ease-in-out .2s;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.AccountSwitchBanner__counter--visible {
+  opacity: 1;
+}

@@ -1,0 +1,17 @@
+.ComposerAttachVideo {
+  position: relative;
+  width: var(--composerAttachWidth);
+  height: var(--composerAttachHeight);
+}
+
+.ComposerAttachVideo--withTools:hover .ComposerAttachPreviewMeta {
+  opacity: 0;
+}
+
+.ComposerDraggableAttach--moving .ComposerAttachVideo .ComposerAttachPreviewMeta {
+  opacity: 1;
+}
+
+.ComposerAttachVideo__videoPlay {
+  margin-right: 4px;
+}

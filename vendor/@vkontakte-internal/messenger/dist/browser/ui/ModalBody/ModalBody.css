@@ -1,0 +1,32 @@
+.RE_ModalBody {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--vkui--color_text_primary);
+  overflow: auto;
+}
+
+.RE_ModalPanel>.RE_ModalBody:last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.RE_ModalBody--fullScreen {
+  min-width: 0;
+  min-height: 0;
+}
+
+:where(.RE_ModalBody--fullScreen>*) {
+  max-width: 100%;
+}
+
+.RE_ModalBody--standard {
+  padding: 25px;
+}
+
+.RE_ModalBody__scrollbar-content {
+  min-width: 100%;
+}
+
+.RE_ModalBody--dark {
+  background-color: var(--vkui--color_background);
+}

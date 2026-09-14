@@ -1,0 +1,51 @@
+.root {
+  text-align: center;
+  color: var(--vkui--color_text_primary);
+}
+
+.rootPadded {
+  padding: var(--vkui--size_base_padding_vertical--regular) var(--vkui--size_base_padding_horizontal--regular);
+}
+
+.preheader,
+.subheader {
+  color: var(--vkui--color_text_secondary);
+}
+
+.preheader.preheader {
+  margin-bottom: 4px;
+}
+
+.subheader.subheader {
+  margin-top: 8px;
+}
+
+.subheaderPrimary {
+  color: inherit;
+}
+
+.rootDefault {
+  background: var(--vkui--color_background);
+}
+
+.rootTransparent {
+  background: transparent;
+}
+
+:global(.vkuiInternalRoundedMedia) .root,
+:global(.vkuiInternalRoundedMedia) .media {
+  border-top-left-radius: var(--vkui--size_border_radius_paper--regular);
+  border-top-right-radius: var(--vkui--size_border_radius_paper--regular);
+}
+
+.root.visuallyHidden,
+.root .visuallyHidden {
+  position: absolute;
+  clip: rect(1px,1px,1px,1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  opacity: 0;
+}

@@ -1,0 +1,23 @@
+import { actionCreator, optionalDataActionCreator } from '../../../helpers/actionCreator';
+import { E_ACTION, } from './actionTypes';
+export const setVoiceRoomListenersPages = actionCreator(E_ACTION.SET_VOICE_ROOM_LISTENERS_PAGES);
+export const setVoiceRoomListenersPagesIsLoading = actionCreator(E_ACTION.SET_VOICE_ROOM_LISTENERS_PAGES_IS_LOADING);
+export const setVoiceRoomListenersPage = actionCreator(E_ACTION.SET_VOICE_ROOM_LISTENERS_PAGE);
+export const setVoiceRoomListenersCount = actionCreator(E_ACTION.SET_VOICE_ROOM_LISTENERS_COUNT);
+export const removeVoiceRoomListeners = actionCreator(E_ACTION.REMOVE_VOICE_ROOM_LISTENERS);
+export const setVoiceRoomPromotionRequestsTotalCount = actionCreator(E_ACTION.SET_VOICE_ROOM_PROMOTION_REQUESTS_TOTAL_COUNT);
+export const setVoiceRoomPromotionRequests = actionCreator(E_ACTION.SET_VOICE_ROOM_PROMOTION_REQUESTS);
+export const clearVoiceRoomPromotionRequestsState = optionalDataActionCreator(E_ACTION.CLEAR_VOICE_ROOM_PROMOTION_REQUESTS_STATE);
+export const updateVoiceRoomPromotionRequests = actionCreator(E_ACTION.UPDATE_VOICE_ROOM_PROMOTION_REQUESTS);
+export const setVoiceRoomPromotionRequestsProfiles = actionCreator(E_ACTION.SET_VOICE_ROOM_PROMOTION_REQUESTS_PROFILES);
+export const updateVoiceRoomPromotionRequestsProfiles = actionCreator(E_ACTION.UPDATE_VOICE_ROOM_PROMOTION_REQUESTS_PROFILES);
+export const setPromotionRequestsHandUp = actionCreator(E_ACTION.SET_VOICE_ROOM_PROMOTION_REQUESTS_HAND_UP);
+export const setVoiceRoomVisibleSpeakersIndexes = actionCreator(E_ACTION.SET_VOICE_ROOM_VISIBLE_SPEAKERS_INDEXES);
+export const setVoiceRoomListenersUpdateKey = actionCreator(E_ACTION.SET_VOICE_ROOM_LISTENERS_UPDATE_KEY);
+export const setVoiceRoomMode = actionCreator(E_ACTION.SET_VOICE_ROOM_MODE);
+export const setSausageViewMode = actionCreator(E_ACTION.SET_VOICE_ROOM_SAUSAGE_VIEW);
+export const setVoiceRoomNotification = actionCreator(E_ACTION.SET_VOICE_ROOM_NOTIFICATION);
+export const setVoiceRoomModal = actionCreator(E_ACTION.SET_VOICE_ROOM_MODAL);
+export const setVoiceRoomScreenShare = actionCreator(E_ACTION.SET_VOICE_ROOM_SCREEN_SHARE);
+export const setVoiceRoomInitialData = actionCreator(E_ACTION.SET_VOICE_ROOM_INITIAL_DATA);
+//# sourceMappingURL=actions.js.map

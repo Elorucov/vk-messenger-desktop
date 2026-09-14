@@ -1,0 +1,17 @@
+.AttachActiveCall {
+  border: none;
+  background: none;
+  text-align: inherit;
+  text-decoration: none;
+}
+
+.AttachActiveCall:hover {
+  text-decoration: none;
+}
+
+.AttachActiveCall__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}

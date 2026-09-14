@@ -1,0 +1,7 @@
+import { CommonErrorReasons, ERROR_CODES } from '../constants/errors.js';
+import { MiniAppEvents } from '../constants/events.js';
+import l$1 from './VKWebAppHandlerBase.js';
+
+const t=400;class s extends l$1{constructor(...n){super(...n),this.handlerName=MiniAppEvents.Scroll,this.handle=e=>{return this.parseHandlerParams(e).then(e=>{const{scrollTarget:r}=this.controller.getMiniAppInfo().config;const{top:o,speed:n}=e;const s=n||t;const i=window.scrollY;const c=o-window.scrollY;const l=performance.now();return new Promise(e=>{if(r.tagName==="HTML"){const r=o=>{const n=(o-l)/s;window.scrollTo(window.scrollX,i+c*(n>1?1:n));if(n>=1){e({top:window.scrollY,height:document.documentElement.clientHeight});}else {window.requestAnimationFrame(r);}};window.requestAnimationFrame(r);}else {r.scrollTop=o;e({top:o,height:r.clientHeight});}})}).then(this.handleSuccess).catch(this.handleFailed)},this.parseHandlerParams=o=>{const{top:n,speed:t}=o;const s={request_id:o.request_id,top:n};if(n===undefined){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("top")})}else if(typeof n!=="number"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("top","number")})}if(t!==undefined){if(typeof t!=="number"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("speed","number")})}s.speed=t;}return Promise.resolve(s)};}}
+
+export { s as default };

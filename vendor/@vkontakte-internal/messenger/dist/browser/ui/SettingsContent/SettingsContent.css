@@ -1,0 +1,52 @@
+.SettingsContent__Subgroup {
+  padding: 9px 12px;
+}
+
+.SettingsContent__Subgroup--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SettingsContent__Subgroup--header__Content {
+  flex: 1;
+}
+
+.SettingsContent__Subgroup .Subgroup__Title {
+  letter-spacing: -.15px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.SettingsContent__Subgroup .Subgroup__Subtitle {
+  letter-spacing: -.15px;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--vkui--color_text_subhead);
+}
+
+.SettingsContent__Subgroup .Subgroup__Subtitle--progress {
+  letter-spacing: -.08px;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_subhead);
+  display: block;
+}
+
+.SettingsContent__Subgroup--header .vkuiButton {
+  margin-left: 24px;
+}
+
+.SettingsContent__Subgroup--header .vkuiProgress {
+  margin: 3px 0;
+}
+
+.SettingsContent__Patch-notes {
+  letter-spacing: .2px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.SettingsContent__Patch-notes__Footer {
+  color: var(--vkui--color_text_subhead);
+}

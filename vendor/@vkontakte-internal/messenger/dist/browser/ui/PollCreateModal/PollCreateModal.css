@@ -1,0 +1,102 @@
+.PollCreateModal__wrapper {
+  min-width: min(500px,100%);
+  max-width: 500px;
+}
+
+.PollCreateModal__titleSubhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.PollCreateModal__groupSubhead {
+  color: var(--vkui--color_text_subhead);
+  padding: 2px 0 6px 16px;
+}
+
+.PollCreateModal__answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 12px;
+}
+
+.PollCreateModal__answerInput {
+  width: 100%;
+  margin: 0 4px;
+}
+
+.PollCreateModal__answerDragButton,
+.PollCreateModal__answerRemoveButton {
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--vkui--color_icon_medium);
+  opacity: .7;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.PollCreateModal__answerDragButton:hover,
+.PollCreateModal__answerRemoveButton:hover {
+  opacity: 1;
+}
+
+.PollCreateModal__answerDragButton {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.PollCreateModal__answerTapDragButton {
+  position: relative;
+  opacity: 1;
+}
+
+.PollCreateModal__answerTapDragButtonArea {
+  position: absolute;
+  inset: 0 -6px;
+}
+
+.PollCreateModal__answerRemoveButton {
+  cursor: pointer;
+}
+
+.PollCreateModal__pollBackgrounds {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+}
+
+.PollCreateModal__pollBackground {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.PollCreateModal__dateInput {
+  margin-top: 8px;
+  margin-left: 44px;
+  margin-bottom: 12px;
+  max-width: 250px;
+}
+
+.PollBackgroundDemoSvg {
+  border-radius: 6px;
+  margin-bottom: 8px;
+}

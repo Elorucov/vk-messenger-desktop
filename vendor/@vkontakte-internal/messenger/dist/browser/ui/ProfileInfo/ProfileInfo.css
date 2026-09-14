@@ -1,0 +1,183 @@
+.ProfileInfo__VKID {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+}
+
+.ProfileInfo__VKID--noScreenName {
+  padding-bottom: 12px;
+}
+
+.ProfileInfo__VKIDAvatar {
+  margin: 12px 0;
+}
+
+.ProfileInfo__VKIDDetailsCard {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 18px;
+  text-decoration: none;
+  background-color: var(--vkui--color_background_secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 16px;
+}
+
+.ProfileInfo__name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--vkui--color_text_primary);
+  margin-right: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ProfileInfo__VKIDSettings {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_accent);
+  padding-top: 2px;
+}
+
+.ProfileInfo__shortNameBox {
+  padding-top: 26px;
+}
+
+.ProfileInfo__phoneNumber {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_secondary);
+  padding-top: 2px;
+}
+
+.ProfileInfo__screenName {
+  cursor: pointer;
+  color: var(--vkui--color_text_accent);
+}
+
+.ProfileInfo__a-z0-9 {
+  font-weight: 500;
+}
+
+.ProfileInfo__footer {
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background: var(--vkui--color_background_tertiary);
+  border-top: 1px solid var(--vkui--color_separator_primary);
+}
+
+.ProfileInfo__screenNameValidationInfo {
+  margin-top: 1em;
+}
+
+.ProfileInfo__chevron {
+  position: absolute;
+  color: var(--vkui--color_icon_tertiary);
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ProfileInfo__container {
+  padding: 0 20px;
+}
+
+.ProfileInfo__screenNameInputTop {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_tertiary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ProfileInfo__screenNameDescription {
+  color: var(--vkui--color_text_secondary);
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.ProfileInfo__avaliableScreenName {
+  color: var(--vkui--color_text_primary);
+}
+
+.FoldersSettings__empty {
+  text-align: center;
+  padding: 52px 32px;
+}
+
+.FoldersSettings__emptyIcon {
+  margin: 0 auto;
+  color: var(--vkui--color_icon_secondary);
+}
+
+.FoldersSettings__emptyText {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--vkui--color_text_secondary);
+  margin-top: 8px;
+}
+
+.FoldersSettings__emptyActions {
+  margin-top: 24px;
+}
+
+.FoldersSettings__list {
+  padding: 10px 8px 16px;
+}
+
+.FoldersSettings__list--compact {
+  padding: 0;
+  margin: 0;
+}
+
+.FoldersSettings__folder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.FoldersSettings__folder--dragging {
+  cursor: pointer;
+  outline: none;
+  background: -webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_transparent--hover)),to(var(--vkui--color_transparent--hover))),-webkit-gradient(linear,left top,left bottom,from(var(--vkui--color_background_content)),to(var(--vkui--color_background_content)));
+  background: linear-gradient(var(--vkui--color_transparent--hover),var(--vkui--color_transparent--hover)),linear-gradient(var(--vkui--color_background_content),var(--vkui--color_background_content));
+}
+
+.FoldersSettings__folder--noHover:hover {
+  background-color: transparent;
+}
+
+.FoldersSettings__dragButton {
+  position: relative;
+}
+
+.FoldersSettings__dragTapArea {
+  position: absolute;
+  inset: -6px;
+}

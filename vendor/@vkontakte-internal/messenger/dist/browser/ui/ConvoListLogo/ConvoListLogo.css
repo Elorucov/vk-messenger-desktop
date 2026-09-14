@@ -1,0 +1,39 @@
+.ConvoListLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+}
+
+.ConvoListLogo__title,
+.ConvoListLogo__titleShort {
+  margin: 4px 6px 0 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.ConvoListLogo__titleShort {
+  display: none;
+  margin-top: 1px;
+}
+
+.ConvoListLogo__title path,
+.ConvoListLogo__titleShort path {
+  fill: var(--vkui--color_text_primary);
+}
+
+@media (max-width: 370px),
+(min-width: 640px) and (max-width: 1000px) {
+  .ConvoListLogo {
+    margin: 0;
+  }
+  .ConvoListLogo__title {
+    display: none;
+  }
+  .ConvoListLogo__titleShort {
+    display: block;
+  }
+}

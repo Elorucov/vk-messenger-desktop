@@ -1,0 +1,8 @@
+import { CommonErrorReasons, ERROR_CODES } from '../constants/errors.js';
+import { MiniAppEvents } from '../constants/events.js';
+import l$1 from './VKWebAppHandlerBase.js';
+import { getCryptoKeyFromLocalStorage, getCryptoKey, generateCryptoKey, encrypt } from '../modules/crypto.js';
+
+class l extends l$1{constructor(...o){super(...o),this.handlerName=MiniAppEvents.StorageSet,this.handle=e=>{return this.parseHandlerParams(e).then(e=>this.prepareAnonymStorageData(e)).then(e=>this.controller.requestApiMethod("storage.set",e)).then(({response:e})=>this.wrapResult(Boolean(e))).then(this.handleSuccess).catch(this.handleFailed)},this.parseHandlerParams=t=>{if(!t.key){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("key")})}if(t.hasOwnProperty("value")&&typeof t.value!=="string"){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.invalidParam("value","string")})}if(t.hasOwnProperty("global")&&typeof t.global!=="boolean"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("global","boolean")})}return Promise.resolve({request_id:t.request_id,global:t.global?1:0,key:t.key,value:t.value})},this.prepareAnonymStorageData=async t=>{if(!this.controller.isAnonymousLaunch){return t}if(!window.hasOwnProperty("crypto")){return Promise.reject({code:ERROR_CODES.CRYPTO_UNSUPPORTED,reason:CommonErrorReasons.cryptoUnsupported()})}const{localStorageKey:o,localStorageIV:l}=await getCryptoKeyFromLocalStorage();const p=o&&l;const{key:c,iv:u}=p?await getCryptoKey(o,l):await generateCryptoKey();t.value=await encrypt(c,u,t.value);return t};}}
+
+export { l as default };

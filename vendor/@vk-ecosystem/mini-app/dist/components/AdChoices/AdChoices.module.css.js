@@ -1,0 +1,5 @@
+import e$1 from './../../deps/style-inject/dist/style-inject.es.js';
+
+var e=".AdChoices-module_button__rYVkD{height:auto}.AdChoices-module_buttonLarge__pGja3{height:24px;padding-left:4px;width:24px}.AdChoices-module_icon__h-unN.AdChoices-module_icon__h-unN{padding:initial}.AdChoices-module_item__r6wG9.AdChoices-module_item__r6wG9{min-height:32px;padding:0 20px}.AdChoices-module_text__KzBVq{color:var(--vkui--color_text_primary);font-size:13px;font-weight:600;text-align:center}.AdChoices-module_hidden__ZrnjU{display:none}.AdChoices-module_popup__uUiy-{max-width:unset}.AdChoices-module_popupFullscreen__z2XDs{z-index:1;z-index:var(--vkui--z-index-popup,5)}";var i = {"button":"AdChoices-module_button__rYVkD","buttonLarge":"AdChoices-module_buttonLarge__pGja3","icon":"AdChoices-module_icon__h-unN","item":"AdChoices-module_item__r6wG9","text":"AdChoices-module_text__KzBVq","hidden":"AdChoices-module_hidden__ZrnjU","popup":"AdChoices-module_popup__uUiy-","popupFullscreen":"AdChoices-module_popupFullscreen__z2XDs"};e$1(e);
+
+export { i as default };

@@ -1,0 +1,77 @@
+.ConvoAttachesLinks {
+  padding: 0 8px;
+}
+
+.ConvoAttachesLinks__itemContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  padding-right: 8px;
+  border-radius: 8px;
+}
+
+.ConvoAttachesLinks__itemContainer:hover {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.ConvoAttachesLinks__item {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0;
+}
+
+.ConvoAttachesLinkItem__dropdown {
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  -webkit-transition: all 90ms ease-out;
+  transition: all 90ms ease-out;
+}
+
+.ConvoAttachesLinkItem__dropdown--open,
+.ConvoAttachesLinks__itemContainer:hover .ConvoAttachesLinkItem__dropdown,
+.ConvoAttachesLinks__itemContainer:focus-within .ConvoAttachesLinkItem__dropdown {
+  width: 20px;
+  opacity: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 6px;
+}
+
+.DropArea {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--vkui--color_background_content);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.DropArea--hidden {
+  display: none;
+}
+
+.ConvoMain .DropArea {
+  height: calc(100% - var(--convoHeaderHeight) - 1px);
+}

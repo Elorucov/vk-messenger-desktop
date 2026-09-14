@@ -1,0 +1,69 @@
+.ComposerAttachToolsContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 var(--composerAttachBorderRadius) var(--composerAttachBorderRadius);
+}
+
+.ComposerAttachToolsContainer:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(35,35,36,.0001)),color-stop(9.22%,rgba(35,35,36,.0156863)),color-stop(18.76%,rgba(35,35,36,.054902)),color-stop(28.48%,rgba(35,35,36,.117647)),color-stop(38.19%,rgba(35,35,36,.2)),color-stop(47.75%,rgba(35,35,36,.290196)),color-stop(56.99%,rgba(35,35,36,.392157)),color-stop(65.75%,rgba(35,35,36,.501961)),color-stop(73.87%,rgba(35,35,36,.607843)),color-stop(81.18%,rgba(35,35,36,.709804)),color-stop(87.52%,rgba(35,35,36,.8)),color-stop(92.74%,rgba(35,35,36,.882353)),color-stop(96.66%,rgba(35,35,36,.945098)),color-stop(99.14%,rgba(35,35,36,.984314)),to(#232324));
+  background: linear-gradient(#23232400,#23232404 9.22%,#2323240e 18.76%,#2323241e,#23232433 38.19%,#2323244a 47.75%,#23232464 56.99%,#23232480 65.75%,#2323249b 73.87%,#232324b5 81.18%,#232324cc 87.52%,#232324e1 92.74%,#232324f1 96.66%,#232324fb 99.14%,#232324);
+  opacity: 0;
+}
+
+.ComposerAttachToolsContainer:hover:after,
+.ComposerAttachToolsContainer:hover .ComposerAttachTools {
+  opacity: 1;
+}
+
+.ComposerAttachTools {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 8px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+.ComposerAttachToolsItem {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: var(--vkui--color_text_contrast);
+  opacity: .64;
+}
+
+.ComposerAttachToolsItem:hover {
+  opacity: 1;
+}
+
+.ComposerAttachTools,
+.ComposerAttachToolsItem,
+.ComposerAttachToolsContainer:after {
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.ComposerDraggableAttach--moving .ComposerAttachToolsContainer:hover:after,
+.ComposerDraggableAttach--moving .ComposerAttachToolsContainer:hover .ComposerAttachTools {
+  display: none;
+}

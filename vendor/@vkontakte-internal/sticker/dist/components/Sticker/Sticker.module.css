@@ -1,0 +1,77 @@
+.sticker {
+  --sticker-padding: 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker:before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  transition: background var(--vkui--animation_duration_m);
+  width: calc(var(--sticker-size, 0) + var(--sticker-padding, 0) * 2);
+  height: calc(var(--sticker-size, 0) + var(--sticker-padding, 0) * 2);
+}
+
+.sticker:before,
+.placeholder .in {
+  border-radius: calc(var(--vkui--size_border_radius--regular) * var(--sticker-scale, 1));
+}
+
+.tappable {
+  --sticker-padding: calc(4px * var(--sticker-scale, 1));
+  cursor: pointer;
+}
+
+.tappable:not(.placeholder):hover:before {
+  background: var(--vkui--color_transparent--hover);
+}
+
+.content {
+  opacity: 1;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  pointer-events: none;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.placeholder {
+  cursor: default;
+}
+
+.placeholder .content {
+  opacity: 0;
+}
+
+.placeholder:before {
+  width: 100%;
+  height: 100%;
+  transition: none;
+  background: var(--vkui--color_transparent--active);
+}
+
+.in {
+  overflow: hidden;
+  user-select: none;
+  width: var(--sticker-size, inherit);
+  height: var(--sticker-size, inherit);
+  transition: border-radius var(--vkui--animation_duration_m);
+}
+
+.disabled .in {
+  opacity: var(--vkui--opacity_disable);
+}
+
+.in canvas {
+  pointer-events: none;
+}
+
+.sticker:not(:hover) .favorite {
+  opacity: 0;
+}

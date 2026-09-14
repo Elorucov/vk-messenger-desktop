@@ -1,0 +1,57 @@
+.AttachCard,
+.AttachCard:hover,
+.AttachMiniAppCell {
+  text-decoration: none;
+}
+
+.AttachMiniAppCell--rich {
+  min-width: var(--miniappWidth);
+  max-width: 390px;
+  padding: 8px 0;
+  margin: 0 -3px;
+  border-radius: 12px;
+}
+
+.AttachMiniAppCell--rich.AttachMiniAppCell--classic {
+  min-width: 330px;
+  margin: 0;
+  background-color: var(--vkui--color_background_tertiary);
+  border: .5px solid var(--vkui--color_image_border_alpha);
+}
+
+.AttachMiniAppCell--rich.AttachMiniAppCell--disabled {
+  min-width: 0;
+  width: 100%;
+  max-width: 310px;
+}
+
+.AttachMiniAppCell--rich.AttachMiniAppCell--forwarded {
+  margin: 0;
+}
+
+.AttachMiniAppCell--rich.AttachMiniAppCell--classic.AttachMiniAppCell--disabled {
+  max-width: 330px;
+}
+
+.AttachMiniAppCell--rich.AttachMiniAppCell--classic.AttachMiniAppCell--compact.AttachMiniAppCell--disabled {
+  max-width: 310px;
+}
+
+.ForwardedMessageNew__attachments .AttachMiniAppCell--rich {
+  margin-left: calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+}
+
+@media screen and (max-width: 740px) {
+  .AttachMiniAppCell--rich.AttachMiniAppCell--classic {
+    max-width: 256px;
+  }
+  .AttachMiniAppCell--rich.AttachMiniAppCell--disabled {
+    max-width: 228px;
+  }
+  .AttachMiniAppCell--rich.AttachMiniAppCell--classic.AttachMiniAppCell--disabled {
+    max-width: 248px;
+  }
+  .AttachMiniAppCell--rich.AttachMiniAppCell--classic.AttachMiniAppCell--compact.AttachMiniAppCell--disabled {
+    max-width: 238px;
+  }
+}

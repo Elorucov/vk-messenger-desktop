@@ -1,0 +1,30 @@
+.rootPadding {
+  margin: 12px var(--vkui--size_base_padding_horizontal--regular);
+}
+
+.rootStretched {
+  height: 100%;
+}
+
+.rootStretched:global(.vkuiBanner__host) {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.rootStretched :global(.vkuiBanner__content) {
+  justify-content: stretch;
+}
+
+.rootStretched :global(.vkuiBanner__actions) {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.rootTransparent:global(.vkuiBanner__host) {
+  background-color: transparent;
+}
+
+.rootTransparent:global(.vkuiBanner__host):before {
+  border: 0;
+}

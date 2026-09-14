@@ -1,0 +1,36 @@
+.keyboard {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: var(--stickers-tab-flex-direction, column);
+}
+
+.scroll {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll.scroll {
+  scrollbar-width: thin;
+}
+
+.scrollDisabled>* {
+  overflow: hidden;
+}
+
+.in {
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.item {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.itemHeader {
+  z-index: 1;
+}

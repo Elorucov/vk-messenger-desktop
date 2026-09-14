@@ -1,0 +1,46 @@
+{
+  "name": "vk-messenger",
+  "version": "6.0.57",
+  "productName": "VK Мессенджер",
+  "description": "Лёгкий и быстрый в любых условиях",
+  "main": "packages/main/dist/index.js",
+  "author": "VK Support <support@vk.com> (https://vk.com)",
+  "homepage": "https://vk.com",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/active-win",
+    "packages/vkme-common",
+    "packages/main",
+    "packages/preload",
+    "packages/renderer",
+    "vendor/*/*"
+  ],
+  "scripts": {
+    "build": "npm run lang && npm run build:preload && npm run build:renderer && npm run build:main",
+    "build:main": "vite build --config packages/main/vite.config.ts",
+    "build:preload": "vite build --config packages/preload/vite.config.ts",
+    "build:renderer": "vite build --config packages/renderer/vite.config.ts",
+    "lang": "node scripts/download-langs.mjs",
+    "typecheck": "tsc --noEmit -p packages/main && tsc --noEmit -p packages/preload && tsc --noEmit -p packages/renderer",
+    "start": "npm run build && electron .",
+    "start_nobuild": "electron .",
+    "compile": "npm run build && electron-builder build --config electron-builder.yml",
+    "compile:dir": "npm run build && electron-builder build --dir --config electron-builder.yml"
+  },
+  "dependencies": {
+    "active-win": "file:./packages/active-win",
+    "electron-log": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@vitejs/plugin-react": "4.3.4",
+    "electron": "44.3.0",
+    "electron-builder": "26.15.3",
+    "typescript": "5.5.4",
+    "vite": "6.3.5"
+  },
+  "engines": {
+    "node": "^18 || >=20.0.0"
+  }
+}

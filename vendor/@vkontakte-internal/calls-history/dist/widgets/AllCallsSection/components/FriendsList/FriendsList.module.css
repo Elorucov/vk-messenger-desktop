@@ -1,0 +1,39 @@
+.button {
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--vkui--color_stroke_accent);
+}
+
+.name {
+  max-width: 64px;
+}
+
+.content {
+  width: 64px;
+}
+
+.photoWrapper {
+  position: relative;
+}
+
+.button:hover .photo {
+  filter: brightness(.5);
+}
+
+.photo {
+  transition: filter var(--vkui--animation_duration_s) linear;
+}
+
+.hoverIcon {
+  opacity: 0;
+  transition: opacity var(--vkui--animation_duration_s) linear;
+}
+
+.button:hover .hoverIcon {
+  opacity: 1;
+}

@@ -1,0 +1,8 @@
+import { CommonErrorReasons, ERROR_CODES } from '../constants/errors.js';
+import { MiniAppEvents } from '../constants/events.js';
+import { GroupActions } from '../entries/MiniAppBase/constants.js';
+import l$1 from './VKWebAppHandlerBase.js';
+
+class n extends l$1{confirm(t){return new Promise((s,n)=>{this.handleModal({type:"JoinLeaveGroupModal",data:{action:GroupActions.LEAVE,avatar:t.photo_100||"",group:t.name||""},actions:{onAccept:s,onDeny:()=>n({error_code:ERROR_CODES.USER_DENIED,error_reason:CommonErrorReasons.userDenied()})}});})}constructor(...o){super(...o),this.handlerName=MiniAppEvents.LeaveGroup,this.handle=e=>{return this.parseHandlerParams(e).then(e=>{return this.getGroupInfo(e).then(r=>{if(!r.is_member){return this.handleSuccess({result:true})}return this.confirm(r).then(()=>this.updateModalData({loading:true})).then(()=>this.leaveGroup(e)).then(()=>this.handleSuccess({result:true}))})}).catch(this.handleFailed).finally(()=>this.updateModalData({shouldClosed:true}))},this.getGroupInfo=({group_id:e})=>{return this.controller.requestApiMethod("groups.getById",{group_ids:e,fields:"is_member"}).then(e=>e.response.groups[0])},this.leaveGroup=({group_id:e})=>{return this.controller.requestApiMethod("groups.leave",{group_id:e}).then(()=>this.handleSuccess({result:true}))},this.parseHandlerParams=t=>{if(!t.group_id){return Promise.reject({error_code:ERROR_CODES.MISSING_PARAM,error_reason:CommonErrorReasons.missingParam("group_id")})}if(typeof t.group_id!=="number"){return Promise.reject({error_code:ERROR_CODES.INVALID_PARAMS,error_reason:CommonErrorReasons.wrongType("group_id","number")})}return Promise.resolve({request_id:t.request_id,group_id:t.group_id})};}}
+
+export { n as default };

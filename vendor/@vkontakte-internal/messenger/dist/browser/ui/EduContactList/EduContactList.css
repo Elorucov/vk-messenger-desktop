@@ -1,0 +1,239 @@
+.EduContactList {
+  width: 100%;
+  min-height: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: var(--vkui--color_background_content);
+}
+
+.EduContactList__search {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.EduContactList__contacts {
+  min-height: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.EduContactList__itemWrapper {
+  padding-left: 8px;
+  padding-right: 8px;
+  list-style-type: none;
+}
+
+.EduContactList__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+  position: relative;
+  height: 56px;
+}
+
+.EduContactList__item:not(.EduContactList__item--skeleton) {
+  cursor: pointer;
+}
+
+.EduContactList__item:before,
+.EduContactList__importButton:before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: opacity .16s ease;
+  transition: opacity .16s ease;
+  background: var(--vkui--color_transparent--hover);
+  opacity: 0;
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+}
+
+.EduContactList .EduContactList__phoneJoin {
+  border-radius: var(--vkui--size_border_radius--regular,8px);
+  height: 56px;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+:is(.EduContactList__item:not(.EduContactList__item--skeleton),
+.EduContactList__importButton):where(:hover,
+:focus):before {
+  opacity: 1;
+}
+
+.EduContactList__avatar {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.EduContactList__itemContent {
+  overflow: hidden;
+}
+
+.EduContactList__name {
+  min-width: 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--vkui--color_text_primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.EduContactList__info {
+  min-width: 0;
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--vkui--color_text_secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.EduContactList__noResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 45px;
+  text-align: center;
+  color: var(--vkui--color_text_subhead);
+}
+
+.EduContactList__loader {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.EduContactList__importButton {
+  width: 100%;
+  height: 56px;
+  padding: 0 12px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  color: var(--vkui--color_text_accent);
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.EduContactList__importButtonIcon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--vkui--color_background_secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.EduContactList__sectionSeparator {
+  padding: 15px 16px 9px;
+  font: 600 13px/16px var(--font);
+  text-transform: uppercase;
+  color: var(--vkui--color_text_secondary);
+}
+
+.EduContactList__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.EduContactList__verifiedIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-left: 4px;
+  color: var(--vkui--color_icon_accent);
+}
+
+.EduContactList__sectionSeparator--first {
+  margin-top: 8px;
+}
+
+.EduContactList__itemWrapper {
+  padding-left: 4px;
+  padding-right: 4px;
+  list-style-type: none;
+}
+
+.EduContactList__inviteButtonIcon--sferum,
+.EduContactList__importButtonIcon {
+  width: 48px;
+  height: 48px;
+}
