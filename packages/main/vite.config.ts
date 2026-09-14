@@ -14,6 +14,11 @@ export default defineConfig({
   resolve: {
     conditions: ['node'],
     mainFields: ['module', 'jsnext:main', 'jsnext', 'main'],
+    alias: {
+      "react": "preact/compat",
+      "react-dom": "preact/compat",
+      "react/jsx-runtime": "preact/jsx-runtime"
+    }
   },
   ssr: {
     // как и в исходной сборке, всё кроме electron и нативных модулей едет внутрь бандла

@@ -16,6 +16,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     dedupe: ['react', 'react-dom', 'mobx', '@vkontakte/vkui'],
+    alias: {
+      "react": "preact/compat",
+      "react-dom": "preact/compat",
+      "react/jsx-runtime": "preact/jsx-runtime"
+    }
   },
   worker: {
     format: 'es',
